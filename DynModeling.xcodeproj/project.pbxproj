@@ -1,0 +1,1519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F918B7FC2061646100C8C6A1 /* drawPointMovingTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F918B7F92061646100C8C6A1 /* drawPointMovingTest.cpp */; };
+		F972A9A9206173830007D5F6 /* libopencv_aruco.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725888206168C600410831 /* libopencv_aruco.3.4.1.dylib */; };
+		F972A9AA206173830007D5F6 /* libopencv_aruco.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725888206168C600410831 /* libopencv_aruco.3.4.1.dylib */; };
+		F972A9AB206173830007D5F6 /* libopencv_aruco.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725888206168C600410831 /* libopencv_aruco.3.4.1.dylib */; };
+		F972A9AC206173830007D5F6 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725881206168C600410831 /* libopencv_bgsegm.3.4.1.dylib */; };
+		F972A9AD206173830007D5F6 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725881206168C600410831 /* libopencv_bgsegm.3.4.1.dylib */; };
+		F972A9AE206173830007D5F6 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725881206168C600410831 /* libopencv_bgsegm.3.4.1.dylib */; };
+		F972A9AF206173830007D5F6 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725885206168C600410831 /* libopencv_bioinspired.3.4.1.dylib */; };
+		F972A9B0206173830007D5F6 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725885206168C600410831 /* libopencv_bioinspired.3.4.1.dylib */; };
+		F972A9B1206173830007D5F6 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725885206168C600410831 /* libopencv_bioinspired.3.4.1.dylib */; };
+		F972A9B2206173830007D5F6 /* libopencv_calib3d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725879206168C500410831 /* libopencv_calib3d.3.4.1.dylib */; };
+		F972A9B3206173830007D5F6 /* libopencv_calib3d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725879206168C500410831 /* libopencv_calib3d.3.4.1.dylib */; };
+		F972A9B4206173830007D5F6 /* libopencv_calib3d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725879206168C500410831 /* libopencv_calib3d.3.4.1.dylib */; };
+		F972A9B5206173830007D5F6 /* libopencv_ccalib.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587D206168C600410831 /* libopencv_ccalib.3.4.1.dylib */; };
+		F972A9B6206173830007D5F6 /* libopencv_ccalib.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587D206168C600410831 /* libopencv_ccalib.3.4.1.dylib */; };
+		F972A9B7206173830007D5F6 /* libopencv_ccalib.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587D206168C600410831 /* libopencv_ccalib.3.4.1.dylib */; };
+		F972A9B8206173830007D5F6 /* libopencv_core.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587A206168C500410831 /* libopencv_core.3.4.1.dylib */; };
+		F972A9B9206173830007D5F6 /* libopencv_core.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587A206168C500410831 /* libopencv_core.3.4.1.dylib */; };
+		F972A9BA206173830007D5F6 /* libopencv_core.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587A206168C500410831 /* libopencv_core.3.4.1.dylib */; };
+		F972A9BB206173830007D5F6 /* libopencv_datasets.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725899206168C600410831 /* libopencv_datasets.3.4.1.dylib */; };
+		F972A9BC206173830007D5F6 /* libopencv_datasets.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725899206168C600410831 /* libopencv_datasets.3.4.1.dylib */; };
+		F972A9BD206173830007D5F6 /* libopencv_datasets.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725899206168C600410831 /* libopencv_datasets.3.4.1.dylib */; };
+		F972A9BE206173830007D5F6 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725889206168C600410831 /* libopencv_dnn_objdetect.3.4.1.dylib */; };
+		F972A9BF206173830007D5F6 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725889206168C600410831 /* libopencv_dnn_objdetect.3.4.1.dylib */; };
+		F972A9C0206173830007D5F6 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725889206168C600410831 /* libopencv_dnn_objdetect.3.4.1.dylib */; };
+		F972A9C1206173830007D5F6 /* libopencv_dnn.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725884206168C600410831 /* libopencv_dnn.3.4.1.dylib */; };
+		F972A9C2206173830007D5F6 /* libopencv_dnn.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725884206168C600410831 /* libopencv_dnn.3.4.1.dylib */; };
+		F972A9C3206173830007D5F6 /* libopencv_dnn.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725884206168C600410831 /* libopencv_dnn.3.4.1.dylib */; };
+		F972A9C4206173830007D5F6 /* libopencv_dpm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588A206168C600410831 /* libopencv_dpm.3.4.1.dylib */; };
+		F972A9C5206173830007D5F6 /* libopencv_dpm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588A206168C600410831 /* libopencv_dpm.3.4.1.dylib */; };
+		F972A9C6206173830007D5F6 /* libopencv_dpm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588A206168C600410831 /* libopencv_dpm.3.4.1.dylib */; };
+		F972A9C7206173830007D5F6 /* libopencv_face.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725886206168C600410831 /* libopencv_face.3.4.1.dylib */; };
+		F972A9C8206173830007D5F6 /* libopencv_face.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725886206168C600410831 /* libopencv_face.3.4.1.dylib */; };
+		F972A9C9206173830007D5F6 /* libopencv_face.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725886206168C600410831 /* libopencv_face.3.4.1.dylib */; };
+		F972A9CA206173830007D5F6 /* libopencv_features2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588E206168C600410831 /* libopencv_features2d.3.4.1.dylib */; };
+		F972A9CB206173830007D5F6 /* libopencv_features2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588E206168C600410831 /* libopencv_features2d.3.4.1.dylib */; };
+		F972A9CC206173830007D5F6 /* libopencv_features2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588E206168C600410831 /* libopencv_features2d.3.4.1.dylib */; };
+		F972A9CD206173830007D5F6 /* libopencv_flann.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588B206168C600410831 /* libopencv_flann.3.4.1.dylib */; };
+		F972A9CE206173830007D5F6 /* libopencv_flann.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588B206168C600410831 /* libopencv_flann.3.4.1.dylib */; };
+		F972A9CF206173830007D5F6 /* libopencv_flann.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588B206168C600410831 /* libopencv_flann.3.4.1.dylib */; };
+		F972A9D0206173830007D5F6 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725894206168C600410831 /* libopencv_fuzzy.3.4.1.dylib */; };
+		F972A9D1206173830007D5F6 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725894206168C600410831 /* libopencv_fuzzy.3.4.1.dylib */; };
+		F972A9D2206173830007D5F6 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725894206168C600410831 /* libopencv_fuzzy.3.4.1.dylib */; };
+		F972A9D3206173830007D5F6 /* libopencv_hfs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725882206168C600410831 /* libopencv_hfs.3.4.1.dylib */; };
+		F972A9D4206173830007D5F6 /* libopencv_hfs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725882206168C600410831 /* libopencv_hfs.3.4.1.dylib */; };
+		F972A9D5206173830007D5F6 /* libopencv_hfs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725882206168C600410831 /* libopencv_hfs.3.4.1.dylib */; };
+		F972A9D6206173830007D5F6 /* libopencv_highgui.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725887206168C600410831 /* libopencv_highgui.3.4.1.dylib */; };
+		F972A9D7206173830007D5F6 /* libopencv_highgui.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725887206168C600410831 /* libopencv_highgui.3.4.1.dylib */; };
+		F972A9D8206173830007D5F6 /* libopencv_highgui.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725887206168C600410831 /* libopencv_highgui.3.4.1.dylib */; };
+		F972A9D9206173830007D5F6 /* libopencv_img_hash.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588C206168C600410831 /* libopencv_img_hash.3.4.1.dylib */; };
+		F972A9DA206173830007D5F6 /* libopencv_img_hash.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588C206168C600410831 /* libopencv_img_hash.3.4.1.dylib */; };
+		F972A9DB206173830007D5F6 /* libopencv_img_hash.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588C206168C600410831 /* libopencv_img_hash.3.4.1.dylib */; };
+		F972A9DC206173830007D5F6 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588D206168C600410831 /* libopencv_imgcodecs.3.4.1.dylib */; };
+		F972A9DD206173830007D5F6 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588D206168C600410831 /* libopencv_imgcodecs.3.4.1.dylib */; };
+		F972A9DE206173830007D5F6 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588D206168C600410831 /* libopencv_imgcodecs.3.4.1.dylib */; };
+		F972A9DF206173830007D5F6 /* libopencv_imgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589D206168C600410831 /* libopencv_imgproc.3.4.1.dylib */; };
+		F972A9E0206173830007D5F6 /* libopencv_imgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589D206168C600410831 /* libopencv_imgproc.3.4.1.dylib */; };
+		F972A9E1206173830007D5F6 /* libopencv_imgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589D206168C600410831 /* libopencv_imgproc.3.4.1.dylib */; };
+		F972A9E2206173830007D5F6 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725883206168C600410831 /* libopencv_line_descriptor.3.4.1.dylib */; };
+		F972A9E3206173830007D5F6 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725883206168C600410831 /* libopencv_line_descriptor.3.4.1.dylib */; };
+		F972A9E4206173830007D5F6 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725883206168C600410831 /* libopencv_line_descriptor.3.4.1.dylib */; };
+		F972A9E5206173830007D5F6 /* libopencv_ml.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589B206168C600410831 /* libopencv_ml.3.4.1.dylib */; };
+		F972A9E6206173830007D5F6 /* libopencv_ml.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589B206168C600410831 /* libopencv_ml.3.4.1.dylib */; };
+		F972A9E7206173830007D5F6 /* libopencv_ml.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589B206168C600410831 /* libopencv_ml.3.4.1.dylib */; };
+		F972A9E8206173830007D5F6 /* libopencv_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588F206168C600410831 /* libopencv_objdetect.3.4.1.dylib */; };
+		F972A9E9206173830007D5F6 /* libopencv_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588F206168C600410831 /* libopencv_objdetect.3.4.1.dylib */; };
+		F972A9EA206173830007D5F6 /* libopencv_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972588F206168C600410831 /* libopencv_objdetect.3.4.1.dylib */; };
+		F972A9EB206173830007D5F6 /* libopencv_optflow.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725895206168C600410831 /* libopencv_optflow.3.4.1.dylib */; };
+		F972A9EC206173830007D5F6 /* libopencv_optflow.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725895206168C600410831 /* libopencv_optflow.3.4.1.dylib */; };
+		F972A9ED206173830007D5F6 /* libopencv_optflow.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725895206168C600410831 /* libopencv_optflow.3.4.1.dylib */; };
+		F972A9EE206173830007D5F6 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589F206168C600410831 /* libopencv_phase_unwrapping.3.4.1.dylib */; };
+		F972A9EF206173830007D5F6 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589F206168C600410831 /* libopencv_phase_unwrapping.3.4.1.dylib */; };
+		F972A9F0206173830007D5F6 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589F206168C600410831 /* libopencv_phase_unwrapping.3.4.1.dylib */; };
+		F972A9F1206173830007D5F6 /* libopencv_photo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589E206168C600410831 /* libopencv_photo.3.4.1.dylib */; };
+		F972A9F2206173830007D5F6 /* libopencv_photo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589E206168C600410831 /* libopencv_photo.3.4.1.dylib */; };
+		F972A9F3206173830007D5F6 /* libopencv_photo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589E206168C600410831 /* libopencv_photo.3.4.1.dylib */; };
+		F972A9F4206173830007D5F6 /* libopencv_plot.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589C206168C600410831 /* libopencv_plot.3.4.1.dylib */; };
+		F972A9F5206173830007D5F6 /* libopencv_plot.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589C206168C600410831 /* libopencv_plot.3.4.1.dylib */; };
+		F972A9F6206173830007D5F6 /* libopencv_plot.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589C206168C600410831 /* libopencv_plot.3.4.1.dylib */; };
+		F972A9F7206173830007D5F6 /* libopencv_reg.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587E206168C600410831 /* libopencv_reg.3.4.1.dylib */; };
+		F972A9F8206173830007D5F6 /* libopencv_reg.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587E206168C600410831 /* libopencv_reg.3.4.1.dylib */; };
+		F972A9F9206173830007D5F6 /* libopencv_reg.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587E206168C600410831 /* libopencv_reg.3.4.1.dylib */; };
+		F972A9FA206173830007D5F6 /* libopencv_rgbd.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725891206168C600410831 /* libopencv_rgbd.3.4.1.dylib */; };
+		F972A9FB206173830007D5F6 /* libopencv_rgbd.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725891206168C600410831 /* libopencv_rgbd.3.4.1.dylib */; };
+		F972A9FC206173830007D5F6 /* libopencv_rgbd.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725891206168C600410831 /* libopencv_rgbd.3.4.1.dylib */; };
+		F972A9FD206173830007D5F6 /* libopencv_saliency.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725896206168C600410831 /* libopencv_saliency.3.4.1.dylib */; };
+		F972A9FE206173830007D5F6 /* libopencv_saliency.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725896206168C600410831 /* libopencv_saliency.3.4.1.dylib */; };
+		F972A9FF206173830007D5F6 /* libopencv_saliency.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725896206168C600410831 /* libopencv_saliency.3.4.1.dylib */; };
+		F972AA00206173830007D5F6 /* libopencv_shape.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589A206168C600410831 /* libopencv_shape.3.4.1.dylib */; };
+		F972AA01206173830007D5F6 /* libopencv_shape.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589A206168C600410831 /* libopencv_shape.3.4.1.dylib */; };
+		F972AA02206173830007D5F6 /* libopencv_shape.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972589A206168C600410831 /* libopencv_shape.3.4.1.dylib */; };
+		F972AA03206173830007D5F6 /* libopencv_stereo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725890206168C600410831 /* libopencv_stereo.3.4.1.dylib */; };
+		F972AA04206173830007D5F6 /* libopencv_stereo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725890206168C600410831 /* libopencv_stereo.3.4.1.dylib */; };
+		F972AA05206173830007D5F6 /* libopencv_stereo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725890206168C600410831 /* libopencv_stereo.3.4.1.dylib */; };
+		F972AA06206173830007D5F6 /* libopencv_stitching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587C206168C500410831 /* libopencv_stitching.3.4.1.dylib */; };
+		F972AA07206173830007D5F6 /* libopencv_stitching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587C206168C500410831 /* libopencv_stitching.3.4.1.dylib */; };
+		F972AA08206173830007D5F6 /* libopencv_stitching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587C206168C500410831 /* libopencv_stitching.3.4.1.dylib */; };
+		F972AA09206173830007D5F6 /* libopencv_structured_light.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725898206168C600410831 /* libopencv_structured_light.3.4.1.dylib */; };
+		F972AA0A206173830007D5F6 /* libopencv_structured_light.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725898206168C600410831 /* libopencv_structured_light.3.4.1.dylib */; };
+		F972AA0B206173830007D5F6 /* libopencv_structured_light.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725898206168C600410831 /* libopencv_structured_light.3.4.1.dylib */; };
+		F972AA0C206173830007D5F6 /* libopencv_superres.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725880206168C600410831 /* libopencv_superres.3.4.1.dylib */; };
+		F972AA0D206173830007D5F6 /* libopencv_superres.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725880206168C600410831 /* libopencv_superres.3.4.1.dylib */; };
+		F972AA0E206173830007D5F6 /* libopencv_superres.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725880206168C600410831 /* libopencv_superres.3.4.1.dylib */; };
+		F972AA0F206173830007D5F6 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587B206168C500410831 /* libopencv_surface_matching.3.4.1.dylib */; };
+		F972AA10206173830007D5F6 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587B206168C500410831 /* libopencv_surface_matching.3.4.1.dylib */; };
+		F972AA11206173830007D5F6 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587B206168C500410831 /* libopencv_surface_matching.3.4.1.dylib */; };
+		F972AA12206173830007D5F6 /* libopencv_text.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725877206168C500410831 /* libopencv_text.3.4.1.dylib */; };
+		F972AA13206173830007D5F6 /* libopencv_text.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725877206168C500410831 /* libopencv_text.3.4.1.dylib */; };
+		F972AA14206173830007D5F6 /* libopencv_text.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725877206168C500410831 /* libopencv_text.3.4.1.dylib */; };
+		F972AA15206173830007D5F6 /* libopencv_tracking.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587F206168C600410831 /* libopencv_tracking.3.4.1.dylib */; };
+		F972AA16206173830007D5F6 /* libopencv_tracking.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587F206168C600410831 /* libopencv_tracking.3.4.1.dylib */; };
+		F972AA17206173830007D5F6 /* libopencv_tracking.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972587F206168C600410831 /* libopencv_tracking.3.4.1.dylib */; };
+		F972AA18206173830007D5F6 /* libopencv_video.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725892206168C600410831 /* libopencv_video.3.4.1.dylib */; };
+		F972AA19206173830007D5F6 /* libopencv_video.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725892206168C600410831 /* libopencv_video.3.4.1.dylib */; };
+		F972AA1A206173830007D5F6 /* libopencv_video.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725892206168C600410831 /* libopencv_video.3.4.1.dylib */; };
+		F972AA1B206173830007D5F6 /* libopencv_videoio.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725897206168C600410831 /* libopencv_videoio.3.4.1.dylib */; };
+		F972AA1C206173830007D5F6 /* libopencv_videoio.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725897206168C600410831 /* libopencv_videoio.3.4.1.dylib */; };
+		F972AA1D206173830007D5F6 /* libopencv_videoio.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725897206168C600410831 /* libopencv_videoio.3.4.1.dylib */; };
+		F972AA1E206173830007D5F6 /* libopencv_videostab.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725878206168C500410831 /* libopencv_videostab.3.4.1.dylib */; };
+		F972AA1F206173830007D5F6 /* libopencv_videostab.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725878206168C500410831 /* libopencv_videostab.3.4.1.dylib */; };
+		F972AA20206173830007D5F6 /* libopencv_videostab.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725878206168C500410831 /* libopencv_videostab.3.4.1.dylib */; };
+		F972AA21206173830007D5F6 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725893206168C600410831 /* libopencv_xfeatures2d.3.4.1.dylib */; };
+		F972AA22206173830007D5F6 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725893206168C600410831 /* libopencv_xfeatures2d.3.4.1.dylib */; };
+		F972AA23206173830007D5F6 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9725893206168C600410831 /* libopencv_xfeatures2d.3.4.1.dylib */; };
+		F972AA27206173830007D5F6 /* libopencv_xobjdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972AA24206173830007D5F6 /* libopencv_xobjdetect.3.4.1.dylib */; };
+		F972AA28206173830007D5F6 /* libopencv_xphoto.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972AA25206173830007D5F6 /* libopencv_xphoto.3.4.1.dylib */; };
+		F972AA29206173830007D5F6 /* libopencv_ximgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F972AA26206173830007D5F6 /* libopencv_ximgproc.3.4.1.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F9456A4E20612F3C00E28067 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F918B7F52061646000C8C6A1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F918B7F62061646000C8C6A1 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		F918B7F72061646000C8C6A1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F918B7F92061646100C8C6A1 /* drawPointMovingTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawPointMovingTest.cpp; sourceTree = "<group>"; };
+		F918B7FB2061646100C8C6A1 /* defs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = defs.hpp; sourceTree = "<group>"; };
+		F9456A5020612F3C00E28067 /* DynModeling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DynModeling; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9725877206168C500410831 /* libopencv_text.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_text.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_text.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725878206168C500410831 /* libopencv_videostab.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videostab.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_videostab.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725879206168C500410831 /* libopencv_calib3d.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_calib3d.3.4.1.dylib; sourceTree = "<group>"; };
+		F972587A206168C500410831 /* libopencv_core.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_core.3.4.1.dylib; sourceTree = "<group>"; };
+		F972587B206168C500410831 /* libopencv_surface_matching.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_surface_matching.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_surface_matching.3.4.1.dylib; sourceTree = "<group>"; };
+		F972587C206168C500410831 /* libopencv_stitching.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_stitching.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_stitching.3.4.1.dylib; sourceTree = "<group>"; };
+		F972587D206168C600410831 /* libopencv_ccalib.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_ccalib.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_ccalib.3.4.1.dylib; sourceTree = "<group>"; };
+		F972587E206168C600410831 /* libopencv_reg.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_reg.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_reg.3.4.1.dylib; sourceTree = "<group>"; };
+		F972587F206168C600410831 /* libopencv_tracking.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_tracking.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_tracking.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725880206168C600410831 /* libopencv_superres.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_superres.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_superres.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725881206168C600410831 /* libopencv_bgsegm.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_bgsegm.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_bgsegm.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725882206168C600410831 /* libopencv_hfs.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_hfs.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_hfs.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725883206168C600410831 /* libopencv_line_descriptor.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_line_descriptor.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_line_descriptor.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725884206168C600410831 /* libopencv_dnn.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_dnn.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_dnn.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725885206168C600410831 /* libopencv_bioinspired.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_bioinspired.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_bioinspired.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725886206168C600410831 /* libopencv_face.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_face.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_face.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725887206168C600410831 /* libopencv_highgui.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_highgui.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725888206168C600410831 /* libopencv_aruco.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_aruco.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_aruco.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725889206168C600410831 /* libopencv_dnn_objdetect.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_dnn_objdetect.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_dnn_objdetect.3.4.1.dylib; sourceTree = "<group>"; };
+		F972588A206168C600410831 /* libopencv_dpm.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_dpm.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_dpm.3.4.1.dylib; sourceTree = "<group>"; };
+		F972588B206168C600410831 /* libopencv_flann.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_flann.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_flann.3.4.1.dylib; sourceTree = "<group>"; };
+		F972588C206168C600410831 /* libopencv_img_hash.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_img_hash.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_img_hash.3.4.1.dylib; sourceTree = "<group>"; };
+		F972588D206168C600410831 /* libopencv_imgcodecs.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgcodecs.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_imgcodecs.3.4.1.dylib; sourceTree = "<group>"; };
+		F972588E206168C600410831 /* libopencv_features2d.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_features2d.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_features2d.3.4.1.dylib; sourceTree = "<group>"; };
+		F972588F206168C600410831 /* libopencv_objdetect.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_objdetect.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_objdetect.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725890206168C600410831 /* libopencv_stereo.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_stereo.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_stereo.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725891206168C600410831 /* libopencv_rgbd.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_rgbd.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_rgbd.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725892206168C600410831 /* libopencv_video.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_video.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_video.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725893206168C600410831 /* libopencv_xfeatures2d.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_xfeatures2d.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_xfeatures2d.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725894206168C600410831 /* libopencv_fuzzy.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_fuzzy.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_fuzzy.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725895206168C600410831 /* libopencv_optflow.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_optflow.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_optflow.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725896206168C600410831 /* libopencv_saliency.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_saliency.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_saliency.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725897206168C600410831 /* libopencv_videoio.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videoio.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_videoio.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725898206168C600410831 /* libopencv_structured_light.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_structured_light.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_structured_light.3.4.1.dylib; sourceTree = "<group>"; };
+		F9725899206168C600410831 /* libopencv_datasets.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_datasets.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_datasets.3.4.1.dylib; sourceTree = "<group>"; };
+		F972589A206168C600410831 /* libopencv_shape.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_shape.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_shape.3.4.1.dylib; sourceTree = "<group>"; };
+		F972589B206168C600410831 /* libopencv_ml.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_ml.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_ml.3.4.1.dylib; sourceTree = "<group>"; };
+		F972589C206168C600410831 /* libopencv_plot.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_plot.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_plot.3.4.1.dylib; sourceTree = "<group>"; };
+		F972589D206168C600410831 /* libopencv_imgproc.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_imgproc.3.4.1.dylib; sourceTree = "<group>"; };
+		F972589E206168C600410831 /* libopencv_photo.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_photo.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_photo.3.4.1.dylib; sourceTree = "<group>"; };
+		F972589F206168C600410831 /* libopencv_phase_unwrapping.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_phase_unwrapping.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_phase_unwrapping.3.4.1.dylib; sourceTree = "<group>"; };
+		F97258CB20616C4600410831 /* CholmodSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CholmodSupport.h; sourceTree = "<group>"; };
+		F97258CD20616C4600410831 /* blas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blas.h; sourceTree = "<group>"; };
+		F97258CE20616C4600410831 /* lapacke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lapacke.h; sourceTree = "<group>"; };
+		F97258CF20616C4600410831 /* Kernel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kernel.h; sourceTree = "<group>"; };
+		F97258D020616C4600410831 /* RealSvd2x2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealSvd2x2.h; sourceTree = "<group>"; };
+		F97258D120616C4600410831 /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		F97258D220616C4600410831 /* lapack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lapack.h; sourceTree = "<group>"; };
+		F97258D320616C4600410831 /* lapacke_mangling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lapacke_mangling.h; sourceTree = "<group>"; };
+		F97258D520616C4600410831 /* Reverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reverse.h; sourceTree = "<group>"; };
+		F97258D620616C4600410831 /* ConditionEstimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConditionEstimator.h; sourceTree = "<group>"; };
+		F97258D720616C4600410831 /* PermutationMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermutationMatrix.h; sourceTree = "<group>"; };
+		F97258D820616C4600410831 /* Assign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assign.h; sourceTree = "<group>"; };
+		F97258D920616C4600410831 /* MathFunctionsImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathFunctionsImpl.h; sourceTree = "<group>"; };
+		F97258DA20616C4600410831 /* CwiseUnaryOp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CwiseUnaryOp.h; sourceTree = "<group>"; };
+		F97258DB20616C4600410831 /* DiagonalMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagonalMatrix.h; sourceTree = "<group>"; };
+		F97258DC20616C4600410831 /* VectorBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorBlock.h; sourceTree = "<group>"; };
+		F97258DD20616C4600410831 /* ReturnByValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReturnByValue.h; sourceTree = "<group>"; };
+		F97258DE20616C4600410831 /* Solve.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solve.h; sourceTree = "<group>"; };
+		F97258E020616C4600410831 /* SelfadjointRank2Update.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfadjointRank2Update.h; sourceTree = "<group>"; };
+		F97258E120616C4600410831 /* GeneralBlockPanelKernel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralBlockPanelKernel.h; sourceTree = "<group>"; };
+		F97258E220616C4600410831 /* GeneralMatrixMatrixTriangular_BLAS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMatrixMatrixTriangular_BLAS.h; sourceTree = "<group>"; };
+		F97258E320616C4600410831 /* GeneralMatrixMatrix_BLAS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMatrixMatrix_BLAS.h; sourceTree = "<group>"; };
+		F97258E420616C4600410831 /* GeneralMatrixVector_BLAS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMatrixVector_BLAS.h; sourceTree = "<group>"; };
+		F97258E520616C4600410831 /* GeneralMatrixMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMatrixMatrix.h; sourceTree = "<group>"; };
+		F97258E620616C4600410831 /* Parallelizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parallelizer.h; sourceTree = "<group>"; };
+		F97258E720616C4600410831 /* GeneralMatrixMatrixTriangular.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMatrixMatrixTriangular.h; sourceTree = "<group>"; };
+		F97258E820616C4600410831 /* TriangularMatrixVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangularMatrixVector.h; sourceTree = "<group>"; };
+		F97258E920616C4600410831 /* SelfadjointMatrixVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfadjointMatrixVector.h; sourceTree = "<group>"; };
+		F97258EA20616C4600410831 /* TriangularSolverMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangularSolverMatrix.h; sourceTree = "<group>"; };
+		F97258EB20616C4600410831 /* GeneralMatrixVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralMatrixVector.h; sourceTree = "<group>"; };
+		F97258EC20616C4600410831 /* SelfadjointProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfadjointProduct.h; sourceTree = "<group>"; };
+		F97258ED20616C4600410831 /* TriangularMatrixVector_BLAS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangularMatrixVector_BLAS.h; sourceTree = "<group>"; };
+		F97258EE20616C4600410831 /* TriangularMatrixMatrix_BLAS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangularMatrixMatrix_BLAS.h; sourceTree = "<group>"; };
+		F97258EF20616C4600410831 /* SelfadjointMatrixVector_BLAS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfadjointMatrixVector_BLAS.h; sourceTree = "<group>"; };
+		F97258F020616C4600410831 /* TriangularSolverMatrix_BLAS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangularSolverMatrix_BLAS.h; sourceTree = "<group>"; };
+		F97258F120616C4600410831 /* SelfadjointMatrixMatrix_BLAS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfadjointMatrixMatrix_BLAS.h; sourceTree = "<group>"; };
+		F97258F220616C4600410831 /* TriangularSolverVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangularSolverVector.h; sourceTree = "<group>"; };
+		F97258F320616C4600410831 /* TriangularMatrixMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangularMatrixMatrix.h; sourceTree = "<group>"; };
+		F97258F420616C4600410831 /* SelfadjointMatrixMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfadjointMatrixMatrix.h; sourceTree = "<group>"; };
+		F97258F520616C4600410831 /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		F97258F720616C4600410831 /* NonMPL2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NonMPL2.h; sourceTree = "<group>"; };
+		F97258F820616C4600410831 /* BlasUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlasUtil.h; sourceTree = "<group>"; };
+		F97258F920616C4600410831 /* StaticAssert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticAssert.h; sourceTree = "<group>"; };
+		F97258FA20616C4600410831 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F97258FB20616C4600410831 /* XprHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XprHelper.h; sourceTree = "<group>"; };
+		F97258FC20616C4600410831 /* MKL_support.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKL_support.h; sourceTree = "<group>"; };
+		F97258FD20616C4600410831 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		F97258FE20616C4600410831 /* DisableStupidWarnings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisableStupidWarnings.h; sourceTree = "<group>"; };
+		F97258FF20616C4600410831 /* ForwardDeclarations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForwardDeclarations.h; sourceTree = "<group>"; };
+		F972590020616C4600410831 /* Memory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Memory.h; sourceTree = "<group>"; };
+		F972590120616C4600410831 /* Meta.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Meta.h; sourceTree = "<group>"; };
+		F972590220616C4600410831 /* ReenableStupidWarnings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReenableStupidWarnings.h; sourceTree = "<group>"; };
+		F972590320616C4600410831 /* MatrixBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixBase.h; sourceTree = "<group>"; };
+		F972590420616C4600410831 /* Stride.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stride.h; sourceTree = "<group>"; };
+		F972590520616C4600410831 /* Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		F972590620616C4600410831 /* ForceAlignedAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForceAlignedAccess.h; sourceTree = "<group>"; };
+		F972590720616C4600410831 /* MathFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathFunctions.h; sourceTree = "<group>"; };
+		F972590920616C4600410831 /* UnaryFunctors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnaryFunctors.h; sourceTree = "<group>"; };
+		F972590A20616C4600410831 /* TernaryFunctors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TernaryFunctors.h; sourceTree = "<group>"; };
+		F972590B20616C4600410831 /* AssignmentFunctors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssignmentFunctors.h; sourceTree = "<group>"; };
+		F972590C20616C4600410831 /* BinaryFunctors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryFunctors.h; sourceTree = "<group>"; };
+		F972590D20616C4600410831 /* StlFunctors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StlFunctors.h; sourceTree = "<group>"; };
+		F972590E20616C4600410831 /* NullaryFunctors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NullaryFunctors.h; sourceTree = "<group>"; };
+		F972590F20616C4600410831 /* SelfCwiseBinaryOp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfCwiseBinaryOp.h; sourceTree = "<group>"; };
+		F972591020616C4600410831 /* BandMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BandMatrix.h; sourceTree = "<group>"; };
+		F972591120616C4600410831 /* Inverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inverse.h; sourceTree = "<group>"; };
+		F972591220616C4600410831 /* Assign_MKL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assign_MKL.h; sourceTree = "<group>"; };
+		F972591320616C4600410831 /* Swap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swap.h; sourceTree = "<group>"; };
+		F972591420616C4600410831 /* ProductEvaluators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductEvaluators.h; sourceTree = "<group>"; };
+		F972591520616C4600410831 /* MapBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapBase.h; sourceTree = "<group>"; };
+		F972591620616C4600410831 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		F972591720616C4600410831 /* EigenBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EigenBase.h; sourceTree = "<group>"; };
+		F972591820616C4600410831 /* StableNorm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StableNorm.h; sourceTree = "<group>"; };
+		F972591920616C4600410831 /* GenericPacketMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericPacketMath.h; sourceTree = "<group>"; };
+		F972591A20616C4600410831 /* CwiseBinaryOp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CwiseBinaryOp.h; sourceTree = "<group>"; };
+		F972591B20616C4600410831 /* Visitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Visitor.h; sourceTree = "<group>"; };
+		F972591C20616C4600410831 /* DenseStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenseStorage.h; sourceTree = "<group>"; };
+		F972591D20616C4600410831 /* DiagonalProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagonalProduct.h; sourceTree = "<group>"; };
+		F972591E20616C4600410831 /* CwiseUnaryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CwiseUnaryView.h; sourceTree = "<group>"; };
+		F972591F20616C4600410831 /* NoAlias.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoAlias.h; sourceTree = "<group>"; };
+		F972592020616C4600410831 /* DenseCoeffsBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenseCoeffsBase.h; sourceTree = "<group>"; };
+		F972592120616C4600410831 /* Fuzzy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fuzzy.h; sourceTree = "<group>"; };
+		F972592220616C4600410831 /* TriangularMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangularMatrix.h; sourceTree = "<group>"; };
+		F972592320616C4600410831 /* IO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IO.h; sourceTree = "<group>"; };
+		F972592620616C4600410831 /* PacketMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketMath.h; sourceTree = "<group>"; };
+		F972592720616C4600410831 /* MathFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathFunctions.h; sourceTree = "<group>"; };
+		F972592820616C4600410831 /* TypeCasting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeCasting.h; sourceTree = "<group>"; };
+		F972592920616C4600410831 /* Complex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		F972592B20616C4600410831 /* Half.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Half.h; sourceTree = "<group>"; };
+		F972592C20616C4600410831 /* PacketMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketMath.h; sourceTree = "<group>"; };
+		F972592D20616C4600410831 /* MathFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathFunctions.h; sourceTree = "<group>"; };
+		F972592E20616C4600410831 /* TypeCasting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeCasting.h; sourceTree = "<group>"; };
+		F972592F20616C4600410831 /* PacketMathHalf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketMathHalf.h; sourceTree = "<group>"; };
+		F972593020616C4600410831 /* Complex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		F972593220616C4600410831 /* PacketMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketMath.h; sourceTree = "<group>"; };
+		F972593320616C4600410831 /* MathFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathFunctions.h; sourceTree = "<group>"; };
+		F972593420616C4600410831 /* Complex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		F972593620616C4600410831 /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		F972593820616C4600410831 /* PacketMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketMath.h; sourceTree = "<group>"; };
+		F972593920616C4600410831 /* MathFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathFunctions.h; sourceTree = "<group>"; };
+		F972593B20616C4600410831 /* PacketMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketMath.h; sourceTree = "<group>"; };
+		F972593C20616C4600410831 /* MathFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathFunctions.h; sourceTree = "<group>"; };
+		F972593D20616C4600410831 /* TypeCasting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeCasting.h; sourceTree = "<group>"; };
+		F972593E20616C4600410831 /* Complex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		F972594020616C4600410831 /* PacketMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketMath.h; sourceTree = "<group>"; };
+		F972594120616C4600410831 /* MathFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathFunctions.h; sourceTree = "<group>"; };
+		F972594220616C4600410831 /* Complex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		F972594420616C4600410831 /* PacketMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketMath.h; sourceTree = "<group>"; };
+		F972594520616C4600410831 /* MathFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathFunctions.h; sourceTree = "<group>"; };
+		F972594620616C4600410831 /* Complex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		F972594720616C4600410831 /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		F972594820616C4600410831 /* SolverBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolverBase.h; sourceTree = "<group>"; };
+		F972594920616C4600410831 /* AssignEvaluator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssignEvaluator.h; sourceTree = "<group>"; };
+		F972594A20616C4600410831 /* Replicate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Replicate.h; sourceTree = "<group>"; };
+		F972594B20616C4600410831 /* CoreIterators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreIterators.h; sourceTree = "<group>"; };
+		F972594C20616C4600410831 /* ArrayBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayBase.h; sourceTree = "<group>"; };
+		F972594D20616C4600410831 /* Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		F972594E20616C4600410831 /* Dot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dot.h; sourceTree = "<group>"; };
+		F972594F20616C4600410831 /* PlainObjectBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlainObjectBase.h; sourceTree = "<group>"; };
+		F972595020616C4600410831 /* SelfAdjointView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfAdjointView.h; sourceTree = "<group>"; };
+		F972595120616C4600410831 /* GeneralProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralProduct.h; sourceTree = "<group>"; };
+		F972595220616C4600410831 /* SolveTriangular.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolveTriangular.h; sourceTree = "<group>"; };
+		F972595320616C4600410831 /* CoreEvaluators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreEvaluators.h; sourceTree = "<group>"; };
+		F972595420616C4600410831 /* CwiseNullaryOp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CwiseNullaryOp.h; sourceTree = "<group>"; };
+		F972595520616C4600410831 /* VectorwiseOp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorwiseOp.h; sourceTree = "<group>"; };
+		F972595620616C4600410831 /* ArrayWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayWrapper.h; sourceTree = "<group>"; };
+		F972595720616C4600410831 /* BooleanRedux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooleanRedux.h; sourceTree = "<group>"; };
+		F972595820616C4600410831 /* Transpositions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transpositions.h; sourceTree = "<group>"; };
+		F972595920616C4600410831 /* NestByValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NestByValue.h; sourceTree = "<group>"; };
+		F972595A20616C4600410831 /* Ref.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ref.h; sourceTree = "<group>"; };
+		F972595B20616C4600410831 /* Transpose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transpose.h; sourceTree = "<group>"; };
+		F972595C20616C4600410831 /* Redux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Redux.h; sourceTree = "<group>"; };
+		F972595D20616C4600410831 /* NumTraits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumTraits.h; sourceTree = "<group>"; };
+		F972595E20616C4600410831 /* CommaInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommaInitializer.h; sourceTree = "<group>"; };
+		F972595F20616C4600410831 /* GlobalFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalFunctions.h; sourceTree = "<group>"; };
+		F972596020616C4600410831 /* Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
+		F972596120616C4600410831 /* Diagonal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Diagonal.h; sourceTree = "<group>"; };
+		F972596220616C4600410831 /* DenseBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenseBase.h; sourceTree = "<group>"; };
+		F972596320616C4600410831 /* CwiseTernaryOp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CwiseTernaryOp.h; sourceTree = "<group>"; };
+		F972596420616C4600410831 /* Select.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Select.h; sourceTree = "<group>"; };
+		F972596620616C4600410831 /* SparseLU_Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_Utils.h; sourceTree = "<group>"; };
+		F972596720616C4600410831 /* SparseLU_kernel_bmod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_kernel_bmod.h; sourceTree = "<group>"; };
+		F972596820616C4600410831 /* SparseLU_column_bmod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_column_bmod.h; sourceTree = "<group>"; };
+		F972596920616C4600410831 /* SparseLU_gemm_kernel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_gemm_kernel.h; sourceTree = "<group>"; };
+		F972596A20616C4600410831 /* SparseLU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU.h; sourceTree = "<group>"; };
+		F972596B20616C4600410831 /* SparseLU_column_dfs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_column_dfs.h; sourceTree = "<group>"; };
+		F972596C20616C4600410831 /* SparseLU_panel_dfs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_panel_dfs.h; sourceTree = "<group>"; };
+		F972596D20616C4600410831 /* SparseLU_relax_snode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_relax_snode.h; sourceTree = "<group>"; };
+		F972596E20616C4600410831 /* SparseLU_heap_relax_snode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_heap_relax_snode.h; sourceTree = "<group>"; };
+		F972596F20616C4600410831 /* SparseLU_panel_bmod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_panel_bmod.h; sourceTree = "<group>"; };
+		F972597020616C4600410831 /* SparseLU_Structs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_Structs.h; sourceTree = "<group>"; };
+		F972597120616C4600410831 /* SparseLU_pruneL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_pruneL.h; sourceTree = "<group>"; };
+		F972597220616C4600410831 /* SparseLU_copy_to_ucol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_copy_to_ucol.h; sourceTree = "<group>"; };
+		F972597320616C4600410831 /* SparseLU_Memory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_Memory.h; sourceTree = "<group>"; };
+		F972597420616C4600410831 /* SparseLU_pivotL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_pivotL.h; sourceTree = "<group>"; };
+		F972597520616C4600410831 /* SparseLUImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLUImpl.h; sourceTree = "<group>"; };
+		F972597620616C4600410831 /* SparseLU_SupernodalMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseLU_SupernodalMatrix.h; sourceTree = "<group>"; };
+		F972597820616C4600410831 /* Ordering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ordering.h; sourceTree = "<group>"; };
+		F972597920616C4600410831 /* Eigen_Colamd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Eigen_Colamd.h; sourceTree = "<group>"; };
+		F972597A20616C4600410831 /* Amd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Amd.h; sourceTree = "<group>"; };
+		F972597C20616C4600410831 /* ArrayCwiseUnaryOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayCwiseUnaryOps.h; sourceTree = "<group>"; };
+		F972597D20616C4600410831 /* CommonCwiseUnaryOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonCwiseUnaryOps.h; sourceTree = "<group>"; };
+		F972597E20616C4600410831 /* BlockMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockMethods.h; sourceTree = "<group>"; };
+		F972597F20616C4600410831 /* ArrayCwiseBinaryOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayCwiseBinaryOps.h; sourceTree = "<group>"; };
+		F972598020616C4600410831 /* MatrixCwiseBinaryOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixCwiseBinaryOps.h; sourceTree = "<group>"; };
+		F972598120616C4600410831 /* CommonCwiseBinaryOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonCwiseBinaryOps.h; sourceTree = "<group>"; };
+		F972598220616C4600410831 /* MatrixCwiseUnaryOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixCwiseUnaryOps.h; sourceTree = "<group>"; };
+		F972598420616C4600410831 /* HouseholderSequence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseholderSequence.h; sourceTree = "<group>"; };
+		F972598520616C4600410831 /* Householder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Householder.h; sourceTree = "<group>"; };
+		F972598620616C4600410831 /* BlockHouseholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockHouseholder.h; sourceTree = "<group>"; };
+		F972598820616C4600410831 /* PardisoSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PardisoSupport.h; sourceTree = "<group>"; };
+		F972598A20616C4600410831 /* SparseSelfAdjointView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseSelfAdjointView.h; sourceTree = "<group>"; };
+		F972598B20616C4600410831 /* SparseMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseMatrix.h; sourceTree = "<group>"; };
+		F972598C20616C4600410831 /* CompressedStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompressedStorage.h; sourceTree = "<group>"; };
+		F972598D20616C4600410831 /* SparseCwiseBinaryOp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseCwiseBinaryOp.h; sourceTree = "<group>"; };
+		F972598E20616C4600410831 /* SparseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseView.h; sourceTree = "<group>"; };
+		F972598F20616C4600410831 /* SparseColEtree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseColEtree.h; sourceTree = "<group>"; };
+		F972599020616C4600410831 /* SparseMatrixBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseMatrixBase.h; sourceTree = "<group>"; };
+		F972599120616C4600410831 /* SparseDiagonalProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseDiagonalProduct.h; sourceTree = "<group>"; };
+		F972599220616C4600410831 /* SparseTriangularView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseTriangularView.h; sourceTree = "<group>"; };
+		F972599320616C4600410831 /* SparseAssign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseAssign.h; sourceTree = "<group>"; };
+		F972599420616C4600410831 /* SparsePermutation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparsePermutation.h; sourceTree = "<group>"; };
+		F972599520616C4600410831 /* SparseCwiseUnaryOp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseCwiseUnaryOp.h; sourceTree = "<group>"; };
+		F972599620616C4600410831 /* SparseMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseMap.h; sourceTree = "<group>"; };
+		F972599720616C4600410831 /* SparseDenseProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseDenseProduct.h; sourceTree = "<group>"; };
+		F972599820616C4600410831 /* SparseRef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseRef.h; sourceTree = "<group>"; };
+		F972599920616C4600410831 /* SparseFuzzy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseFuzzy.h; sourceTree = "<group>"; };
+		F972599A20616C4600410831 /* MappedSparseMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MappedSparseMatrix.h; sourceTree = "<group>"; };
+		F972599B20616C4600410831 /* SparseSparseProductWithPruning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseSparseProductWithPruning.h; sourceTree = "<group>"; };
+		F972599C20616C4600410831 /* SparseSolverBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseSolverBase.h; sourceTree = "<group>"; };
+		F972599D20616C4600410831 /* SparseBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseBlock.h; sourceTree = "<group>"; };
+		F972599E20616C4600410831 /* TriangularSolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangularSolver.h; sourceTree = "<group>"; };
+		F972599F20616C4600410831 /* SparseVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseVector.h; sourceTree = "<group>"; };
+		F97259A020616C4600410831 /* SparseCompressedBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseCompressedBase.h; sourceTree = "<group>"; };
+		F97259A120616C4600410831 /* SparseTranspose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseTranspose.h; sourceTree = "<group>"; };
+		F97259A220616C4600410831 /* SparseProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseProduct.h; sourceTree = "<group>"; };
+		F97259A320616C4600410831 /* AmbiVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmbiVector.h; sourceTree = "<group>"; };
+		F97259A420616C4600410831 /* SparseRedux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseRedux.h; sourceTree = "<group>"; };
+		F97259A520616C4600410831 /* ConservativeSparseSparseProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConservativeSparseSparseProduct.h; sourceTree = "<group>"; };
+		F97259A620616C4600410831 /* SparseUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseUtil.h; sourceTree = "<group>"; };
+		F97259A720616C4600410831 /* SparseDot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseDot.h; sourceTree = "<group>"; };
+		F97259A920616C4600410831 /* Jacobi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jacobi.h; sourceTree = "<group>"; };
+		F97259AB20616C4600410831 /* SuiteSparseQRSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuiteSparseQRSupport.h; sourceTree = "<group>"; };
+		F97259AD20616C4600410831 /* FullPivHouseholderQR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullPivHouseholderQR.h; sourceTree = "<group>"; };
+		F97259AE20616C4600410831 /* HouseholderQR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseholderQR.h; sourceTree = "<group>"; };
+		F97259AF20616C4600410831 /* CompleteOrthogonalDecomposition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompleteOrthogonalDecomposition.h; sourceTree = "<group>"; };
+		F97259B020616C4600410831 /* ColPivHouseholderQR_LAPACKE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColPivHouseholderQR_LAPACKE.h; sourceTree = "<group>"; };
+		F97259B120616C4600410831 /* ColPivHouseholderQR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColPivHouseholderQR.h; sourceTree = "<group>"; };
+		F97259B220616C4600410831 /* HouseholderQR_LAPACKE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseholderQR_LAPACKE.h; sourceTree = "<group>"; };
+		F97259B420616C4600410831 /* SparseQR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseQR.h; sourceTree = "<group>"; };
+		F97259B620616C4600410831 /* JacobiSVD_LAPACKE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JacobiSVD_LAPACKE.h; sourceTree = "<group>"; };
+		F97259B720616C4600410831 /* SVDBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVDBase.h; sourceTree = "<group>"; };
+		F97259B820616C4600410831 /* JacobiSVD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JacobiSVD.h; sourceTree = "<group>"; };
+		F97259B920616C4600410831 /* BDCSVD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDCSVD.h; sourceTree = "<group>"; };
+		F97259BA20616C4600410831 /* UpperBidiagonalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpperBidiagonalization.h; sourceTree = "<group>"; };
+		F97259BC20616C4600410831 /* LLT_LAPACKE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLT_LAPACKE.h; sourceTree = "<group>"; };
+		F97259BD20616C4600410831 /* LDLT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDLT.h; sourceTree = "<group>"; };
+		F97259BE20616C4600410831 /* LLT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLT.h; sourceTree = "<group>"; };
+		F97259C020616C4600410831 /* UmfPackSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UmfPackSupport.h; sourceTree = "<group>"; };
+		F97259C220616C4600410831 /* BasicPreconditioners.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicPreconditioners.h; sourceTree = "<group>"; };
+		F97259C320616C4600410831 /* IncompleteCholesky.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncompleteCholesky.h; sourceTree = "<group>"; };
+		F97259C420616C4600410831 /* SolveWithGuess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolveWithGuess.h; sourceTree = "<group>"; };
+		F97259C520616C4600410831 /* IncompleteLUT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncompleteLUT.h; sourceTree = "<group>"; };
+		F97259C620616C4600410831 /* LeastSquareConjugateGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeastSquareConjugateGradient.h; sourceTree = "<group>"; };
+		F97259C720616C4600410831 /* ConjugateGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConjugateGradient.h; sourceTree = "<group>"; };
+		F97259C820616C4600410831 /* BiCGSTAB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BiCGSTAB.h; sourceTree = "<group>"; };
+		F97259C920616C4600410831 /* IterativeSolverBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IterativeSolverBase.h; sourceTree = "<group>"; };
+		F97259CB20616C4600410831 /* PartialPivLU_LAPACKE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartialPivLU_LAPACKE.h; sourceTree = "<group>"; };
+		F97259CC20616C4600410831 /* InverseImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InverseImpl.h; sourceTree = "<group>"; };
+		F97259CD20616C4600410831 /* Determinant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Determinant.h; sourceTree = "<group>"; };
+		F97259CF20616C4600410831 /* Inverse_SSE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inverse_SSE.h; sourceTree = "<group>"; };
+		F97259D020616C4600410831 /* PartialPivLU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartialPivLU.h; sourceTree = "<group>"; };
+		F97259D120616C4600410831 /* FullPivLU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullPivLU.h; sourceTree = "<group>"; };
+		F97259D320616C4600410831 /* AngleAxis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AngleAxis.h; sourceTree = "<group>"; };
+		F97259D420616C4600410831 /* RotationBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotationBase.h; sourceTree = "<group>"; };
+		F97259D520616C4600410831 /* EulerAngles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EulerAngles.h; sourceTree = "<group>"; };
+		F97259D620616C4600410831 /* Hyperplane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hyperplane.h; sourceTree = "<group>"; };
+		F97259D720616C4600410831 /* Homogeneous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Homogeneous.h; sourceTree = "<group>"; };
+		F97259D820616C4600410831 /* AlignedBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlignedBox.h; sourceTree = "<group>"; };
+		F97259D920616C4600410831 /* Quaternion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quaternion.h; sourceTree = "<group>"; };
+		F97259DA20616C4600410831 /* Umeyama.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Umeyama.h; sourceTree = "<group>"; };
+		F97259DB20616C4600410831 /* Translation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Translation.h; sourceTree = "<group>"; };
+		F97259DC20616C4600410831 /* Scaling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scaling.h; sourceTree = "<group>"; };
+		F97259DD20616C4600410831 /* OrthoMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrthoMethods.h; sourceTree = "<group>"; };
+		F97259DE20616C4600410831 /* Rotation2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rotation2D.h; sourceTree = "<group>"; };
+		F97259E020616C4600410831 /* Geometry_SSE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geometry_SSE.h; sourceTree = "<group>"; };
+		F97259E120616C4600410831 /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transform.h; sourceTree = "<group>"; };
+		F97259E220616C4600410831 /* ParametrizedLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParametrizedLine.h; sourceTree = "<group>"; };
+		F97259E420616C4600410831 /* SuperLUSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperLUSupport.h; sourceTree = "<group>"; };
+		F97259E620616C4600410831 /* MetisSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetisSupport.h; sourceTree = "<group>"; };
+		F97259E820616C4600410831 /* StdList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StdList.h; sourceTree = "<group>"; };
+		F97259E920616C4600410831 /* StdDeque.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StdDeque.h; sourceTree = "<group>"; };
+		F97259EA20616C4600410831 /* details.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = details.h; sourceTree = "<group>"; };
+		F97259EB20616C4600410831 /* StdVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StdVector.h; sourceTree = "<group>"; };
+		F97259ED20616C4600410831 /* SimplicialCholesky_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplicialCholesky_impl.h; sourceTree = "<group>"; };
+		F97259EE20616C4600410831 /* SimplicialCholesky.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplicialCholesky.h; sourceTree = "<group>"; };
+		F97259F020616C4600410831 /* GeneralizedEigenSolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralizedEigenSolver.h; sourceTree = "<group>"; };
+		F97259F120616C4600410831 /* EigenSolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EigenSolver.h; sourceTree = "<group>"; };
+		F97259F220616C4600410831 /* RealSchur_LAPACKE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealSchur_LAPACKE.h; sourceTree = "<group>"; };
+		F97259F320616C4600410831 /* RealSchur.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealSchur.h; sourceTree = "<group>"; };
+		F97259F420616C4600410831 /* ComplexSchur_LAPACKE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplexSchur_LAPACKE.h; sourceTree = "<group>"; };
+		F97259F520616C4600410831 /* Tridiagonalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tridiagonalization.h; sourceTree = "<group>"; };
+		F97259F620616C4600410831 /* HessenbergDecomposition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HessenbergDecomposition.h; sourceTree = "<group>"; };
+		F97259F720616C4600410831 /* ComplexEigenSolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplexEigenSolver.h; sourceTree = "<group>"; };
+		F97259F820616C4600410831 /* GeneralizedSelfAdjointEigenSolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralizedSelfAdjointEigenSolver.h; sourceTree = "<group>"; };
+		F97259F920616C4600410831 /* SelfAdjointEigenSolver_LAPACKE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfAdjointEigenSolver_LAPACKE.h; sourceTree = "<group>"; };
+		F97259FA20616C4600410831 /* ComplexSchur.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplexSchur.h; sourceTree = "<group>"; };
+		F97259FB20616C4600410831 /* SelfAdjointEigenSolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfAdjointEigenSolver.h; sourceTree = "<group>"; };
+		F97259FC20616C4600410831 /* RealQZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealQZ.h; sourceTree = "<group>"; };
+		F97259FD20616C4600410831 /* MatrixBaseEigenvalues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixBaseEigenvalues.h; sourceTree = "<group>"; };
+		F97259FF20616C4600410831 /* PaStiXSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaStiXSupport.h; sourceTree = "<group>"; };
+		F9725A0020616C8C00410831 /* Core */ = {isa = PBXFileReference; lastKnownFileType = text; name = Core; path = ../../../../usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/Core; sourceTree = "<group>"; };
+		F972AA24206173830007D5F6 /* libopencv_xobjdetect.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_xobjdetect.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_xobjdetect.3.4.1.dylib; sourceTree = "<group>"; };
+		F972AA25206173830007D5F6 /* libopencv_xphoto.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_xphoto.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_xphoto.3.4.1.dylib; sourceTree = "<group>"; };
+		F972AA26206173830007D5F6 /* libopencv_ximgproc.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_ximgproc.3.4.1.dylib; path = ../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_ximgproc.3.4.1.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9456A4D20612F3C00E28067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F972AA27206173830007D5F6 /* libopencv_xobjdetect.3.4.1.dylib in Frameworks */,
+				F972AA28206173830007D5F6 /* libopencv_xphoto.3.4.1.dylib in Frameworks */,
+				F972AA29206173830007D5F6 /* libopencv_ximgproc.3.4.1.dylib in Frameworks */,
+				F972A9A9206173830007D5F6 /* libopencv_aruco.3.4.1.dylib in Frameworks */,
+				F972A9AA206173830007D5F6 /* libopencv_aruco.3.4.1.dylib in Frameworks */,
+				F972A9AB206173830007D5F6 /* libopencv_aruco.3.4.1.dylib in Frameworks */,
+				F972A9AC206173830007D5F6 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */,
+				F972A9AD206173830007D5F6 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */,
+				F972A9AE206173830007D5F6 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */,
+				F972A9AF206173830007D5F6 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */,
+				F972A9B0206173830007D5F6 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */,
+				F972A9B1206173830007D5F6 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */,
+				F972A9B2206173830007D5F6 /* libopencv_calib3d.3.4.1.dylib in Frameworks */,
+				F972A9B3206173830007D5F6 /* libopencv_calib3d.3.4.1.dylib in Frameworks */,
+				F972A9B4206173830007D5F6 /* libopencv_calib3d.3.4.1.dylib in Frameworks */,
+				F972A9B5206173830007D5F6 /* libopencv_ccalib.3.4.1.dylib in Frameworks */,
+				F972A9B6206173830007D5F6 /* libopencv_ccalib.3.4.1.dylib in Frameworks */,
+				F972A9B7206173830007D5F6 /* libopencv_ccalib.3.4.1.dylib in Frameworks */,
+				F972A9B8206173830007D5F6 /* libopencv_core.3.4.1.dylib in Frameworks */,
+				F972A9B9206173830007D5F6 /* libopencv_core.3.4.1.dylib in Frameworks */,
+				F972A9BA206173830007D5F6 /* libopencv_core.3.4.1.dylib in Frameworks */,
+				F972A9BB206173830007D5F6 /* libopencv_datasets.3.4.1.dylib in Frameworks */,
+				F972A9BC206173830007D5F6 /* libopencv_datasets.3.4.1.dylib in Frameworks */,
+				F972A9BD206173830007D5F6 /* libopencv_datasets.3.4.1.dylib in Frameworks */,
+				F972A9BE206173830007D5F6 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */,
+				F972A9BF206173830007D5F6 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */,
+				F972A9C0206173830007D5F6 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */,
+				F972A9C1206173830007D5F6 /* libopencv_dnn.3.4.1.dylib in Frameworks */,
+				F972A9C2206173830007D5F6 /* libopencv_dnn.3.4.1.dylib in Frameworks */,
+				F972A9C3206173830007D5F6 /* libopencv_dnn.3.4.1.dylib in Frameworks */,
+				F972A9C4206173830007D5F6 /* libopencv_dpm.3.4.1.dylib in Frameworks */,
+				F972A9C5206173830007D5F6 /* libopencv_dpm.3.4.1.dylib in Frameworks */,
+				F972A9C6206173830007D5F6 /* libopencv_dpm.3.4.1.dylib in Frameworks */,
+				F972A9C7206173830007D5F6 /* libopencv_face.3.4.1.dylib in Frameworks */,
+				F972A9C8206173830007D5F6 /* libopencv_face.3.4.1.dylib in Frameworks */,
+				F972A9C9206173830007D5F6 /* libopencv_face.3.4.1.dylib in Frameworks */,
+				F972A9CA206173830007D5F6 /* libopencv_features2d.3.4.1.dylib in Frameworks */,
+				F972A9CB206173830007D5F6 /* libopencv_features2d.3.4.1.dylib in Frameworks */,
+				F972A9CC206173830007D5F6 /* libopencv_features2d.3.4.1.dylib in Frameworks */,
+				F972A9CD206173830007D5F6 /* libopencv_flann.3.4.1.dylib in Frameworks */,
+				F972A9CE206173830007D5F6 /* libopencv_flann.3.4.1.dylib in Frameworks */,
+				F972A9CF206173830007D5F6 /* libopencv_flann.3.4.1.dylib in Frameworks */,
+				F972A9D0206173830007D5F6 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */,
+				F972A9D1206173830007D5F6 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */,
+				F972A9D2206173830007D5F6 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */,
+				F972A9D3206173830007D5F6 /* libopencv_hfs.3.4.1.dylib in Frameworks */,
+				F972A9D4206173830007D5F6 /* libopencv_hfs.3.4.1.dylib in Frameworks */,
+				F972A9D5206173830007D5F6 /* libopencv_hfs.3.4.1.dylib in Frameworks */,
+				F972A9D6206173830007D5F6 /* libopencv_highgui.3.4.1.dylib in Frameworks */,
+				F972A9D7206173830007D5F6 /* libopencv_highgui.3.4.1.dylib in Frameworks */,
+				F972A9D8206173830007D5F6 /* libopencv_highgui.3.4.1.dylib in Frameworks */,
+				F972A9D9206173830007D5F6 /* libopencv_img_hash.3.4.1.dylib in Frameworks */,
+				F972A9DA206173830007D5F6 /* libopencv_img_hash.3.4.1.dylib in Frameworks */,
+				F972A9DB206173830007D5F6 /* libopencv_img_hash.3.4.1.dylib in Frameworks */,
+				F972A9DC206173830007D5F6 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */,
+				F972A9DD206173830007D5F6 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */,
+				F972A9DE206173830007D5F6 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */,
+				F972A9DF206173830007D5F6 /* libopencv_imgproc.3.4.1.dylib in Frameworks */,
+				F972A9E0206173830007D5F6 /* libopencv_imgproc.3.4.1.dylib in Frameworks */,
+				F972A9E1206173830007D5F6 /* libopencv_imgproc.3.4.1.dylib in Frameworks */,
+				F972A9E2206173830007D5F6 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */,
+				F972A9E3206173830007D5F6 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */,
+				F972A9E4206173830007D5F6 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */,
+				F972A9E5206173830007D5F6 /* libopencv_ml.3.4.1.dylib in Frameworks */,
+				F972A9E6206173830007D5F6 /* libopencv_ml.3.4.1.dylib in Frameworks */,
+				F972A9E7206173830007D5F6 /* libopencv_ml.3.4.1.dylib in Frameworks */,
+				F972A9E8206173830007D5F6 /* libopencv_objdetect.3.4.1.dylib in Frameworks */,
+				F972A9E9206173830007D5F6 /* libopencv_objdetect.3.4.1.dylib in Frameworks */,
+				F972A9EA206173830007D5F6 /* libopencv_objdetect.3.4.1.dylib in Frameworks */,
+				F972A9EB206173830007D5F6 /* libopencv_optflow.3.4.1.dylib in Frameworks */,
+				F972A9EC206173830007D5F6 /* libopencv_optflow.3.4.1.dylib in Frameworks */,
+				F972A9ED206173830007D5F6 /* libopencv_optflow.3.4.1.dylib in Frameworks */,
+				F972A9EE206173830007D5F6 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */,
+				F972A9EF206173830007D5F6 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */,
+				F972A9F0206173830007D5F6 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */,
+				F972A9F1206173830007D5F6 /* libopencv_photo.3.4.1.dylib in Frameworks */,
+				F972A9F2206173830007D5F6 /* libopencv_photo.3.4.1.dylib in Frameworks */,
+				F972A9F3206173830007D5F6 /* libopencv_photo.3.4.1.dylib in Frameworks */,
+				F972A9F4206173830007D5F6 /* libopencv_plot.3.4.1.dylib in Frameworks */,
+				F972A9F5206173830007D5F6 /* libopencv_plot.3.4.1.dylib in Frameworks */,
+				F972A9F6206173830007D5F6 /* libopencv_plot.3.4.1.dylib in Frameworks */,
+				F972A9F7206173830007D5F6 /* libopencv_reg.3.4.1.dylib in Frameworks */,
+				F972A9F8206173830007D5F6 /* libopencv_reg.3.4.1.dylib in Frameworks */,
+				F972A9F9206173830007D5F6 /* libopencv_reg.3.4.1.dylib in Frameworks */,
+				F972A9FA206173830007D5F6 /* libopencv_rgbd.3.4.1.dylib in Frameworks */,
+				F972A9FB206173830007D5F6 /* libopencv_rgbd.3.4.1.dylib in Frameworks */,
+				F972A9FC206173830007D5F6 /* libopencv_rgbd.3.4.1.dylib in Frameworks */,
+				F972A9FD206173830007D5F6 /* libopencv_saliency.3.4.1.dylib in Frameworks */,
+				F972A9FE206173830007D5F6 /* libopencv_saliency.3.4.1.dylib in Frameworks */,
+				F972A9FF206173830007D5F6 /* libopencv_saliency.3.4.1.dylib in Frameworks */,
+				F972AA00206173830007D5F6 /* libopencv_shape.3.4.1.dylib in Frameworks */,
+				F972AA01206173830007D5F6 /* libopencv_shape.3.4.1.dylib in Frameworks */,
+				F972AA02206173830007D5F6 /* libopencv_shape.3.4.1.dylib in Frameworks */,
+				F972AA03206173830007D5F6 /* libopencv_stereo.3.4.1.dylib in Frameworks */,
+				F972AA04206173830007D5F6 /* libopencv_stereo.3.4.1.dylib in Frameworks */,
+				F972AA05206173830007D5F6 /* libopencv_stereo.3.4.1.dylib in Frameworks */,
+				F972AA06206173830007D5F6 /* libopencv_stitching.3.4.1.dylib in Frameworks */,
+				F972AA07206173830007D5F6 /* libopencv_stitching.3.4.1.dylib in Frameworks */,
+				F972AA08206173830007D5F6 /* libopencv_stitching.3.4.1.dylib in Frameworks */,
+				F972AA09206173830007D5F6 /* libopencv_structured_light.3.4.1.dylib in Frameworks */,
+				F972AA0A206173830007D5F6 /* libopencv_structured_light.3.4.1.dylib in Frameworks */,
+				F972AA0B206173830007D5F6 /* libopencv_structured_light.3.4.1.dylib in Frameworks */,
+				F972AA0C206173830007D5F6 /* libopencv_superres.3.4.1.dylib in Frameworks */,
+				F972AA0D206173830007D5F6 /* libopencv_superres.3.4.1.dylib in Frameworks */,
+				F972AA0E206173830007D5F6 /* libopencv_superres.3.4.1.dylib in Frameworks */,
+				F972AA0F206173830007D5F6 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */,
+				F972AA10206173830007D5F6 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */,
+				F972AA11206173830007D5F6 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */,
+				F972AA12206173830007D5F6 /* libopencv_text.3.4.1.dylib in Frameworks */,
+				F972AA13206173830007D5F6 /* libopencv_text.3.4.1.dylib in Frameworks */,
+				F972AA14206173830007D5F6 /* libopencv_text.3.4.1.dylib in Frameworks */,
+				F972AA15206173830007D5F6 /* libopencv_tracking.3.4.1.dylib in Frameworks */,
+				F972AA16206173830007D5F6 /* libopencv_tracking.3.4.1.dylib in Frameworks */,
+				F972AA17206173830007D5F6 /* libopencv_tracking.3.4.1.dylib in Frameworks */,
+				F972AA18206173830007D5F6 /* libopencv_video.3.4.1.dylib in Frameworks */,
+				F972AA19206173830007D5F6 /* libopencv_video.3.4.1.dylib in Frameworks */,
+				F972AA1A206173830007D5F6 /* libopencv_video.3.4.1.dylib in Frameworks */,
+				F972AA1B206173830007D5F6 /* libopencv_videoio.3.4.1.dylib in Frameworks */,
+				F972AA1C206173830007D5F6 /* libopencv_videoio.3.4.1.dylib in Frameworks */,
+				F972AA1D206173830007D5F6 /* libopencv_videoio.3.4.1.dylib in Frameworks */,
+				F972AA1E206173830007D5F6 /* libopencv_videostab.3.4.1.dylib in Frameworks */,
+				F972AA1F206173830007D5F6 /* libopencv_videostab.3.4.1.dylib in Frameworks */,
+				F972AA20206173830007D5F6 /* libopencv_videostab.3.4.1.dylib in Frameworks */,
+				F972AA21206173830007D5F6 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */,
+				F972AA22206173830007D5F6 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */,
+				F972AA23206173830007D5F6 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F918B7F82061646100C8C6A1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F918B7F92061646100C8C6A1 /* drawPointMovingTest.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F918B7FA2061646100C8C6A1 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F918B7FB2061646100C8C6A1 /* defs.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		F9456A4720612F3C00E28067 = {
+			isa = PBXGroup;
+			children = (
+				F918B7F62061646000C8C6A1 /* CMakeLists.txt */,
+				F918B7FA2061646100C8C6A1 /* include */,
+				F918B7F52061646000C8C6A1 /* LICENSE */,
+				F918B7F72061646000C8C6A1 /* README.md */,
+				F918B7F82061646100C8C6A1 /* src */,
+				F9456A5120612F3C00E28067 /* Products */,
+				F9725876206168C500410831 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F9456A5120612F3C00E28067 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9456A5020612F3C00E28067 /* DynModeling */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9725876206168C500410831 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F972AA26206173830007D5F6 /* libopencv_ximgproc.3.4.1.dylib */,
+				F972AA24206173830007D5F6 /* libopencv_xobjdetect.3.4.1.dylib */,
+				F972AA25206173830007D5F6 /* libopencv_xphoto.3.4.1.dylib */,
+				F9725A0020616C8C00410831 /* Core */,
+				F97258C920616C4600410831 /* src */,
+				F9725888206168C600410831 /* libopencv_aruco.3.4.1.dylib */,
+				F9725881206168C600410831 /* libopencv_bgsegm.3.4.1.dylib */,
+				F9725885206168C600410831 /* libopencv_bioinspired.3.4.1.dylib */,
+				F9725879206168C500410831 /* libopencv_calib3d.3.4.1.dylib */,
+				F972587D206168C600410831 /* libopencv_ccalib.3.4.1.dylib */,
+				F972587A206168C500410831 /* libopencv_core.3.4.1.dylib */,
+				F9725899206168C600410831 /* libopencv_datasets.3.4.1.dylib */,
+				F9725889206168C600410831 /* libopencv_dnn_objdetect.3.4.1.dylib */,
+				F9725884206168C600410831 /* libopencv_dnn.3.4.1.dylib */,
+				F972588A206168C600410831 /* libopencv_dpm.3.4.1.dylib */,
+				F9725886206168C600410831 /* libopencv_face.3.4.1.dylib */,
+				F972588E206168C600410831 /* libopencv_features2d.3.4.1.dylib */,
+				F972588B206168C600410831 /* libopencv_flann.3.4.1.dylib */,
+				F9725894206168C600410831 /* libopencv_fuzzy.3.4.1.dylib */,
+				F9725882206168C600410831 /* libopencv_hfs.3.4.1.dylib */,
+				F9725887206168C600410831 /* libopencv_highgui.3.4.1.dylib */,
+				F972588C206168C600410831 /* libopencv_img_hash.3.4.1.dylib */,
+				F972588D206168C600410831 /* libopencv_imgcodecs.3.4.1.dylib */,
+				F972589D206168C600410831 /* libopencv_imgproc.3.4.1.dylib */,
+				F9725883206168C600410831 /* libopencv_line_descriptor.3.4.1.dylib */,
+				F972589B206168C600410831 /* libopencv_ml.3.4.1.dylib */,
+				F972588F206168C600410831 /* libopencv_objdetect.3.4.1.dylib */,
+				F9725895206168C600410831 /* libopencv_optflow.3.4.1.dylib */,
+				F972589F206168C600410831 /* libopencv_phase_unwrapping.3.4.1.dylib */,
+				F972589E206168C600410831 /* libopencv_photo.3.4.1.dylib */,
+				F972589C206168C600410831 /* libopencv_plot.3.4.1.dylib */,
+				F972587E206168C600410831 /* libopencv_reg.3.4.1.dylib */,
+				F9725891206168C600410831 /* libopencv_rgbd.3.4.1.dylib */,
+				F9725896206168C600410831 /* libopencv_saliency.3.4.1.dylib */,
+				F972589A206168C600410831 /* libopencv_shape.3.4.1.dylib */,
+				F9725890206168C600410831 /* libopencv_stereo.3.4.1.dylib */,
+				F972587C206168C500410831 /* libopencv_stitching.3.4.1.dylib */,
+				F9725898206168C600410831 /* libopencv_structured_light.3.4.1.dylib */,
+				F9725880206168C600410831 /* libopencv_superres.3.4.1.dylib */,
+				F972587B206168C500410831 /* libopencv_surface_matching.3.4.1.dylib */,
+				F9725877206168C500410831 /* libopencv_text.3.4.1.dylib */,
+				F972587F206168C600410831 /* libopencv_tracking.3.4.1.dylib */,
+				F9725892206168C600410831 /* libopencv_video.3.4.1.dylib */,
+				F9725897206168C600410831 /* libopencv_videoio.3.4.1.dylib */,
+				F9725878206168C500410831 /* libopencv_videostab.3.4.1.dylib */,
+				F9725893206168C600410831 /* libopencv_xfeatures2d.3.4.1.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F97258C920616C4600410831 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F97258CA20616C4600410831 /* CholmodSupport */,
+				F97258CC20616C4600410831 /* misc */,
+				F97258D420616C4600410831 /* Core */,
+				F972596520616C4600410831 /* SparseLU */,
+				F972597720616C4600410831 /* OrderingMethods */,
+				F972597B20616C4600410831 /* plugins */,
+				F972598320616C4600410831 /* Householder */,
+				F972598720616C4600410831 /* PardisoSupport */,
+				F972598920616C4600410831 /* SparseCore */,
+				F97259A820616C4600410831 /* Jacobi */,
+				F97259AA20616C4600410831 /* SPQRSupport */,
+				F97259AC20616C4600410831 /* QR */,
+				F97259B320616C4600410831 /* SparseQR */,
+				F97259B520616C4600410831 /* SVD */,
+				F97259BB20616C4600410831 /* Cholesky */,
+				F97259BF20616C4600410831 /* UmfPackSupport */,
+				F97259C120616C4600410831 /* IterativeLinearSolvers */,
+				F97259CA20616C4600410831 /* LU */,
+				F97259D220616C4600410831 /* Geometry */,
+				F97259E320616C4600410831 /* SuperLUSupport */,
+				F97259E520616C4600410831 /* MetisSupport */,
+				F97259E720616C4600410831 /* StlSupport */,
+				F97259EC20616C4600410831 /* SparseCholesky */,
+				F97259EF20616C4600410831 /* Eigenvalues */,
+				F97259FE20616C4600410831 /* PaStiXSupport */,
+			);
+			name = src;
+			path = ../../../../usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src;
+			sourceTree = "<group>";
+		};
+		F97258CA20616C4600410831 /* CholmodSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F97258CB20616C4600410831 /* CholmodSupport.h */,
+			);
+			path = CholmodSupport;
+			sourceTree = "<group>";
+		};
+		F97258CC20616C4600410831 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				F97258CD20616C4600410831 /* blas.h */,
+				F97258CE20616C4600410831 /* lapacke.h */,
+				F97258CF20616C4600410831 /* Kernel.h */,
+				F97258D020616C4600410831 /* RealSvd2x2.h */,
+				F97258D120616C4600410831 /* Image.h */,
+				F97258D220616C4600410831 /* lapack.h */,
+				F97258D320616C4600410831 /* lapacke_mangling.h */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
+		F97258D420616C4600410831 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F97258D520616C4600410831 /* Reverse.h */,
+				F97258D620616C4600410831 /* ConditionEstimator.h */,
+				F97258D720616C4600410831 /* PermutationMatrix.h */,
+				F97258D820616C4600410831 /* Assign.h */,
+				F97258D920616C4600410831 /* MathFunctionsImpl.h */,
+				F97258DA20616C4600410831 /* CwiseUnaryOp.h */,
+				F97258DB20616C4600410831 /* DiagonalMatrix.h */,
+				F97258DC20616C4600410831 /* VectorBlock.h */,
+				F97258DD20616C4600410831 /* ReturnByValue.h */,
+				F97258DE20616C4600410831 /* Solve.h */,
+				F97258DF20616C4600410831 /* products */,
+				F97258F520616C4600410831 /* Product.h */,
+				F97258F620616C4600410831 /* util */,
+				F972590320616C4600410831 /* MatrixBase.h */,
+				F972590420616C4600410831 /* Stride.h */,
+				F972590520616C4600410831 /* Map.h */,
+				F972590620616C4600410831 /* ForceAlignedAccess.h */,
+				F972590720616C4600410831 /* MathFunctions.h */,
+				F972590820616C4600410831 /* functors */,
+				F972590F20616C4600410831 /* SelfCwiseBinaryOp.h */,
+				F972591020616C4600410831 /* BandMatrix.h */,
+				F972591120616C4600410831 /* Inverse.h */,
+				F972591220616C4600410831 /* Assign_MKL.h */,
+				F972591320616C4600410831 /* Swap.h */,
+				F972591420616C4600410831 /* ProductEvaluators.h */,
+				F972591520616C4600410831 /* MapBase.h */,
+				F972591620616C4600410831 /* Matrix.h */,
+				F972591720616C4600410831 /* EigenBase.h */,
+				F972591820616C4600410831 /* StableNorm.h */,
+				F972591920616C4600410831 /* GenericPacketMath.h */,
+				F972591A20616C4600410831 /* CwiseBinaryOp.h */,
+				F972591B20616C4600410831 /* Visitor.h */,
+				F972591C20616C4600410831 /* DenseStorage.h */,
+				F972591D20616C4600410831 /* DiagonalProduct.h */,
+				F972591E20616C4600410831 /* CwiseUnaryView.h */,
+				F972591F20616C4600410831 /* NoAlias.h */,
+				F972592020616C4600410831 /* DenseCoeffsBase.h */,
+				F972592120616C4600410831 /* Fuzzy.h */,
+				F972592220616C4600410831 /* TriangularMatrix.h */,
+				F972592320616C4600410831 /* IO.h */,
+				F972592420616C4600410831 /* arch */,
+				F972594720616C4600410831 /* Array.h */,
+				F972594820616C4600410831 /* SolverBase.h */,
+				F972594920616C4600410831 /* AssignEvaluator.h */,
+				F972594A20616C4600410831 /* Replicate.h */,
+				F972594B20616C4600410831 /* CoreIterators.h */,
+				F972594C20616C4600410831 /* ArrayBase.h */,
+				F972594D20616C4600410831 /* Block.h */,
+				F972594E20616C4600410831 /* Dot.h */,
+				F972594F20616C4600410831 /* PlainObjectBase.h */,
+				F972595020616C4600410831 /* SelfAdjointView.h */,
+				F972595120616C4600410831 /* GeneralProduct.h */,
+				F972595220616C4600410831 /* SolveTriangular.h */,
+				F972595320616C4600410831 /* CoreEvaluators.h */,
+				F972595420616C4600410831 /* CwiseNullaryOp.h */,
+				F972595520616C4600410831 /* VectorwiseOp.h */,
+				F972595620616C4600410831 /* ArrayWrapper.h */,
+				F972595720616C4600410831 /* BooleanRedux.h */,
+				F972595820616C4600410831 /* Transpositions.h */,
+				F972595920616C4600410831 /* NestByValue.h */,
+				F972595A20616C4600410831 /* Ref.h */,
+				F972595B20616C4600410831 /* Transpose.h */,
+				F972595C20616C4600410831 /* Redux.h */,
+				F972595D20616C4600410831 /* NumTraits.h */,
+				F972595E20616C4600410831 /* CommaInitializer.h */,
+				F972595F20616C4600410831 /* GlobalFunctions.h */,
+				F972596020616C4600410831 /* Random.h */,
+				F972596120616C4600410831 /* Diagonal.h */,
+				F972596220616C4600410831 /* DenseBase.h */,
+				F972596320616C4600410831 /* CwiseTernaryOp.h */,
+				F972596420616C4600410831 /* Select.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F97258DF20616C4600410831 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				F97258E020616C4600410831 /* SelfadjointRank2Update.h */,
+				F97258E120616C4600410831 /* GeneralBlockPanelKernel.h */,
+				F97258E220616C4600410831 /* GeneralMatrixMatrixTriangular_BLAS.h */,
+				F97258E320616C4600410831 /* GeneralMatrixMatrix_BLAS.h */,
+				F97258E420616C4600410831 /* GeneralMatrixVector_BLAS.h */,
+				F97258E520616C4600410831 /* GeneralMatrixMatrix.h */,
+				F97258E620616C4600410831 /* Parallelizer.h */,
+				F97258E720616C4600410831 /* GeneralMatrixMatrixTriangular.h */,
+				F97258E820616C4600410831 /* TriangularMatrixVector.h */,
+				F97258E920616C4600410831 /* SelfadjointMatrixVector.h */,
+				F97258EA20616C4600410831 /* TriangularSolverMatrix.h */,
+				F97258EB20616C4600410831 /* GeneralMatrixVector.h */,
+				F97258EC20616C4600410831 /* SelfadjointProduct.h */,
+				F97258ED20616C4600410831 /* TriangularMatrixVector_BLAS.h */,
+				F97258EE20616C4600410831 /* TriangularMatrixMatrix_BLAS.h */,
+				F97258EF20616C4600410831 /* SelfadjointMatrixVector_BLAS.h */,
+				F97258F020616C4600410831 /* TriangularSolverMatrix_BLAS.h */,
+				F97258F120616C4600410831 /* SelfadjointMatrixMatrix_BLAS.h */,
+				F97258F220616C4600410831 /* TriangularSolverVector.h */,
+				F97258F320616C4600410831 /* TriangularMatrixMatrix.h */,
+				F97258F420616C4600410831 /* SelfadjointMatrixMatrix.h */,
+			);
+			path = products;
+			sourceTree = "<group>";
+		};
+		F97258F620616C4600410831 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				F97258F720616C4600410831 /* NonMPL2.h */,
+				F97258F820616C4600410831 /* BlasUtil.h */,
+				F97258F920616C4600410831 /* StaticAssert.h */,
+				F97258FA20616C4600410831 /* Constants.h */,
+				F97258FB20616C4600410831 /* XprHelper.h */,
+				F97258FC20616C4600410831 /* MKL_support.h */,
+				F97258FD20616C4600410831 /* Macros.h */,
+				F97258FE20616C4600410831 /* DisableStupidWarnings.h */,
+				F97258FF20616C4600410831 /* ForwardDeclarations.h */,
+				F972590020616C4600410831 /* Memory.h */,
+				F972590120616C4600410831 /* Meta.h */,
+				F972590220616C4600410831 /* ReenableStupidWarnings.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		F972590820616C4600410831 /* functors */ = {
+			isa = PBXGroup;
+			children = (
+				F972590920616C4600410831 /* UnaryFunctors.h */,
+				F972590A20616C4600410831 /* TernaryFunctors.h */,
+				F972590B20616C4600410831 /* AssignmentFunctors.h */,
+				F972590C20616C4600410831 /* BinaryFunctors.h */,
+				F972590D20616C4600410831 /* StlFunctors.h */,
+				F972590E20616C4600410831 /* NullaryFunctors.h */,
+			);
+			path = functors;
+			sourceTree = "<group>";
+		};
+		F972592420616C4600410831 /* arch */ = {
+			isa = PBXGroup;
+			children = (
+				F972592520616C4600410831 /* SSE */,
+				F972592A20616C4600410831 /* CUDA */,
+				F972593120616C4600410831 /* ZVector */,
+				F972593520616C4600410831 /* Default */,
+				F972593720616C4600410831 /* AVX512 */,
+				F972593A20616C4600410831 /* AVX */,
+				F972593F20616C4600410831 /* NEON */,
+				F972594320616C4600410831 /* AltiVec */,
+			);
+			path = arch;
+			sourceTree = "<group>";
+		};
+		F972592520616C4600410831 /* SSE */ = {
+			isa = PBXGroup;
+			children = (
+				F972592620616C4600410831 /* PacketMath.h */,
+				F972592720616C4600410831 /* MathFunctions.h */,
+				F972592820616C4600410831 /* TypeCasting.h */,
+				F972592920616C4600410831 /* Complex.h */,
+			);
+			path = SSE;
+			sourceTree = "<group>";
+		};
+		F972592A20616C4600410831 /* CUDA */ = {
+			isa = PBXGroup;
+			children = (
+				F972592B20616C4600410831 /* Half.h */,
+				F972592C20616C4600410831 /* PacketMath.h */,
+				F972592D20616C4600410831 /* MathFunctions.h */,
+				F972592E20616C4600410831 /* TypeCasting.h */,
+				F972592F20616C4600410831 /* PacketMathHalf.h */,
+				F972593020616C4600410831 /* Complex.h */,
+			);
+			path = CUDA;
+			sourceTree = "<group>";
+		};
+		F972593120616C4600410831 /* ZVector */ = {
+			isa = PBXGroup;
+			children = (
+				F972593220616C4600410831 /* PacketMath.h */,
+				F972593320616C4600410831 /* MathFunctions.h */,
+				F972593420616C4600410831 /* Complex.h */,
+			);
+			path = ZVector;
+			sourceTree = "<group>";
+		};
+		F972593520616C4600410831 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				F972593620616C4600410831 /* Settings.h */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		F972593720616C4600410831 /* AVX512 */ = {
+			isa = PBXGroup;
+			children = (
+				F972593820616C4600410831 /* PacketMath.h */,
+				F972593920616C4600410831 /* MathFunctions.h */,
+			);
+			path = AVX512;
+			sourceTree = "<group>";
+		};
+		F972593A20616C4600410831 /* AVX */ = {
+			isa = PBXGroup;
+			children = (
+				F972593B20616C4600410831 /* PacketMath.h */,
+				F972593C20616C4600410831 /* MathFunctions.h */,
+				F972593D20616C4600410831 /* TypeCasting.h */,
+				F972593E20616C4600410831 /* Complex.h */,
+			);
+			path = AVX;
+			sourceTree = "<group>";
+		};
+		F972593F20616C4600410831 /* NEON */ = {
+			isa = PBXGroup;
+			children = (
+				F972594020616C4600410831 /* PacketMath.h */,
+				F972594120616C4600410831 /* MathFunctions.h */,
+				F972594220616C4600410831 /* Complex.h */,
+			);
+			path = NEON;
+			sourceTree = "<group>";
+		};
+		F972594320616C4600410831 /* AltiVec */ = {
+			isa = PBXGroup;
+			children = (
+				F972594420616C4600410831 /* PacketMath.h */,
+				F972594520616C4600410831 /* MathFunctions.h */,
+				F972594620616C4600410831 /* Complex.h */,
+			);
+			path = AltiVec;
+			sourceTree = "<group>";
+		};
+		F972596520616C4600410831 /* SparseLU */ = {
+			isa = PBXGroup;
+			children = (
+				F972596620616C4600410831 /* SparseLU_Utils.h */,
+				F972596720616C4600410831 /* SparseLU_kernel_bmod.h */,
+				F972596820616C4600410831 /* SparseLU_column_bmod.h */,
+				F972596920616C4600410831 /* SparseLU_gemm_kernel.h */,
+				F972596A20616C4600410831 /* SparseLU.h */,
+				F972596B20616C4600410831 /* SparseLU_column_dfs.h */,
+				F972596C20616C4600410831 /* SparseLU_panel_dfs.h */,
+				F972596D20616C4600410831 /* SparseLU_relax_snode.h */,
+				F972596E20616C4600410831 /* SparseLU_heap_relax_snode.h */,
+				F972596F20616C4600410831 /* SparseLU_panel_bmod.h */,
+				F972597020616C4600410831 /* SparseLU_Structs.h */,
+				F972597120616C4600410831 /* SparseLU_pruneL.h */,
+				F972597220616C4600410831 /* SparseLU_copy_to_ucol.h */,
+				F972597320616C4600410831 /* SparseLU_Memory.h */,
+				F972597420616C4600410831 /* SparseLU_pivotL.h */,
+				F972597520616C4600410831 /* SparseLUImpl.h */,
+				F972597620616C4600410831 /* SparseLU_SupernodalMatrix.h */,
+			);
+			path = SparseLU;
+			sourceTree = "<group>";
+		};
+		F972597720616C4600410831 /* OrderingMethods */ = {
+			isa = PBXGroup;
+			children = (
+				F972597820616C4600410831 /* Ordering.h */,
+				F972597920616C4600410831 /* Eigen_Colamd.h */,
+				F972597A20616C4600410831 /* Amd.h */,
+			);
+			path = OrderingMethods;
+			sourceTree = "<group>";
+		};
+		F972597B20616C4600410831 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				F972597C20616C4600410831 /* ArrayCwiseUnaryOps.h */,
+				F972597D20616C4600410831 /* CommonCwiseUnaryOps.h */,
+				F972597E20616C4600410831 /* BlockMethods.h */,
+				F972597F20616C4600410831 /* ArrayCwiseBinaryOps.h */,
+				F972598020616C4600410831 /* MatrixCwiseBinaryOps.h */,
+				F972598120616C4600410831 /* CommonCwiseBinaryOps.h */,
+				F972598220616C4600410831 /* MatrixCwiseUnaryOps.h */,
+			);
+			path = plugins;
+			sourceTree = "<group>";
+		};
+		F972598320616C4600410831 /* Householder */ = {
+			isa = PBXGroup;
+			children = (
+				F972598420616C4600410831 /* HouseholderSequence.h */,
+				F972598520616C4600410831 /* Householder.h */,
+				F972598620616C4600410831 /* BlockHouseholder.h */,
+			);
+			path = Householder;
+			sourceTree = "<group>";
+		};
+		F972598720616C4600410831 /* PardisoSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F972598820616C4600410831 /* PardisoSupport.h */,
+			);
+			path = PardisoSupport;
+			sourceTree = "<group>";
+		};
+		F972598920616C4600410831 /* SparseCore */ = {
+			isa = PBXGroup;
+			children = (
+				F972598A20616C4600410831 /* SparseSelfAdjointView.h */,
+				F972598B20616C4600410831 /* SparseMatrix.h */,
+				F972598C20616C4600410831 /* CompressedStorage.h */,
+				F972598D20616C4600410831 /* SparseCwiseBinaryOp.h */,
+				F972598E20616C4600410831 /* SparseView.h */,
+				F972598F20616C4600410831 /* SparseColEtree.h */,
+				F972599020616C4600410831 /* SparseMatrixBase.h */,
+				F972599120616C4600410831 /* SparseDiagonalProduct.h */,
+				F972599220616C4600410831 /* SparseTriangularView.h */,
+				F972599320616C4600410831 /* SparseAssign.h */,
+				F972599420616C4600410831 /* SparsePermutation.h */,
+				F972599520616C4600410831 /* SparseCwiseUnaryOp.h */,
+				F972599620616C4600410831 /* SparseMap.h */,
+				F972599720616C4600410831 /* SparseDenseProduct.h */,
+				F972599820616C4600410831 /* SparseRef.h */,
+				F972599920616C4600410831 /* SparseFuzzy.h */,
+				F972599A20616C4600410831 /* MappedSparseMatrix.h */,
+				F972599B20616C4600410831 /* SparseSparseProductWithPruning.h */,
+				F972599C20616C4600410831 /* SparseSolverBase.h */,
+				F972599D20616C4600410831 /* SparseBlock.h */,
+				F972599E20616C4600410831 /* TriangularSolver.h */,
+				F972599F20616C4600410831 /* SparseVector.h */,
+				F97259A020616C4600410831 /* SparseCompressedBase.h */,
+				F97259A120616C4600410831 /* SparseTranspose.h */,
+				F97259A220616C4600410831 /* SparseProduct.h */,
+				F97259A320616C4600410831 /* AmbiVector.h */,
+				F97259A420616C4600410831 /* SparseRedux.h */,
+				F97259A520616C4600410831 /* ConservativeSparseSparseProduct.h */,
+				F97259A620616C4600410831 /* SparseUtil.h */,
+				F97259A720616C4600410831 /* SparseDot.h */,
+			);
+			path = SparseCore;
+			sourceTree = "<group>";
+		};
+		F97259A820616C4600410831 /* Jacobi */ = {
+			isa = PBXGroup;
+			children = (
+				F97259A920616C4600410831 /* Jacobi.h */,
+			);
+			path = Jacobi;
+			sourceTree = "<group>";
+		};
+		F97259AA20616C4600410831 /* SPQRSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F97259AB20616C4600410831 /* SuiteSparseQRSupport.h */,
+			);
+			path = SPQRSupport;
+			sourceTree = "<group>";
+		};
+		F97259AC20616C4600410831 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				F97259AD20616C4600410831 /* FullPivHouseholderQR.h */,
+				F97259AE20616C4600410831 /* HouseholderQR.h */,
+				F97259AF20616C4600410831 /* CompleteOrthogonalDecomposition.h */,
+				F97259B020616C4600410831 /* ColPivHouseholderQR_LAPACKE.h */,
+				F97259B120616C4600410831 /* ColPivHouseholderQR.h */,
+				F97259B220616C4600410831 /* HouseholderQR_LAPACKE.h */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		F97259B320616C4600410831 /* SparseQR */ = {
+			isa = PBXGroup;
+			children = (
+				F97259B420616C4600410831 /* SparseQR.h */,
+			);
+			path = SparseQR;
+			sourceTree = "<group>";
+		};
+		F97259B520616C4600410831 /* SVD */ = {
+			isa = PBXGroup;
+			children = (
+				F97259B620616C4600410831 /* JacobiSVD_LAPACKE.h */,
+				F97259B720616C4600410831 /* SVDBase.h */,
+				F97259B820616C4600410831 /* JacobiSVD.h */,
+				F97259B920616C4600410831 /* BDCSVD.h */,
+				F97259BA20616C4600410831 /* UpperBidiagonalization.h */,
+			);
+			path = SVD;
+			sourceTree = "<group>";
+		};
+		F97259BB20616C4600410831 /* Cholesky */ = {
+			isa = PBXGroup;
+			children = (
+				F97259BC20616C4600410831 /* LLT_LAPACKE.h */,
+				F97259BD20616C4600410831 /* LDLT.h */,
+				F97259BE20616C4600410831 /* LLT.h */,
+			);
+			path = Cholesky;
+			sourceTree = "<group>";
+		};
+		F97259BF20616C4600410831 /* UmfPackSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F97259C020616C4600410831 /* UmfPackSupport.h */,
+			);
+			path = UmfPackSupport;
+			sourceTree = "<group>";
+		};
+		F97259C120616C4600410831 /* IterativeLinearSolvers */ = {
+			isa = PBXGroup;
+			children = (
+				F97259C220616C4600410831 /* BasicPreconditioners.h */,
+				F97259C320616C4600410831 /* IncompleteCholesky.h */,
+				F97259C420616C4600410831 /* SolveWithGuess.h */,
+				F97259C520616C4600410831 /* IncompleteLUT.h */,
+				F97259C620616C4600410831 /* LeastSquareConjugateGradient.h */,
+				F97259C720616C4600410831 /* ConjugateGradient.h */,
+				F97259C820616C4600410831 /* BiCGSTAB.h */,
+				F97259C920616C4600410831 /* IterativeSolverBase.h */,
+			);
+			path = IterativeLinearSolvers;
+			sourceTree = "<group>";
+		};
+		F97259CA20616C4600410831 /* LU */ = {
+			isa = PBXGroup;
+			children = (
+				F97259CB20616C4600410831 /* PartialPivLU_LAPACKE.h */,
+				F97259CC20616C4600410831 /* InverseImpl.h */,
+				F97259CD20616C4600410831 /* Determinant.h */,
+				F97259CE20616C4600410831 /* arch */,
+				F97259D020616C4600410831 /* PartialPivLU.h */,
+				F97259D120616C4600410831 /* FullPivLU.h */,
+			);
+			path = LU;
+			sourceTree = "<group>";
+		};
+		F97259CE20616C4600410831 /* arch */ = {
+			isa = PBXGroup;
+			children = (
+				F97259CF20616C4600410831 /* Inverse_SSE.h */,
+			);
+			path = arch;
+			sourceTree = "<group>";
+		};
+		F97259D220616C4600410831 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				F97259D320616C4600410831 /* AngleAxis.h */,
+				F97259D420616C4600410831 /* RotationBase.h */,
+				F97259D520616C4600410831 /* EulerAngles.h */,
+				F97259D620616C4600410831 /* Hyperplane.h */,
+				F97259D720616C4600410831 /* Homogeneous.h */,
+				F97259D820616C4600410831 /* AlignedBox.h */,
+				F97259D920616C4600410831 /* Quaternion.h */,
+				F97259DA20616C4600410831 /* Umeyama.h */,
+				F97259DB20616C4600410831 /* Translation.h */,
+				F97259DC20616C4600410831 /* Scaling.h */,
+				F97259DD20616C4600410831 /* OrthoMethods.h */,
+				F97259DE20616C4600410831 /* Rotation2D.h */,
+				F97259DF20616C4600410831 /* arch */,
+				F97259E120616C4600410831 /* Transform.h */,
+				F97259E220616C4600410831 /* ParametrizedLine.h */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		F97259DF20616C4600410831 /* arch */ = {
+			isa = PBXGroup;
+			children = (
+				F97259E020616C4600410831 /* Geometry_SSE.h */,
+			);
+			path = arch;
+			sourceTree = "<group>";
+		};
+		F97259E320616C4600410831 /* SuperLUSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F97259E420616C4600410831 /* SuperLUSupport.h */,
+			);
+			path = SuperLUSupport;
+			sourceTree = "<group>";
+		};
+		F97259E520616C4600410831 /* MetisSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F97259E620616C4600410831 /* MetisSupport.h */,
+			);
+			path = MetisSupport;
+			sourceTree = "<group>";
+		};
+		F97259E720616C4600410831 /* StlSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F97259E820616C4600410831 /* StdList.h */,
+				F97259E920616C4600410831 /* StdDeque.h */,
+				F97259EA20616C4600410831 /* details.h */,
+				F97259EB20616C4600410831 /* StdVector.h */,
+			);
+			path = StlSupport;
+			sourceTree = "<group>";
+		};
+		F97259EC20616C4600410831 /* SparseCholesky */ = {
+			isa = PBXGroup;
+			children = (
+				F97259ED20616C4600410831 /* SimplicialCholesky_impl.h */,
+				F97259EE20616C4600410831 /* SimplicialCholesky.h */,
+			);
+			path = SparseCholesky;
+			sourceTree = "<group>";
+		};
+		F97259EF20616C4600410831 /* Eigenvalues */ = {
+			isa = PBXGroup;
+			children = (
+				F97259F020616C4600410831 /* GeneralizedEigenSolver.h */,
+				F97259F120616C4600410831 /* EigenSolver.h */,
+				F97259F220616C4600410831 /* RealSchur_LAPACKE.h */,
+				F97259F320616C4600410831 /* RealSchur.h */,
+				F97259F420616C4600410831 /* ComplexSchur_LAPACKE.h */,
+				F97259F520616C4600410831 /* Tridiagonalization.h */,
+				F97259F620616C4600410831 /* HessenbergDecomposition.h */,
+				F97259F720616C4600410831 /* ComplexEigenSolver.h */,
+				F97259F820616C4600410831 /* GeneralizedSelfAdjointEigenSolver.h */,
+				F97259F920616C4600410831 /* SelfAdjointEigenSolver_LAPACKE.h */,
+				F97259FA20616C4600410831 /* ComplexSchur.h */,
+				F97259FB20616C4600410831 /* SelfAdjointEigenSolver.h */,
+				F97259FC20616C4600410831 /* RealQZ.h */,
+				F97259FD20616C4600410831 /* MatrixBaseEigenvalues.h */,
+			);
+			path = Eigenvalues;
+			sourceTree = "<group>";
+		};
+		F97259FE20616C4600410831 /* PaStiXSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F97259FF20616C4600410831 /* PaStiXSupport.h */,
+			);
+			path = PaStiXSupport;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9456A4F20612F3C00E28067 /* DynModeling */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9456A5720612F3D00E28067 /* Build configuration list for PBXNativeTarget "DynModeling" */;
+			buildPhases = (
+				F9456A4C20612F3C00E28067 /* Sources */,
+				F9456A4D20612F3C00E28067 /* Frameworks */,
+				F9456A4E20612F3C00E28067 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynModeling;
+			productName = DynModeling;
+			productReference = F9456A5020612F3C00E28067 /* DynModeling */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9456A4820612F3C00E28067 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = dinies;
+				TargetAttributes = {
+					F9456A4F20612F3C00E28067 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F9456A4B20612F3C00E28067 /* Build configuration list for PBXProject "DynModeling" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F9456A4720612F3C00E28067;
+			productRefGroup = F9456A5120612F3C00E28067 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9456A4F20612F3C00E28067 /* DynModeling */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9456A4C20612F3C00E28067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F918B7FC2061646100C8C6A1 /* drawPointMovingTest.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F9456A5520612F3D00E28067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F9456A5620612F3D00E28067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F9456A5820612F3D00E28067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29B3N6JL98;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/,
+					/usr/local/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/opencv/3.4.1_2/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F9456A5920612F3D00E28067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29B3N6JL98;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/,
+					/usr/local/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/opencv/3.4.1_2/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9456A4B20612F3C00E28067 /* Build configuration list for PBXProject "DynModeling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9456A5520612F3D00E28067 /* Debug */,
+				F9456A5620612F3D00E28067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9456A5720612F3D00E28067 /* Build configuration list for PBXNativeTarget "DynModeling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9456A5820612F3D00E28067 /* Debug */,
+				F9456A5920612F3D00E28067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9456A4820612F3C00E28067 /* Project object */;
+}
