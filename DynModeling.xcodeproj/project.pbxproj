@@ -11797,9 +11797,10 @@
 		F9456A4720612F3C00E28067 = {
 			isa = PBXGroup;
 			children = (
-				F918B7F62061646000C8C6A1 /* CMakeLists.txt */,
+				F9ED51102063A5350048B216 /* files */,
 				F918B7FA2061646100C8C6A1 /* include */,
 				F918B7F52061646000C8C6A1 /* LICENSE */,
+				F918B7F62061646000C8C6A1 /* CMakeLists.txt */,
 				F918B7F72061646000C8C6A1 /* README.md */,
 				F918B7F82061646100C8C6A1 /* src */,
 				F9456A5120612F3C00E28067 /* Products */,
@@ -12462,6 +12463,13 @@
 			);
 			path = PaStiXSupport;
 			sourceTree = "<group>";
+		};
+		F9ED51102063A5350048B216 /* files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = files;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
