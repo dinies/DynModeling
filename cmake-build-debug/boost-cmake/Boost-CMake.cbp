@@ -1,0 +1,2845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Boost-CMake"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\boost-cmake\;CMake Files\boost-cmake\cmake\;CMake Files\boost-cmake\cmake\Modules\;CMake Files\boost-cmake\libs\;CMake Files\boost-cmake\boost\;CMake Files\boost-cmake\boost\boost_1_64_0\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\pthread-mutex-robust\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\atomic-int32\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\native-syslog\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\eigen3\;CMake Files\..\..\..\..\usr\local\share\eigen3\cmake\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_wave">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_wave.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_wave"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_wave/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_wave.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_wave/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_type_erasure">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_type_erasure.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_type_erasure"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_type_erasure/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_type_erasure.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_type_erasure/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_thread">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_thread.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_THREAD_BUILD_LIB=1"/>
+					<Add option="-DBOOST_THREAD_POSIX"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_thread"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_thread/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_thread.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_THREAD_BUILD_LIB=1"/>
+					<Add option="-DBOOST_THREAD_POSIX"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_thread/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_iostreams">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_iostreams.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_IOSTREAMS_USE_DEPRECATED"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_iostreams"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_iostreams/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_iostreams.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_IOSTREAMS_USE_DEPRECATED"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_iostreams/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_signals">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_signals.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_signals"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_signals/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_signals.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_signals/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_system">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_system.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_SYSTEM_STATIC_LINK=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_system"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_system/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_system.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_SYSTEM_STATIC_LINK=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_system/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_regex">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_regex.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_regex"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_regex/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_regex.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_regex/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_fiber">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_fiber.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_FIBERS_SOURCE=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_fiber"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_fiber/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_fiber.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_FIBERS_SOURCE=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_fiber/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_graph">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_graph.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_graph"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_graph/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_graph.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_graph/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_serialization">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_serialization.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_serialization"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_serialization/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_serialization.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_serialization/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_program_options">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_program_options.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_program_options"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_program_options/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_program_options.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_program_options/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_random">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_random.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_random"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_random/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_random.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_random/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_unit_test_framework">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_unit_test_framework.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_unit_test_framework"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_unit_test_framework/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_unit_test_framework.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_unit_test_framework/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_math">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_math.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_math"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_math/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_math.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_math/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_log">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_log.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-D_STDC_CONSTANT_MACROS"/>
+					<Add option="-DBOOST_SPIRIT_USE_PHOENIX_V3=1"/>
+					<Add option="-DBOOST_THREAD_DONT_USE_CHRONO=1"/>
+					<Add option="-DBOOST_LOG_BUILDING_THE_LIB=1"/>
+					<Add option="-DBOOST_LOG_USE_NATIVE_SYSLOG"/>
+					<Add option="-DBOOST_LOG_WITHOUT_EVENT_LOG"/>
+					<Add option="-DBOOST_LOG_WITHOUT_DEBUG_OUTPUT"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_log"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_log/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_log.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-D_STDC_CONSTANT_MACROS"/>
+					<Add option="-DBOOST_SPIRIT_USE_PHOENIX_V3=1"/>
+					<Add option="-DBOOST_THREAD_DONT_USE_CHRONO=1"/>
+					<Add option="-DBOOST_LOG_BUILDING_THE_LIB=1"/>
+					<Add option="-DBOOST_LOG_USE_NATIVE_SYSLOG"/>
+					<Add option="-DBOOST_LOG_WITHOUT_EVENT_LOG"/>
+					<Add option="-DBOOST_LOG_WITHOUT_DEBUG_OUTPUT"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_log/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_locale">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_locale.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add option="-DBOOST_LOCALE_WITH_ICONV=1"/>
+					<Add option="-DBOOST_LOCALE_NO_WINAPI_BACKEND=1"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_locale"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_locale/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_locale.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add option="-DBOOST_LOCALE_WITH_ICONV=1"/>
+					<Add option="-DBOOST_LOCALE_NO_WINAPI_BACKEND=1"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_locale/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_timer">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_timer.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_TIMER_STATIC_LINK=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_timer"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_timer/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_timer.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_TIMER_STATIC_LINK=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_timer/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_context">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_context.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_CONTEXT_SOURCE=1"/>
+					<Add option="-DBOOST_CONTEXT_EXPORT"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_context"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_context/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_context.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_CONTEXT_SOURCE=1"/>
+					<Add option="-DBOOST_CONTEXT_EXPORT"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_context/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_exception">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_exception.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_exception"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_exception/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_exception.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_exception/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_container">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_container.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_CONTAINER_STATIC_LINK=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_container"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_container/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_container.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_CONTAINER_STATIC_LINK=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_container/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_date_time">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_date_time.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_DATE_TIME_STATIC_LINK"/>
+					<Add option="-DDATE_TIME_INLINE"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_date_time"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_date_time/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_date_time.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_DATE_TIME_STATIC_LINK"/>
+					<Add option="-DDATE_TIME_INLINE"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_date_time/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_filesystem">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_filesystem.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_FILESYSTEM_STATIC_LINK=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_filesystem"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_filesystem/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_filesystem.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_FILESYSTEM_STATIC_LINK=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_filesystem/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_coroutine">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_coroutine.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_COROUTINES_SOURCE"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_coroutine"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_coroutine/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_coroutine.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_COROUTINES_SOURCE"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_coroutine/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_chrono">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_chrono.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_CHRONO_STATIC_LINK=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_chrono"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_chrono/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_chrono.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_CHRONO_STATIC_LINK=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_chrono/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_log_setup">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_log_setup.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_LOG_SETUP_BUILDING_THE_LIB=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_log_setup"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_log_setup/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_log_setup.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_LOG_SETUP_BUILDING_THE_LIB=1"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_log_setup/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_atomic">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_atomic.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_ATOMIC_STATIC_LINK=1"/>
+					<Add option="-DBOOST_ATOMIC_SOURCE"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_atomic"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Boost_atomic/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/libboost_atomic.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_ATOMIC_STATIC_LINK=1"/>
+					<Add option="-DBOOST_ATOMIC_SOURCE"/>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 Boost_atomic/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/atomic/src/lockpool.cpp">
+			<Option target="Boost_atomic"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/chrono/src/chrono.cpp">
+			<Option target="Boost_chrono"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/chrono/src/process_cpu_clocks.cpp">
+			<Option target="Boost_chrono"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/chrono/src/thread_clock.cpp">
+			<Option target="Boost_chrono"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/container/src/alloc_lib.c">
+			<Option target="Boost_container"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/container/src/dlmalloc.cpp">
+			<Option target="Boost_container"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/container/src/global_resource.cpp">
+			<Option target="Boost_container"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/container/src/monotonic_buffer_resource.cpp">
+			<Option target="Boost_container"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/container/src/pool_resource.cpp">
+			<Option target="Boost_container"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/container/src/synchronized_pool_resource.cpp">
+			<Option target="Boost_container"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/container/src/unsynchronized_pool_resource.cpp">
+			<Option target="Boost_container"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/context/src/posix/stack_traits.cpp">
+			<Option target="Boost_context"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/coroutine/src/detail/coroutine_context.cpp">
+			<Option target="Boost_coroutine"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/coroutine/src/exceptions.cpp">
+			<Option target="Boost_coroutine"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/coroutine/src/posix/stack_traits.cpp">
+			<Option target="Boost_coroutine"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/date_time/src/gregorian/date_generators.cpp">
+			<Option target="Boost_date_time"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/date_time/src/gregorian/greg_month.cpp">
+			<Option target="Boost_date_time"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/date_time/src/gregorian/greg_weekday.cpp">
+			<Option target="Boost_date_time"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/exception/src/clone_current_exception_non_intrusive.cpp">
+			<Option target="Boost_exception"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/algo/algorithm.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/algo/round_robin.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/algo/shared_work.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/algo/work_stealing.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/barrier.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/condition_variable.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/context.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/fiber.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/future.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/mutex.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/properties.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/recursive_mutex.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/recursive_timed_mutex.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/scheduler.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/fiber/src/timed_mutex.cpp">
+			<Option target="Boost_fiber"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/filesystem/src/codecvt_error_category.cpp">
+			<Option target="Boost_filesystem"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/filesystem/src/operations.cpp">
+			<Option target="Boost_filesystem"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/filesystem/src/path.cpp">
+			<Option target="Boost_filesystem"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/filesystem/src/path_traits.cpp">
+			<Option target="Boost_filesystem"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/filesystem/src/portability.cpp">
+			<Option target="Boost_filesystem"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/filesystem/src/unique_path.cpp">
+			<Option target="Boost_filesystem"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/filesystem/src/utf8_codecvt_facet.cpp">
+			<Option target="Boost_filesystem"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/filesystem/src/windows_file_codecvt.cpp">
+			<Option target="Boost_filesystem"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/filesystem/src/windows_file_codecvt.hpp">
+			<Option target="Boost_filesystem"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/graph/src/graphml.cpp">
+			<Option target="Boost_graph"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/graph/src/read_graphviz_new.cpp">
+			<Option target="Boost_graph"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/iostreams/src/bzip2.cpp">
+			<Option target="Boost_iostreams"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/iostreams/src/file_descriptor.cpp">
+			<Option target="Boost_iostreams"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/iostreams/src/gzip.cpp">
+			<Option target="Boost_iostreams"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/iostreams/src/mapped_file.cpp">
+			<Option target="Boost_iostreams"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/iostreams/src/zlib.cpp">
+			<Option target="Boost_iostreams"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/encoding/codepage.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/posix/codecvt.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/posix/codecvt.hpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/posix/collate.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/posix/converter.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/posix/numeric.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/posix/posix_backend.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/posix/posix_backend.hpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/shared/date_time.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/shared/format.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/shared/formatting.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/shared/generator.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/shared/ids.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/shared/localization_backend.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/shared/message.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/shared/mo_lambda.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/shared/mo_lambda.hpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/std/codecvt.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/std/collate.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/std/converter.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/std/numeric.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/std/std_backend.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/std/std_backend.hpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/util/codecvt_converter.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/util/default_locale.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/util/gregorian.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/util/gregorian.hpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/util/info.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/util/locale_data.cpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/locale/src/util/locale_data.hpp">
+			<Option target="Boost_locale"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/attribute_name.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/attribute_set.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/attribute_value_set.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/code_conversion.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/core.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/date_time_format_parser.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/default_attribute_names.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/default_sink.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/default_sink.hpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/dump.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/event.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/exceptions.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/format_parser.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/global_logger_storage.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/named_scope.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/named_scope_format_parser.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/once_block.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/permissions.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/posix/ipc_reliable_message_queue.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/posix/object_name.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/process_id.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/process_name.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/record_ostream.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/default_filter_factory.cpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/default_filter_factory.hpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/default_formatter_factory.cpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/default_formatter_factory.hpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/filter_parser.cpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/formatter_parser.cpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/init_from_settings.cpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/init_from_stream.cpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/matches_relation_factory.cpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/parser_utils.cpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/parser_utils.hpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/setup/settings_parser.cpp">
+			<Option target="Boost_log_setup"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/severity_level.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/spirit_encoding.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/spirit_encoding.hpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/syslog_backend.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/text_file_backend.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/text_multifile_backend.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/text_ostream_backend.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/thread_id.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/thread_specific.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/threadsafe_queue.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/timer.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/timestamp.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/trivial.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/src/unhandled_exception_count.cpp">
+			<Option target="Boost_log"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/acosh.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/acoshf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/asinh.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/asinhf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/assoc_laguerre.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/assoc_laguerref.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/assoc_legendre.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/assoc_legendref.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/atanh.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/atanhf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/beta.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/betaf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/cbrt.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/cbrtf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/comp_ellint_1.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/comp_ellint_1f.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/comp_ellint_2.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/comp_ellint_2f.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/comp_ellint_3.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/comp_ellint_3f.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/copysign.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/copysignf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/cyl_bessel_i.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/cyl_bessel_if.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/cyl_bessel_j.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/cyl_bessel_jf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/cyl_bessel_k.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/cyl_bessel_kf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/cyl_neumann.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/cyl_neumannf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/ellint_1.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/ellint_1f.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/ellint_2.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/ellint_2f.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/ellint_3.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/ellint_3f.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/erf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/erfc.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/erfcf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/erff.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/expint.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/expintf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/expm1.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/expm1f.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/fmax.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/fmaxf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/fmin.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/fminf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/fpclassify.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/fpclassifyf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/hermite.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/hermitef.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/hypot.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/hypotf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/laguerre.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/laguerref.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/legendre.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/legendref.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/lgamma.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/lgammaf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/llround.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/llroundf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/log1p.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/log1pf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/lround.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/lroundf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/nextafter.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/nextafterf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/nexttoward.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/nexttowardf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/riemann_zeta.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/riemann_zetaf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/round.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/roundf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/sph_bessel.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/sph_besself.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/sph_legendre.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/sph_legendref.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/sph_neumann.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/sph_neumannf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/tgamma.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/tgammaf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/trunc.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/math/src/tr1/truncf.cpp">
+			<Option target="Boost_math"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/cmdline.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/config_file.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/convert.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/options_description.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/parsers.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/positional_options.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/split.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/utf8_codecvt_facet.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/value_semantic.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/variables_map.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/program_options/src/winmain.cpp">
+			<Option target="Boost_program_options"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/random/src/random_device.cpp">
+			<Option target="Boost_random"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/c_regex_traits.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/cpp_regex_traits.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/cregex.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/fileiter.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/icu.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/instances.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/posix_api.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/regex.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/regex_debug.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/regex_raw_buffer.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/regex_traits_defaults.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/static_mutex.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/usinstances.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/w32_regex_traits.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/wc_regex_traits.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/wide_posix_api.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/regex/src/winstances.cpp">
+			<Option target="Boost_regex"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/archive_exception.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_archive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_iarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_iserializer.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_oarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_oserializer.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_pointer_iserializer.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_pointer_oserializer.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_serializer_map.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_text_iprimitive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_text_oprimitive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_xml_archive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/basic_xml_grammar.ipp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/binary_iarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/binary_oarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/binary_wiarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/binary_woarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/codecvt_null.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/extended_type_info.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/extended_type_info_no_rtti.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/extended_type_info_typeid.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/polymorphic_iarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/polymorphic_oarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/singleton.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/stl_port.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/text_iarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/text_oarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/utf8_codecvt_facet.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/void_cast.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/xml_archive_exception.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/xml_grammar.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/xml_iarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/serialization/src/xml_oarchive.cpp">
+			<Option target="Boost_serialization"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/signals/src/connection.cpp">
+			<Option target="Boost_signals"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/signals/src/named_slot_map.cpp">
+			<Option target="Boost_signals"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/signals/src/signal_base.cpp">
+			<Option target="Boost_signals"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/signals/src/slot.cpp">
+			<Option target="Boost_signals"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/signals/src/trackable.cpp">
+			<Option target="Boost_signals"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/system/src/error_code.cpp">
+			<Option target="Boost_system"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/compiler_log_formatter.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/debug.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/decorator.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/execution_monitor.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/framework.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/junit_log_formatter.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/plain_report_formatter.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/progress_monitor.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/results_collector.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/results_reporter.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/test_tools.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/test_tree.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/unit_test_log.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/unit_test_main.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/unit_test_monitor.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/unit_test_parameters.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/xml_log_formatter.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/test/src/xml_report_formatter.cpp">
+			<Option target="Boost_unit_test_framework"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/thread/src/future.cpp">
+			<Option target="Boost_thread"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/thread/src/pthread/once.cpp">
+			<Option target="Boost_thread"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/thread/src/pthread/thread.cpp">
+			<Option target="Boost_thread"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/timer/src/auto_timers_construction.cpp">
+			<Option target="Boost_timer"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/timer/src/cpu_timer.cpp">
+			<Option target="Boost_timer"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/type_erasure/src/dynamic_binding.cpp">
+			<Option target="Boost_type_erasure"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/cpplexer/re2clex/aq.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/cpplexer/re2clex/cpp_re.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/instantiate_cpp_exprgrammar.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/instantiate_cpp_grammar.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/instantiate_cpp_literalgrs.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/instantiate_defined_grammar.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/instantiate_predef_macros.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/instantiate_re2c_lexer.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/instantiate_re2c_lexer_str.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/token_ids.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/wave/src/wave_config_constant.cpp">
+			<Option target="Boost_wave"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/context/jump_combined.S">
+			<Option target="Boost_context"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/context/make_combined.S">
+			<Option target="Boost_context"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/context/ontop_combined.S">
+			<Option target="Boost_context"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\boost-cmake\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/cmake/Modules/AddBoostLib.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/cmake/Modules/AddBoostTest.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/cmake/Modules/CheckPreprocessor.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/cmake/Modules/DownloadBoost.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/cmake/Modules/FindIconv.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/cmake/Modules/PlatformDetect.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/cmake/Modules/StandaloneBuild.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/atomic.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/chrono.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/container.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/context.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/coroutine.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/date_time.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/exception.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/fiber.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/filesystem.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/graph.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/graph_parallel.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/header.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/iostreams.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/locale.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/log.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/math.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/mpi.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/program_options.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/random.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/regex.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/serialization.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/signals.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/system.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/test.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/thread.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/timer.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/type_erasure.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/wave.cmake">
+			<Option virtualFolder="CMake Files\boost-cmake\libs\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/config/pthread-mutex-robust/pthread_mutex_robust.cpp">
+			<Option virtualFolder="CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\pthread-mutex-robust\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/config/atomic-int32/atomic_int32.cpp">
+			<Option virtualFolder="CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\atomic-int32\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/log/config/native-syslog/native_syslog.cpp">
+			<Option virtualFolder="CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\native-syslog\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/../../../../usr/local/share/eigen3/cmake/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/../../../../usr/local/share/eigen3/cmake/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/../../../../usr/local/share/eigen3/cmake/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

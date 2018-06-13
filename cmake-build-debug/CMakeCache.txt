@@ -14,8 +14,181 @@
 # EXTERNAL cache entries
 ########################
 
+//Use the specified local directory to search for boost archives
+// instead of downloading them
+BOOST_ARCHIVE_DIRECTORY:STRING=
+
+//Prefer downloading Boost to the binary directory instead of source
+// directory
+BOOST_DOWNLOAD_TO_BINARY_DIR:BOOL=OFF
+
+//Enable bzip2 support in Boost Iostreams if available
+BOOST_IOSTREAMS_ENABLE_BZIP2:BOOL=ON
+
+//Enable zlib support in Boost Iostreams if available
+BOOST_IOSTREAMS_ENABLE_ZLIB:BOOL=ON
+
+//Enable Iconv backend in Boost Locale if available
+BOOST_LOCALE_ENABLE_ICONV_BACKEND:BOOL=ON
+
+//Enable ICU backend in Boost Locale if available
+BOOST_LOCALE_ENABLE_ICU_BACKEND:BOOL=ON
+
+//Enable Posix backend in Boost Locale if available
+BOOST_LOCALE_ENABLE_POSIX_BACKEND:BOOL=ON
+
+//Enable STD backend in Boost Locale if available
+BOOST_LOCALE_ENABLE_STD_BACKEND:BOOL=ON
+
+//Enable Winapi backend in Boost Locale if available
+BOOST_LOCALE_ENABLE_WINAPI_BACKEND:BOOL=OFF
+
+//Current SHA256 of Boost archive used
+BOOST_LOCAL_SHA256:STRING=d964dfdab2f73d04a8f52303f1b141344447b78ab85dc79da78fa167fdd807f5
+
+//Disable debug output backend in Boost Log
+BOOST_LOG_WITHOUT_DEBUG_OUTPUT:BOOL=OFF
+
+//Disable event log backend in Boost Log
+BOOST_LOG_WITHOUT_EVENT_LOG:BOOL=OFF
+
+//Disable syslog backend in Boost Log
+BOOST_LOG_WITHOUT_SYSLOG:BOOL=OFF
+
+//Boost location
+BOOST_SOURCE:STRING=/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0
+
+//Boost download URL
+BOOST_URL:STRING=https://github.com/Orphis/boost-cmake/releases/download/v1.64.0/boost_1_64_0.tar.xz
+
+//Boost download URL SHA256 checksum
+BOOST_URL_SHA256:STRING=d964dfdab2f73d04a8f52303f1b141344447b78ab85dc79da78fa167fdd807f5
+
+//Path to a file.
+BZIP2_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+BZIP2_LIBRARY_DEBUG:FILEPATH=BZIP2_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+BZIP2_LIBRARY_RELEASE:FILEPATH=/usr/lib/libbz2.dylib
+
+//Value Computed by CMake
+Boost-CMake_BINARY_DIR:STATIC=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake
+
+//Value Computed by CMake
+Boost-CMake_SOURCE_DIR:STATIC=/Users/dinies33/GitRepos/DynModeling/boost-cmake
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/local/include
+
+//Dependencies for target
+Boost_atomic_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+Boost_chrono_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+Boost_container_LIB_DEPENDS:STATIC=
+
+//Dependencies for the target
+Boost_context_LIB_DEPENDS:STATIC=general;Boost::thread;
+
+//Dependencies for the target
+Boost_coroutine_LIB_DEPENDS:STATIC=general;Boost::context;general;Boost::system;general;Boost::thread;
+
+//Dependencies for target
+Boost_date_time_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+Boost_exception_LIB_DEPENDS:STATIC=
+
+//Dependencies for the target
+Boost_fiber_LIB_DEPENDS:STATIC=general;Boost::context;
+
+//Dependencies for the target
+Boost_filesystem_LIB_DEPENDS:STATIC=general;Boost::system;
+
+//Dependencies for the target
+Boost_graph_LIB_DEPENDS:STATIC=general;Boost::regex;
+
+//Dependencies for the target
+Boost_iostreams_LIB_DEPENDS:STATIC=general;BZip2::BZip2;general;ZLIB::ZLIB;
+
+//Dependencies for the target
+Boost_locale_LIB_DEPENDS:STATIC=general;Boost::system;
+
+//Dependencies for the target
+Boost_log_LIB_DEPENDS:STATIC=general;Boost::atomic;general;Boost::date_time;general;Boost::filesystem;general;Boost::system;general;Boost::thread;general;ws2_32;general;mswsock;general;advapi32;general;>;
+
+//Dependencies for the target
+Boost_log_setup_LIB_DEPENDS:STATIC=general;Boost::log;
+
+//Dependencies for target
+Boost_math_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+Boost_program_options_LIB_DEPENDS:STATIC=
+
+//Dependencies for the target
+Boost_random_LIB_DEPENDS:STATIC=general;Boost::system;
+
+//Dependencies for target
+Boost_regex_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+Boost_serialization_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+Boost_signals_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+Boost_system_LIB_DEPENDS:STATIC=
+
+//Dependencies for the target
+Boost_thread_LIB_DEPENDS:STATIC=general;Boost::chrono;general;Boost::system;
+
+//Dependencies for the target
+Boost_timer_LIB_DEPENDS:STATIC=general;Boost::chrono;general;Boost::system;
+
+//Dependencies for the target
+Boost_type_erasure_LIB_DEPENDS:STATIC=general;Boost::system;general;Boost::thread;
+
+//Dependencies for the target
+Boost_unit_test_framework_LIB_DEPENDS:STATIC=general;Boost::timer;
+
+//Dependencies for the target
+Boost_wave_LIB_DEPENDS:STATIC=general;Boost::date_time;general;Boost::filesystem;general;Boost::thread;
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
+
+//The ASM compiler
+CMAKE_ASM_COMPILER:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
+
+//LLVM archiver
+CMAKE_ASM_COMPILER_AR:FILEPATH=CMAKE_ASM_COMPILER_AR-NOTFOUND
+
+//Generate index for LLVM archive
+CMAKE_ASM_COMPILER_RANLIB:FILEPATH=CMAKE_ASM_COMPILER_RANLIB-NOTFOUND
+
+//Flags used by the assembler during all build types.
+CMAKE_ASM_FLAGS:STRING=
+
+//Flags used by the assembler during debug builds.
+CMAKE_ASM_FLAGS_DEBUG:STRING=-g
+
+//Flags used by the assembler during release minsize builds.
+CMAKE_ASM_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+//Flags used by the assembler during release builds.
+CMAKE_ASM_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+//Flags used by the assembler during Release with Debug Info builds.
+CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
@@ -189,11 +362,169 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //The directory containing a CMake configuration file for Eigen3.
 Eigen3_DIR:PATH=/usr/local/share/eigen3/cmake
 
+//Iconv include directory
+ICONV_INCLUDE_DIR:PATH=/usr/include
+
+//Iconv library
+ICONV_LIBRARY:FILEPATH=/usr/lib/libiconv.dylib
+
+//ICU derb executable
+ICU_DERB_EXECUTABLE:FILEPATH=ICU_DERB_EXECUTABLE-NOTFOUND
+
+//ICU dt library (debug)
+ICU_DT_LIBRARY_DEBUG:FILEPATH=ICU_DT_LIBRARY_DEBUG-NOTFOUND
+
+//ICU dt library (release)
+ICU_DT_LIBRARY_RELEASE:FILEPATH=ICU_DT_LIBRARY_RELEASE-NOTFOUND
+
+//ICU genbrk executable
+ICU_GENBRK_EXECUTABLE:FILEPATH=ICU_GENBRK_EXECUTABLE-NOTFOUND
+
+//ICU genccode executable
+ICU_GENCCODE_EXECUTABLE:FILEPATH=ICU_GENCCODE_EXECUTABLE-NOTFOUND
+
+//ICU gencfu executable
+ICU_GENCFU_EXECUTABLE:FILEPATH=ICU_GENCFU_EXECUTABLE-NOTFOUND
+
+//ICU gencmn executable
+ICU_GENCMN_EXECUTABLE:FILEPATH=ICU_GENCMN_EXECUTABLE-NOTFOUND
+
+//ICU gencnval executable
+ICU_GENCNVAL_EXECUTABLE:FILEPATH=ICU_GENCNVAL_EXECUTABLE-NOTFOUND
+
+//ICU gendict executable
+ICU_GENDICT_EXECUTABLE:FILEPATH=ICU_GENDICT_EXECUTABLE-NOTFOUND
+
+//ICU gennorm2 executable
+ICU_GENNORM2_EXECUTABLE:FILEPATH=ICU_GENNORM2_EXECUTABLE-NOTFOUND
+
+//ICU genrb executable
+ICU_GENRB_EXECUTABLE:FILEPATH=ICU_GENRB_EXECUTABLE-NOTFOUND
+
+//ICU gensprep executable
+ICU_GENSPREP_EXECUTABLE:FILEPATH=ICU_GENSPREP_EXECUTABLE-NOTFOUND
+
+//ICU i18n library (debug)
+ICU_I18N_LIBRARY_DEBUG:FILEPATH=ICU_I18N_LIBRARY_DEBUG-NOTFOUND
+
+//ICU i18n library (release)
+ICU_I18N_LIBRARY_RELEASE:FILEPATH=ICU_I18N_LIBRARY_RELEASE-NOTFOUND
+
+//ICU icu-config executable
+ICU_ICU-CONFIG_EXECUTABLE:FILEPATH=ICU_ICU-CONFIG_EXECUTABLE-NOTFOUND
+
+//ICU icuinfo executable
+ICU_ICUINFO_EXECUTABLE:FILEPATH=ICU_ICUINFO_EXECUTABLE-NOTFOUND
+
+//ICU icupkg executable
+ICU_ICUPKG_EXECUTABLE:FILEPATH=ICU_ICUPKG_EXECUTABLE-NOTFOUND
+
+//ICU include directory
+ICU_INCLUDE_DIR:PATH=ICU_INCLUDE_DIR-NOTFOUND
+
+//ICU makeconv executable
+ICU_MAKECONV_EXECUTABLE:FILEPATH=ICU_MAKECONV_EXECUTABLE-NOTFOUND
+
+//ICU Makefile.inc data file
+ICU_MAKEFILE_INC:FILEPATH=ICU_MAKEFILE_INC-NOTFOUND
+
+//ICU pkgdata executable
+ICU_PKGDATA_EXECUTABLE:FILEPATH=ICU_PKGDATA_EXECUTABLE-NOTFOUND
+
+//ICU pkgdata.inc data file
+ICU_PKGDATA_INC:FILEPATH=ICU_PKGDATA_INC-NOTFOUND
+
+//ICU uconv executable
+ICU_UCONV_EXECUTABLE:FILEPATH=ICU_UCONV_EXECUTABLE-NOTFOUND
+
+//ICU uc library (debug)
+ICU_UC_LIBRARY_DEBUG:FILEPATH=ICU_UC_LIBRARY_DEBUG-NOTFOUND
+
+//ICU uc library (release)
+ICU_UC_LIBRARY_RELEASE:FILEPATH=ICU_UC_LIBRARY_RELEASE-NOTFOUND
+
+//Message Compiler executable
+MC_EXECUTABLE:FILEPATH=MC_EXECUTABLE-NOTFOUND
+
+//Executable for running MPI programs.
+MPIEXEC_EXECUTABLE:FILEPATH=MPIEXEC_EXECUTABLE-NOTFOUND
+
+//Maximum number of processors available to run MPI applications.
+MPIEXEC_MAX_NUMPROCS:STRING=2
+
+//Flag used by MPI to specify the number of processes for mpiexec;
+// the next option will be the number of processes.
+MPIEXEC_NUMPROC_FLAG:STRING=-n
+
+//These flags will be placed after all flags passed to mpiexec.
+MPIEXEC_POSTFLAGS:STRING=
+
+//These flags will be directly before the executable that is being
+// run by mpiexec.
+MPIEXEC_PREFLAGS:STRING=
+
+//MPI CXX additional include directories
+MPI_CXX_ADDITIONAL_INCLUDE_DIRS:STRING=
+
+//MPI compiler for CXX
+MPI_CXX_COMPILER:FILEPATH=MPI_CXX_COMPILER-NOTFOUND
+
+//MPI CXX compilation definitions
+MPI_CXX_COMPILE_DEFINITIONS:STRING=
+
+//MPI CXX compilation flags
+MPI_CXX_COMPILE_OPTIONS:STRING=
+
+//Path to a file.
+MPI_CXX_HEADER_DIR:PATH=MPI_CXX_HEADER_DIR-NOTFOUND
+
+//MPI CXX libraries to link against
+MPI_CXX_LIB_NAMES:STRING=
+
+//MPI CXX linker flags
+MPI_CXX_LINK_FLAGS:STRING=
+
+//If true, the MPI-2 C++ bindings are disabled using definitions.
+MPI_CXX_SKIP_MPICXX:BOOL=FALSE
+
+//MPI C additional include directories
+MPI_C_ADDITIONAL_INCLUDE_DIRS:STRING=
+
+//MPI compiler for C
+MPI_C_COMPILER:FILEPATH=MPI_C_COMPILER-NOTFOUND
+
+//MPI C compilation definitions
+MPI_C_COMPILE_DEFINITIONS:STRING=
+
+//MPI C compilation flags
+MPI_C_COMPILE_OPTIONS:STRING=
+
+//Path to a file.
+MPI_C_HEADER_DIR:PATH=MPI_C_HEADER_DIR-NOTFOUND
+
+//MPI C libraries to link against
+MPI_C_LIB_NAMES:STRING=
+
+//MPI C linker flags
+MPI_C_LINK_FLAGS:STRING=
+
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/local/share/OpenCV
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
+
+//rt library
+RT_LIBRARY:FILEPATH=RT_LIBRARY-NOTFOUND
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/usr/lib/libz.dylib
 
 //Value Computed by CMake
 dyn_modeling_BINARY_DIR:STATIC=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug
@@ -206,16 +537,47 @@ dyn_modeling_SOURCE_DIR:STATIC=/Users/dinies33/GitRepos/DynModeling
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: BOOST_LOCAL_SHA256
+BOOST_LOCAL_SHA256-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BZIP2_INCLUDE_DIR
+BZIP2_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BZIP2_LIBRARY_DEBUG
+BZIP2_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BZIP2_LIBRARY_RELEASE
+BZIP2_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//Have symbol BZ2_bzCompressInit
+BZIP2_NEED_PREFIX:INTERNAL=1
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_COMPILER
+CMAKE_ASM_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_COMPILER_AR
+CMAKE_ASM_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_COMPILER_RANLIB
+CMAKE_ASM_COMPILER_RANLIB-ADVANCED:INTERNAL=1
+CMAKE_ASM_COMPILER_WORKS:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_FLAGS
+CMAKE_ASM_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_FLAGS_DEBUG
+CMAKE_ASM_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_FLAGS_MINSIZEREL
+CMAKE_ASM_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_FLAGS_RELEASE
+CMAKE_ASM_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_FLAGS_RELWITHDEBINFO
+CMAKE_ASM_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=9
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=10
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=6
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -278,6 +640,10 @@ CMAKE_GENERATOR:INTERNAL=Unix Makefiles
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Have symbol pthread_create
+CMAKE_HAVE_LIBC_CREATE:INTERNAL=1
+//Have include pthread.h
+CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/Users/dinies33/GitRepos/DynModeling
@@ -300,7 +666,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -310,7 +676,7 @@ CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/Applications/CLion.app/Contents/bin/cmake/share/cmake-3.9
+CMAKE_ROOT:INTERNAL=/Applications/CLion.app/Contents/bin/cmake/share/cmake-3.10
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -341,8 +707,106 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding BZip2
+FIND_PACKAGE_MESSAGE_DETAILS_BZip2:INTERNAL=[/usr/lib/libbz2.dylib][/usr/include][v1.0.6()]
 //Details about finding OpenCV
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v3.4.1()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/usr/lib/libz.dylib][/usr/include][v1.2.11()]
+//Result of TRY_COMPILE
+HAVE_ATOMIC_INT32:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_NATIVE_SYSLOG:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_PTHREAD_MUTEX_ROBUST:INTERNAL=FALSE
+//ADVANCED property for variable: ICONV_INCLUDE_DIR
+ICONV_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ICONV_LIBRARY
+ICONV_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ICU_DT_LIBRARY_DEBUG
+ICU_DT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ICU_DT_LIBRARY_RELEASE
+ICU_DT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ICU_I18N_LIBRARY_DEBUG
+ICU_I18N_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ICU_I18N_LIBRARY_RELEASE
+ICU_I18N_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ICU_UC_LIBRARY_DEBUG
+ICU_UC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ICU_UC_LIBRARY_RELEASE
+ICU_UC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPIEXEC_EXECUTABLE
+MPIEXEC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPIEXEC_MAX_NUMPROCS
+MPIEXEC_MAX_NUMPROCS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPIEXEC_NUMPROC_FLAG
+MPIEXEC_NUMPROC_FLAG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPIEXEC_POSTFLAGS
+MPIEXEC_POSTFLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPIEXEC_PREFLAGS
+MPIEXEC_PREFLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_ADDITIONAL_INCLUDE_DIRS
+MPI_CXX_ADDITIONAL_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_COMPILER
+MPI_CXX_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_COMPILE_DEFINITIONS
+MPI_CXX_COMPILE_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_COMPILE_OPTIONS
+MPI_CXX_COMPILE_OPTIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_HEADER_DIR
+MPI_CXX_HEADER_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_LIB_NAMES
+MPI_CXX_LIB_NAMES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_LINK_FLAGS
+MPI_CXX_LINK_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_SKIP_MPICXX
+MPI_CXX_SKIP_MPICXX-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_ADDITIONAL_INCLUDE_DIRS
+MPI_C_ADDITIONAL_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_COMPILER
+MPI_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_COMPILE_DEFINITIONS
+MPI_C_COMPILE_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_COMPILE_OPTIONS
+MPI_C_COMPILE_OPTIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_HEADER_DIR
+MPI_C_HEADER_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_LIB_NAMES
+MPI_C_LIB_NAMES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_LINK_FLAGS
+MPI_C_LINK_FLAGS-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+MPI_RESULT_CXX_test_mpi_normal:INTERNAL=FALSE
+//Result of TRY_COMPILE
+MPI_RESULT_C_test_mpi_normal:INTERNAL=FALSE
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
+//Have symbol __ANDROID__
+USE_ANDROID:INTERNAL=0
+//Have symbol __APPLE__
+USE_APPLE:INTERNAL=1
+//Have symbol __FreeBSD__
+USE_FREEBSD:INTERNAL=0
+//Have symbol __linux__
+USE_LINUX:INTERNAL=0
+//Have symbol _WIN32
+USE_WINDOWS:INTERNAL=0
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//Last used BOOST_ROOT value.
+_BOOST_ROOT_LAST:INTERNAL=/usr/local/Cellar/boost/1.67.0_1/include/boost
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/local/include
+//Last used Boost_NAMESPACE value.
+_Boost_NAMESPACE_LAST:INTERNAL=boost
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 

@@ -1,0 +1,112 @@
+Determining if the __linux__ exist failed with the following output:
+Change Dir: /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fa9b5/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_fa9b5.dir/build.make CMakeFiles/cmTC_fa9b5.dir/build
+Building CXX object CMakeFiles/cmTC_fa9b5.dir/CheckSymbolExists.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -o CMakeFiles/cmTC_fa9b5.dir/CheckSymbolExists.cxx.o -c /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:7:19: error: use of undeclared identifier '__linux__'
+  return ((int*)(&__linux__))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_fa9b5.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTC_fa9b5/fast] Error 2
+
+File /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __linux__
+  return ((int*)(&__linux__))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the _WIN32 exist failed with the following output:
+Change Dir: /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_938f4/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_938f4.dir/build.make CMakeFiles/cmTC_938f4.dir/build
+Building CXX object CMakeFiles/cmTC_938f4.dir/CheckSymbolExists.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -o CMakeFiles/cmTC_938f4.dir/CheckSymbolExists.cxx.o -c /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:7:19: error: use of undeclared identifier '_WIN32'
+  return ((int*)(&_WIN32))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_938f4.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTC_938f4/fast] Error 2
+
+File /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _WIN32
+  return ((int*)(&_WIN32))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the __ANDROID__ exist failed with the following output:
+Change Dir: /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e8584/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_e8584.dir/build.make CMakeFiles/cmTC_e8584.dir/build
+Building CXX object CMakeFiles/cmTC_e8584.dir/CheckSymbolExists.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -o CMakeFiles/cmTC_e8584.dir/CheckSymbolExists.cxx.o -c /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:7:19: error: use of undeclared identifier '__ANDROID__'
+  return ((int*)(&__ANDROID__))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_e8584.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTC_e8584/fast] Error 2
+
+File /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __ANDROID__
+  return ((int*)(&__ANDROID__))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the __FreeBSD__ exist failed with the following output:
+Change Dir: /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_840dc/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_840dc.dir/build.make CMakeFiles/cmTC_840dc.dir/build
+Building CXX object CMakeFiles/cmTC_840dc.dir/CheckSymbolExists.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -o CMakeFiles/cmTC_840dc.dir/CheckSymbolExists.cxx.o -c /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:7:19: error: use of undeclared identifier '__FreeBSD__'
+  return ((int*)(&__FreeBSD__))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_840dc.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTC_840dc/fast] Error 2
+
+File /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __FreeBSD__
+  return ((int*)(&__FreeBSD__))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

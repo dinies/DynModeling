@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc ../../bin/libboost_atomic.a  CMakeFiles/Boost_atomic.dir/boost/boost_1_64_0/libs/atomic/src/lockpool.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib ../../bin/libboost_atomic.a

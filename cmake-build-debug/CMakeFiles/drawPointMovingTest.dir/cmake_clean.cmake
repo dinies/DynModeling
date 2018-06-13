@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drawPointMovingTest.dir/src/drawPointMovingTest.cpp.o"
-  "drawPointMovingTest.pdb"
-  "drawPointMovingTest"
+  "../bin/drawPointMovingTest.pdb"
+  "../bin/drawPointMovingTest"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc ../../bin/libboost_coroutine.a  CMakeFiles/Boost_coroutine.dir/boost/boost_1_64_0/libs/coroutine/src/posix/stack_traits.cpp.o CMakeFiles/Boost_coroutine.dir/boost/boost_1_64_0/libs/coroutine/src/detail/coroutine_context.cpp.o CMakeFiles/Boost_coroutine.dir/boost/boost_1_64_0/libs/coroutine/src/exceptions.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib ../../bin/libboost_coroutine.a

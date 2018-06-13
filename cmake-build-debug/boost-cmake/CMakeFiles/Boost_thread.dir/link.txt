@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc ../../bin/libboost_thread.a  CMakeFiles/Boost_thread.dir/boost/boost_1_64_0/libs/thread/src/pthread/thread.cpp.o CMakeFiles/Boost_thread.dir/boost/boost_1_64_0/libs/thread/src/pthread/once.cpp.o CMakeFiles/Boost_thread.dir/boost/boost_1_64_0/libs/thread/src/future.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib ../../bin/libboost_thread.a

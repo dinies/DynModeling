@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc ../../bin/libboost_timer.a  CMakeFiles/Boost_timer.dir/boost/boost_1_64_0/libs/timer/src/auto_timers_construction.cpp.o CMakeFiles/Boost_timer.dir/boost/boost_1_64_0/libs/timer/src/cpu_timer.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib ../../bin/libboost_timer.a
