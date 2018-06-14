@@ -2848,6 +2848,12 @@
 		<Unit filename="/Users/dinies33/GitRepos/DynModeling/src/pendulum/Pendulum.hpp">
 			<Option target="pendulumTest"/>
 		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/src/utils/Clock.cpp">
+			<Option target="pendulumTest"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/src/utils/Clock.hpp">
+			<Option target="pendulumTest"/>
+		</Unit>
 		<Unit filename="/Users/dinies33/GitRepos/DynModeling/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

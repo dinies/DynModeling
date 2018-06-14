@@ -167,6 +167,33 @@ __/src/pendulum/Pendulum.cpp.s:
 	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug && $(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/__/src/pendulum/Pendulum.cpp.s
 .PHONY : __/src/pendulum/Pendulum.cpp.s
 
+__/src/utils/Clock.o: __/src/utils/Clock.cpp.o
+
+.PHONY : __/src/utils/Clock.o
+
+# target to build an object file
+__/src/utils/Clock.cpp.o:
+	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug && $(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.o
+.PHONY : __/src/utils/Clock.cpp.o
+
+__/src/utils/Clock.i: __/src/utils/Clock.cpp.i
+
+.PHONY : __/src/utils/Clock.i
+
+# target to preprocess a source file
+__/src/utils/Clock.cpp.i:
+	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug && $(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.i
+.PHONY : __/src/utils/Clock.cpp.i
+
+__/src/utils/Clock.s: __/src/utils/Clock.cpp.s
+
+.PHONY : __/src/utils/Clock.s
+
+# target to generate assembly for a file
+__/src/utils/Clock.cpp.s:
+	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug && $(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.s
+.PHONY : __/src/utils/Clock.cpp.s
+
 drawPointMovingTest.o: drawPointMovingTest.cpp.o
 
 .PHONY : drawPointMovingTest.o
@@ -234,6 +261,9 @@ help:
 	@echo "... __/src/pendulum/Pendulum.o"
 	@echo "... __/src/pendulum/Pendulum.i"
 	@echo "... __/src/pendulum/Pendulum.s"
+	@echo "... __/src/utils/Clock.o"
+	@echo "... __/src/utils/Clock.i"
+	@echo "... __/src/utils/Clock.s"
 	@echo "... drawPointMovingTest.o"
 	@echo "... drawPointMovingTest.i"
 	@echo "... drawPointMovingTest.s"

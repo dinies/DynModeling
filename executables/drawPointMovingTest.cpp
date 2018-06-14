@@ -4,7 +4,7 @@
 #include<iostream>
 #include <cmath>
 #include <boost/tuple/tuple.hpp>
-#include <opencv2/plot.hpp>
+//#include <opencv2/plot.hpp>
 
 using namespace dyn_modeling;
 using namespace std;
@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
 
   Vector2iVector pointPositions(num_pos);
 
-//  cout << "debug\n";
+  cout << "debug\n";
   for (size_t i = 0; i < pointPositions.size(); i++) {
     pointPositions[i] = Eigen::Vector2i(rows * drand48(), cols * drand48());
   }

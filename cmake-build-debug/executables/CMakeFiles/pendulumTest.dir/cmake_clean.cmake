@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/pendulumTest.dir/pendulumTest.cpp.o"
   "CMakeFiles/pendulumTest.dir/__/src/pendulum/Pendulum.cpp.o"
+  "CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.o"
   "../../bin/pendulumTest.pdb"
   "../../bin/pendulumTest"
 )
