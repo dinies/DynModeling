@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named drawPointMovingTest
-
-# Build rule for target.
-drawPointMovingTest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 drawPointMovingTest
-.PHONY : drawPointMovingTest
-
-# fast build rule for target.
-drawPointMovingTest/fast:
-	$(MAKE) -f CMakeFiles/drawPointMovingTest.dir/build.make CMakeFiles/drawPointMovingTest.dir/build
-.PHONY : drawPointMovingTest/fast
-
-#=============================================================================
 # Target rules for targets named Boost_wave
 
 # Build rule for target.
@@ -461,32 +448,31 @@ Boost_atomic/fast:
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_atomic.dir/build.make boost-cmake/CMakeFiles/Boost_atomic.dir/build
 .PHONY : Boost_atomic/fast
 
-src/drawPointMovingTest.o: src/drawPointMovingTest.cpp.o
+#=============================================================================
+# Target rules for targets named pendulumTest
 
-.PHONY : src/drawPointMovingTest.o
+# Build rule for target.
+pendulumTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pendulumTest
+.PHONY : pendulumTest
 
-# target to build an object file
-src/drawPointMovingTest.cpp.o:
-	$(MAKE) -f CMakeFiles/drawPointMovingTest.dir/build.make CMakeFiles/drawPointMovingTest.dir/src/drawPointMovingTest.cpp.o
-.PHONY : src/drawPointMovingTest.cpp.o
+# fast build rule for target.
+pendulumTest/fast:
+	$(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/build
+.PHONY : pendulumTest/fast
 
-src/drawPointMovingTest.i: src/drawPointMovingTest.cpp.i
+#=============================================================================
+# Target rules for targets named drawPointMovingTest
 
-.PHONY : src/drawPointMovingTest.i
+# Build rule for target.
+drawPointMovingTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 drawPointMovingTest
+.PHONY : drawPointMovingTest
 
-# target to preprocess a source file
-src/drawPointMovingTest.cpp.i:
-	$(MAKE) -f CMakeFiles/drawPointMovingTest.dir/build.make CMakeFiles/drawPointMovingTest.dir/src/drawPointMovingTest.cpp.i
-.PHONY : src/drawPointMovingTest.cpp.i
-
-src/drawPointMovingTest.s: src/drawPointMovingTest.cpp.s
-
-.PHONY : src/drawPointMovingTest.s
-
-# target to generate assembly for a file
-src/drawPointMovingTest.cpp.s:
-	$(MAKE) -f CMakeFiles/drawPointMovingTest.dir/build.make CMakeFiles/drawPointMovingTest.dir/src/drawPointMovingTest.cpp.s
-.PHONY : src/drawPointMovingTest.cpp.s
+# fast build rule for target.
+drawPointMovingTest/fast:
+	$(MAKE) -f executables/CMakeFiles/drawPointMovingTest.dir/build.make executables/CMakeFiles/drawPointMovingTest.dir/build
+.PHONY : drawPointMovingTest/fast
 
 # Help Target
 help:
@@ -496,7 +482,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... drawPointMovingTest"
 	@echo "... Boost_wave"
 	@echo "... Boost_type_erasure"
 	@echo "... Boost_thread"
@@ -523,9 +508,8 @@ help:
 	@echo "... Boost_chrono"
 	@echo "... Boost_log_setup"
 	@echo "... Boost_atomic"
-	@echo "... src/drawPointMovingTest.o"
-	@echo "... src/drawPointMovingTest.i"
-	@echo "... src/drawPointMovingTest.s"
+	@echo "... pendulumTest"
+	@echo "... drawPointMovingTest"
 .PHONY : help
 
 

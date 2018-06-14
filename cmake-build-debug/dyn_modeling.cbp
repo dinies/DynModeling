@@ -5,7 +5,7 @@
 		<Option title="dyn_modeling"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="clang"/>
-		<Option virtualFolders="CMake Files\;CMake Files\boost-cmake\;CMake Files\boost-cmake\cmake\;CMake Files\boost-cmake\cmake\Modules\;CMake Files\boost-cmake\libs\;CMake Files\boost-cmake\boost\;CMake Files\boost-cmake\boost\boost_1_64_0\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\pthread-mutex-robust\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\atomic-int32\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\native-syslog\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\eigen3\;CMake Files\..\..\..\..\usr\local\share\eigen3\cmake\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\boost-cmake\;CMake Files\boost-cmake\cmake\;CMake Files\boost-cmake\cmake\Modules\;CMake Files\boost-cmake\libs\;CMake Files\boost-cmake\boost\;CMake Files\boost-cmake\boost\boost_1_64_0\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\pthread-mutex-robust\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\atomic-int32\;CMake Files\boost-cmake\boost\boost_1_64_0\libs\log\config\native-syslog\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\usr\local\share\eigen3\;CMake Files\..\..\..\..\usr\local\share\eigen3\cmake\;CMake Files\..\..\..\..\usr\local\share\OpenCV\;CMake Files\executables\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/cmake-build-debug"/>
@@ -32,70 +32,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="drawPointMovingTest">
-				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/drawPointMovingTest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="clang"/>
-				<Compiler>
-					<Add option="-DUNIX"/>
-					<Add option="-DBOOST_ALL_NO_LIB=1"/>
-					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
-					<Add option="-DBOOST_THREAD_VERSION=4"/>
-					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
-					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
-					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
-					<Add directory="/usr/local/include/eigen3"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 drawPointMovingTest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="drawPointMovingTest/fast">
-				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/drawPointMovingTest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="clang"/>
-				<Compiler>
-					<Add option="-DUNIX"/>
-					<Add option="-DBOOST_ALL_NO_LIB=1"/>
-					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
-					<Add option="-DBOOST_THREAD_VERSION=4"/>
-					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
-					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
-					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
-					<Add directory="/usr/local/include/eigen3"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 drawPointMovingTest/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1823,6 +1759,122 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/boost-cmake/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="pendulumTest">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/pendulumTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 pendulumTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pendulumTest/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/pendulumTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 pendulumTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="drawPointMovingTest">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/drawPointMovingTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 drawPointMovingTest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="drawPointMovingTest/fast">
+				<Option output="/Users/dinies33/GitRepos/DynModeling/bin/drawPointMovingTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dinies33/GitRepos/DynModeling/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 drawPointMovingTest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0/libs/atomic/src/lockpool.cpp">
 			<Option target="Boost_atomic"/>
@@ -2784,8 +2836,17 @@
 		<Unit filename="/Users/dinies33/GitRepos/DynModeling/boost-cmake/libs/context/ontop_combined.S">
 			<Option target="Boost_context"/>
 		</Unit>
-		<Unit filename="/Users/dinies33/GitRepos/DynModeling/src/drawPointMovingTest.cpp">
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/executables/drawPointMovingTest.cpp">
 			<Option target="drawPointMovingTest"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/executables/pendulumTest.cpp">
+			<Option target="pendulumTest"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/src/pendulum/Pendulum.cpp">
+			<Option target="pendulumTest"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/src/pendulum/Pendulum.hpp">
+			<Option target="pendulumTest"/>
 		</Unit>
 		<Unit filename="/Users/dinies33/GitRepos/DynModeling/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
@@ -2927,6 +2988,9 @@
 		</Unit>
 		<Unit filename="/Users/dinies33/GitRepos/DynModeling/../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/executables/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\executables\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

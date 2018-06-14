@@ -60,45 +60,6 @@ CMAKE_SOURCE_DIR = /Users/dinies33/GitRepos/DynModeling
 CMAKE_BINARY_DIR = /Users/dinies33/GitRepos/DynModeling/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/drawPointMovingTest.dir
-
-# All Build rule for target.
-CMakeFiles/drawPointMovingTest.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
-CMakeFiles/drawPointMovingTest.dir/all: boost-cmake/CMakeFiles/Boost_iostreams.dir/all
-CMakeFiles/drawPointMovingTest.dir/all: boost-cmake/CMakeFiles/Boost_filesystem.dir/all
-	$(MAKE) -f CMakeFiles/drawPointMovingTest.dir/build.make CMakeFiles/drawPointMovingTest.dir/depend
-	$(MAKE) -f CMakeFiles/drawPointMovingTest.dir/build.make CMakeFiles/drawPointMovingTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=100 "Built target drawPointMovingTest"
-.PHONY : CMakeFiles/drawPointMovingTest.dir/all
-
-# Include target in all.
-all: CMakeFiles/drawPointMovingTest.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/drawPointMovingTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/drawPointMovingTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/drawPointMovingTest.dir/rule
-
-# Convenience name for target.
-drawPointMovingTest: CMakeFiles/drawPointMovingTest.dir/rule
-
-.PHONY : drawPointMovingTest
-
-# clean rule for target.
-CMakeFiles/drawPointMovingTest.dir/clean:
-	$(MAKE) -f CMakeFiles/drawPointMovingTest.dir/build.make CMakeFiles/drawPointMovingTest.dir/clean
-.PHONY : CMakeFiles/drawPointMovingTest.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/drawPointMovingTest.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Directory level rules for directory boost-cmake
 
 # Convenience name for "all" pass in the directory.
@@ -145,19 +106,19 @@ boost-cmake/preinstall:
 # Target rules for target boost-cmake/CMakeFiles/Boost_wave.dir
 
 # All Build rule for target.
-boost-cmake/CMakeFiles/Boost_wave.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_wave.dir/all: boost-cmake/CMakeFiles/Boost_thread.dir/all
+boost-cmake/CMakeFiles/Boost_wave.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_wave.dir/all: boost-cmake/CMakeFiles/Boost_date_time.dir/all
 boost-cmake/CMakeFiles/Boost_wave.dir/all: boost-cmake/CMakeFiles/Boost_filesystem.dir/all
 boost-cmake/CMakeFiles/Boost_wave.dir/all: boost-cmake/CMakeFiles/Boost_chrono.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_wave.dir/build.make boost-cmake/CMakeFiles/Boost_wave.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_wave.dir/build.make boost-cmake/CMakeFiles/Boost_wave.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=96,97,98,99 "Built target Boost_wave"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=95,96,97,98 "Built target Boost_wave"
 .PHONY : boost-cmake/CMakeFiles/Boost_wave.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_wave.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_wave.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_wave.dir/rule
@@ -181,17 +142,17 @@ clean: boost-cmake/CMakeFiles/Boost_wave.dir/clean
 # Target rules for target boost-cmake/CMakeFiles/Boost_type_erasure.dir
 
 # All Build rule for target.
-boost-cmake/CMakeFiles/Boost_type_erasure.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_type_erasure.dir/all: boost-cmake/CMakeFiles/Boost_thread.dir/all
+boost-cmake/CMakeFiles/Boost_type_erasure.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_type_erasure.dir/all: boost-cmake/CMakeFiles/Boost_chrono.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_type_erasure.dir/build.make boost-cmake/CMakeFiles/Boost_type_erasure.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_type_erasure.dir/build.make boost-cmake/CMakeFiles/Boost_type_erasure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=90 "Built target Boost_type_erasure"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=89 "Built target Boost_type_erasure"
 .PHONY : boost-cmake/CMakeFiles/Boost_type_erasure.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_type_erasure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_type_erasure.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_type_erasure.dir/rule
@@ -219,12 +180,12 @@ boost-cmake/CMakeFiles/Boost_thread.dir/all: boost-cmake/CMakeFiles/Boost_system
 boost-cmake/CMakeFiles/Boost_thread.dir/all: boost-cmake/CMakeFiles/Boost_chrono.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_thread.dir/build.make boost-cmake/CMakeFiles/Boost_thread.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_thread.dir/build.make boost-cmake/CMakeFiles/Boost_thread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=88 "Built target Boost_thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=87 "Built target Boost_thread"
 .PHONY : boost-cmake/CMakeFiles/Boost_thread.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_thread.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_thread.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_thread.dir/rule
@@ -251,12 +212,12 @@ clean: boost-cmake/CMakeFiles/Boost_thread.dir/clean
 boost-cmake/CMakeFiles/Boost_iostreams.dir/all:
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_iostreams.dir/build.make boost-cmake/CMakeFiles/Boost_iostreams.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_iostreams.dir/build.make boost-cmake/CMakeFiles/Boost_iostreams.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=18 "Built target Boost_iostreams"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target Boost_iostreams"
 .PHONY : boost-cmake/CMakeFiles/Boost_iostreams.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_iostreams.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_iostreams.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_iostreams.dir/rule
@@ -283,12 +244,12 @@ clean: boost-cmake/CMakeFiles/Boost_iostreams.dir/clean
 boost-cmake/CMakeFiles/Boost_signals.dir/all:
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_signals.dir/build.make boost-cmake/CMakeFiles/Boost_signals.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_signals.dir/build.make boost-cmake/CMakeFiles/Boost_signals.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=86 "Built target Boost_signals"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=85,86 "Built target Boost_signals"
 .PHONY : boost-cmake/CMakeFiles/Boost_signals.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_signals.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_signals.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_signals.dir/rule
@@ -315,12 +276,12 @@ clean: boost-cmake/CMakeFiles/Boost_signals.dir/clean
 boost-cmake/CMakeFiles/Boost_system.dir/all:
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_system.dir/build.make boost-cmake/CMakeFiles/Boost_system.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_system.dir/build.make boost-cmake/CMakeFiles/Boost_system.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=87 "Built target Boost_system"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num= "Built target Boost_system"
 .PHONY : boost-cmake/CMakeFiles/Boost_system.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_system.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_system.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_system.dir/rule
@@ -347,12 +308,12 @@ clean: boost-cmake/CMakeFiles/Boost_system.dir/clean
 boost-cmake/CMakeFiles/Boost_regex.dir/all:
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_regex.dir/build.make boost-cmake/CMakeFiles/Boost_regex.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_regex.dir/build.make boost-cmake/CMakeFiles/Boost_regex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=70,71,72,73,74,75 "Built target Boost_regex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=70,71,72,73,74 "Built target Boost_regex"
 .PHONY : boost-cmake/CMakeFiles/Boost_regex.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_regex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_regex.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_regex.dir/rule
@@ -376,8 +337,8 @@ clean: boost-cmake/CMakeFiles/Boost_regex.dir/clean
 # Target rules for target boost-cmake/CMakeFiles/Boost_fiber.dir
 
 # All Build rule for target.
-boost-cmake/CMakeFiles/Boost_fiber.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_fiber.dir/all: boost-cmake/CMakeFiles/Boost_thread.dir/all
+boost-cmake/CMakeFiles/Boost_fiber.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_fiber.dir/all: boost-cmake/CMakeFiles/Boost_context.dir/all
 boost-cmake/CMakeFiles/Boost_fiber.dir/all: boost-cmake/CMakeFiles/Boost_chrono.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_fiber.dir/build.make boost-cmake/CMakeFiles/Boost_fiber.dir/depend
@@ -387,7 +348,7 @@ boost-cmake/CMakeFiles/Boost_fiber.dir/all: boost-cmake/CMakeFiles/Boost_chrono.
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_fiber.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_fiber.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_fiber.dir/rule
@@ -414,12 +375,12 @@ clean: boost-cmake/CMakeFiles/Boost_fiber.dir/clean
 boost-cmake/CMakeFiles/Boost_graph.dir/all: boost-cmake/CMakeFiles/Boost_regex.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_graph.dir/build.make boost-cmake/CMakeFiles/Boost_graph.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_graph.dir/build.make boost-cmake/CMakeFiles/Boost_graph.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=17 "Built target Boost_graph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num= "Built target Boost_graph"
 .PHONY : boost-cmake/CMakeFiles/Boost_graph.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_graph.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_graph.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_graph.dir/rule
@@ -446,7 +407,7 @@ clean: boost-cmake/CMakeFiles/Boost_graph.dir/clean
 boost-cmake/CMakeFiles/Boost_serialization.dir/all:
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_serialization.dir/build.make boost-cmake/CMakeFiles/Boost_serialization.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_serialization.dir/build.make boost-cmake/CMakeFiles/Boost_serialization.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=76,77,78,79,80,81,82,83,84,85 "Built target Boost_serialization"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=75,76,77,78,79,80,81,82,83,84 "Built target Boost_serialization"
 .PHONY : boost-cmake/CMakeFiles/Boost_serialization.dir/all
 
 # Build rule for subdir invocation for target.
@@ -478,7 +439,7 @@ clean: boost-cmake/CMakeFiles/Boost_serialization.dir/clean
 boost-cmake/CMakeFiles/Boost_program_options.dir/all:
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_program_options.dir/build.make boost-cmake/CMakeFiles/Boost_program_options.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_program_options.dir/build.make boost-cmake/CMakeFiles/Boost_program_options.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=66,67,68,69 "Built target Boost_program_options"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=65,66,67,68 "Built target Boost_program_options"
 .PHONY : boost-cmake/CMakeFiles/Boost_program_options.dir/all
 
 # Build rule for subdir invocation for target.
@@ -510,7 +471,7 @@ clean: boost-cmake/CMakeFiles/Boost_program_options.dir/clean
 boost-cmake/CMakeFiles/Boost_random.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_random.dir/build.make boost-cmake/CMakeFiles/Boost_random.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_random.dir/build.make boost-cmake/CMakeFiles/Boost_random.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num= "Built target Boost_random"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=69 "Built target Boost_random"
 .PHONY : boost-cmake/CMakeFiles/Boost_random.dir/all
 
 # Build rule for subdir invocation for target.
@@ -544,12 +505,12 @@ boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/all: boost-cmake/CMakeFiles
 boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/all: boost-cmake/CMakeFiles/Boost_chrono.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/build.make boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/build.make boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=91,92,93,94,95 "Built target Boost_unit_test_framework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=90,91,92,93,94 "Built target Boost_unit_test_framework"
 .PHONY : boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/rule
@@ -576,7 +537,7 @@ clean: boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/clean
 boost-cmake/CMakeFiles/Boost_math.dir/all:
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_math.dir/build.make boost-cmake/CMakeFiles/Boost_math.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_math.dir/build.make boost-cmake/CMakeFiles/Boost_math.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65 "Built target Boost_math"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64 "Built target Boost_math"
 .PHONY : boost-cmake/CMakeFiles/Boost_math.dir/all
 
 # Build rule for subdir invocation for target.
@@ -605,20 +566,20 @@ clean: boost-cmake/CMakeFiles/Boost_math.dir/clean
 # Target rules for target boost-cmake/CMakeFiles/Boost_log.dir
 
 # All Build rule for target.
-boost-cmake/CMakeFiles/Boost_log.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_log.dir/all: boost-cmake/CMakeFiles/Boost_thread.dir/all
+boost-cmake/CMakeFiles/Boost_log.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_log.dir/all: boost-cmake/CMakeFiles/Boost_date_time.dir/all
 boost-cmake/CMakeFiles/Boost_log.dir/all: boost-cmake/CMakeFiles/Boost_filesystem.dir/all
 boost-cmake/CMakeFiles/Boost_log.dir/all: boost-cmake/CMakeFiles/Boost_chrono.dir/all
 boost-cmake/CMakeFiles/Boost_log.dir/all: boost-cmake/CMakeFiles/Boost_atomic.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_log.dir/build.make boost-cmake/CMakeFiles/Boost_log.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_log.dir/build.make boost-cmake/CMakeFiles/Boost_log.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36,37 "Built target Boost_log"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36 "Built target Boost_log"
 .PHONY : boost-cmake/CMakeFiles/Boost_log.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_log.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_log.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_log.dir/rule
@@ -650,7 +611,7 @@ boost-cmake/CMakeFiles/Boost_locale.dir/all: boost-cmake/CMakeFiles/Boost_system
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_locale.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_locale.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_locale.dir/rule
@@ -678,12 +639,12 @@ boost-cmake/CMakeFiles/Boost_timer.dir/all: boost-cmake/CMakeFiles/Boost_system.
 boost-cmake/CMakeFiles/Boost_timer.dir/all: boost-cmake/CMakeFiles/Boost_chrono.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_timer.dir/build.make boost-cmake/CMakeFiles/Boost_timer.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_timer.dir/build.make boost-cmake/CMakeFiles/Boost_timer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=89 "Built target Boost_timer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=88 "Built target Boost_timer"
 .PHONY : boost-cmake/CMakeFiles/Boost_timer.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_timer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_timer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_timer.dir/rule
@@ -707,8 +668,8 @@ clean: boost-cmake/CMakeFiles/Boost_timer.dir/clean
 # Target rules for target boost-cmake/CMakeFiles/Boost_context.dir
 
 # All Build rule for target.
-boost-cmake/CMakeFiles/Boost_context.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_context.dir/all: boost-cmake/CMakeFiles/Boost_thread.dir/all
+boost-cmake/CMakeFiles/Boost_context.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_context.dir/all: boost-cmake/CMakeFiles/Boost_chrono.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_context.dir/build.make boost-cmake/CMakeFiles/Boost_context.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_context.dir/build.make boost-cmake/CMakeFiles/Boost_context.dir/build
@@ -717,7 +678,7 @@ boost-cmake/CMakeFiles/Boost_context.dir/all: boost-cmake/CMakeFiles/Boost_chron
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_context.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_context.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_context.dir/rule
@@ -845,7 +806,7 @@ boost-cmake/CMakeFiles/Boost_filesystem.dir/all: boost-cmake/CMakeFiles/Boost_sy
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_filesystem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_filesystem.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_filesystem.dir/rule
@@ -869,8 +830,8 @@ clean: boost-cmake/CMakeFiles/Boost_filesystem.dir/clean
 # Target rules for target boost-cmake/CMakeFiles/Boost_coroutine.dir
 
 # All Build rule for target.
-boost-cmake/CMakeFiles/Boost_coroutine.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_coroutine.dir/all: boost-cmake/CMakeFiles/Boost_thread.dir/all
+boost-cmake/CMakeFiles/Boost_coroutine.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_coroutine.dir/all: boost-cmake/CMakeFiles/Boost_context.dir/all
 boost-cmake/CMakeFiles/Boost_coroutine.dir/all: boost-cmake/CMakeFiles/Boost_chrono.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_coroutine.dir/build.make boost-cmake/CMakeFiles/Boost_coroutine.dir/depend
@@ -880,7 +841,7 @@ boost-cmake/CMakeFiles/Boost_coroutine.dir/all: boost-cmake/CMakeFiles/Boost_chr
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_coroutine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_coroutine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_coroutine.dir/rule
@@ -936,8 +897,8 @@ clean: boost-cmake/CMakeFiles/Boost_chrono.dir/clean
 # Target rules for target boost-cmake/CMakeFiles/Boost_log_setup.dir
 
 # All Build rule for target.
-boost-cmake/CMakeFiles/Boost_log_setup.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_log_setup.dir/all: boost-cmake/CMakeFiles/Boost_thread.dir/all
+boost-cmake/CMakeFiles/Boost_log_setup.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
 boost-cmake/CMakeFiles/Boost_log_setup.dir/all: boost-cmake/CMakeFiles/Boost_log.dir/all
 boost-cmake/CMakeFiles/Boost_log_setup.dir/all: boost-cmake/CMakeFiles/Boost_date_time.dir/all
 boost-cmake/CMakeFiles/Boost_log_setup.dir/all: boost-cmake/CMakeFiles/Boost_filesystem.dir/all
@@ -945,12 +906,12 @@ boost-cmake/CMakeFiles/Boost_log_setup.dir/all: boost-cmake/CMakeFiles/Boost_chr
 boost-cmake/CMakeFiles/Boost_log_setup.dir/all: boost-cmake/CMakeFiles/Boost_atomic.dir/all
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_log_setup.dir/build.make boost-cmake/CMakeFiles/Boost_log_setup.dir/depend
 	$(MAKE) -f boost-cmake/CMakeFiles/Boost_log_setup.dir/build.make boost-cmake/CMakeFiles/Boost_log_setup.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=38,39,40 "Built target Boost_log_setup"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=37,38,39 "Built target Boost_log_setup"
 .PHONY : boost-cmake/CMakeFiles/Boost_log_setup.dir/all
 
 # Build rule for subdir invocation for target.
 boost-cmake/CMakeFiles/Boost_log_setup.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 boost-cmake/CMakeFiles/Boost_log_setup.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
 .PHONY : boost-cmake/CMakeFiles/Boost_log_setup.dir/rule
@@ -999,6 +960,102 @@ boost-cmake/CMakeFiles/Boost_atomic.dir/clean:
 
 # clean rule for target.
 clean: boost-cmake/CMakeFiles/Boost_atomic.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory executables
+
+# Convenience name for "all" pass in the directory.
+executables/all: executables/CMakeFiles/pendulumTest.dir/all
+executables/all: executables/CMakeFiles/drawPointMovingTest.dir/all
+
+.PHONY : executables/all
+
+# Convenience name for "clean" pass in the directory.
+executables/clean: executables/CMakeFiles/pendulumTest.dir/clean
+executables/clean: executables/CMakeFiles/drawPointMovingTest.dir/clean
+
+.PHONY : executables/clean
+
+# Convenience name for "preinstall" pass in the directory.
+executables/preinstall:
+
+.PHONY : executables/preinstall
+
+#=============================================================================
+# Target rules for target executables/CMakeFiles/pendulumTest.dir
+
+# All Build rule for target.
+executables/CMakeFiles/pendulumTest.dir/all:
+	$(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/depend
+	$(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=100 "Built target pendulumTest"
+.PHONY : executables/CMakeFiles/pendulumTest.dir/all
+
+# Include target in all.
+all: executables/CMakeFiles/pendulumTest.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+executables/CMakeFiles/pendulumTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 executables/CMakeFiles/pendulumTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
+.PHONY : executables/CMakeFiles/pendulumTest.dir/rule
+
+# Convenience name for target.
+pendulumTest: executables/CMakeFiles/pendulumTest.dir/rule
+
+.PHONY : pendulumTest
+
+# clean rule for target.
+executables/CMakeFiles/pendulumTest.dir/clean:
+	$(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/clean
+.PHONY : executables/CMakeFiles/pendulumTest.dir/clean
+
+# clean rule for target.
+clean: executables/CMakeFiles/pendulumTest.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target executables/CMakeFiles/drawPointMovingTest.dir
+
+# All Build rule for target.
+executables/CMakeFiles/drawPointMovingTest.dir/all: boost-cmake/CMakeFiles/Boost_iostreams.dir/all
+executables/CMakeFiles/drawPointMovingTest.dir/all: boost-cmake/CMakeFiles/Boost_system.dir/all
+executables/CMakeFiles/drawPointMovingTest.dir/all: boost-cmake/CMakeFiles/Boost_filesystem.dir/all
+	$(MAKE) -f executables/CMakeFiles/drawPointMovingTest.dir/build.make executables/CMakeFiles/drawPointMovingTest.dir/depend
+	$(MAKE) -f executables/CMakeFiles/drawPointMovingTest.dir/build.make executables/CMakeFiles/drawPointMovingTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=99 "Built target drawPointMovingTest"
+.PHONY : executables/CMakeFiles/drawPointMovingTest.dir/all
+
+# Include target in all.
+all: executables/CMakeFiles/drawPointMovingTest.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+executables/CMakeFiles/drawPointMovingTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 executables/CMakeFiles/drawPointMovingTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles 0
+.PHONY : executables/CMakeFiles/drawPointMovingTest.dir/rule
+
+# Convenience name for target.
+drawPointMovingTest: executables/CMakeFiles/drawPointMovingTest.dir/rule
+
+.PHONY : drawPointMovingTest
+
+# clean rule for target.
+executables/CMakeFiles/drawPointMovingTest.dir/clean:
+	$(MAKE) -f executables/CMakeFiles/drawPointMovingTest.dir/build.make executables/CMakeFiles/drawPointMovingTest.dir/clean
+.PHONY : executables/CMakeFiles/drawPointMovingTest.dir/clean
+
+# clean rule for target.
+clean: executables/CMakeFiles/drawPointMovingTest.dir/clean
 
 .PHONY : clean
 
