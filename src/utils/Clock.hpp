@@ -9,7 +9,7 @@ namespace dyn_modeling {
 
     private:
         double m_curr_time;
-        double m_time_step;
+        double m_delta_t;
 
     public:
         Clock( double t_time_step);

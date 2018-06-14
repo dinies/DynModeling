@@ -3,11 +3,11 @@
 #include "Clock.hpp"
 
 namespace dyn_modeling {
-    Clock::Clock(double t_time_step): m_curr_time(0), m_time_step(t_time_step){
+    Clock::Clock(double t_delta_t): m_curr_time(0), m_delta_t(t_delta_t){
     }
 
     void Clock::thick() {
-        double t = getCurrTime() + m_time_step;
+        double t = getCurrTime() + m_delta_t;
         setCurrTime(t);
     }
 

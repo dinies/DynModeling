@@ -39,41 +39,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cc5ea4a-236b-4079-a4fb-ce80a2e06cdf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/drawPointMovingTest" beforeDir="false" afterPath="$PROJECT_DIR$/bin/drawPointMovingTest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_date_time.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_date_time.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_exception.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_exception.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_filesystem.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_filesystem.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_graph.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_graph.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_locale.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_locale.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_log.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_log.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_log_setup.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_log_setup.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_math.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_math.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_program_options.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_program_options.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_random.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_random.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_regex.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_regex.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_serialization.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_serialization.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_signals.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_signals.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_system.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_system.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_thread.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_thread.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_timer.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_timer.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_type_erasure.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_type_erasure.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_unit_test_framework.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_wave.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/boost-cmake/CMakeFiles/Boost_wave.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dyn_modeling.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dyn_modeling.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/drawPointMovingTest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/drawPointMovingTest.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/executables/drawPointMovingTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/executables/drawPointMovingTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pendulumTest" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pendulumTest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/executables/pendulumTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/executables/pendulumTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pendulum/Pendulum.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/pendulum/Pendulum.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pendulum/Pendulum.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/pendulum/Pendulum.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Clock.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Clock.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Clock.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Clock.hpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pendulumTest.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pendulumTest.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/executables/pendulumTest.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="330">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -107,19 +78,19 @@
       <file leaf-file-name="Pendulum.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="82" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+            <state relative-caret-position="150">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pendulum.hpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Pendulum.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="41" selection-start-column="41" selection-end-column="41" />
+            <state relative-caret-position="255">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding>
-                <element signature="e#138#157#0" expanded="true" />
+                <element signature="e#136#155#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,8 +99,8 @@
       <file leaf-file-name="Clock.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Clock.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="165">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -137,8 +108,8 @@
       <file leaf-file-name="Clock.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Clock.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -166,16 +137,16 @@
         <option value="$PROJECT_DIR$/src/pendulum/Pendulum.h" />
         <option value="$PROJECT_DIR$/src/pendulum/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/executables/pendulumTest.cpp" />
         <option value="$PROJECT_DIR$/executables/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/utils/Clock.hpp" />
+        <option value="$PROJECT_DIR$/src/utils/Clock.cpp" />
         <option value="$PROJECT_DIR$/src/pendulum/Pendulum.hpp" />
         <option value="$PROJECT_DIR$/src/pendulum/Pendulum.cpp" />
-        <option value="$PROJECT_DIR$/src/utils/Clock.cpp" />
-        <option value="$PROJECT_DIR$/src/utils/Clock.hpp" />
+        <option value="$PROJECT_DIR$/executables/pendulumTest.cpp" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="840" />
     <option name="width" value="840" />
     <option name="height" value="1050" />
@@ -329,12 +300,12 @@
       <workItem from="1528789873781" duration="9952000" />
       <workItem from="1528828188945" duration="13019000" />
       <workItem from="1528965548336" duration="8640000" />
-      <workItem from="1528980707455" duration="6989000" />
+      <workItem from="1528980707455" duration="11309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47581000" />
+    <option name="totallyTimeSpent" value="51901000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -346,15 +317,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="840" y="0" width="840" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2039072" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17239301" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948583" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32948583" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32948583" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50061053" side_tool="true" weight="0.32948583" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.32948583" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.32948583" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948583" />
@@ -403,7 +374,7 @@
         <state relative-caret-position="285">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#138#157#0" expanded="true" />
+            <element signature="e#136#155#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -459,7 +430,7 @@
         <state relative-caret-position="210">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <element signature="e#138#157#0" expanded="true" />
+            <element signature="e#136#155#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -585,41 +556,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/executables/pendulumTest.cpp">
+    <entry file="file://$PROJECT_DIR$/src/utils/Clock.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="82" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+        <state relative-caret-position="165">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Clock.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Clock.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        <state relative-caret-position="255">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
-            <element signature="e#138#157#0" expanded="true" />
+            <element signature="e#136#155#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/executables/pendulumTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

@@ -4,27 +4,40 @@
 
 #include "Pendulum.hpp"
 
+#define PI 3.14159265
+
 namespace dyn_modeling {
-    Pendulum::Pendulum():m_state( std::vector<double>{ 0, 0}), m_clock( Clock(0.2))  {
+    Pendulum::Pendulum(double t_delta_t, double t_length):
+            m_state( std::vector<double>{ 50, 0}),
+            m_clock( Clock(t_delta_t)),
+            m_length( t_length),
+            m_grav(9.81)
+    {
     }
 
-
-//  no pointers  only references
-//    std::vector<double>*  Pendulum::incrementState(double t_inc) {
-//        const std::vector<double>* oldStatePtr = Pendulum::getStatePtr();
-//        const std::vector<double> oldState = *oldStatePtr;
-//        std::vector<double> newState = { oldState.at(0) + t_inc,  oldState.at(1) + t_inc};
-//        std::vector<double>* newState_ptr;
-//        return newState_ptr;
-//    }
+    std::vector<double> Pendulum::evolutionModel( std::vector<double> t_curr_state) {
+        std::vector<double>  state_evolution = std::vector<double>{ 0,0 };
+        state_evolution.at(0) = t_curr_state.at(1);
+        state_evolution.at(1) =  - (m_grav/m_length)*sin(t_curr_state.at(0)*PI/180);
+        return state_evolution;
+        }
 
     void Pendulum::updateState() {
-        const double increment = 0.001;
-        m_clock.thick();
         std::vector<double> oldState = getState();
-        std::vector<double> newState = {oldState.at(0) + increment, oldState.at(1)-increment};
+        std::vector<double> state_evolution = evolutionModel(oldState);
+
+
+        Eigen::Vector2d  arr1;
+        arr1 << oldState.at(0), oldState.at(1);
+        Eigen::Vector2d  arr2;
+        arr2 << state_evolution.at(0), state_evolution.at(1);
+        Eigen::Vector2d arr3 = arr1 + arr2;
+
+        std::vector<double> newState ={ arr3(0), arr3(1)} ;
+        m_clock.thick();
         Pendulum::setState(newState);
     }
+
 
     void Pendulum::printState() {
 
@@ -39,6 +52,8 @@ namespace dyn_modeling {
             Pendulum::printState();
         }
     }
+
+
 }
 
 

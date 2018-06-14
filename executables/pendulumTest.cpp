@@ -13,8 +13,10 @@
 using namespace dyn_modeling;
 
 int main(int argc, char **argv) {
-    const int numCycles{10};
-    Pendulum p = Pendulum();
+    const int numCycles{100};
+    const double t_delta_t = 0.01;
+    const double t_length = 2;
+    Pendulum p = Pendulum(t_delta_t,t_length);
     p.cycle(numCycles);
     return 0;
 }
