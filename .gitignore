@@ -34,3 +34,9 @@
 
 # Xcode 
 xcuserdata
+
+# build directory
+cmake-build-debug/*
+
+# clion
+./idea/*
