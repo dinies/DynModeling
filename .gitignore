@@ -36,7 +36,7 @@
 xcuserdata
 
 # build directory
-cmake-build-debug/*
+cmake-build-debug/
 
 # clion
-./idea/*
+./idea/
