@@ -38,24 +38,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cc5ea4a-236b-4079-a4fb-ce80a2e06cdf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pendulumTest" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pendulumTest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dyn_modeling.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dyn_modeling.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/executables/CMakeFiles/pendulumTest.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/executables/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/executables/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/executables/pendulumTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/executables/pendulumTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pendulum/Pendulum.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/pendulum/Pendulum.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pendulum/Pendulum.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/pendulum/Pendulum.hpp" afterDir="false" />
-    </list>
+    <list default="true" id="3cc5ea4a-236b-4079-a4fb-ce80a2e06cdf" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -96,8 +79,8 @@
       <file leaf-file-name="Pendulum.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            <state relative-caret-position="570">
+              <caret line="80" column="4" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -105,8 +88,8 @@
       <file leaf-file-name="Pendulum.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            <state relative-caret-position="336">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
               <folding>
                 <element signature="e#136#155#0" expanded="true" />
               </folding>
@@ -159,8 +142,8 @@
         <option value="$PROJECT_DIR$/executables/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/pendulum/Pendulum.hpp" />
-        <option value="$PROJECT_DIR$/executables/pendulumTest.cpp" />
         <option value="$PROJECT_DIR$/src/pendulum/Pendulum.cpp" />
+        <option value="$PROJECT_DIR$/executables/pendulumTest.cpp" />
       </list>
     </option>
   </component>
@@ -318,12 +301,12 @@
       <workItem from="1528828188945" duration="13019000" />
       <workItem from="1528965548336" duration="8640000" />
       <workItem from="1528980707455" duration="11309000" />
-      <workItem from="1529049465873" duration="17430000" />
+      <workItem from="1529049465873" duration="18078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69331000" />
+    <option name="totallyTimeSpent" value="69979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -369,13 +352,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/pendulum/Pendulum.cpp</url>
-          <line>108</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -641,8 +617,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        <state relative-caret-position="336">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
           <folding>
             <element signature="e#136#155#0" expanded="true" />
           </folding>
@@ -651,8 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        <state relative-caret-position="570">
+          <caret line="80" column="4" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
         </state>
       </provider>
     </entry>

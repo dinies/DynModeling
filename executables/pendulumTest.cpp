@@ -17,6 +17,5 @@ int main(int argc, char **argv) {
     const double t_length = 1;
     Pendulum p = Pendulum(t_delta_t, t_length);
     p.cycle(numCycles);
-
     return 0;
 }
