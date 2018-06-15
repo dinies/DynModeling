@@ -16,7 +16,7 @@ namespace dyn_modeling {
     class Pendulum {
 
     private:
-        std::vector<double> m_state;
+        Eigen::Vector2d m_state;
         Clock m_clock;
         double m_length;
         double m_gravity;
@@ -24,13 +24,14 @@ namespace dyn_modeling {
 
     public:
 
-        Pendulum( double t_delta_t, double t_length );
+//        Pendulum( double t_delta_t, double t_length );
+        Pendulum( Eigen::Vector2d t_initial_state, double t_delta_t, double t_length );
 
-        inline const std::vector<double> getState() const { return m_state; }
+        inline const Eigen::Vector2d getState() const { return m_state; }
 
-        inline void setState(std::vector<double> &t_newState) { m_state = t_newState; }
+        inline void setState(Eigen::Vector2d &t_newState) { m_state = t_newState; }
 
-        std::vector<double> evolutionModel(std::vector<double> t_curr_state);
+        Eigen::Vector2d evolutionModel();
 
         void updateState();
 

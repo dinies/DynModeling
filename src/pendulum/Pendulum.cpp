@@ -7,42 +7,35 @@
 #define PI 3.14159265
 
 namespace dyn_modeling {
-    Pendulum::Pendulum(double t_delta_t, double t_length):
-            m_state( std::vector<double>{ 5, 0}),
+
+    Pendulum::Pendulum(Eigen::Vector2d t_initial_state, double t_delta_t, double t_length):
+            m_state( t_initial_state),
             m_clock( Clock(t_delta_t)),
             m_length( t_length),
             m_gravity(9.81)
-    {
-    }
+            {}
 
-    std::vector<double> Pendulum::evolutionModel( std::vector<double> t_curr_state) {
-        std::vector<double>  state_evolution = std::vector<double>{ 0,0 };
-        state_evolution.at(0) = t_curr_state.at(1);
-        state_evolution.at(1) =  - (m_gravity/m_length)*sin(t_curr_state.at(0)*PI/180);
+
+    Eigen::Vector2d Pendulum::evolutionModel() {
+        Eigen::Vector2d state_evolution;
+        state_evolution(0) =  m_state(1);
+        state_evolution(1) =  - (m_gravity/m_length)*sin(m_state(0)*PI/180);
         return state_evolution;
         }
 
     void Pendulum::updateState() {
-        std::vector<double> oldState = getState();
-        std::vector<double> state_evolution = evolutionModel(oldState);
-
-
-        Eigen::Vector2d  arr1;
-        arr1 << oldState.at(0), oldState.at(1);
-        Eigen::Vector2d  arr2;
-        arr2 << state_evolution.at(0), state_evolution.at(1);
-        Eigen::Vector2d arr3 = arr1 + arr2;
-
-        std::vector<double> newState ={ arr3(0), arr3(1)} ;
+        Eigen::Vector2d oldState = getState();
+        Eigen::Vector2d state_evolution = evolutionModel();
+        Eigen::Vector2d new_state = oldState + state_evolution;
         m_clock.thick();
-        Pendulum::setState(newState);
+        Pendulum::setState( new_state);
     }
 
 
     void Pendulum::printState() {
         std::cout << "current time =" << m_clock.getCurrTime() << '\n';
-        std::cout << "state 1=" << getState().at(0) << '\n';
-        std::cout << "state 2=" << getState().at(1) << '\n';
+        std::cout << "state 1=" << getState()(0) << '\n';
+        std::cout << "state 2=" << getState()(1) << '\n';
     }
 
 //    void Pendulum::plotStateCycle(std::vector<std::vector<std::pair<double, double>>> &t_plotData) {
@@ -54,20 +47,19 @@ namespace dyn_modeling {
             theta.push_back( boost::make_tuple( vec.at(0),vec.at(1)));
             theta_dot.push_back( boost::make_tuple( vec.at(0),vec.at(2)));
         }
-
         Gnuplot gp;
         gp << "set terminal qt 1 \n";
         gp << "plot";
         gp << gp.binFile1d(theta, "record") << "with lines title 'theta'" << "\n";
         gp << "set terminal qt 2 \n";
         gp << "plot";
-        gp << gp.binFile1d(theta_dot, "record") << "with lines title 'theta'" << "\n";
+        gp << gp.binFile1d(theta_dot, "record") << "with lines title 'theta dot'" << "\n";
 
     }
 
     void Pendulum::storePlotData(std::vector<std::vector<double>> &t_plotData) {
         double t = m_clock.getCurrTime();
-        std::vector<double> curr_state { t, m_state.at(0), m_state.at(1)};
+        std::vector<double> curr_state { t, m_state(0), m_state(1)};
         t_plotData.push_back(curr_state);
     }
 
@@ -81,20 +73,5 @@ namespace dyn_modeling {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
