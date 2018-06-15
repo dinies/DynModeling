@@ -27,4 +27,20 @@ add_executable( pendulumTest pendulumTest.cpp
         ../src/pendulum/Pendulum.cpp
         ../src/utils/Clock.cpp
 )
+target_link_libraries(
+        pendulumTest
+        PUBLIC Boost::boost
+)
+target_link_libraries(
+        pendulumTest
+        PUBLIC Boost::filesystem
+)
+target_link_libraries(
+        pendulumTest
+        PUBLIC Boost::system
+)
+target_link_libraries(
+        pendulumTest
+        PUBLIC Boost::iostreams
+)
 

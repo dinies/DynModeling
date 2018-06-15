@@ -5,10 +5,12 @@
 //#include <Eigen/Geometry>
 //#include <Eigen/StdVector>
 #include <unistd.h>
+#include <boost/tuple/tuple.hpp>
 #include <iostream>
 #include <vector>
 #include <math.h>
 #include "../utils/Clock.hpp"
+#include "../../include/gnuplot-iostream.h"
 
 namespace dyn_modeling {
     class Pendulum {
@@ -17,7 +19,8 @@ namespace dyn_modeling {
         std::vector<double> m_state;
         Clock m_clock;
         double m_length;
-        double m_grav;
+        double m_gravity;
+
 
     public:
 
@@ -32,6 +35,10 @@ namespace dyn_modeling {
         void updateState();
 
         void printState();
+
+        void plotStateCycle(std::vector< std::vector<double>>& t_plotData);
+
+        void storePlotData(std::vector< std::vector<double>>& t_plotData);
 
         void cycle(int t_numCycles);
 

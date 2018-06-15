@@ -1767,10 +1767,16 @@
 				<Option compiler="clang"/>
 				<Compiler>
 					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
 					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
 					<Add directory="/usr/local/include/eigen3"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -1793,10 +1799,16 @@
 				<Option compiler="clang"/>
 				<Compiler>
 					<Add option="-DUNIX"/>
+					<Add option="-DBOOST_ALL_NO_LIB=1"/>
+					<Add option="-DBOOST_SYSTEM_NO_DEPRECATED"/>
+					<Add option="-DBOOST_THREAD_VERSION=4"/>
+					<Add option="-DBOOST_THREAD_USES_CHRONO"/>
+					<Add option="-DBOOST_THREAD_PROVIDES_EXECUTORS"/>
 					<Add directory="/Users/dinies33/GitRepos/DynModeling"/>
 					<Add directory="/usr/local/include/eigen3"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/Users/dinies33/GitRepos/DynModeling/boost-cmake/boost/boost_1_64_0"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>

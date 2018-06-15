@@ -6,7 +6,7 @@ PROJECT(dyn_modeling)
 ADD_DEFINITIONS(-DUNIX)
 MESSAGE(STATUS "Compiling on Unix")
 
-SET(CMAKE_CXX_FLAGS_DEBUG "-Wall -Wextra -std=c++11") #ds enable all warnings and c++11 features
+SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra -std=c++11") #ds enable all warnings and c++11 features
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Debug)

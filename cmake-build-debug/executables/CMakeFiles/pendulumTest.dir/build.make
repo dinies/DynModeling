@@ -142,6 +142,11 @@ pendulumTest_EXTERNAL_OBJECTS =
 ../bin/pendulumTest: executables/CMakeFiles/pendulumTest.dir/__/src/pendulum/Pendulum.cpp.o
 ../bin/pendulumTest: executables/CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.o
 ../bin/pendulumTest: executables/CMakeFiles/pendulumTest.dir/build.make
+../bin/pendulumTest: ../bin/libboost_filesystem.a
+../bin/pendulumTest: ../bin/libboost_system.a
+../bin/pendulumTest: ../bin/libboost_iostreams.a
+../bin/pendulumTest: /usr/lib/libbz2.dylib
+../bin/pendulumTest: /usr/lib/libz.dylib
 ../bin/pendulumTest: executables/CMakeFiles/pendulumTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/pendulumTest"
 	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pendulumTest.dir/link.txt --verbose=$(VERBOSE)
