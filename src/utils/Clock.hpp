@@ -12,7 +12,8 @@ namespace dyn_modeling {
         double m_delta_t;
 
     public:
-        Clock( double t_time_step);
+        explicit Clock( double t_time_step);
+        inline double getDeltaT() const { return m_delta_t; }
         inline double getCurrTime() const { return m_curr_time; }
         inline void setCurrTime( double t_new_time) { m_curr_time= t_new_time; }
 

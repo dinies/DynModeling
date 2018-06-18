@@ -2,34 +2,34 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="dyn_modeling" targetName="Boost_serialization" />
-      <config projectName="dyn_modeling" targetName="Boost_date_time" />
-      <config projectName="dyn_modeling" targetName="Boost_program_options" />
+      <config projectName="dyn_modeling" targetName="Boost_filesystem" />
+      <config projectName="dyn_modeling" targetName="Boost_math" />
+      <config projectName="dyn_modeling" targetName="Boost_atomic" />
+      <config projectName="dyn_modeling" targetName="Boost_exception" />
       <config projectName="dyn_modeling" targetName="Boost_thread" />
-      <config projectName="dyn_modeling" targetName="Boost_timer" />
+      <config projectName="dyn_modeling" targetName="Boost_unit_test_framework" />
+      <config projectName="dyn_modeling" targetName="Boost_program_options" />
       <config projectName="dyn_modeling" targetName="drawPointMovingTest" />
+      <config projectName="dyn_modeling" targetName="Boost_date_time" />
+      <config projectName="dyn_modeling" targetName="Boost_locale" />
+      <config projectName="dyn_modeling" targetName="Boost_random" />
+      <config projectName="dyn_modeling" targetName="Boost_regex" />
       <config projectName="dyn_modeling" targetName="Boost_log" />
-      <config projectName="dyn_modeling" targetName="Boost_fiber" />
-      <config projectName="dyn_modeling" targetName="Boost_signals" />
+      <config projectName="dyn_modeling" targetName="Boost_graph" />
       <config projectName="dyn_modeling" targetName="Boost_system" />
       <config projectName="dyn_modeling" targetName="Boost_coroutine" />
-      <config projectName="dyn_modeling" targetName="Boost_atomic" />
-      <config projectName="dyn_modeling" targetName="Boost_log_setup" />
-      <config projectName="dyn_modeling" targetName="Boost_graph" />
       <config projectName="dyn_modeling" targetName="Boost_wave" />
+      <config projectName="dyn_modeling" targetName="Boost_signals" />
       <config projectName="dyn_modeling" targetName="Boost_container" />
-      <config projectName="dyn_modeling" targetName="Boost_locale" />
+      <config projectName="dyn_modeling" targetName="Boost_log_setup" />
       <config projectName="dyn_modeling" targetName="Boost_chrono" />
-      <config projectName="dyn_modeling" targetName="Boost_math" />
-      <config projectName="dyn_modeling" targetName="Boost_type_erasure" />
-      <config projectName="dyn_modeling" targetName="Boost_filesystem" />
-      <config projectName="dyn_modeling" targetName="Boost_unit_test_framework" />
-      <config projectName="dyn_modeling" targetName="Boost_regex" />
-      <config projectName="dyn_modeling" targetName="Boost_context" />
-      <config projectName="dyn_modeling" targetName="Boost_iostreams" />
-      <config projectName="dyn_modeling" targetName="Boost_exception" />
-      <config projectName="dyn_modeling" targetName="Boost_random" />
       <config projectName="dyn_modeling" targetName="pendulumTest" />
+      <config projectName="dyn_modeling" targetName="Boost_context" />
+      <config projectName="dyn_modeling" targetName="Boost_timer" />
+      <config projectName="dyn_modeling" targetName="Boost_type_erasure" />
+      <config projectName="dyn_modeling" targetName="Boost_iostreams" />
+      <config projectName="dyn_modeling" targetName="Boost_fiber" />
+      <config projectName="dyn_modeling" targetName="Boost_serialization" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -39,10 +39,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cc5ea4a-236b-4079-a4fb-ce80a2e06cdf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/pendulumTest" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pendulumTest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/executables/pendulumTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/executables/pendulumTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pendulum/Pendulum.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/pendulum/Pendulum.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pendulum/Pendulum.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/pendulum/Pendulum.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Clock.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Clock.hpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,25 +69,17 @@
       <file leaf-file-name="pendulumTest.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/executables/pendulumTest.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <folding>
-                <element signature="e#159#199#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/executables/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Pendulum.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="55" column="75" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
+            <state relative-caret-position="345">
+              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -93,8 +87,8 @@
       <file leaf-file-name="Pendulum.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="270">
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
               <folding>
                 <element signature="e#136#155#0" expanded="true" />
               </folding>
@@ -102,11 +96,50 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="odeint.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boost-cmake/boost/boost_1_64_0/boost/numeric/odeint.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#647#701#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ublas_wrapper.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boost-cmake/boost/boost_1_64_0/boost/numeric/odeint/util/ublas_wrapper.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vector.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boost-cmake/boost/boost_1_64_0/boost/numeric/ublas/vector.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storage.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boost-cmake/boost/boost_1_64_0/boost/numeric/ublas/storage.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="298" selection-start-line="298" selection-end-line="298" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Clock.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/Clock.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -142,10 +175,10 @@
         <option value="$PROJECT_DIR$/executables/drawPointMovingTest.cpp" />
         <option value="$PROJECT_DIR$/src/pendulum/Pendulum.h" />
         <option value="$PROJECT_DIR$/src/pendulum/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/utils/Clock.hpp" />
         <option value="$PROJECT_DIR$/src/utils/Clock.cpp" />
         <option value="$PROJECT_DIR$/executables/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/utils/Clock.hpp" />
         <option value="$PROJECT_DIR$/src/pendulum/Pendulum.hpp" />
         <option value="$PROJECT_DIR$/executables/pendulumTest.cpp" />
         <option value="$PROJECT_DIR$/src/pendulum/Pendulum.cpp" />
@@ -153,8 +186,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="560" />
+    <option name="y" value="22" />
     <option name="width" value="1120" />
-    <option name="height" value="1050" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -307,11 +342,14 @@
       <workItem from="1528965548336" duration="8640000" />
       <workItem from="1528980707455" duration="11309000" />
       <workItem from="1529049465873" duration="21064000" />
+      <workItem from="1529188263324" duration="1180000" />
+      <workItem from="1529309475041" duration="1066000" />
+      <workItem from="1529311133013" duration="13932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72965000" />
+    <option name="totallyTimeSpent" value="89143000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -323,19 +361,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1120" height="1050" extended-state="0" />
+    <frame x="560" y="22" width="1120" height="1028" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1255687" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32948583" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32948583" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.32948583" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32867885" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32867885" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.32867885" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50061053" side_tool="true" weight="0.32948583" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.32948583" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948583" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.32867885" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32975295" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948583" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39979014" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32867885" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39957035" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -344,7 +383,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32948583" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -357,13 +395,27 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/executables/pendulumTest.cpp</url>
+          <line>27</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="8" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="75" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -406,9 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#159#199#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -586,32 +635,22 @@
     <entry file="file://$PROJECT_DIR$/src/pendulum/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/src/utils/Clock.h" />
+    <entry file="file://$PROJECT_DIR$/executables/drawPointMovingTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/executables/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Clock.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Clock.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/executables/drawPointMovingTest.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/executables/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -620,30 +659,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Clock.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boost-cmake/boost/boost_1_64_0/boost/numeric/odeint.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#647#701#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boost-cmake/boost/boost_1_64_0/boost/numeric/odeint/util/ublas_wrapper.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boost-cmake/boost/boost_1_64_0/boost/numeric/ublas/vector.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boost-cmake/boost/boost_1_64_0/boost/numeric/ublas/storage.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="298" selection-start-line="298" selection-end-line="298" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/executables/pendulumTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="270">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding>
             <element signature="e#136#155#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/executables/pendulumTest.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#159#199#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pendulum/Pendulum.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="55" column="75" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
+        <state relative-caret-position="345">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
         </state>
       </provider>
     </entry>
