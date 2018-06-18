@@ -13,7 +13,7 @@
 #include <math.h>
 #include "../utils/Clock.hpp"
 #include "../../include/gnuplot-iostream.h"
-
+#define PI 3.14159265
 namespace dyn_modeling {
     class Pendulum {
 

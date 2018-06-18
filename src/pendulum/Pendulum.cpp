@@ -4,9 +4,6 @@
 
 #include "Pendulum.hpp"
 
-
-#define PI 3.14159265
-
 namespace dyn_modeling {
 
     Pendulum::Pendulum(
@@ -25,7 +22,7 @@ namespace dyn_modeling {
     void Pendulum::operator()(const dyn_modeling::Pendulum::state_type &x, dyn_modeling::Pendulum::state_type &dxdt,
                               const double /* t */ ) {
         dxdt[0] = x[1];
-        dxdt[1] = - (m_gravity/m_length)*sin(x[0]*PI/180);
+        dxdt[1] = - (m_gravity/m_length)*sin(x[0]);
     }
 
 
@@ -61,12 +58,14 @@ namespace dyn_modeling {
 
     double Pendulum::computeEnergy() {
         const double theta_zero = 0;
-        const double one  = cos(theta_zero*PI/180);
-        const double h_offset = cos(m_state(0)*PI/180);
+        const double one  = cos(theta_zero);
+        const double h_offset = cos(m_state(0));
         const double delta_theta = one  - h_offset;
         const double h = m_length* delta_theta ;
         const double potential = m_mass * m_gravity * h;
-        const double kinetic =  m_mass * m_state(1)* m_state(1) * 1/2;
+        const double rad_velocity = m_state(1);
+        const double v = rad_velocity * m_length;
+        const double kinetic =  m_mass * v * v * 1/2;
         std::cout << "debug "<< h << ", "   <<m_mass << ", " << potential << ", " << kinetic << "\n";
         return kinetic + potential;
     }
@@ -89,8 +88,8 @@ namespace dyn_modeling {
         std::vector< boost::tuple<double,double>> theta_dot_dot;
         std::vector< boost::tuple<double,double>> energy;
         for ( auto vec : t_plotData){
-            theta.push_back( boost::make_tuple( vec.at(0),vec.at(1)));
-            theta_dot.push_back( boost::make_tuple( vec.at(0),vec.at(2)));
+            theta.push_back( boost::make_tuple( vec.at(0),vec.at(1)*180/PI));
+            theta_dot.push_back( boost::make_tuple( vec.at(0),vec.at(2)*180/PI));
             theta_dot_dot.push_back( boost::make_tuple( vec.at(0),vec.at(3)));
             energy.push_back( boost::make_tuple( vec.at(0),vec.at(4)));
         }
