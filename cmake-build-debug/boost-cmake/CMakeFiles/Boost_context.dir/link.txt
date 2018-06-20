@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc ../../bin/libboost_context.a  CMakeFiles/Boost_context.dir/libs/context/jump_combined.S.o CMakeFiles/Boost_context.dir/libs/context/make_combined.S.o CMakeFiles/Boost_context.dir/libs/context/ontop_combined.S.o CMakeFiles/Boost_context.dir/boost/boost_1_64_0/libs/context/src/posix/stack_traits.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib ../../bin/libboost_context.a

@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc ../../bin/libboost_date_time.a  CMakeFiles/Boost_date_time.dir/boost/boost_1_64_0/libs/date_time/src/gregorian/greg_month.cpp.o CMakeFiles/Boost_date_time.dir/boost/boost_1_64_0/libs/date_time/src/gregorian/greg_weekday.cpp.o CMakeFiles/Boost_date_time.dir/boost/boost_1_64_0/libs/date_time/src/gregorian/date_generators.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib ../../bin/libboost_date_time.a
