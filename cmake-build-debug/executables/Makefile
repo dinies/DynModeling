@@ -140,6 +140,33 @@ drawPointMovingTest/fast:
 	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug && $(MAKE) -f executables/CMakeFiles/drawPointMovingTest.dir/build.make executables/CMakeFiles/drawPointMovingTest.dir/build
 .PHONY : drawPointMovingTest/fast
 
+__/src/controllers/Controller.o: __/src/controllers/Controller.cpp.o
+
+.PHONY : __/src/controllers/Controller.o
+
+# target to build an object file
+__/src/controllers/Controller.cpp.o:
+	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug && $(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o
+.PHONY : __/src/controllers/Controller.cpp.o
+
+__/src/controllers/Controller.i: __/src/controllers/Controller.cpp.i
+
+.PHONY : __/src/controllers/Controller.i
+
+# target to preprocess a source file
+__/src/controllers/Controller.cpp.i:
+	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug && $(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.i
+.PHONY : __/src/controllers/Controller.cpp.i
+
+__/src/controllers/Controller.s: __/src/controllers/Controller.cpp.s
+
+.PHONY : __/src/controllers/Controller.s
+
+# target to generate assembly for a file
+__/src/controllers/Controller.cpp.s:
+	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug && $(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.s
+.PHONY : __/src/controllers/Controller.cpp.s
+
 __/src/pendulum/Pendulum.o: __/src/pendulum/Pendulum.cpp.o
 
 .PHONY : __/src/pendulum/Pendulum.o
@@ -258,6 +285,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... pendulumTest"
 	@echo "... drawPointMovingTest"
+	@echo "... __/src/controllers/Controller.o"
+	@echo "... __/src/controllers/Controller.i"
+	@echo "... __/src/controllers/Controller.s"
 	@echo "... __/src/pendulum/Pendulum.o"
 	@echo "... __/src/pendulum/Pendulum.i"
 	@echo "... __/src/pendulum/Pendulum.s"

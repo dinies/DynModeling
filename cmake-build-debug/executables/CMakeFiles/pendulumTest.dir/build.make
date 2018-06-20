@@ -129,11 +129,36 @@ executables/CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.o.provides: execu
 executables/CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.o.provides.build: executables/CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.o
 
 
+executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o: executables/CMakeFiles/pendulumTest.dir/flags.make
+executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o: ../src/controllers/Controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o"
+	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o -c /Users/dinies33/GitRepos/DynModeling/src/controllers/Controller.cpp
+
+executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.i"
+	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dinies33/GitRepos/DynModeling/src/controllers/Controller.cpp > CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.i
+
+executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.s"
+	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dinies33/GitRepos/DynModeling/src/controllers/Controller.cpp -o CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.s
+
+executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o.requires:
+
+.PHONY : executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o.requires
+
+executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o.provides: executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o.requires
+	$(MAKE) -f executables/CMakeFiles/pendulumTest.dir/build.make executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o.provides.build
+.PHONY : executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o.provides
+
+executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o.provides.build: executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o
+
+
 # Object files for target pendulumTest
 pendulumTest_OBJECTS = \
 "CMakeFiles/pendulumTest.dir/pendulumTest.cpp.o" \
 "CMakeFiles/pendulumTest.dir/__/src/pendulum/Pendulum.cpp.o" \
-"CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.o"
+"CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.o" \
+"CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o"
 
 # External object files for target pendulumTest
 pendulumTest_EXTERNAL_OBJECTS =
@@ -141,6 +166,7 @@ pendulumTest_EXTERNAL_OBJECTS =
 ../bin/pendulumTest: executables/CMakeFiles/pendulumTest.dir/pendulumTest.cpp.o
 ../bin/pendulumTest: executables/CMakeFiles/pendulumTest.dir/__/src/pendulum/Pendulum.cpp.o
 ../bin/pendulumTest: executables/CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.o
+../bin/pendulumTest: executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o
 ../bin/pendulumTest: executables/CMakeFiles/pendulumTest.dir/build.make
 ../bin/pendulumTest: ../bin/libboost_filesystem.a
 ../bin/pendulumTest: ../bin/libboost_system.a
@@ -148,7 +174,7 @@ pendulumTest_EXTERNAL_OBJECTS =
 ../bin/pendulumTest: /usr/lib/libbz2.dylib
 ../bin/pendulumTest: /usr/lib/libz.dylib
 ../bin/pendulumTest: executables/CMakeFiles/pendulumTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/pendulumTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dinies33/GitRepos/DynModeling/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../../bin/pendulumTest"
 	cd /Users/dinies33/GitRepos/DynModeling/cmake-build-debug/executables && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pendulumTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -159,6 +185,7 @@ executables/CMakeFiles/pendulumTest.dir/build: ../bin/pendulumTest
 executables/CMakeFiles/pendulumTest.dir/requires: executables/CMakeFiles/pendulumTest.dir/pendulumTest.cpp.o.requires
 executables/CMakeFiles/pendulumTest.dir/requires: executables/CMakeFiles/pendulumTest.dir/__/src/pendulum/Pendulum.cpp.o.requires
 executables/CMakeFiles/pendulumTest.dir/requires: executables/CMakeFiles/pendulumTest.dir/__/src/utils/Clock.cpp.o.requires
+executables/CMakeFiles/pendulumTest.dir/requires: executables/CMakeFiles/pendulumTest.dir/__/src/controllers/Controller.cpp.o.requires
 
 .PHONY : executables/CMakeFiles/pendulumTest.dir/requires
 

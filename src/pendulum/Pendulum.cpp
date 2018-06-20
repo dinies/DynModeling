@@ -10,26 +10,27 @@ namespace dyn_modeling {
             const Eigen::Vector2d t_initial_state,
             const double t_delta_t,
             const double t_length,
-            const double t_mass):
+            const double t_mass,
+            const std::vector<double> t_gains):
             m_state( t_initial_state),
             m_clock( Clock(t_delta_t)),
             m_length( t_length),
             m_mass( t_mass),
-            m_gravity(9.81)
+            m_gravity(9.81),
+            m_current_input(0),
+            m_controller( Controller(t_gains))
             {}
 
 
     void Pendulum::operator()(const dyn_modeling::Pendulum::state_type &x, dyn_modeling::Pendulum::state_type &dxdt,
                               const double /* t */ ) {
         dxdt[0] = x[1];
-        dxdt[1] = - (m_gravity/m_length)*sin(x[0]);
+        dxdt[1] = - (m_gravity/m_length)*sin(x[0]) + m_current_input ;
     }
 
 
     void Pendulum::updateState() {
         Eigen::Vector2d oldState = getState();
-        // when i will implement the controller , the current input will be added as class member m_curr_input
-        // and taken from the overloaded operator function with this.m_curr_input
         state_type x(2);
         x[0] = oldState(0);
         x[1] = oldState(1);
@@ -49,34 +50,29 @@ namespace dyn_modeling {
         std::cout << "state 2=" << getState()(1) << '\n';
     }
 
-    void Pendulum::storePlotData(std::vector<std::vector<double>> &t_plotData, double t_curr_input) {
+    void Pendulum::storePlotData(std::vector<std::vector<double>> &t_plotData, double t_error ) {
         double t = m_clock.getCurrTime();
-        const double e = this->computeEnergy();
-        std::vector<double> curr_data{ t, m_state(0), m_state(1),t_curr_input,e};
+        const double energy = this->computeEnergy();
+        std::vector<double> curr_data{ t, m_state(0), m_state(1),m_current_input,t_error, energy};
         t_plotData.push_back(curr_data);
     }
 
     double Pendulum::computeEnergy() {
-        const double theta_zero = 0;
-        const double one  = cos(theta_zero);
-        const double h_offset = cos(m_state(0));
-        const double delta_theta = one  - h_offset;
-        const double h = m_length* delta_theta ;
+        const double h = m_length* (1 - cos(m_state(0))) ;
         const double potential = m_mass * m_gravity * h;
-        const double rad_velocity = m_state(1);
-        const double v = rad_velocity * m_length;
+        const double v = m_state(1) * m_length;
         const double kinetic =  m_mass * v * v * 1/2;
-        std::cout << "debug "<< h << ", "   <<m_mass << ", " << potential << ", " << kinetic << "\n";
         return kinetic + potential;
     }
 
-    void Pendulum::cycle(const int t_numCycles) {
+  void Pendulum::cycle(const int t_numCycles, double t_theta_ref) {
         std::vector < std::vector<double>> plotting_data;
         Eigen::Vector2d evolution_vec;
         for (int i = 0; i < t_numCycles; ++i) {
+            std::vector<double> controller_output = m_controller.computeInput( t_theta_ref, m_state);
+            setCurrInput( controller_output.at(0));
             this->updateState();
-            double curr_input = 0;//TODO implement controller
-            this->storePlotData( plotting_data, curr_input);
+            this->storePlotData( plotting_data, controller_output.at(1));
         }
         this->plotStateCycle(plotting_data);
     }
@@ -85,13 +81,15 @@ namespace dyn_modeling {
 
         std::vector< boost::tuple<double,double>> theta;
         std::vector< boost::tuple<double,double>> theta_dot;
-        std::vector< boost::tuple<double,double>> theta_dot_dot;
+        std::vector< boost::tuple<double,double>> input;
+        std::vector< boost::tuple<double,double>> error;
         std::vector< boost::tuple<double,double>> energy;
         for ( auto vec : t_plotData){
-            theta.push_back( boost::make_tuple( vec.at(0),vec.at(1)*180/PI));
-            theta_dot.push_back( boost::make_tuple( vec.at(0),vec.at(2)*180/PI));
-            theta_dot_dot.push_back( boost::make_tuple( vec.at(0),vec.at(3)));
-            energy.push_back( boost::make_tuple( vec.at(0),vec.at(4)));
+            theta.push_back( boost::make_tuple( vec.at(0),vec.at(1)));
+            theta_dot.push_back( boost::make_tuple( vec.at(0),vec.at(2)));
+            input.push_back( boost::make_tuple( vec.at(0),vec.at(3)));
+            error.push_back( boost::make_tuple( vec.at(0),vec.at(4)));
+            energy.push_back( boost::make_tuple( vec.at(0),vec.at(5)));
         }
         Gnuplot gp;
         gp << "set terminal qt 1\n";
@@ -102,8 +100,11 @@ namespace dyn_modeling {
         gp << gp.binFile1d(theta_dot, "record") << "with lines title 'theta dot'" << "\n";
         gp << "set terminal qt 3\n";
         gp << "plot";
-        gp << gp.binFile1d(theta_dot_dot, "record") << "with lines title 'theta dot_dot'" << "\n";
+        gp << gp.binFile1d(input, "record") << "with lines title 'input'" << "\n";
         gp << "set terminal qt 4\n";
+        gp << "plot";
+        gp << gp.binFile1d(error, "record") << "with lines title 'error'" << "\n";
+        gp << "set terminal qt 5\n";
         gp << "plot";
         gp << gp.binFile1d(energy, "record") << "with lines title 'energy'" << "\n";
 

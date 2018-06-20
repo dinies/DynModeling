@@ -13,7 +13,8 @@
 #include <math.h>
 #include "../utils/Clock.hpp"
 #include "../../include/gnuplot-iostream.h"
-#define PI 3.14159265
+#include "../controllers/Controller.hpp"
+
 namespace dyn_modeling {
     class Pendulum {
 
@@ -24,8 +25,8 @@ namespace dyn_modeling {
         double m_length;
         double m_mass;
         double m_gravity;
-
-        Eigen::Vector2d evolutionModel();
+        double m_current_input;
+        Controller m_controller;
 
 
         void updateState();
@@ -34,11 +35,11 @@ namespace dyn_modeling {
 
         void plotStateCycle(std::vector< std::vector<double>>& t_plotData);
 
-        void storePlotData(std::vector< std::vector<double>>& t_plotData, double t_curr_input);
+        void storePlotData(std::vector< std::vector<double>>& t_plotData, double t_error);
 
         double computeEnergy();
 
-
+        inline void setCurrInput(double t_input) { m_current_input= t_input; }
 
 
     public:
@@ -46,13 +47,15 @@ namespace dyn_modeling {
         typedef std::vector< double > state_type;
 
 //        Pendulum( double t_delta_t, double t_length );
-        Pendulum(const Eigen::Vector2d t_initial_state, double t_delta_t, double t_length, double t_mass );
+        Pendulum(Eigen::Vector2d t_initial_state, double t_delta_t, double t_length, double t_mass, std::vector<double> t_gains );
 
         inline const Eigen::Vector2d getState() const { return m_state; }
 
         inline void setState(Eigen::Vector2d &t_newState) { m_state = t_newState; }
 
-        void cycle(int t_numCycles);
+        inline double getCurrInput() { return m_current_input; }
+
+      void cycle(int t_numCycles, double t_reference);
 
         void operator() ( const state_type &x , state_type &dxdt , double /* t */ );
 

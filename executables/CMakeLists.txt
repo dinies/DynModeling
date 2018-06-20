@@ -26,6 +26,7 @@ target_link_libraries(
 add_executable( pendulumTest pendulumTest.cpp
         ../src/pendulum/Pendulum.cpp
         ../src/utils/Clock.cpp
+        ../src/controllers/Controller.cpp
 )
 target_link_libraries(
         pendulumTest

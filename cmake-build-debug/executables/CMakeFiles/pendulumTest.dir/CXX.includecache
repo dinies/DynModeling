@@ -27,6 +27,8 @@ math.h
 ../src/utils/Clock.hpp
 ../../include/gnuplot-iostream.h
 ../include/gnuplot-iostream.h
+../controllers/Controller.hpp
+../src/controllers/Controller.hpp
 
 ../include/gnuplot-iostream.h
 cstdio
@@ -82,6 +84,14 @@ boost/cstdint.hpp
 blitz/array.h
 -
 windows.h
+-
+
+../src/controllers/Controller.hpp
+iostream
+-
+Eigen/Core
+-
+vector
 -
 
 ../src/utils/Clock.hpp
@@ -150,6 +160,18 @@ blitz/array.h
 windows.h
 -
 
+/Users/dinies33/GitRepos/DynModeling/src/controllers/Controller.cpp
+Controller.hpp
+/Users/dinies33/GitRepos/DynModeling/src/controllers/Controller.hpp
+
+/Users/dinies33/GitRepos/DynModeling/src/controllers/Controller.hpp
+iostream
+-
+Eigen/Core
+-
+vector
+-
+
 /Users/dinies33/GitRepos/DynModeling/src/pendulum/Pendulum.cpp
 Pendulum.hpp
 /Users/dinies33/GitRepos/DynModeling/src/pendulum/Pendulum.hpp
@@ -175,6 +197,8 @@ math.h
 /Users/dinies33/GitRepos/DynModeling/src/utils/Clock.hpp
 ../../include/gnuplot-iostream.h
 /Users/dinies33/GitRepos/DynModeling/include/gnuplot-iostream.h
+../controllers/Controller.hpp
+/Users/dinies33/GitRepos/DynModeling/src/controllers/Controller.hpp
 
 /Users/dinies33/GitRepos/DynModeling/src/utils/Clock.cpp
 Clock.hpp

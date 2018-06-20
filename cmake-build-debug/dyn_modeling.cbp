@@ -2854,6 +2854,12 @@
 		<Unit filename="/Users/dinies33/GitRepos/DynModeling/executables/pendulumTest.cpp">
 			<Option target="pendulumTest"/>
 		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/src/controllers/Controller.cpp">
+			<Option target="pendulumTest"/>
+		</Unit>
+		<Unit filename="/Users/dinies33/GitRepos/DynModeling/src/controllers/Controller.hpp">
+			<Option target="pendulumTest"/>
+		</Unit>
 		<Unit filename="/Users/dinies33/GitRepos/DynModeling/src/pendulum/Pendulum.cpp">
 			<Option target="pendulumTest"/>
 		</Unit>
