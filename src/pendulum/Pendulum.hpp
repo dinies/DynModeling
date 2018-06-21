@@ -49,6 +49,10 @@ namespace dyn_modeling {
 
     double computeGravityCompens( double t_theta_ref);
 
+    void staticDraw();
+    void dynamicDraw(cv::Point2d &t_prev_head);
+    void drawImg(cv::Point2d &t_prev_head);
+
 
   public:
 

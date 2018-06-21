@@ -19,9 +19,9 @@ namespace dyn_modeling {
     m_gravity(9.81),
     m_current_input(0),
     m_controller( Controller(t_gains)),
-    m_static_drawn_flag(false),
     m_pixel_height(600),
-    m_pixel_width(960)
+    m_pixel_width(960),
+    m_static_drawn_flag(false)
   {
     m_drawing.create(600,960);
     m_drawing= cv::Vec3b(255, 255, 255);
@@ -96,7 +96,7 @@ namespace dyn_modeling {
     cv::Scalar red(0,0,255);
     cv::Scalar black(0,0,0);
 
-    cv::line( m_drawing, p1,prev_p2,white, 3);
+    cv::line( m_drawing, foot,t_prev_head,white, 3);
 
     const double scale = 50;
     Eigen::Vector2d origin_p2_w(0 , - scale* m_length );
@@ -105,26 +105,24 @@ namespace dyn_modeling {
       sin(m_state(0)), cos(m_state(0));
 
     Eigen::Vector2d p2_w = R * origin_p2_w;
-    double p2_c_x = p1.x + p2_w(0);
-    double p2_c_y = p1.y - p2_w(1);
+    double p2_c_x = foot.x + p2_w(0);
+    double p2_c_y = foot.y - p2_w(1);
 
-    cv::Point2d p2( p2_c_x, p2_c_y);
-    cv::line( drawing, p1,p2,red, 3);
-    cv::imshow("Pendulum", drawing);
+    cv::Point2d head( p2_c_x, p2_c_y);
+    cv::line( m_drawing, foot,head,red, 3);
+    cv::imshow("Pendulum", m_drawing);
     cv::waitKey(1);
-    prev_p2 = p2;
+    t_prev_head = head;
     // std::cout << ", \n" << m_state(0) << ", " << p2_w(0)<<", " << p2_w(1) << ", "<< p2_c_x << ", " << p2_c_y <<"\n";
-
- 
   }
 
-  void Pendulum::drawImg(){
+  void Pendulum::drawImg(cv::Point2d &t_prev_head){
     if (m_static_drawn_flag){
-      dynamicDraw();
+      dynamicDraw( t_prev_head);
     }
     else {
       staticDraw();
-      dynamicDraw();
+      dynamicDraw( t_prev_head);
     }
   }
 
@@ -135,59 +133,19 @@ namespace dyn_modeling {
   void Pendulum::cycle(const int t_numCycles, double t_theta_ref, bool t_drawing_flag = false) {
     std::vector < std::vector<double>> plotting_data;
     Eigen::Vector2d evolution_vec;
-    double gravity_compens = computeGravityCompens( t_theta_ref);
-
-    // RGBImage drawing;
-    // drawing.create(400,700);
-    // drawing= cv::Vec3b(255, 255, 255);
-    // cv::namedWindow("Pendulum");
-    // cv::Point2d h1( 1, 100 );
-    // cv::Point2d h2( 700, 100 );
-    // cv::Scalar green(0,255,0);
-    // cv::Scalar red(0,0,255);
-    // cv::Scalar black(0,0,0);
-    // cv::Scalar white(255,255,255);
-    // cv::Point2d p1(350 ,100);
-    // cv::Point2d prev_p2 = p1;
-    // if (t_drawing_flag){
-    //   drawing.at<cv::Vec3b>(350,100) = cv::Vec3b(0,0,0); //p1
-    //   cv::line( drawing, h1,h2,green);
-    // }
+    double g_comp = computeGravityCompens( t_theta_ref);
+    cv::Point2d prev_point(1,1);
 
     for (int i = 0; i < t_numCycles; ++i) {
-      std::vector<double> controller_output = m_controller.computeInput( t_theta_ref, m_state, gravity_compens);
-      // setCurrInput( controller_output.at(0));
+      std::vector<double> controller_output = m_controller.computeInput(t_theta_ref,m_state,g_comp);
+      setCurrInput( controller_output.at(0));
       updateState();
       storePlotData( plotting_data, controller_output.at(1));
 
-      // if (t_drawing_flag){
-
-      //   cv::line( drawing, p1,prev_p2,white, 3);
-      //   const double scale = 50;
-      //   Eigen::Vector2d origin_p2_w(0 , - scale* m_length );
-      //   Eigen::Matrix2d R;
-      //   R << cos( m_state(0)), -sin(m_state(0)),
-      //     sin(m_state(0)), cos(m_state(0));
-
-      //   Eigen::Vector2d p2_w = R * origin_p2_w;
-      //   double p2_c_x = p1.x + p2_w(0);
-      //   double p2_c_y = p1.y - p2_w(1);
-
-      //   cv::Point2d p2( p2_c_x, p2_c_y);
-      //   cv::line( drawing, p1,p2,red, 3);
-      //   cv::imshow("Pendulum", drawing);
-      //   cv::waitKey(1);
-      //   prev_p2 = p2;
-      //   // std::cout << ", \n" << m_state(0) << ", " << p2_w(0)<<", " << p2_w(1) << ", "<< p2_c_x << ", " << p2_c_y <<"\n";
-
-      // }
+      if(t_drawing_flag){
+        drawImg(prev_point);
+      }
     }
-
-    // if (t_drawing_flag){
-    //   std::cout << "finished" << "\n";
-    //   cv::imshow("Pendulum", drawing);
-    //   cv::waitKey();
-    // }
     plotStateCycle(plotting_data);
   }
 
