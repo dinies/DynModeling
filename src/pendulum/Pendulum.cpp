@@ -16,7 +16,7 @@ namespace dyn_modeling {
     m_clock( Clock(t_delta_t)),
     m_length( t_length),
     m_mass( t_mass),
-    m_gravity(9.81),
+    m_gravity(9.80665),
     m_current_input(0),
     m_controller( Controller(t_gains)),
     m_pixel_height(600),
@@ -72,8 +72,7 @@ namespace dyn_modeling {
   }
 
   double Pendulum::computeGravityCompens( const double t_theta_ref) {
-    const double force = m_mass * m_gravity;
-    return force * sin( t_theta_ref);
+    return  m_gravity * sin( t_theta_ref) / m_length;
   }
 
   void Pendulum::staticDraw(){
@@ -81,7 +80,7 @@ namespace dyn_modeling {
     int horizon_y = (int)(m_pixel_height/3);
     cv::Point2d h1( 1, horizon_y );
     cv::Point2d h2( m_pixel_width, horizon_y);
-    cv::Scalar green(0,255,0);
+    cv::Scalar green(0,255,20);
     cv::line( m_drawing, h1,h2,green);
     m_static_drawn_flag = true;
   }
@@ -93,10 +92,9 @@ namespace dyn_modeling {
     // cv::Point2d prev_head= t_prev_head;
 
     cv::Scalar white(255,255,255);
-    cv::Scalar red(0,0,255);
-    cv::Scalar black(0,0,0);
+    cv::Scalar dark_red(20,0,255);
 
-    cv::line( m_drawing, foot,t_prev_head,white, 3);
+    cv::line( m_drawing, foot,t_prev_head,white);
 
     const double scale = 50;
     Eigen::Vector2d origin_p2_w(0 , - scale* m_length );
@@ -109,7 +107,7 @@ namespace dyn_modeling {
     double p2_c_y = foot.y - p2_w(1);
 
     cv::Point2d head( p2_c_x, p2_c_y);
-    cv::line( m_drawing, foot,head,red, 3);
+    cv::line( m_drawing, foot,head,dark_red);
     cv::imshow("Pendulum", m_drawing);
     cv::waitKey(1);
     t_prev_head = head;
@@ -126,10 +124,6 @@ namespace dyn_modeling {
     }
   }
 
-
-
-
-
   void Pendulum::cycle(const int t_numCycles, double t_theta_ref, bool t_drawing_flag = false) {
     std::vector < std::vector<double>> plotting_data;
     Eigen::Vector2d evolution_vec;
@@ -142,7 +136,7 @@ namespace dyn_modeling {
       updateState();
       storePlotData( plotting_data, controller_output.at(1));
 
-      if(t_drawing_flag){
+      if(t_drawing_flag && i%5==0){
         drawImg(prev_point);
       }
     }

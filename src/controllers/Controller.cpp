@@ -5,15 +5,13 @@
 namespace dyn_modeling {
     Controller::Controller(std::vector<double> t_gains): m_gains(t_gains){}
 
-    std::vector<double> Controller::computeInput(double t_ref, Eigen::Vector2d t_state, double t_gravity_compens) {
+    std::vector<double> Controller::computeInput(double t_ref,Eigen::Vector2d t_state,double t_grav_comp) {
 
         double error = boxMinusAngleRad( t_ref, t_state(0));
         double K_p = m_gains.at(0);
         double K_d = m_gains.at(1);
-//        std::cout << error << " \n";
-        std::vector<double> vec{ K_p * error - K_d * t_state(1), error};
+        std::vector<double> vec{ K_p * error - K_d * t_state(1) + t_grav_comp, error};
         return vec;
-//        return  K_p * error - K_d * t_state(1) + 9.81 * sin( t_state(0));
     }
     double Controller::boxMinusAngleRad(double t_ref, double t_actual) {
            Eigen::Matrix2d rot_ref;
