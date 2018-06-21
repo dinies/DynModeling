@@ -11,13 +11,14 @@
 #include <iostream>
 #include <vector>
 #include <math.h>
+#include "opencv2/opencv.hpp"
 #include "../utils/Clock.hpp"
 #include "../../include/gnuplot-iostream.h"
 #include "../controllers/Controller.hpp"
 
 namespace dyn_modeling {
     class Pendulum {
-
+        typedef cv::Mat_< cv::Vec3b > RGBImage;
 
     private:
         Eigen::Vector2d m_state;
@@ -41,12 +42,13 @@ namespace dyn_modeling {
 
         inline void setCurrInput(double t_input) { m_current_input= t_input; }
 
+        double computeGravityCompens( double t_theta_ref);
+
 
     public:
 
         typedef std::vector< double > state_type;
 
-//        Pendulum( double t_delta_t, double t_length );
         Pendulum(Eigen::Vector2d t_initial_state, double t_delta_t, double t_length, double t_mass, std::vector<double> t_gains );
 
         inline const Eigen::Vector2d getState() const { return m_state; }
@@ -55,7 +57,7 @@ namespace dyn_modeling {
 
         inline double getCurrInput() { return m_current_input; }
 
-      void cycle(int t_numCycles, double t_reference);
+        void cycle(int t_numCycles, double t_reference, bool t_drawing_flag);
 
         void operator() ( const state_type &x , state_type &dxdt , double /* t */ );
 

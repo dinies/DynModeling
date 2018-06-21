@@ -35,6 +35,8 @@ INCLUDE_DIRECTORIES(${OpenCV_INCLUDE_DIRS})
 add_subdirectory( boost-cmake)
 add_subdirectory( executables)
 
+enable_testing()
+add_subdirectory( tests)
 
 
 
