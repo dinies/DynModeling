@@ -13,6 +13,7 @@ namespace dyn_modeling {
         std::vector<double> vec{ K_p * error - K_d * t_state(1) + t_grav_comp, error};
         return vec;
     }
+
     double Controller::boxMinusAngleRad(double t_ref, double t_actual) {
            Eigen::Matrix2d rot_ref;
            Eigen::Matrix2d rot_actual;
@@ -20,7 +21,6 @@ namespace dyn_modeling {
                       sin(t_ref), cos(t_ref);
            rot_actual << cos( t_actual), -sin(t_actual),
                       sin(t_actual), cos(t_actual);
-
            Eigen::Matrix2d rot = rot_actual.transpose() * rot_ref;
            return atan2( rot(1,0), rot(0,0));
 

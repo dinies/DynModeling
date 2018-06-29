@@ -1,4 +1,4 @@
-add_executable( TestController TestController.cpp
+add_executable( TestController TestController.cpp ../../src/controllers/Controller.cpp
         )
 target_link_libraries(
         TestController

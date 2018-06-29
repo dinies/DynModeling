@@ -7,3 +7,4 @@ target_link_libraries(
 add_test( NAME NameTest COMMAND Test)
 
 add_subdirectory(pendulum)
+add_subdirectory(slam)

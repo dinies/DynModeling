@@ -1,6 +1,4 @@
-//
 // Created by Edoardo Ghini on 13/06/2018.
-//
 
 #include "Pendulum.hpp"
 

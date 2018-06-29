@@ -49,3 +49,7 @@ target_link_libraries(
         PUBLIC Boost::iostreams
 )
 
+
+add_executable( fileParsing fileParsing.cpp
+        ../src/slam/DatasetManager.cpp
+)
