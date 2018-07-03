@@ -6,7 +6,8 @@ PROJECT(dyn_modeling)
 ADD_DEFINITIONS(-DUNIX)
 MESSAGE(STATUS "Compiling on Unix")
 
-SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -Wall -Wextra -std=c++11") #ds enable all warnings and c++11 features
+# -g used for enabling gdb  and -D for use gdb on boost tests ( it gives an error at compilation time,give up !!)
+SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}  -g  -Wall -Wextra -std=c++11") #ds enable all warnings and c++11 features
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Debug)

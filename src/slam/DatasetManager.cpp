@@ -1,9 +1,18 @@
-// Created by Edoardo Ghini on 26/06/2018.
+// Created by Dinies on 26/06/2018.
 
 #include "DatasetManager.hpp"
 namespace dyn_modeling {
 
-  DatasetManager::datasetParams DatasetManager::parseStaticParameters( std::string t_dataSetPath){
+  DatasetManager::DatasetManager(const std::string &t_dataSetPath):
+    m_dataSetPath( t_dataSetPath)
+  {
+    m_staticParams = DatasetManager::parseStaticParameters(t_dataSetPath);
+    m_dataSet = DatasetManager::parseDataSet( t_dataSetPath, m_staticParams);
+  };
+
+
+
+  datasetParams DatasetManager::parseStaticParameters( const std::string &t_dataSetPath){
 
     std::ifstream fileStream( t_dataSetPath);
     std::string firstLine;
@@ -46,23 +55,74 @@ namespace dyn_modeling {
       pS.tag = "something goes wrong";
       return pS;
     }
- }
+  }
+  void DatasetManager::collectDataFromString( const std::string &t_dataString, dataNode &t_returning_struct, int t_rangesNum){
+    char * cstr = new char [t_dataString.length()+1];
+    std::strcpy (cstr, t_dataString.c_str());
 
-  DatasetManager::DatasetManager( std::string t_dataSetPath){
-    // datasetParams data = {
-    //   "LASER_MESSAGE",
-    //   "/scan",
-    //   "/laser_frame",
-    //   0.02,
-    //   30,
-    //   -1.5708,
-    //   1.5708,
-    //   0.00436332,
-    //   0,
-    //   0,
-    //   721,
-    //   0
-    // };
-    m_staticParams = DatasetManager::parseStaticParameters(t_dataSetPath);
+    char * pch;
+    int i = 0;
+    pch = std::strtok( cstr, " ");
+    while ( pch != NULL) {
+
+      switch(i){
+      case 3:{
+        t_returning_struct.sequence_number = std::stoi( pch);
+      }
+      case 4:{
+        t_returning_struct.timing_count= std::stod( pch);
+      }
+      }
+      if(i>= 21 && i<= 21+ t_rangesNum -1){
+        t_returning_struct.ranges.push_back(std::stod(pch));
+      }
+      pch = std::strtok( NULL, " ");
+      ++i;
+    }
   };
+
+
+  dataSet DatasetManager::parseDataSet( const std::string &t_dataSetPath, const datasetParams &t_dSetParams){
+    dataSet dS;
+
+    std::ifstream fileStream( t_dataSetPath);
+    std::string current_line;
+    if (!fileStream.is_open()) {
+      return dS;
+    }
+
+    const int ranges_num = static_cast<int>(t_dSetParams.ranges_size);
+    while ( getline (fileStream,current_line) ){
+
+      dataNode dataOfNode;
+      dataOfNode.ranges.reserve(ranges_num);
+      DatasetManager::collectDataFromString(current_line, dataOfNode, ranges_num);
+      dS.push_back(dataOfNode);
+    }
+    fileStream.close();
+    return dS;
+  };
+
+  std::vector<double> DatasetManager::getSpanningAngles(){
+    // double total_span = std::abs( m_staticParams.max_angle - m_staticParams.min_angle);
+    // double raw_num_span = std::round(total_span / delta_span );
+
+    int num_span = static_cast<int>(m_staticParams.ranges_size);
+    std::vector<double> span_angles;
+    span_angles.reserve(num_span);
+    double angle = m_staticParams.min_angle;
+    double delta_span = m_staticParams.angle_increment;
+    for (int i = 0; i < num_span; ++i) {
+      span_angles.push_back( angle );
+      angle += delta_span;
+    }
+    return span_angles;
+  };
+
+
+  std::vector<double> DatasetManager::getDataNodeRanges( int t_index_datanode){
+    dataNode dN = m_dataSet.at(t_index_datanode);
+    return dN.ranges;
+  };
+
 }

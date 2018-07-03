@@ -2,53 +2,85 @@
 
 #pragma once
 #include <unistd.h>
+#include <cmath>
 #include <vector>
 #include <string>
 #include <fstream>
 #include <iostream>
 
 namespace dyn_modeling {
+  typedef struct datasetParams_tag {
+    std::string tag;
+    std::string topic;
+    std::string frame_id;
+    double min_range;
+    double max_range;
+    double min_angle;
+    double max_angle;
+    double angle_increment;
+    double time_increment;
+    double scan_time;
+    double ranges_size;
+    double intensities;
+  } datasetParams;
+
+  typedef struct dataNode_tag {
+    int sequence_number;
+    double timing_count;
+    std::vector<double> ranges;
+  }dataNode;
+
+  typedef std::vector< dataNode > dataSet;
+
+
+
   class DatasetManager {
+  private:
+    std::string m_dataSetPath; //TODO maybe unused
+    dataSet m_dataSet;
   public:
+   datasetParams m_staticParams;
 
-    typedef struct datasetParams {
-      std::string tag;
-      std::string topic;
-      std::string frame_id;
-      double min_range;
-      double max_range;
-      double min_angle;
-      double max_angle;
-      double angle_increment;
-      double time_increment;
-      double scan_time;
-      double ranges_size;
-      double intensities;
-    } datasetParams;
+    DatasetManager( const std::string &t_dataSetPath);
 
+    static datasetParams parseStaticParameters( const std::string &t_dataSetPath); //TODO  try to make this private , maybe with RTTR ( reflection library)
 
-    // std::string tag;
-    // std::string topic;
-    // std::string frame_id;
-    // double sequence_num;
-    // double timing_count;
-    // std::vector<double> imu_odom;
-    // double min_range;
-    // double max_range;
-    // double min_angle;
-    // double max_angle;
-    // double angle_increment;
-    // double time_increment;
-    // double scan_time;
-    // double ranges_size;
-    // std::vector<double> ranges;
-    // double intensities;
-    datasetParams m_staticParams;
+    static dataSet parseDataSet( const std::string &t_dataSetPath, const datasetParams &t_dSetParams); //TODO  try to make this private
 
-    DatasetManager( std::string t_dataSetPath);
+    static void collectDataFromString( const std::string &t_dataString , dataNode &t_returning_struct , int t_rangesNum);
 
-    static datasetParams parseStaticParameters( std::string t_dataSetPath);
+    inline dataSet& getDataSet() { return m_dataSet; } //dangerous TODO remove
 
+    std::vector<double> getSpanningAngles();
+
+    inline int getNumDataEntries() { return m_dataSet.size(); }
+
+    std::vector<double> getDataNodeRanges( int t_index_datanode);
 
   };
 }
+
+
+
+
+
+
+
+
+// std::string tag;
+// std::string topic;
+// std::string frame_id;
+// double sequence_num;
+// double timing_count;
+// std::vector<double> imu_odom;
+// double min_range;
+// double max_range;
+// double min_angle;
+// double max_angle;
+// double angle_increment;
+// double time_increment;
+// double scan_time;
+// double ranges_size;
+// std::vector<double> ranges;
+// double intensities;
+ 
