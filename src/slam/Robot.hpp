@@ -9,6 +9,7 @@
 // #include <iostream>
 
 #include "../../include/structs.hpp"
+#include "../utils/MyMath.hpp"
 #include "DatasetManager.hpp"
 namespace dyn_modeling {
   typedef struct state_tag{
@@ -18,7 +19,6 @@ namespace dyn_modeling {
   class Robot{
   private:
     DatasetManager m_datasetManager;
-
     state m_state;
     std::vector<state> m_old_states;
 
@@ -27,10 +27,13 @@ namespace dyn_modeling {
 
     inline std::vector<double> getState() { return m_state.q; };
 
-    std::vector<scanPoint> retrieveScanPoints( int t_index_datanode );
+    std::vector<scanPoint> retrieveScanPointsRobotFrame( int t_index_datanode );
 
-    std::vector<double> updateState( const std::vector<double> &optimalTransf);
+    std::vector<scanPoint> changeCoordsRobotToWorld( const std::vector<scanPoint> &t_scanPoints_robotFrame);
 
+    std::vector<double> updateState( const std::vector<double> &t_optimalTransf);
+
+    inline int getNumDataEntries() { return m_datasetManager.getNumDataEntries(); }
 
   };
 }

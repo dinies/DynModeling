@@ -36,20 +36,18 @@ namespace dyn_modeling {
 
   class DatasetManager {
   private:
-    std::string m_dataSetPath; //TODO maybe unused
+    std::string m_dataSetPath; //maybe unused
     dataSet m_dataSet;
   public:
    datasetParams m_staticParams;
 
     DatasetManager( const std::string &t_dataSetPath);
 
-    static datasetParams parseStaticParameters( const std::string &t_dataSetPath); //TODO  try to make this private , maybe with RTTR ( reflection library)
+    static datasetParams parseStaticParameters( const std::string &t_dataSetPath); //try to make this private , maybe with RTTR ( reflection library)
 
-    static dataSet parseDataSet( const std::string &t_dataSetPath, const datasetParams &t_dSetParams); //TODO  try to make this private
+    static dataSet parseDataSet( const std::string &t_dataSetPath, const datasetParams &t_dSetParams); //try to make this private
 
     static void collectDataFromString( const std::string &t_dataString , dataNode &t_returning_struct , int t_rangesNum);
-
-    inline dataSet& getDataSet() { return m_dataSet; } //dangerous TODO remove
 
     std::vector<double> getSpanningAngles();
 

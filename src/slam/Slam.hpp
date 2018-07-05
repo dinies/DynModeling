@@ -8,9 +8,9 @@
 // #include "opencv2/opencv.hpp"
 // #include "../../include/gnuplot-iostream.h"
 
+#include "Map.hpp"
 #include "Robot.hpp"
 #include "ScanMatcher.hpp"
-#include "Map.hpp"
 
 
 namespace dyn_modeling {

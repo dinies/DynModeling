@@ -12,19 +12,22 @@ namespace dyn_modeling {
 
 
   void Slam::cycle(){
-    int num_dataEntries = 2 ;// m_robot.getNumDataEntries
+    int num_dataEntries = m_robot.getNumDataEntries();
+    //here call a init func to preserve the space for datastructs in the objects for example in Map
     for (int i = 0; i < num_dataEntries; ++i) {
       std::vector<double> old_robotState = m_robot.getState();
-      std::vector< scanPoint > scanPoints_robotFrame = m_robot.retrieveScanPoints(i);
-      // remind the frame of the coords:  ICP calculations has to be maid wtr to robot instead of world
-      std::vector<double> optimalTransf = m_scanMatcher.icpIteration(old_robotState, scanPoints_robotFrame);
+      std::vector< scanPoint > scanPoints_robotFrame= m_robot.retrieveScanPointsRobotFrame(i);
+      std::vector< scanPoint > scanPoints_worldFrame= m_robot.changeCoordsRobotToWorld( scanPoints_robotFrame );
 
-      std::vector<double> new_robotState = m_robot.updateState( optimalTransf);
+      // remind the frame of the coords:  ICP calculations has to be maid wtr to robot instead of world (not sure)
+
+      //std::vector<double> optimalTransf = m_scanMatcher.icpIteration(old_robotState, scanPoints_worldFrame);
+
+      // std::vector<double> new_robotState = m_robot.updateState( optimalTransf);
 
       //loop checker
-      //m_map.drawRanges( scanPoints_robotFrame, new_robotState ); //TODO useful for debugging also
-      // TODO consider that maybe the Map class should be a referenced by Robot class since only Robot would have the informations to draw the Map... to decide yet
-
+      // m_map.drawScanPoints( scanPoints_worldFrame, new_robotState , i);
+      m_map.drawScanPoints( scanPoints_worldFrame, old_robotState , i);
     }
   }
 }

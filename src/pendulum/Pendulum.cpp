@@ -42,7 +42,7 @@ namespace dyn_modeling {
     double t_f = t_0 + m_clock.getDeltaT();
     double initial_step_size = (t_f-t_0)/100;
     boost::numeric::odeint::integrate( boost::ref( *this) ,x, t_0, t_f,initial_step_size );
-    m_clock.thick();
+    m_clock.tick();
     Eigen::Vector2d new_state( x[0], x[1]);
     this->setState(new_state);
   }

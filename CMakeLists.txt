@@ -6,14 +6,17 @@ PROJECT(dyn_modeling)
 ADD_DEFINITIONS(-DUNIX)
 MESSAGE(STATUS "Compiling on Unix")
 
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Debug)
+endif()
+
 # -g used for enabling gdb  and -D for use gdb on boost tests ( it gives an error at compilation time,give up !!)
 SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}  -g  -Wall -Wextra -std=c++11") #ds enable all warnings and c++11 features
 
-if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Debug)
-endif()
 message("build type: '${CMAKE_BUILD_TYPE}'")
 
+
+set_property(GLOBAL PROPERTY GLOBAL_DEPENDS_DEBUG_MODE 1)
 
 
 SET(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
