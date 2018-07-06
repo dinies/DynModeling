@@ -19,7 +19,6 @@ int main(int argc, char **argv) {
   cv::Point2d p3 ( 0 , 1);
   std::vector<cv::Point2d> points = { p1, p2, p3};
 
-  std::abort();
   Drawer::drawPoligon(dImg, points, dark_red);
   cv::imshow("Map",dImg);
   cv::waitKey();
