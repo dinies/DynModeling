@@ -68,11 +68,11 @@ target_link_libraries(
 add_executable( slamBehaviour slamBehaviour.cpp
   ../src/slam/Slam.cpp
   ../src/slam/Robot.cpp
+  ../src/drawing/Drawer.cpp
   ../src/slam/Map.cpp
   ../src/slam/DatasetManager.cpp
   ../src/slam/ScanMatcher.cpp
   ../src/utils/MyMath.cpp
-  ../src/drawing/Drawer.cpp
   )
 
 target_link_libraries(

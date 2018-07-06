@@ -17,11 +17,11 @@ namespace dyn_modeling{
     cv::Scalar dark_red = {20,0,255};
 
     cv::Point2d p1 ( 0 , 0);
-    cv::Point2d p2 ( 1 , 0);
-    cv::Point2d p3 ( 0 , 1);
+    cv::Point2d p2 ( 100 , 0);
+    cv::Point2d p3 ( 0 , 100);
     std::vector<cv::Point2d> points = { p1, p2, p3};
 
-    Drawer::drawPoligon(dImg, points, dark_red);
+    Drawer::drawHollowPoligon(dImg, points, dark_red);
     cv::imshow("Map",dImg);
     cv::waitKey();
   }

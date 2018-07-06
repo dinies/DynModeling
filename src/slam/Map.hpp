@@ -3,9 +3,10 @@
 #pragma once
 #include <unistd.h>
 #include <vector>
+
 #include "opencv2/opencv.hpp"
 
-#include "../../include/structs.hpp"
+
 #include "../drawing/Drawer.hpp"
 #include "../utils/MyMath.hpp"
 
@@ -34,17 +35,22 @@ namespace dyn_modeling {
     int m_spatialUnit;
 
 
-    std::vector< cv::Point2d> computePointsRobot( const std::vector<double> &t_robotState );
-    std::vector< cv::Point2d> computePointsScans( const std::vector<scanPoint> &t_scanPoints_worldFrame, const std::vector<double> &t_robotState);
-    static void drawRobot( const RGBImage &t_drawingImg, const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color);
-    static void drawScans( const RGBImage &t_drawingImg, const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color);
-
   public:
     Map();
+
+    std::vector< cv::Point2d> computePointsRobot( const std::vector<double> &t_robotState );
+
+    std::vector< cv::Point2d> computePointsScans( const std::vector<scanPoint> &t_scanPoints_worldFrame);
+
+    void drawRobot( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color);
+
+    void drawScans( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color);
 
     void drawScanPoints(const std::vector<scanPoint> &t_scanPoints_worldFrame,const std::vector<double> &t_robotState,const int t_index );
 
     void deleteScanPoints( const int t_index);
+
+    inline void show(){ cv::imshow("Map",m_drawingImg); };
 
   };
 }

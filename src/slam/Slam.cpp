@@ -28,6 +28,7 @@ namespace dyn_modeling {
       //loop checker
       // m_map.drawScanPoints( scanPoints_worldFrame, new_robotState , i);
       m_map.drawScanPoints( scanPoints_worldFrame, old_robotState , i);
+      m_map.show();
     }
   }
 }

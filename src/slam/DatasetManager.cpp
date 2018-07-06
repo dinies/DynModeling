@@ -64,17 +64,21 @@ namespace dyn_modeling {
     int i = 0;
     pch = std::strtok( cstr, " ");
     while ( pch != NULL) {
-
       switch(i){
       case 3:{
         t_returning_struct.sequence_number = std::stoi( pch);
+        break;
       }
       case 4:{
         t_returning_struct.timing_count= std::stod( pch);
+        break;
       }
+      default:{
+        if(i>= 21 && i<= 21+ t_rangesNum -1){
+          t_returning_struct.ranges.push_back(std::stod(pch));
+          break;
+        }
       }
-      if(i>= 21 && i<= 21+ t_rangesNum -1){
-        t_returning_struct.ranges.push_back(std::stod(pch));
       }
       pch = std::strtok( NULL, " ");
       ++i;
