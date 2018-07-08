@@ -6,15 +6,17 @@
 // #include <string>
 // #include <fstream>
 // #include <iostream>
+#include <Eigen/Dense>
 
 #include "../../include/structs.hpp"
 namespace dyn_modeling {
+
 
   class ScanMatcher{
   public:
     ScanMatcher();
 
-    std::vector<double> icpIteration( const std::vector<double> &t_old_robotState, const std::vector<scanPoint> &t_scanPoints_robotFrame);
+    std::vector<double> icpIteration( const std::vector<double> &t_old_robotState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_oldScanPoints_world, const std::vector<scanPoint> &t_newScanPoints_world);
   };
 }
 

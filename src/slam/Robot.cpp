@@ -48,14 +48,13 @@ namespace dyn_modeling {
     return scanPvec_worldFrame;
   };
 
-  std::vector<double> Robot::updateState(const std::vector<double> &t_transfVec){
+  void Robot::updateState(const std::vector<double> &t_newState){
     m_old_states.push_back(m_state);
-    Eigen::Isometry2d transf = MyMath::v2t(t_transfVec);
-    Eigen::Vector2d curr_state( m_state.q.at(0), m_state.q.at(1));
-    Eigen::Vector2d new_state = transf * curr_state;
-    std::vector<double> new_state_vec(new_state(0), new_state(1));
-    m_state.q = new_state_vec;
-    return new_state_vec;
+    // Eigen::Isometry2d transf = MyMath::v2t(t_transfVec);
+    // Eigen::Vector2d curr_state( m_state.q.at(0), m_state.q.at(1));
+    // Eigen::Vector2d new_state = transf * curr_state;
+    // std::vector<double> new_state_vec(new_state(0), new_state(1));
+    m_state.q = t_newState;
   };
 }
 

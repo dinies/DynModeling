@@ -3,16 +3,17 @@
 #include "Map.hpp"
 namespace dyn_modeling {
 
-  Map::Map(){
+  Map::Map():
+    m_drawer( Drawer(10))
+  {
     m_drawingImg.create( 900,1200 );
     m_drawingImg= cv::Vec3b(255, 255, 255);
     cv::namedWindow("Map");
     m_colors.white = {255,255,255};
     m_colors.green = {0,255,20};
     m_colors.dark_red = {20,0,255};
-    m_spatialUnit = 10;
+    m_spatialUnit = 0.3;
   };
-  // add a member  to class Drawer
 
   std::vector< cv::Point2d> Map::computePointsRobot( const std::vector<double> &t_robotState ){
     double robot_radius = m_spatialUnit;
@@ -42,12 +43,12 @@ namespace dyn_modeling {
   };
 
   void Map::drawRobot( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color){
-    Drawer::drawHollowPoligon(m_drawingImg, t_points, t_color);
+    m_drawer.drawHollowPoligon(m_drawingImg, t_points, t_color);
   };
 
   void Map::drawScans( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color){
     for (auto p : t_points){
-      Drawer::drawPatch(m_drawingImg, p, t_color);
+      m_drawer.drawPatch(m_drawingImg, p, t_color);
     }
  };
 

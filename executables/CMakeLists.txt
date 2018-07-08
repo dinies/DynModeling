@@ -80,11 +80,3 @@ target_link_libraries(
   PUBLIC ${OpenCV_LIBS}
   )
 
-add_executable( drawerTrial drawerTrial.cpp
-  ../src/drawing/Drawer.cpp
-  )
-
-target_link_libraries(
-  drawerTrial
-  PUBLIC ${OpenCV_LIBS}
-  )

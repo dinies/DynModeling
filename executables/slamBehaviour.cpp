@@ -6,8 +6,9 @@
 using namespace dyn_modeling;
 int main(int argc, char **argv) {
 
-  std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/exampleDataSetTwoLines.txt";
-  std::vector<double> initial_state = { 0, 0, M_PI/2};
+  // std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/exampleDataSetTwoLines.txt";
+  std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/realLaserScans.txt";
+  std::vector<double> initial_state = { 0, 0, 0 };
   Slam slam = Slam(absolutePath, initial_state);
   slam.cycle();
   cv::waitKey();

@@ -32,7 +32,8 @@ namespace dyn_modeling {
     RGBImage m_drawingImg;
     std::vector< drawingData> m_drawingList;
     colors m_colors;
-    int m_spatialUnit;
+    double m_spatialUnit;
+    Drawer m_drawer;
 
 
   public:

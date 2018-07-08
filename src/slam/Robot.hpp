@@ -31,7 +31,7 @@ namespace dyn_modeling {
 
     std::vector<scanPoint> changeCoordsRobotToWorld( const std::vector<scanPoint> &t_scanPoints_robotFrame);
 
-    std::vector<double> updateState( const std::vector<double> &t_optimalTransf);
+    void updateState(const std::vector<double> &t_newState);
 
     inline int getNumDataEntries() { return m_datasetManager.getNumDataEntries(); }
 
