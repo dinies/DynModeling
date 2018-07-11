@@ -48,13 +48,35 @@ namespace dyn_modeling {
     return scanPvec_worldFrame;
   };
 
-  void Robot::updateState(const std::vector<double> &t_newState){
+  void Robot::updateState(const std::vector<double> &t_deltaState){
     m_old_states.push_back(m_state);
-    // Eigen::Isometry2d transf = MyMath::v2t(t_transfVec);
-    // Eigen::Vector2d curr_state( m_state.q.at(0), m_state.q.at(1));
-    // Eigen::Vector2d new_state = transf * curr_state;
-    // std::vector<double> new_state_vec(new_state(0), new_state(1));
-    m_state.q = t_newState;
+    Eigen::Vector3d old_state( m_state.q.at(0),m_state.q.at(1),m_state.q.at(2));
+    Eigen::Vector3d delta_q(t_deltaState.at(0),t_deltaState.at(1),t_deltaState.at(2));
+    Eigen::Vector3d new_state = old_state + delta_q;
+    m_state.q = { new_state(0), new_state(1), new_state(2)};
+  };
+
+  void Robot::plotStateEvolution(const double t_delta_t){
+    double curr_t = 0;
+    std::vector< boost::tuple<double,double>> x;
+    std::vector< boost::tuple<double,double>> y;
+    std::vector< boost::tuple<double,double>> theta;
+    for ( auto s : m_old_states){
+      x.push_back( boost::make_tuple( curr_t,s.q.at(0)));
+      y.push_back( boost::make_tuple( curr_t,s.q.at(1)));
+      theta.push_back( boost::make_tuple( curr_t,s.q.at(2)));
+      curr_t += t_delta_t;
+    }
+    Gnuplot gp;
+    gp << "set terminal qt 1\n";
+    gp << "plot";
+    gp << gp.binFile1d(x, "record") << "with lines title 'x'" << "\n";
+    gp << "set terminal qt 2\n";
+    gp << "plot";
+    gp << gp.binFile1d(y, "record") << "with lines title 'y'" << "\n";
+    gp << "set terminal qt 3\n";
+    gp << "plot";
+    gp << gp.binFile1d(theta, "record") << "with lines title 'theta'" << "\n";
   };
 }
 

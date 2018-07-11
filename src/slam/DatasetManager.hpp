@@ -52,6 +52,7 @@ namespace dyn_modeling {
     std::vector<double> getSpanningAngles();
 
     inline int getNumDataEntries() { return m_dataSet.size(); }
+    inline int getNumRanges() { return m_staticParams.ranges_size; }
 
     std::vector<double> getDataNodeRanges( int t_index_datanode);
 

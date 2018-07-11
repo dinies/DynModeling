@@ -12,40 +12,44 @@ namespace dyn_modeling {
 
 
   void Slam::cycle(){
-    int num_dataEntries = m_robot.getNumDataEntries();
-    //here call a init func to preserve the space for datastructs in the objects for example in Map
-    for (int i = 0; i < num_dataEntries; ++i) {
+    const int num_ranges = m_robot.getNumRanges();
+    const int num_dataEntries = m_robot.getNumDataEntries();
+    const std::vector<double> initialGuessState = { 0, 0, 0};
+    std::vector<double> old_robotState;
+    old_robotState.reserve(3);
+    std::vector<scanPoint> oldSPoints_robotFrame;
+    oldSPoints_robotFrame.reserve(num_ranges);
+    std::vector<scanPoint> newSPoints_robotFrame;
+    newSPoints_robotFrame.reserve(num_ranges);
+    std::vector<scanPoint> newDrawingPoints_worldFrame;
+    newDrawingPoints_worldFrame.reserve(num_ranges);
+    std::vector<double> new_robotState;
+    new_robotState.reserve(3);
+    std::vector<double> delta_state;
+    delta_state.reserve(3);
 
-      std::vector<double> old_robotState;
-      std::vector<scanPoint> oldSPoints_robotFrame;
-      std::vector<scanPoint> oldSPoints_worldFrame;
-      std::vector<scanPoint> newSPoints_robotFrame;
-      std::vector<scanPoint> newSPoints_worldFrame;
-      std::vector<double> new_robotState;
+    for (int i = 0; i < num_dataEntries; ++i) {
 
       if ( i == 0 ){
         new_robotState = m_robot.getState();
         newSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
-        newSPoints_worldFrame = m_robot.changeCoordsRobotToWorld(newSPoints_robotFrame);
 
       }
       else{
-        old_robotState = m_robot.getState();
         oldSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i - 1);
-
-        oldSPoints_worldFrame = m_robot.changeCoordsRobotToWorld(oldSPoints_robotFrame);
         newSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
-        newSPoints_worldFrame = m_robot.changeCoordsRobotToWorld(newSPoints_robotFrame);
+        delta_state = m_scanMatcher.icpIterationRframe(initialGuessState,oldSPoints_robotFrame,newSPoints_robotFrame);
 
-        new_robotState = m_scanMatcher.icpIteration(old_robotState,oldSPoints_robotFrame,oldSPoints_worldFrame,newSPoints_worldFrame);
 
-        m_robot.updateState( new_robotState);
-
+        m_robot.updateState( delta_state);
+        new_robotState = m_robot.getState();
       }
-        //loop checker
-        m_map.drawScanPoints( newSPoints_worldFrame , new_robotState , i);
-        m_map.show();
-        cv::waitKey(1);
+      //loop checker
+      newDrawingPoints_worldFrame = m_robot.changeCoordsRobotToWorld(newSPoints_robotFrame);
+      m_map.drawScanPoints( newDrawingPoints_worldFrame  , new_robotState , i);
+      m_map.show();
+      cv::waitKey(1);
     }
+    m_robot.plotStateEvolution(0.01);
   }
 }

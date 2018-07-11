@@ -3,11 +3,10 @@
 #pragma once
 #include <unistd.h>
 #include <Eigen/Core>
-// #include <vector>
-// #include <string>
-// #include <fstream>
-// #include <iostream>
+#include <boost/serialization/array_wrapper.hpp>
+#include <boost/tuple/tuple.hpp>
 
+#include "../../include/gnuplot-iostream.h"
 #include "../../include/structs.hpp"
 #include "../utils/MyMath.hpp"
 #include "DatasetManager.hpp"
@@ -31,9 +30,13 @@ namespace dyn_modeling {
 
     std::vector<scanPoint> changeCoordsRobotToWorld( const std::vector<scanPoint> &t_scanPoints_robotFrame);
 
-    void updateState(const std::vector<double> &t_newState);
+    void updateState(const std::vector<double> &t_deltaState);
 
     inline int getNumDataEntries() { return m_datasetManager.getNumDataEntries(); }
 
+    inline int getNumRanges() { return m_datasetManager.getNumRanges(); }
+
+
+    void plotStateEvolution(const double t_delta_t);
   };
 }

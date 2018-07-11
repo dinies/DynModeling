@@ -11,5 +11,6 @@ int main(int argc, char **argv) {
   std::vector<double> initial_state = { 0, 0, 0 };
   Slam slam = Slam(absolutePath, initial_state);
   slam.cycle();
+  
   cv::waitKey();
 }

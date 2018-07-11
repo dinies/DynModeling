@@ -9,6 +9,9 @@
 #include <Eigen/Dense>
 
 #include "../../include/structs.hpp"
+#include "../utils/MyMath.hpp"
+
+
 namespace dyn_modeling {
 
 
@@ -16,7 +19,8 @@ namespace dyn_modeling {
   public:
     ScanMatcher();
 
-    std::vector<double> icpIteration( const std::vector<double> &t_old_robotState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_oldScanPoints_world, const std::vector<scanPoint> &t_newScanPoints_world);
+    std::vector<double> icpIterationRframe( const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot);
+
   };
 }
 
