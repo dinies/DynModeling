@@ -50,11 +50,8 @@ namespace dyn_modeling {
 
   void Robot::updateState(const std::vector<double> &t_deltaState){
     m_old_states.push_back(m_state);
-    Eigen::Vector3d old_state( m_state.q.at(0),m_state.q.at(1),m_state.q.at(2));
-    Eigen::Vector3d delta_q(t_deltaState.at(0),t_deltaState.at(1),t_deltaState.at(2));
-    Eigen::Vector3d new_state = old_state + delta_q;
-    m_state.q = { new_state(0), new_state(1), new_state(2)};
-  };
+    m_state.q = MyMath::vecSum(m_state.q, t_deltaState);
+  }
 
   void Robot::plotStateEvolution(const double t_delta_t){
     double curr_t = 0;
@@ -70,11 +67,9 @@ namespace dyn_modeling {
     Gnuplot gp;
     gp << "set terminal qt 1\n";
     gp << "plot";
-    gp << gp.binFile1d(x, "record") << "with lines title 'x'" << "\n";
-    gp << "set terminal qt 2\n";
-    gp << "plot";
+    gp << gp.binFile1d(x, "record") << "with lines title 'x'" << ",";
     gp << gp.binFile1d(y, "record") << "with lines title 'y'" << "\n";
-    gp << "set terminal qt 3\n";
+    gp << "set terminal qt 2\n";
     gp << "plot";
     gp << gp.binFile1d(theta, "record") << "with lines title 'theta'" << "\n";
   };

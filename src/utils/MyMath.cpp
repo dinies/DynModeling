@@ -37,4 +37,25 @@ namespace dyn_modeling {
     t_point.at(0) = p_new(0);
     t_point.at(1) = p_new(1);
   };
+
+  std::vector<double> MyMath::vecSum(const std::vector<double> &t_first,const std::vector<double> &t_second){
+    Eigen::Vector3d first_vec( t_first.at(0),t_first.at(1),t_first.at(2));
+    Eigen::Vector3d second_vec( t_second.at(0),t_second.at(1),t_second.at(2));
+    Eigen::Vector3d result_vec = first_vec + second_vec;
+    std::vector<double> result = { result_vec(0), result_vec(1), result_vec(2)};
+    return result;
+  };
+
+  double MyMath::boxMinusAngleRad(double t_ref, double t_actual) {
+    Eigen::Matrix2d rot_ref;
+    Eigen::Matrix2d rot_actual;
+    rot_ref << cos( t_ref ), -sin(t_ref),
+      sin(t_ref), cos(t_ref);
+    rot_actual << cos( t_actual), -sin(t_actual),
+      sin(t_actual), cos(t_actual);
+    Eigen::Matrix2d rot = rot_actual.transpose() * rot_ref;
+    return atan2( rot(1,0), rot(0,0));
+  };
+
+
 }

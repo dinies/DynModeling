@@ -18,7 +18,8 @@ namespace dyn_modeling {
 
     static void rotate2D( std::vector<double> &t_point, const double t_angle_rad );
 
+    static std::vector<double> vecSum(const std::vector<double> &t_first,const std::vector<double> &t_second);
 
+    static double boxMinusAngleRad(double t_ref, double t_actual);
   };
-
 }

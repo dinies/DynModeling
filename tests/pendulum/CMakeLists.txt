@@ -1,4 +1,7 @@
-add_executable( TestController TestController.cpp ../../src/controllers/Controller.cpp
+add_executable( TestController
+  TestController.cpp
+  ../../src/controllers/Controller.cpp
+  ../../src/utils/MyMath.cpp
   )
 target_link_libraries(
   TestController

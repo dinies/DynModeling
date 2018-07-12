@@ -156,22 +156,17 @@ namespace dyn_modeling {
       energy.push_back( boost::make_tuple( vec.at(0),vec.at(5)));
     }
     Gnuplot gp;
-    // gp << "set 1\n";
+    gp << "set terminal qt 1\n";
     gp << "plot";
-    gp << gp.binFile1d(theta, "record") << "with lines title 'theta'" << "\n";
-    // gp << "set terminal 2\n";
+    gp << gp.binFile1d(theta, "record") << "with lines title 'theta'" << ",";
+    gp << gp.binFile1d(theta_dot, "record") << "with lines title 'theta dot'" << ",";
+    gp << gp.binFile1d(error, "record") << "with lines title 'error'" << "\n";
+    gp << "set terminal qt 2\n";
     gp << "plot";
-    gp << gp.binFile1d(theta_dot, "record") << "with lines title 'theta dot'" << "\n";
-    // gp << "set terminal 3\n";
-    // gp << "plot";
-    // gp << gp.binFile1d(input, "record") << "with lines title 'input'" << "\n";
-    // gp << "set terminal 4\n";
-    // gp << "plot";
-    // gp << gp.binFile1d(error, "record") << "with lines title 'error'" << "\n";
-    // gp << "set terminal 5\n";
-    // gp << "plot";
-    // gp << gp.binFile1d(energy, "record") << "with lines title 'energy'" << "\n";
-
+    gp << gp.binFile1d(energy, "record") << "with lines title 'energy'" << "\n";
+    gp << "set terminal qt 3\n";
+    gp << "plot";
+    gp << gp.binFile1d(input, "record") << "with lines title 'input'" << "\n";
   }
 
 }
