@@ -38,5 +38,9 @@ namespace dyn_modeling {
 
 
     void plotStateEvolution(const double t_delta_t);
+
+    static std::vector<double> boxPlus(const std::vector<double> t_first,const std::vector<double> t_second);
+    static std::vector<double> boxMinus(const std::vector<double> t_first,const std::vector<double> t_second);
+
   };
 }

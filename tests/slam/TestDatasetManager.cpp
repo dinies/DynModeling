@@ -119,7 +119,7 @@ namespace dyn_modeling{
       std::vector<double> truth_spanning = { -alfa*2, -alfa, 0 , alfa , alfa*2};
       double threshold = 0.01;
       for ( int i= 0 ; i <5 ; ++i ){
-        BOOST_CHECK_CLOSE( spanning_angles.at(i), truth_spanning.at(i), threshold);
+        BOOST_CHECK_SMALL( spanning_angles.at(i) - truth_spanning.at(i), threshold);
       }
     }
   }

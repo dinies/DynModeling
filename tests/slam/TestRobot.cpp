@@ -33,8 +33,8 @@ namespace dyn_modeling{
         double threshold = 0.01;
 
         for( int i = 0; i < 5 ; ++i){
-          BOOST_CHECK_CLOSE( scanPoints_robotFrame.at(i).coords(0), truth_points.at(i).at(0), threshold);
-          BOOST_CHECK_CLOSE( scanPoints_robotFrame.at(i).coords(1), truth_points.at(i).at(1), threshold);
+          BOOST_CHECK_SMALL( scanPoints_robotFrame.at(i).coords(0) - truth_points.at(i).at(0), threshold);
+          BOOST_CHECK_SMALL( scanPoints_robotFrame.at(i).coords(1) - truth_points.at(i).at(1), threshold);
         }
       }
     }
@@ -63,8 +63,8 @@ namespace dyn_modeling{
         Eigen::Vector2d coords = R* origin_range;
         scanPoint sP = scanPoints_robotFrame.at(120);
         double threshold = 0.01;
-        BOOST_CHECK_CLOSE( sP.coords(0), coords(0),threshold);
-        BOOST_CHECK_CLOSE( sP.coords(1), coords(1),threshold);
+        BOOST_CHECK_SMALL( sP.coords(0) - coords(0),threshold);
+        BOOST_CHECK_SMALL( sP.coords(1) - coords(1),threshold);
       }
     }
   }
@@ -74,11 +74,12 @@ namespace dyn_modeling{
     std::vector<double> initial_state = { 0, 0, 0};
     Robot r = Robot(absolutePath, initial_state);
     std::vector<double> delta_state = { 4 , -2 , -M_PI/4};
+    std::vector<double> truth_state = { 4 , -2 , -M_PI/4};
     r.updateState( delta_state);
     double threshold = 0.01;
-    BOOST_CHECK_CLOSE( r.getState().at(0), 4,threshold);
-    BOOST_CHECK_CLOSE( r.getState().at(1), -2,threshold);
-    BOOST_CHECK_CLOSE( r.getState().at(2), -M_PI/4,threshold);
+    for ( int i = 0; i < truth_state.size(); ++i){
+      BOOST_CHECK_SMALL( r.getState().at(i) - truth_state.at(i),threshold);
+    }
   }
 
   BOOST_AUTO_TEST_SUITE_END()

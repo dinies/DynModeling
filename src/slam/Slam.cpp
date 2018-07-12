@@ -15,6 +15,7 @@ namespace dyn_modeling {
     const int num_ranges = m_robot.getNumRanges();
     const int num_dataEntries = m_robot.getNumDataEntries();
     const std::vector<double> initialGuessState = { 0, 0, 0};
+    const int icpIterations_cap = 50;
     std::vector<double> old_robotState;
     old_robotState.reserve(3);
     std::vector<scanPoint> oldSPoints_robotFrame;
@@ -25,8 +26,7 @@ namespace dyn_modeling {
     newDrawingPoints_worldFrame.reserve(num_ranges);
     std::vector<double> new_robotState;
     new_robotState.reserve(3);
-    std::vector<double> delta_state;
-    delta_state.reserve(3);
+    roundResult icpRes;
 
     for (int i = 0; i < num_dataEntries; ++i) {
 
@@ -38,15 +38,14 @@ namespace dyn_modeling {
       else{
         oldSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i - 1);
         newSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
-        delta_state = m_scanMatcher.icpIterationRframe(initialGuessState,oldSPoints_robotFrame,newSPoints_robotFrame);
+        icpRes = m_scanMatcher.icpRound(icpIterations_cap,initialGuessState,oldSPoints_robotFrame,newSPoints_robotFrame);
 
-
-        m_robot.updateState( delta_state);
+        m_robot.updateState( icpRes.delta_x);
         new_robotState = m_robot.getState();
       }
       //loop checker
       newDrawingPoints_worldFrame = m_robot.changeCoordsRobotToWorld(newSPoints_robotFrame);
-      m_map.drawScanPoints( newDrawingPoints_worldFrame  , new_robotState , i);
+      m_map.drawScanPoints( newDrawingPoints_worldFrame , new_robotState , i);
       m_map.show();
       cv::waitKey(1);
     }

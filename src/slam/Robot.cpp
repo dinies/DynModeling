@@ -48,9 +48,28 @@ namespace dyn_modeling {
     return scanPvec_worldFrame;
   };
 
+  std::vector<double> Robot::boxPlus(const std::vector<double> t_first,const std::vector<double> t_second){
+    std::vector<double> result;
+    result.reserve(3);
+    result.push_back( t_first.at(0) + t_second.at(0));
+    result.push_back( t_first.at(1) + t_second.at(1));
+    result.push_back( MyMath::boxPlusAngleRad(t_first.at(2), t_second.at(2)));
+    return result;
+  }
+
+  std::vector<double> Robot::boxMinus(const std::vector<double> t_first,const std::vector<double> t_second){
+    std::vector<double> result;
+    result.reserve(3);
+    result.push_back( t_first.at(0) - t_second.at(0));
+    result.push_back( t_first.at(1) - t_second.at(1));
+    result.push_back( MyMath::boxMinusAngleRad(t_first.at(2), t_second.at(2)));
+    return result;
+  }
+
+
   void Robot::updateState(const std::vector<double> &t_deltaState){
     m_old_states.push_back(m_state);
-    m_state.q = MyMath::vecSum(m_state.q, t_deltaState);
+    m_state.q = Robot::boxPlus(m_state.q, t_deltaState);
   }
 
   void Robot::plotStateEvolution(const double t_delta_t){

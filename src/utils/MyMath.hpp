@@ -5,6 +5,7 @@
 
 #include <unistd.h>
 #include <vector>
+#include <iostream>
 #include <Eigen/Core>
 #include <Eigen/Geometry>
 
@@ -20,6 +21,7 @@ namespace dyn_modeling {
 
     static std::vector<double> vecSum(const std::vector<double> &t_first,const std::vector<double> &t_second);
 
-    static double boxMinusAngleRad(double t_ref, double t_actual);
+    static double boxMinusAngleRad(const double t_ref,const double t_actual);
+    static double boxPlusAngleRad(const double t_ref,const double t_actual);
   };
 }

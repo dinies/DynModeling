@@ -39,14 +39,19 @@ namespace dyn_modeling {
   };
 
   std::vector<double> MyMath::vecSum(const std::vector<double> &t_first,const std::vector<double> &t_second){
-    Eigen::Vector3d first_vec( t_first.at(0),t_first.at(1),t_first.at(2));
-    Eigen::Vector3d second_vec( t_second.at(0),t_second.at(1),t_second.at(2));
-    Eigen::Vector3d result_vec = first_vec + second_vec;
-    std::vector<double> result = { result_vec(0), result_vec(1), result_vec(2)};
+    std::vector<double> result = {0};
+    if ( t_first.size() == t_second.size() ){
+      for (int i=0 ; i< t_first.size() ; ++i){
+        result.at(i) = t_first.at(i)+ t_second.at(i);
+      }
+    }
+    else{
+      std::cout << "vecSum received vectors of different size, sum is not possible. \n";
+    }
     return result;
   };
 
-  double MyMath::boxMinusAngleRad(double t_ref, double t_actual) {
+  double MyMath::boxMinusAngleRad(const double t_ref,const double t_actual) {
     Eigen::Matrix2d rot_ref;
     Eigen::Matrix2d rot_actual;
     rot_ref << cos( t_ref ), -sin(t_ref),
@@ -54,6 +59,17 @@ namespace dyn_modeling {
     rot_actual << cos( t_actual), -sin(t_actual),
       sin(t_actual), cos(t_actual);
     Eigen::Matrix2d rot = rot_actual.transpose() * rot_ref;
+    return atan2( rot(1,0), rot(0,0));
+  };
+
+  double MyMath::boxPlusAngleRad(const double t_ref,const double t_actual) {
+    Eigen::Matrix2d rot_ref;
+    Eigen::Matrix2d rot_actual;
+    rot_ref << cos( t_ref ), -sin(t_ref),
+      sin(t_ref), cos(t_ref);
+    rot_actual << cos( t_actual), -sin(t_actual),
+      sin(t_actual), cos(t_actual);
+    Eigen::Matrix2d rot = rot_actual * rot_ref;
     return atan2( rot(1,0), rot(0,0));
   };
 

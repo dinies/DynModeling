@@ -7,6 +7,7 @@
 #include <Eigen/Core>
 
 #include "../../src/slam/ScanMatcher.hpp"
+#include "../../src/slam/Robot.hpp"
 #include "../../include/structs.hpp"
 
 
@@ -52,17 +53,11 @@ namespace dyn_modeling{
 
     const std::vector<scanPoint> oldSPoints_robot ={ sp1,sp2,sp3,sp4,sp5};
     const std::vector<scanPoint> newSPoints_robot ={ sp6,sp7,sp8,sp9,sp10};
-    std::vector<double> delta_state;
-    for(int i = 0; i < 5 ; ++i){
-      delta_state = sM.icpIterationRframe(state,oldSPoints_robot, newSPoints_robot);
-      state = MyMath::vecSum( state, delta_state);
-    }
+    roundResult icpRes = sM.icpRound(25,state,oldSPoints_robot, newSPoints_robot);
     std::vector<double> truthTransf = {t(0),t(1),0};
-
     double threshold = 0.02;
     for ( int i = 0; i < 3; ++i){
-      BOOST_CHECK_CLOSE( state.at(i),truthTransf.at(i),threshold);
-      std::cout << i << "\n";
+      BOOST_CHECK_SMALL(icpRes.delta_x.at(i) - truthTransf.at(i),threshold);
     }
   }
 
@@ -108,19 +103,41 @@ namespace dyn_modeling{
 
     const std::vector<scanPoint> oldSPoints_robot ={ sp1,sp2,sp3,sp4,sp5};
     const std::vector<scanPoint> newSPoints_robot ={ sp6,sp7,sp8,sp9,sp10};
-    std::vector<double> delta_state;
-    for(int i = 0; i < 5 ; ++i){
-      delta_state = sM.icpIterationRframe(state,oldSPoints_robot, newSPoints_robot);
-      state = MyMath::vecSum( state, delta_state);
-    }
+
+    roundResult icpRes = sM.icpRound(65,state,oldSPoints_robot, newSPoints_robot);
     std::vector<double> truthTransf = {0,0,angle};
     double threshold = 0.02;
     for ( int i = 0; i < 3; ++i){
-      BOOST_CHECK_CLOSE( state.at(i),truthTransf.at(i),threshold);
-      std::cout << i << "\n";
+      BOOST_CHECK_SMALL( icpRes.delta_x.at(i) - truthTransf.at(i),threshold);
     }
   }
 
+  BOOST_AUTO_TEST_CASE(simpleIterIcp) {
+
+    ScanMatcher sM = ScanMatcher();
+    std::vector<double> state = { 0 ,0 ,0};
+    double angle = M_PI/2;
+    Eigen::Matrix2d R;
+    R << cos(angle ), -sin(angle),
+      sin(angle), cos(angle);
+
+    scanPoint sp1;
+    scanPoint sp2;
+    Eigen::Vector2d c1(3,0);
+    Eigen::Vector2d c2 = R * c1;
+    sp1.coords = c1;
+    sp2.coords = c2;
+
+    const std::vector<scanPoint> oldSPoints_robot ={sp1};
+    const std::vector<scanPoint> newSPoints_robot ={sp2};
+
+    roundResult icpRes = sM.icpRound(2,state,oldSPoints_robot, newSPoints_robot);
+    std::vector<double> truthTransf = {0,0,angle};
+    double threshold = 0.02;
+    for ( int i = 0; i < 3; ++i){
+      BOOST_CHECK_SMALL( icpRes.delta_x.at(i) - truthTransf.at(i),threshold);
+    }
+  }
 
   BOOST_AUTO_TEST_SUITE_END()
 }

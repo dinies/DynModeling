@@ -38,6 +38,8 @@ add_test( NAME TestMap COMMAND TestMap)
 add_executable( TestScanMatcher
   TestScanMatcher.cpp
   ../../src/slam/ScanMatcher.cpp
+  ../../src/slam/DatasetManager.cpp
+  ../../src/slam/Robot.cpp
   ../../src/utils/MyMath.cpp
   )
 
@@ -45,6 +47,9 @@ target_link_libraries(
   TestScanMatcher
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
+  PUBLIC Boost::filesystem
+  PUBLIC Boost::system
+  PUBLIC Boost::iostreams
   )
 add_test( NAME TestScanMatcher COMMAND TestScanMatcher)
 

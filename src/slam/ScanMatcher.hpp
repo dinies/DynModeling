@@ -10,16 +10,31 @@
 
 #include "../../include/structs.hpp"
 #include "../utils/MyMath.hpp"
+#include "Robot.hpp"
+
 
 
 namespace dyn_modeling {
+  typedef struct iterResult_tag{
+    double chi;
+    std::vector<double> delta_x;
+  } iterResult;
+
+
+  typedef struct roundResult_tag{
+    std::vector<double> chi;
+    std::vector<double> delta_x;
+  } roundResult;
+
 
 
   class ScanMatcher{
   public:
     ScanMatcher();
 
-    std::vector<double> icpIterationRframe( const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot);
+    iterResult icpIterationRframe( const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot);
+
+    roundResult icpRound(const int t_numIterations, const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot);
 
   };
 }
