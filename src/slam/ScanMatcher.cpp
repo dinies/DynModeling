@@ -11,17 +11,18 @@ namespace dyn_modeling {
     double chi = epsilon*2;
     int i = 0;
     iterResult curr_result;
+    roundResult finalResult;
+    finalResult.delta_x = {0 ,0 ,0};
     std::vector<double> curr_guess = t_initialGuessState;
     while (i < t_numIterations && chi>epsilon){
       curr_result = icpIterationRframe(curr_guess, t_oldScanPoints_robot, t_newScanPoints_robot);
       chi = curr_result.chi;
       chis.push_back(chi);
       curr_guess = Robot::boxPlus(curr_guess,curr_result.delta_x);
+      finalResult.delta_x = MyMath::vecSum(finalResult.delta_x,curr_result.delta_x);
       ++i;
     }
-    roundResult finalResult;
     finalResult.chi = chis;
-    finalResult.delta_x = curr_result.delta_x;
     return finalResult;
   };
 
@@ -35,7 +36,7 @@ namespace dyn_modeling {
     double chi = 0 ;
     Eigen::Matrix2d dR;
     dR << -sin(t_initialGuessState.at(2)), -cos(t_initialGuessState.at(2)),
-      sin(t_initialGuessState.at(2)), cos(t_initialGuessState.at(2));
+      cos(t_initialGuessState.at(2)), -sin(t_initialGuessState.at(2));
     Eigen::Vector2d p_r;
     Eigen::Vector2d z;
     Eigen::Isometry2d T;
@@ -49,6 +50,7 @@ namespace dyn_modeling {
       p_r = t_oldScanPoints_robot.at(i).coords;
       z = t_newScanPoints_robot.at(i).coords;
       T = MyMath::v2t(t_initialGuessState);
+      //TODO test v2t
       h_q = T * p_r;
 
       e = h_q - z;
@@ -62,6 +64,7 @@ namespace dyn_modeling {
       chi += e.transpose()* e;
     }
     Eigen::Vector3d dx = - H.inverse() * b;
+
     std::vector<double> delta_x= { dx(0),dx(1),dx(2)};
     iterResult res;
     res.delta_x = delta_x;

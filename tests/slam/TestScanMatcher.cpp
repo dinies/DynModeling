@@ -112,32 +112,33 @@ namespace dyn_modeling{
     }
   }
 
-  BOOST_AUTO_TEST_CASE(simpleIterIcp) {
+  // BOOST_AUTO_TEST_CASE(simpleIterIcp) {
 
-    ScanMatcher sM = ScanMatcher();
-    std::vector<double> state = { 0 ,0 ,0};
-    double angle = M_PI/2;
-    Eigen::Matrix2d R;
-    R << cos(angle ), -sin(angle),
-      sin(angle), cos(angle);
+  // ILL POSED LINEAR SYSTEM there is no solution with only one correspondence point
+  //   ScanMatcher sM = ScanMatcher();
+  //   std::vector<double> state = { 0 ,0 ,0};
+  //   double angle = M_PI/2;
+  //   Eigen::Matrix2d R;
+  //   R << cos(angle ), -sin(angle),
+  //     sin(angle), cos(angle);
 
-    scanPoint sp1;
-    scanPoint sp2;
-    Eigen::Vector2d c1(3,0);
-    Eigen::Vector2d c2 = R * c1;
-    sp1.coords = c1;
-    sp2.coords = c2;
+  //   scanPoint sp1;
+  //   scanPoint sp2;
+  //   Eigen::Vector2d c1(3,0);
+  //   Eigen::Vector2d c2 = R * c1;
+  //   sp1.coords = c1;
+  //   sp2.coords = c2;
 
-    const std::vector<scanPoint> oldSPoints_robot ={sp1};
-    const std::vector<scanPoint> newSPoints_robot ={sp2};
+  //   const std::vector<scanPoint> oldSPoints_robot ={sp1};
+  //   const std::vector<scanPoint> newSPoints_robot ={sp2};
 
-    roundResult icpRes = sM.icpRound(2,state,oldSPoints_robot, newSPoints_robot);
-    std::vector<double> truthTransf = {0,0,angle};
-    double threshold = 0.02;
-    for ( int i = 0; i < 3; ++i){
-      BOOST_CHECK_SMALL( icpRes.delta_x.at(i) - truthTransf.at(i),threshold);
-    }
-  }
+  //   roundResult icpRes = sM.icpRound(2,state,oldSPoints_robot, newSPoints_robot);
+  //   std::vector<double> truthTransf = {0,0,angle};
+  //   double threshold = 0.02;
+  //   for ( int i = 0; i < 3; ++i){
+  //     BOOST_CHECK_SMALL( icpRes.delta_x.at(i) - truthTransf.at(i),threshold);
+  //   }
+  // }
 
   BOOST_AUTO_TEST_SUITE_END()
 }

@@ -39,14 +39,15 @@ namespace dyn_modeling {
   };
 
   std::vector<double> MyMath::vecSum(const std::vector<double> &t_first,const std::vector<double> &t_second){
-    std::vector<double> result = {0};
+    std::vector<double> result;
     if ( t_first.size() == t_second.size() ){
       for (int i=0 ; i< t_first.size() ; ++i){
-        result.at(i) = t_first.at(i)+ t_second.at(i);
+        result.push_back( t_first.at(i)+ t_second.at(i) );
       }
     }
     else{
       std::cout << "vecSum received vectors of different size, sum is not possible. \n";
+      result = {0};
     }
     return result;
   };
