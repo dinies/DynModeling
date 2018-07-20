@@ -14,6 +14,7 @@ namespace dyn_modeling {
 
   typedef struct drawingData_tag{
     int index;
+    std::vector<double> robot_state;
     std::vector<cv::Point2d> robot_drawing;
     std::vector<cv::Point2d> scans_drawing;
   }drawingData;
@@ -22,6 +23,11 @@ namespace dyn_modeling {
     cv::Scalar green;
     cv::Scalar white;
     cv::Scalar dark_red;
+    cv::Scalar milk;
+    cv::Scalar lightBlue;
+    cv::Scalar fadedLightBlue;
+    cv::Scalar lightOrange;
+    cv::Scalar darkBrown;
   }colors;
 
 
@@ -49,7 +55,13 @@ namespace dyn_modeling {
 
     void drawScanPoints(const std::vector<scanPoint> &t_scanPoints_worldFrame,const std::vector<double> &t_robotState,const int t_index );
 
+    void drawTrail(const int t_indexFrom, const int t_indexTo);
+
+    void fadeScanPoints( const int t_index);
+
     void deleteScanPoints( const int t_index);
+
+    void deleteRobot( const int t_index);
 
     inline void show(){ cv::imshow("Map",m_drawingImg); };
 

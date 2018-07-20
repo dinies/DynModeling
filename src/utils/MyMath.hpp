@@ -21,6 +21,8 @@ namespace dyn_modeling {
 
     static std::vector<double> vecSum(const std::vector<double> &t_first,const std::vector<double> &t_second);
 
+    static std::vector<double> vecMultEleWise(const std::vector<double> &t_first,const std::vector<double> &t_second);
+
     static double boxMinusAngleRad(const double t_ref,const double t_actual);
     static double boxPlusAngleRad(const double t_ref,const double t_actual);
   };

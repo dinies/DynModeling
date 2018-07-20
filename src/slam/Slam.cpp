@@ -15,7 +15,7 @@ namespace dyn_modeling {
     const int num_ranges = m_robot.getNumRanges();
     const int num_dataEntries = m_robot.getNumDataEntries();
     const std::vector<double> initialGuessState = { 0, 0, 0};
-    const int icpIterations_cap = 50;
+    const int icpIterations_cap = 1;
     std::vector<double> old_robotState;
     old_robotState.reserve(3);
     std::vector<scanPoint> oldSPoints_robotFrame;
@@ -46,9 +46,31 @@ namespace dyn_modeling {
       //loop checker
       newDrawingPoints_worldFrame = m_robot.changeCoordsRobotToWorld(newSPoints_robotFrame);
       m_map.drawScanPoints( newDrawingPoints_worldFrame , new_robotState , i);
-      m_map.show();
-      cv::waitKey(1);
+      drawingManagement(i);
     }
     m_robot.plotStateEvolution(0.01);
+  }
+
+  void  Slam::drawingManagement( const int t_index){
+    const int i = t_index;
+    // if (i>0){
+      // m_map.deleteRobot(i-1);
+    // }
+    if (i%50==0) {
+      m_map.drawTrail(0,i);
+    }
+    else{
+      m_map.drawTrail(i,i);
+    }
+
+    if (i-20 > 0){
+      m_map.fadeScanPoints(i-20);
+    }
+    if (i-200 > 0){
+      m_map.deleteScanPoints(i-200);
+    }
+
+    m_map.show();
+    cv::waitKey(1);
   }
 }

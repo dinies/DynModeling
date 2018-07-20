@@ -23,6 +23,9 @@ namespace dyn_modeling {
       ++i;
     }
     finalResult.chi = chis;
+
+    std::vector<double> neg = { -1, -1 , -1};
+    finalResult.delta_x = MyMath::vecMultEleWise( finalResult.delta_x, neg);
     return finalResult;
   };
 

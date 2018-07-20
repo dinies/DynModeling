@@ -24,11 +24,7 @@ namespace dyn_modeling {
 
     cv::Point2d P_imgFrame = convertFrowWorldToImg(t_drawing, t_point);
     t_drawing.at<cv::Vec3b>(P_imgFrame.y,P_imgFrame.x) = cv::Vec3b(t_color[0],t_color[1],t_color[2]);
-    // t_drawing.at<cv::Vec3b>(P_imgFrame.y+1,P_imgFrame.x) = cv::Vec3b(t_color[0],t_color[1],t_color[2]);
-    // t_drawing.at<cv::Vec3b>(P_imgFrame.y-1,P_imgFrame.x) = cv::Vec3b(t_color[0],t_color[1],t_color[2]);
-    // t_drawing.at<cv::Vec3b>(P_imgFrame.y,P_imgFrame.x+1) = cv::Vec3b(t_color[0],t_color[1],t_color[2]);
-    // t_drawing.at<cv::Vec3b>(P_imgFrame.y,P_imgFrame.x-1) = cv::Vec3b(t_color[0],t_color[1],t_color[2]);
-    // // need to implement a guard that checks that all the coords are inside the mat ranges: if it happens then segFault
+    // need to implement a guard that checks that all the coords are inside the mat ranges: if it happens then segFault
  };
 
   void Drawer::drawLine(const RGBImage &t_drawing, const cv::Point2d &t_firstP, const cv::Point2d &t_secondP, const cv::Scalar &t_color){

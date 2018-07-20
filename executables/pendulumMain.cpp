@@ -13,7 +13,7 @@ using namespace dyn_modeling;
 
 int main(int argc, char **argv) {
     const int numCycles{1000};
-    double theta_0_rad= 0.3;
+    double theta_0_rad= -1.7;
     double theta_0_dot_rad= 0.0;
     const Eigen::Vector2d init_state (theta_0_rad,theta_0_dot_rad);
     const double t_delta_t = 0.01;

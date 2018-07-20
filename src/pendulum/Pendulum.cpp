@@ -119,6 +119,7 @@ namespace dyn_modeling {
     else {
       staticDraw();
       dynamicDraw( t_prev_head);
+      cv::waitKey(1000);
     }
   }
 
@@ -134,7 +135,7 @@ namespace dyn_modeling {
       updateState();
       storePlotData( plotting_data, controller_output.at(1));
 
-      if(t_drawing_flag && i%5==0){
+      if(t_drawing_flag){
         drawImg(prev_point);
       }
     }

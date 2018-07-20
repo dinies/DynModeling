@@ -4,15 +4,20 @@
 namespace dyn_modeling {
 
   Map::Map():
-    m_drawer( Drawer(10))
+    m_drawer( Drawer(15))
   {
     m_drawingImg.create( 900,1200 );
-    m_drawingImg= cv::Vec3b(255, 255, 255);
+    m_drawingImg= cv::Vec3b(227, 246, 253);
     cv::namedWindow("Map");
     m_colors.white = {255,255,255};
     m_colors.green = {0,255,20};
     m_colors.dark_red = {20,0,255};
-    m_spatialUnit = 0.3;
+    m_colors.milk= {227,246,253};
+    m_colors.lightBlue= {210,139,38};
+    m_colors.fadedLightBlue= {255,207,130};
+    m_colors.lightOrange = {0,164,216};
+    m_colors.darkBrown = {1,83,109};
+    m_spatialUnit = 0.4;
   };
 
   std::vector< cv::Point2d> Map::computePointsRobot( const std::vector<double> &t_robotState ){
@@ -57,37 +62,49 @@ namespace dyn_modeling {
 
     drawingData dD;
     dD.index = t_index;
+    dD.robot_state.reserve(3);
     dD.robot_drawing.reserve(6);
     dD.scans_drawing.reserve(t_scanPoints_worldFrame.size());
-
+    dD.robot_state = t_robotState;
     dD.robot_drawing = computePointsRobot( t_robotState);
     dD.scans_drawing = computePointsScans( t_scanPoints_worldFrame);
 
-    drawRobot( dD.robot_drawing, m_colors.green);
-    drawScans( dD.scans_drawing, m_colors.dark_red);
+    // drawRobot( dD.robot_drawing, m_colors.lightOrange);
+    drawScans( dD.scans_drawing, m_colors.lightBlue);
 
     m_drawingList.push_back(dD);
   };
 
-  void Map::deleteScanPoints( const int t_index){
+  void Map::drawTrail(const int t_indexFrom, const int t_indexTo){
 
-    int i( m_drawingList.size()-1);
-    bool found(false);
-    int eraseIndex(0);
-
-    while ( i <= 0 || found){
-      drawingData dD = m_drawingList.at(i);
-      if ( dD.index == t_index){
-        found = true;
-        drawRobot( dD.robot_drawing, m_colors.white);
-        drawScans( dD.scans_drawing, m_colors.white);
-        eraseIndex = i;
+    if ( t_indexFrom <= t_indexTo && t_indexTo <= m_drawingList.size()-1){
+      for (int i = t_indexFrom; i <= t_indexTo ; ++i) {
+        drawingData dD = m_drawingList.at(i);
+        cv::Point2d p( dD.robot_state.at(0), dD.robot_state.at(1));
+        m_drawer.drawPatch(m_drawingImg, p, m_colors.darkBrown);
       }
-      --i;
     }
+  };
 
-    if (found){
-      m_drawingList.erase( m_drawingList.begin()+ eraseIndex);
+  void Map::fadeScanPoints( const int t_index){
+    if ( t_index <= m_drawingList.size()-1 ) {
+      drawingData dD = m_drawingList.at(t_index);
+      drawScans( dD.scans_drawing, m_colors.fadedLightBlue);
+    }
+  };
+
+
+  void Map::deleteScanPoints( const int t_index){
+    if ( t_index <= m_drawingList.size()-1 ) {
+      drawingData dD = m_drawingList.at(t_index);
+      drawScans( dD.scans_drawing, m_colors.milk);
+    }
+  };
+
+  void Map::deleteRobot( const int t_index){
+    if ( t_index <= m_drawingList.size()-1 ) {
+      drawingData dD = m_drawingList.at(t_index);
+      drawRobot( dD.robot_drawing, m_colors.milk);
     }
   };
 

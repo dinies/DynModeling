@@ -52,6 +52,21 @@ namespace dyn_modeling {
     return result;
   };
 
+  std::vector<double> MyMath::vecMultEleWise(const std::vector<double> &t_first,const std::vector<double> &t_second){
+    std::vector<double> result;
+    if ( t_first.size() == t_second.size() ){
+      for (int i=0 ; i< t_first.size() ; ++i){
+        result.push_back( t_first.at(i) * t_second.at(i) );
+      }
+    }
+    else{
+      std::cout << "vecSum received vectors of different size, sum is not possible. \n";
+      result = {0};
+    }
+    return result;
+  };
+
+
   double MyMath::boxMinusAngleRad(const double t_ref,const double t_actual) {
     Eigen::Matrix2d rot_ref;
     Eigen::Matrix2d rot_actual;

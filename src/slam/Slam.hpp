@@ -25,5 +25,6 @@ namespace dyn_modeling {
   public:
     Slam( const std::string &t_dataSet_AbsolPath, const std::vector<double> &t_initialRobotState);
     void cycle();
+    void drawingManagement( const int t_index);
   };
 }
