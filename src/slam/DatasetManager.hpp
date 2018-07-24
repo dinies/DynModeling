@@ -1,4 +1,4 @@
-// Created by Edoardo Ghini on 26/06/2018.
+// Created by dinies on 26/06/2018.
 
 #pragma once
 #include <unistd.h>

@@ -3,7 +3,9 @@
 #include "ScanMatcher.hpp"
 
 namespace dyn_modeling {
-  ScanMatcher::ScanMatcher(){};
+  ScanMatcher::ScanMatcher(){
+    m_kernelThreshold = std::numeric_limits<double>::max();
+  };
 
   roundResult ScanMatcher::icpRound(const int t_numIterations, const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot){
     std::vector<double> chis;
@@ -17,6 +19,7 @@ namespace dyn_modeling {
     while (i < t_numIterations && chi>epsilon){
       curr_result = icpIterationRframe(curr_guess, t_oldScanPoints_robot, t_newScanPoints_robot);
       chi = curr_result.chi;
+      // std::cout << curr_result.outliers << "\n";
       chis.push_back(chi);
       curr_guess = Robot::boxPlus(curr_guess,curr_result.delta_x);
       finalResult.delta_x = MyMath::vecSum(finalResult.delta_x,curr_result.delta_x);
@@ -32,6 +35,7 @@ namespace dyn_modeling {
 
 
   iterResult ScanMatcher::icpIterationRframe( const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot){
+    int outliers = 0;
     Eigen::Matrix<double, 3, 3> H;
     H.Zero();
     Eigen::Vector3d b;
@@ -53,18 +57,20 @@ namespace dyn_modeling {
       p_r = t_oldScanPoints_robot.at(i).coords;
       z = t_newScanPoints_robot.at(i).coords;
       T = MyMath::v2t(t_initialGuessState);
-      //TODO test v2t
       h_q = T * p_r;
-
       e = h_q - z;
-      dhdTheta = dR * p_r;
 
-      J << 1 , 0 , dhdTheta(0),
-        0, 1, dhdTheta(1);
-
-      H = H + J.transpose() * J;
-      b = b + J.transpose() * e;
-      chi += e.transpose()* e;
+      if (e.squaredNorm() > m_kernelThreshold) {
+        ++outliers;
+      }
+      else {
+        dhdTheta = dR * p_r;
+        J << 1 , 0 , dhdTheta(0),
+          0, 1, dhdTheta(1);
+        H = H + J.transpose() * J;
+        b = b + J.transpose() * e;
+        chi += e.transpose()* e;
+      }
     }
     Eigen::Vector3d dx = - H.inverse() * b;
 
@@ -72,6 +78,7 @@ namespace dyn_modeling {
     iterResult res;
     res.delta_x = delta_x;
     res.chi = chi;
+    res.outliers = outliers;
     return res;
   };
 }

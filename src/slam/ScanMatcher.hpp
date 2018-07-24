@@ -3,6 +3,7 @@
 #pragma once
 #include <unistd.h>
 #include <vector>
+#include <limits>
 // #include <string>
 // #include <fstream>
 // #include <iostream>
@@ -18,6 +19,7 @@ namespace dyn_modeling {
   typedef struct iterResult_tag{
     double chi;
     std::vector<double> delta_x;
+    int outliers;
   } iterResult;
 
 
@@ -29,6 +31,8 @@ namespace dyn_modeling {
 
 
   class ScanMatcher{
+  private:
+    double m_kernelThreshold;
   public:
     ScanMatcher();
 
@@ -36,6 +40,8 @@ namespace dyn_modeling {
 
     roundResult icpRound(const int t_numIterations, const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot);
 
+    inline double getKernelThreshold() { return m_kernelThreshold;};
+    inline void setKernelThreshold( const double t_threshold) { m_kernelThreshold = t_threshold; };
   };
 }
 

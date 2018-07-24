@@ -25,5 +25,6 @@ namespace dyn_modeling {
 
     cv::Point2d convertFrowWorldToImg(const RGBImage &t_drawing, const cv::Point2d &t_point);
 
+    bool isInsideBoundaries(const RGBImage &t_drawing, const cv::Point2d &t_point);
   };
 }

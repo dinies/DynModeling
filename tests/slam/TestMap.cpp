@@ -20,7 +20,7 @@ namespace dyn_modeling{
     std::vector< cv::Point2d> points = m.computePointsRobot(robotState);
     cv::Scalar blue = { 233, 0 , 0};
     m.drawRobot(points, blue);
-    m.show();
+    m.showImg();
     cv::waitKey();
   }
 

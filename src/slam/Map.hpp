@@ -35,7 +35,8 @@ namespace dyn_modeling {
 
   class Map{
   private:
-    RGBImage m_drawingImg;
+    RGBImage m_drawingMap;
+    RGBImage m_drawingRobot;
     std::vector< drawingData> m_drawingList;
     colors m_colors;
     double m_spatialUnit;
@@ -53,17 +54,19 @@ namespace dyn_modeling {
 
     void drawScans( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color);
 
-    void drawScanPoints(const std::vector<scanPoint> &t_scanPoints_worldFrame,const std::vector<double> &t_robotState,const int t_index );
+    void drawImages(const std::vector<scanPoint> &t_scanPoints_worldFrame,const std::vector<double> &t_robotState,const int t_index );
 
     void drawTrail(const int t_indexFrom, const int t_indexTo);
 
     void fadeScanPoints( const int t_index);
 
+    void fadeRobot( const int t_index);
+
     void deleteScanPoints( const int t_index);
 
     void deleteRobot( const int t_index);
 
-    inline void show(){ cv::imshow("Map",m_drawingImg); };
+    void showImg();
 
   };
 }
