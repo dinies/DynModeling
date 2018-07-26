@@ -55,7 +55,7 @@ namespace dyn_modeling{
 
       BOOST_CHECK_EQUAL( scanPoints_robotFrame.size() , 721);
       if (scanPoints_robotFrame.size() == 721){
-        double angle = 0.5235984;
+        double angle = -((M_PI/2) - 0.5235984);
         Eigen::Matrix2d R;
         R << cos(angle ), -sin(angle),
           sin(angle), cos(angle);
