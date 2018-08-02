@@ -6,8 +6,8 @@
 #include <vector>
 // #include <math.h>
 // #include "opencv2/opencv.hpp"
-// #include "../../include/gnuplot-iostream.h"
 
+#include "../../include/gnuplot-iostream.h"
 #include "Map.hpp"
 #include "Robot.hpp"
 #include "ScanMatcher.hpp"
@@ -15,11 +15,18 @@
 
 namespace dyn_modeling {
   class Slam {
+    typedef struct node_tag{
+      state state;
+      std::vector<double> transf2currState;
+      std::vector<scanPoint> scanPoints_robotFrame;
+      std::vector<line> lines;
+    } node;
 
   private:
     Robot m_robot;
     ScanMatcher m_scanMatcher;
     Map m_map;
+    std::vector<node> m_nodes;
 
 
   public:
@@ -27,5 +34,7 @@ namespace dyn_modeling {
     void cycle();
     void preDrawingManagement( const int t_index);
     void postDrawingManagement( const int t_index);
+    void plotStateEvolution(const double t_delta_t);
+
   };
 }

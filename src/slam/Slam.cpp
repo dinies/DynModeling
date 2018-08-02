@@ -14,40 +14,65 @@ namespace dyn_modeling {
   void Slam::cycle(){
     const int num_ranges = m_robot.getNumRanges();
     const int num_dataEntries = m_robot.getNumDataEntries();
-    const std::vector<double> initialGuessState = { 0, 0, 0};
+    m_nodes.reserve(num_dataEntries);
+
+
+
+    // const std::vector<double> initialGuessState = { 0, 0, 0};
     const int icpIterations_cap = 2;
-    std::vector<double> old_robotState;
-    old_robotState.reserve(3);
-    std::vector<scanPoint> oldSPoints_robotFrame;
-    oldSPoints_robotFrame.reserve(num_ranges);
-    std::vector<scanPoint> newSPoints_robotFrame;
-    newSPoints_robotFrame.reserve(num_ranges);
-    std::vector<scanPoint> newDrawingPoints_worldFrame;
-    newDrawingPoints_worldFrame.reserve(num_ranges);
-    std::vector<double> new_robotState;
-    new_robotState.reserve(3);
+
+
+    // std::vector<double> old_robotState;
+    // old_robotState.reserve(3);
+    // std::vector<scanPoint> oldSPoints_robotFrame;
+    // oldSPoints_robotFrame.reserve(num_ranges);
+    // std::vector<scanPoint> newSPoints_robotFrame;
+    // newSPoints_robotFrame.reserve(num_ranges);
+    // std::vector<double> new_robotState;
+    // new_robotState.reserve(3);
+    std::vector<scanPoint> drawingPoints_worldFrame;
+    drawingPoints_worldFrame.reserve(num_ranges);
     roundResult icpRes;
     m_scanMatcher.setKernelThreshold(0.5);
 
+
+
+
+    node currNode;
+    currNode.state.reserve(3);
+    currNode.transf2currState.reserve(3);
+    currNode.scanPoints_robotFrame.reserve(num_ranges);
+    currNode.lines.reserve(num_ranges);
+
+
     for (int i = 0; i < num_dataEntries; ++i) {
 
-      if ( i == 0 ){
-        new_robotState = m_robot.getState();
-        newSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
+      currNode.scanPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
+      currNode.lines = m_lineGenerator.generateLines( currNode.scanPoints_robotFrame );
 
+      if ( i == 0 ){
+        currNode.state = m_robot.getState();
+        currNode.transf2currState = {0,0,0};
       }
       else{
-        oldSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i - 1);
-        newSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
-        icpRes = m_scanMatcher.icpRound(icpIterations_cap,initialGuessState,oldSPoints_robotFrame,newSPoints_robotFrame);
+        // oldSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i - 1);
+        // oldSPoints_robotFrame = m_nodes.at(i - 1).scanPoints_robotFrame;
+        // newSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
 
+        icpRes = m_scanMatcher.icpRound(icpIterations_cap,initialGuessState,oldSPoints_robotFrame,newSPoints_robotFrame);
         m_robot.updateState( icpRes.delta_x);
-        new_robotState = m_robot.getState();
+        currNode.state = m_robot.getState();
+        currNode.transf2currState = icpRes.delta_x;
       }
+      m_nodes.push_back(currNode);
+
       //loop checker
-      newDrawingPoints_worldFrame = m_robot.changeCoordsRobotToWorld(newSPoints_robotFrame);
+      //TODO
+
+      drawingPoints_worldFrame = m_robot.changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame );
       preDrawingManagement(i-1);
       m_map.drawImages( newDrawingPoints_worldFrame , new_robotState , i);
+      //TODO add lines to the drawing;  create line struct inside line generator class and implement a new line matching
       postDrawingManagement(i);
    }
     m_robot.plotStateEvolution(0.01);
@@ -80,5 +105,32 @@ namespace dyn_modeling {
     }
     m_map.showImg();
     cv::waitKey(1);
+  }
+
+
+  void Slam::plotStateEvolution(const double t_delta_t){
+    double curr_t = 0;
+    std::vector< boost::tuple<double,double>> x;
+    std::vector< boost::tuple<double,double>> y;
+    std::vector< boost::tuple<double,double>> theta;
+    std::vector< boost::tuple<double,double>> path;
+    for ( auto n : m_nodes){
+      x.push_back( boost::make_tuple( curr_t, n.state.at(0)));
+      y.push_back( boost::make_tuple( curr_t,n.state.at(1)));
+      theta.push_back( boost::make_tuple( curr_t,n.state.at(2)));
+      curr_t += t_delta_t;
+      path.push_back( boost::make_tuple( n.state.at(0),n.state.at(1)));
+    }
+    Gnuplot gp;
+    gp << "set terminal qt 1\n";
+    gp << "plot";
+    gp << gp.binFile1d(x, "record") << "with lines title 'x'" << ",";
+    gp << gp.binFile1d(y, "record") << "with lines title 'y'" << "\n";
+    gp << "set terminal qt 2\n";
+    gp << "plot";
+    gp << gp.binFile1d(theta, "record") << "with lines title 'theta'" << "\n";
+    gp << "set terminal qt 3\n";
+    gp << "plot";
+    gp << gp.binFile1d(path, "record") << "with lines title 'path'" << "\n";
   }
 }

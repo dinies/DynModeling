@@ -8,7 +8,6 @@ namespace dyn_modeling {
     m_datasetManager( DatasetManager( t_dataSet_AbsolPath))
   {
     m_state.q = t_initial_state;
-    m_old_states.push_back(m_state);
   };
 
 
@@ -68,35 +67,10 @@ namespace dyn_modeling {
 
 
   void Robot::updateState(const std::vector<double> &t_deltaState){
-    m_old_states.push_back(m_state);
     m_state.q = Robot::boxPlus(m_state.q, t_deltaState);
   }
 
-  void Robot::plotStateEvolution(const double t_delta_t){
-    double curr_t = 0;
-    std::vector< boost::tuple<double,double>> x;
-    std::vector< boost::tuple<double,double>> y;
-    std::vector< boost::tuple<double,double>> theta;
-    std::vector< boost::tuple<double,double>> path;
-    for ( auto s : m_old_states){
-      x.push_back( boost::make_tuple( curr_t,s.q.at(0)));
-      y.push_back( boost::make_tuple( curr_t,s.q.at(1)));
-      theta.push_back( boost::make_tuple( curr_t,s.q.at(2)));
-      curr_t += t_delta_t;
-      path.push_back( boost::make_tuple( s.q.at(0),s.q.at(1)));
-    }
-    Gnuplot gp;
-    gp << "set terminal qt 1\n";
-    gp << "plot";
-    gp << gp.binFile1d(x, "record") << "with lines title 'x'" << ",";
-    gp << gp.binFile1d(y, "record") << "with lines title 'y'" << "\n";
-    gp << "set terminal qt 2\n";
-    gp << "plot";
-    gp << gp.binFile1d(theta, "record") << "with lines title 'theta'" << "\n";
-    gp << "set terminal qt 3\n";
-    gp << "plot";
-    gp << gp.binFile1d(path, "record") << "with lines title 'path'" << "\n";
-  };
+
 }
 
 
