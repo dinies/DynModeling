@@ -9,7 +9,7 @@
 -DBOOST_THREAD_VERSION=4
 -DBOOST_TIMER_STATIC_LINK=1
 -DUNIX
--I/home/dinies/GitRepos/DynModeling
+-I/home/dinies/gitrepos/DynModeling
 -I/usr/local/include
 -I/usr/include/eigen3
 -I/opt/ros/lunar/include/opencv-3.3.1-dev

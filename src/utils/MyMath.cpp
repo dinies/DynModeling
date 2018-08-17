@@ -90,4 +90,16 @@ namespace dyn_modeling {
   };
 
 
+  static double MyMath::computeAvg(const double t_prevAvg,const int t_numEntries,const double t_newValue){
+    if ( t_numEntries == 1){
+      return t_newValue;
+    }
+    if ( t_numEntries == 0){
+      std::cout << "Error because the num of entries to compute Avg should be always greater than zero, and in this case it is not";
+      return -1;
+    }
+    return ((t_numEntries * t_prevAvg) + t_newValue) / (t_numEntries +1);
+  };
+
+
 }

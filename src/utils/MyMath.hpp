@@ -25,5 +25,6 @@ namespace dyn_modeling {
 
     static double boxMinusAngleRad(const double t_ref,const double t_actual);
     static double boxPlusAngleRad(const double t_ref,const double t_actual);
+    static double computeAvg(const double t_prevAvg,const int t_numEntries,const double t_newValue);
   };
 }
