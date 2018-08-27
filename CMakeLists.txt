@@ -36,8 +36,9 @@ INCLUDE_DIRECTORIES(${EIGEN3_INCLUDE_DIR})
 FIND_PACKAGE(OpenCV  REQUIRED)
 INCLUDE_DIRECTORIES(${OpenCV_INCLUDE_DIRS})
 
+FIND_PACKAGE(Boost COMPONENTS system filesystem iostreams unit_test_framework REQUIRED)
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 
-add_subdirectory( boost-cmake)
 add_subdirectory( executables)
 
 enable_testing()
