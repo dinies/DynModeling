@@ -47,7 +47,7 @@ namespace dyn_modeling {
     return scanPvec_worldFrame;
   };
 
-  std::vector<double> Robot::boxPlus(const std::vector<double> t_first,const std::vector<double> t_second){
+  std::vector<double> Robot::boxPlus(const std::vector<double> &t_first,const std::vector<double> &t_second){
     std::vector<double> result;
     result.reserve(3);
     result.push_back( t_first.at(0) + t_second.at(0));
@@ -56,7 +56,7 @@ namespace dyn_modeling {
     return result;
   }
 
-  std::vector<double> Robot::boxMinus(const std::vector<double> t_first,const std::vector<double> t_second){
+  std::vector<double> Robot::boxMinus(const std::vector<double> &t_first,const std::vector<double> &t_second){
     std::vector<double> result;
     result.reserve(3);
     result.push_back( t_first.at(0) - t_second.at(0));

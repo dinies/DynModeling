@@ -64,8 +64,7 @@ namespace dyn_modeling {
       m_drawer.drawPatch(m_drawingMap, p, t_color);
     }
  };
-
-
+  
   void Map::drawImages(const std::vector<scanPoint> &t_scanPoints_worldFrame,const std::vector<double> &t_robotState ,const int t_index){
     drawingData dD;
     dD.index = t_index;

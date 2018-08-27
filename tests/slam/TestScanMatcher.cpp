@@ -105,6 +105,7 @@ namespace dyn_modeling{
     const std::vector<scanPoint> oldSPoints_robot ={ sp1,sp2,sp3,sp4,sp5};
     const std::vector<scanPoint> newSPoints_robot ={ sp6,sp7,sp8,sp9,sp10};
 
+
     roundResult icpRes = sM.icpRound(5,state,oldSPoints_robot, newSPoints_robot);
     std::cout << " rotational num of iters " << icpRes.chi.size() <<"\n";
     std::vector<double> truthTransf = {0,0, - angle};

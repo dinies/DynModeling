@@ -90,7 +90,7 @@ namespace dyn_modeling {
   };
 
 
-  static double MyMath::computeAvg(const double t_prevAvg,const int t_numEntries,const double t_newValue){
+  double MyMath::computeAvg(const double t_prevAvg,const int t_numEntries,const double t_newValue){
     if ( t_numEntries == 1){
       return t_newValue;
     }
