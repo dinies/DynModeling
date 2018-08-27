@@ -28,6 +28,7 @@ namespace dyn_modeling {
     new_robotState.reserve(3);
     roundResult icpRes;
     m_scanMatcher.setKernelThreshold(0.5);
+    m_map.showImg();
 
     for (int i = 0; i < num_dataEntries; ++i) {
 

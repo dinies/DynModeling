@@ -44,7 +44,7 @@ namespace dyn_modeling{
  }
 
   BOOST_AUTO_TEST_CASE( retrieveScanPoints) {
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/exampleDataSetOneline.txt";
+    std::string absolutePath = "/home/dinies/gitrepos/DynModeling/files/datasets/exampleDataSetOneline.txt";
     std::vector<double> initial_state = { 0, 0, 0};
     Robot r = Robot(absolutePath, initial_state);
 
@@ -70,7 +70,7 @@ namespace dyn_modeling{
   }
 
   BOOST_AUTO_TEST_CASE(updateState){
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/exampleDataSetOneline.txt";
+    std::string absolutePath = "/home/dinies/gitrepos/DynModeling/files/datasets/exampleDataSetOneline.txt";
     std::vector<double> initial_state = { 0, 0, 0};
     Robot r = Robot(absolutePath, initial_state);
     std::vector<double> delta_state = { 4 , -2 , -M_PI/4};
