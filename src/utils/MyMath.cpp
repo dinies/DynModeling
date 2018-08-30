@@ -98,7 +98,7 @@ namespace dyn_modeling {
       std::cout << "Error because the num of entries to compute Avg should be always greater than zero, and in this case it is not";
       return -1;
     }
-    return ((t_numEntries * t_prevAvg) + t_newValue) / (t_numEntries +1);
+    return (( (t_numEntries -1) * t_prevAvg) + t_newValue) / (t_numEntries );
   };
 
 

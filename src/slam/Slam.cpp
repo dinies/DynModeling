@@ -43,6 +43,7 @@ namespace dyn_modeling {
     currNode.transf2currState.reserve(3);
     currNode.scanPoints_robotFrame.reserve(num_ranges);
     currNode.lines.reserve(num_ranges);
+    Map::showImg();
 
 
     for (int i = 0; i < num_dataEntries; ++i) {
