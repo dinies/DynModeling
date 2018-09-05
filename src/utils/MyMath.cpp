@@ -5,26 +5,49 @@
 namespace dyn_modeling {
 
 
-  Eigen::Isometry2d MyMath::v2t(const std::vector<double> &t_vec){
+  //Deprecated because I am adopting eigen structures for the state
+  // Eigen::Isometry2d MyMath::v2t(const std::vector<double> &t_vec){
+
+  //   Eigen::Isometry2d T;
+  //   T.setIdentity();
+  //   Eigen::Vector2d transl( t_vec.at(0), t_vec.at(1));
+  //   T.translation()= transl;
+  //   double c = cos(t_vec.at(2));
+  //   double s = sin(t_vec.at(2));
+  //   T.linear() << c, -s, s, c;
+  //   return T;
+  // };
+
+  Eigen::Isometry2d MyMath::v2t(const Eigen::Vector3d &t_vec){
 
     Eigen::Isometry2d T;
     T.setIdentity();
-    Eigen::Vector2d transl( t_vec.at(0), t_vec.at(1));
+    Eigen::Vector2d transl( t_vec(0), t_vec(1));
     T.translation()= transl;
-    double c = cos(t_vec.at(2));
-    double s = sin(t_vec.at(2));
+    double c = cos(t_vec(2));
+    double s = sin(t_vec(2));
     T.linear() << c, -s, s, c;
     return T;
   };
 
 
-  std::vector<double> MyMath::t2v(const Eigen::Isometry2d& t_transf){
+  // std::vector<double> MyMath::t2v(const Eigen::Isometry2d& t_transf){
+
+  //   Eigen::Vector3d v;
+  //   v.head<2>()=t_transf.translation();
+  //   v(2) = atan2(t_transf.linear()(1,0), t_transf.linear()(0,0));
+  //   std::vector<double> vec = {v(0),v(1),v(2)};
+  //   return vec;
+  // };
+
+
+
+  Eigen::Vector3d MyMath::t2v(const Eigen::Isometry2d& t_transf){
 
     Eigen::Vector3d v;
     v.head<2>()=t_transf.translation();
     v(2) = atan2(t_transf.linear()(1,0), t_transf.linear()(0,0));
-    std::vector<double> vec = {v(0),v(1),v(2)};
-    return vec;
+    return v;
   };
 
 

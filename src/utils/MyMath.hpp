@@ -13,9 +13,12 @@ namespace dyn_modeling {
   class MyMath{
 
   public:
-    static Eigen::Isometry2d v2t(const std::vector<double> &t_vec);
 
-    static std::vector<double> t2v(const Eigen::Isometry2d& t_transf);
+    // static Eigen::Isometry2d v2t(const std::vector<double> &t_vec);
+    // static std::vector<double> t2v(const Eigen::Isometry2d& t_transf);
+
+    static Eigen::Isometry2d v2t(const Eigen::Vector3d &t_vec);
+    static Eigen::Vector3d t2v(const Eigen::Isometry2d& t_transf);
 
     static void rotate2D( std::vector<double> &t_point, const double t_angle_rad );
 

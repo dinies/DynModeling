@@ -11,7 +11,8 @@
 #include "DatasetManager.hpp"
 namespace dyn_modeling {
   typedef struct state_tag{
-    std::vector<double> q;
+    Eigen::Vector3d mu;
+    Eigen::Matrix3d sigma;
   } state;
 
   class Robot{
@@ -20,16 +21,16 @@ namespace dyn_modeling {
     state m_state;
 
   public:
-    Robot( const std::string &t_dataSet_AbsolPath , const std::vector<double> &t_initial_state);
+    Robot( const std::string &t_dataSet_AbsolPath , const Eigen::Vector3d &t_initial_state);
 
-    inline std::vector<double> getState() { return m_state.q; };
-    inline void setState(std::vector<double> &t_newState ) { m_state.q = t_newState; };
+    inline state getState() { return m_state; };
+    inline void setState(state &t_newState ) { m_state = t_newState; };
 
     std::vector<scanPoint> retrieveScanPointsRobotFrame( int t_index_datanode );
 
     std::vector<scanPoint> changeCoordsRobotToWorld( const std::vector<scanPoint> &t_scanPoints_robotFrame);
 
-    void updateState(const std::vector<double> &t_deltaState);
+    void updateState(const Eigen::Vector3d &t_deltaState);
 
     inline int getNumDataEntries() { return m_datasetManager.getNumDataEntries(); }
 
@@ -37,8 +38,9 @@ namespace dyn_modeling {
 
 
 
-    static std::vector<double> boxPlus(const std::vector<double> &t_first,const std::vector<double> &t_second);
-    static std::vector<double> boxMinus(const std::vector<double> &t_first,const std::vector<double> &t_second);
+    static Eigen::Vector3d boxPlus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second);
+
+    static Eigen::Vector3d boxMinus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second);
 
   };
 }

@@ -23,7 +23,6 @@ namespace dyn_modeling {
   } line;
 
 
-
   class LineMatcher{
   private:
     double m_distanceBetweenSPointsThreshold;
@@ -39,6 +38,7 @@ namespace dyn_modeling {
     inline void setAngularCoeffThreshold( const double t_threshold) { m_angularCoeffThreshold= t_threshold; };
 
     std::vector<line> generateLines(const std::vector<scanPoint> &t_scanPoints_worldFrame);
+
   };
 }
 

@@ -9,7 +9,6 @@ namespace dyn_modeling {
   {};
 
 
-
   std::vector<line> LineMatcher::generateLines(const std::vector<scanPoint> &t_scanPoints_robotFrame){
     std::vector<line> lines;
     int currState = 0;

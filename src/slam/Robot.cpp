@@ -7,7 +7,8 @@ namespace dyn_modeling {
   Robot::Robot( const std::string &t_dataSet_AbsolPath , const std::vector<double> &t_initial_state):
     m_datasetManager( DatasetManager( t_dataSet_AbsolPath))
   {
-    m_state.q = t_initial_state;
+    m_state.mu = t_initial_state;
+    m_state.sigma = Matrix3d::Zero();
   };
 
 
@@ -34,7 +35,7 @@ namespace dyn_modeling {
 
 
   std::vector<scanPoint> Robot::changeCoordsRobotToWorld( const std::vector<scanPoint> &t_scanPoints_robotFrame){
-    Eigen::Isometry2d transf = MyMath::v2t(m_state.q);
+    Eigen::Isometry2d transf = MyMath::v2t(m_state.mu);
     std::vector<scanPoint> scanPvec_worldFrame;
     scanPvec_worldFrame.reserve( t_scanPoints_robotFrame.size());
 
@@ -47,30 +48,27 @@ namespace dyn_modeling {
     return scanPvec_worldFrame;
   };
 
-  std::vector<double> Robot::boxPlus(const std::vector<double> &t_first,const std::vector<double> &t_second){
-    std::vector<double> result;
-    result.reserve(3);
-    result.push_back( t_first.at(0) + t_second.at(0));
-    result.push_back( t_first.at(1) + t_second.at(1));
-    result.push_back( MyMath::boxPlusAngleRad(t_first.at(2), t_second.at(2)));
+  Eigen::Vector3d Robot::boxPlus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second){
+    Eigen::Vector3d result(  t_first(0) + t_second(0),  t_first(1) + t_second(1), MyMath::boxPlusAngleRad(t_first(2), t_second(2)));
     return result;
   }
 
-  std::vector<double> Robot::boxMinus(const std::vector<double> &t_first,const std::vector<double> &t_second){
-    std::vector<double> result;
-    result.reserve(3);
-    result.push_back( t_first.at(0) - t_second.at(0));
-    result.push_back( t_first.at(1) - t_second.at(1));
-    result.push_back( MyMath::boxMinusAngleRad(t_first.at(2), t_second.at(2)));
+  Eigen::Vector3d Robot::boxMinus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second){
+    Eigen::Vector3d result(  t_first(0) - t_second(0),  t_first(1) - t_second(1), MyMath::boxMinusAngleRad(t_first(2), t_second(2)));
     return result;
   }
 
 
-  void Robot::updateState(const std::vector<double> &t_deltaState){
-    m_state.q = Robot::boxPlus(m_state.q, t_deltaState);
+  void Robot::updateState(const Eigen::Vector3d &t_deltaState){
+    m_state.mu = Robot::boxPlus(m_state.mu, t_deltaState);
+    Eigen::Isometry2d transf = MyMath::v2t(t_deltaState);
+    Eigen::Matrix2d R = transf.linear();
+    //TODO
+    // m_state.sigma = 8;
   }
-
-
 }
+
+
+
 
 
