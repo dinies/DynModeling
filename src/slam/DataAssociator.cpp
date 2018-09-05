@@ -49,7 +49,8 @@ namespace dyn_modeling {
 
 
   dataAssociation DataAssociator::chooseMaxScoreAssociation( const std::vector< std::vector< dataAssociation>> &t_matrix){
-    dataAssociation bestAssociation = t_matrix[0][0];
+    dataAssociation bestAssociation;
+    bestAssociation.confidence_score = -100;
     for (auto vec : t_matrix){
       dataAssociation currAssociation = vec.front();
       if ( currAssociation.confidence_score > bestAssociation.confidence_score){
@@ -165,12 +166,12 @@ namespace dyn_modeling {
     std::vector< int> indexes;
     indexes.reserve( m_maxCandidates);
     if( (t_newLine_index- m_maxCandidates/2) >= 0){
-      const int first_index = t_newLine_index- m_maxCandidates/2;
+      const int first_index = t_newLine_index - m_maxCandidates/2;
     }else{
       const int first_index = 0;
     }
     if( (t_newLine_index +  m_maxCandidates/2) < m_oldLines.size())
-      const int last_index = t_newLine_index +  m_maxCandidates/2;
+      const int last_index = t_newLine_index +  m_maxCandidates/2 ;
     else{
       const int last_index = t_oldLines_num-1;
     }

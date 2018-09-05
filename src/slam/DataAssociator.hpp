@@ -19,8 +19,6 @@ namespace dyn_modeling {
   } dataAssociation;
 
 
-
-
   class DataAssociator{
   private:
     int m_maxCandidates;
@@ -32,7 +30,7 @@ namespace dyn_modeling {
     std::vector<scanPoint> m_newSPoints;
 
   public:
-    DataAssociator( double m_distanceBetweenSPointsThreshold , double m_angularCoeffThreshold );
+    DataAssociator( int t_maxCandidates, double t_lengthDifferenceThreshold, double t_orientationDiffThreshold, const std::vector<line> &t_old_lines,const std::vector<scanPoint> &t_old_sPoints,const std::vector<line> &t_new_lines,const std::vector<scanPoint> &t_new_sPoints);
 
     std::vector<dataAssociation> associateLines();
 
