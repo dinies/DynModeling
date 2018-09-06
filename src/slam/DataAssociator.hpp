@@ -32,6 +32,9 @@ namespace dyn_modeling {
   public:
     DataAssociator( int t_maxCandidates, double t_lengthDifferenceThreshold, double t_orientationDiffThreshold, const std::vector<line> &t_old_lines,const std::vector<scanPoint> &t_old_sPoints,const std::vector<line> &t_new_lines,const std::vector<scanPoint> &t_new_sPoints);
 
+
+    DataAssociator();
+
     std::vector<dataAssociation> associateLines();
 
     std::vector<dataAssociation> findCandidates(const int t_choosen_newLine_index);
@@ -53,5 +56,5 @@ namespace dyn_modeling {
     dataAssociation chooseMaxScoreAssociation( const std::vector< std::vector< dataAssociation>> &t_matrix);
 
     bool associationsAllTaken( const std::vector< std::vector< dataAssociation>> &t_matrix);
-  }
+  };
 }

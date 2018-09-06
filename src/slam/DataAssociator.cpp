@@ -13,6 +13,8 @@ namespace dyn_modeling {
     m_newSPoints( t_new_sPoints)
   {};
 
+  DataAssociator::DataAssociator(){};
+
 
 
   std::vector<dataAssociation> DataAssociator::associateLines(){
@@ -52,18 +54,21 @@ namespace dyn_modeling {
     dataAssociation bestAssociation;
     bestAssociation.confidence_score = -100;
     for (auto vec : t_matrix){
-      dataAssociation currAssociation = vec.front();
-      if ( currAssociation.confidence_score > bestAssociation.confidence_score){
-        bestAssociation = currAssociation;
+      if ( !vec.empty()){
+        dataAssociation currAssociation = vec.front();
+        if ( currAssociation.confidence_score > bestAssociation.confidence_score){
+          bestAssociation = currAssociation;
+        }
       }
     }
     return bestAssociation;
   }
 
   void DataAssociator::removeTakenAssociations( const dataAssociation &t_takenAssociation, std::vector< std::vector< dataAssociation>> &t_matrix ){
-    for (auto vec : t_matrix){
-      vec.erase( std::remove_if(vec.begin(), vec.end(), [](dataAssociation dA) -> bool{
-                                                          return ( dA.old_line_index == t_takenAssociation.old_line_index || dA.new_line_index == t_takenAssociation.new_line_index );
+    for (auto &vec : t_matrix){
+      vec.erase( std::remove_if(vec.begin(), vec.end(), [t_takenAssociation](dataAssociation dA) -> bool{
+                                                          bool result = (dA.old_line_index == t_takenAssociation.old_line_index) || (dA.new_line_index == t_takenAssociation.new_line_index);
+                                                          return result;
                                                         }
           ), vec.end() );
     }
@@ -103,8 +108,8 @@ namespace dyn_modeling {
     dataAssociation result;
     result.old_line_index = t_oldLine_index;
     result.new_line_index = t_newLine_index;
-    double oldLength = getLineLenght( m_oldLines.at(t_oldLine_index), m_oldSPoints);
-    double newLength = getLineLenght( m_newLines.at(t_newLine_index), m_newSPoints);
+    double oldLength = getLineLength( m_oldLines.at(t_oldLine_index), m_oldSPoints);
+    double newLength = getLineLength( m_newLines.at(t_newLine_index), m_newSPoints);
     double lengthDiff = fabs(oldLength - newLength);
     if ( lengthDiff > m_lengthDifferenceThreshold ){
       result.confidence_score = -1;
@@ -125,7 +130,7 @@ namespace dyn_modeling {
         double old_low_neigh_ori = getLineOrientation( old_lower_neighboor, m_oldSPoints);
         double new_low_neigh_ori = getLineOrientation( new_lower_neighboor, m_newSPoints);
 
-        if ( fabs(MyMath.boxMinusAngleRad( MyMath.boxMinusAngleRad( old_low_neigh_ori, old_line_orientation) , MyMath.boxMinusAngleRad( new_low_neigh_ori, new_line_orientation))) < m_orientationDiffThreshold ){
+        if ( fabs(MyMath::boxMinusAngleRad( MyMath::boxMinusAngleRad( old_low_neigh_ori, old_line_orientation) , MyMath::boxMinusAngleRad( new_low_neigh_ori, new_line_orientation))) < m_orientationDiffThreshold ){
           result.confidence_score = result.confidence_score * 1.3;
         }
       }
@@ -138,7 +143,7 @@ namespace dyn_modeling {
         double old_up_neigh_ori = getLineOrientation( old_upper_neighboor, m_oldSPoints);
         double new_up_neigh_ori = getLineOrientation( new_upper_neighboor, m_newSPoints);
 
-        if ( fabs(MyMath.boxMinusAngleRad( MyMath.boxMinusAngleRad( old_line_orientation, old_up_neigh_ori) , MyMath.boxMinusAngleRad( new_line_orientation, new_up_neigh_ori ))) < m_orientationDiffThreshold ){
+        if ( fabs(MyMath::boxMinusAngleRad( MyMath::boxMinusAngleRad( old_line_orientation, old_up_neigh_ori) , MyMath::boxMinusAngleRad( new_line_orientation, new_up_neigh_ori ))) < m_orientationDiffThreshold ){
           result.confidence_score = result.confidence_score * 1.3;
         }
       }
@@ -165,15 +170,17 @@ namespace dyn_modeling {
 
     std::vector< int> indexes;
     indexes.reserve( m_maxCandidates);
+    int first_index;
+    int last_index;
     if( (t_newLine_index- m_maxCandidates/2) >= 0){
-      const int first_index = t_newLine_index - m_maxCandidates/2;
+      first_index = t_newLine_index - m_maxCandidates/2;
     }else{
-      const int first_index = 0;
+      first_index = 0;
     }
     if( (t_newLine_index +  m_maxCandidates/2) < m_oldLines.size())
-      const int last_index = t_newLine_index +  m_maxCandidates/2 ;
+      last_index = t_newLine_index +  m_maxCandidates/2 ;
     else{
-      const int last_index = t_oldLines_num-1;
+      last_index = m_oldLines.size() -1;
     }
 
     int i = first_index;
@@ -181,6 +188,7 @@ namespace dyn_modeling {
       indexes.push_back(i);
       ++i;
     }
+    return indexes;
   }
 
 }

@@ -4,11 +4,11 @@
 
 namespace dyn_modeling {
 
-  Robot::Robot( const std::string &t_dataSet_AbsolPath , const std::vector<double> &t_initial_state):
+  Robot::Robot( const std::string &t_dataSet_AbsolPath , const Eigen::Vector3d &t_initial_state):
     m_datasetManager( DatasetManager( t_dataSet_AbsolPath))
   {
     m_state.mu = t_initial_state;
-    m_state.sigma = Matrix3d::Zero();
+    m_state.sigma = Eigen::Matrix3d::Zero();
   };
 
 
