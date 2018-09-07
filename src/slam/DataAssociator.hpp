@@ -56,5 +56,11 @@ namespace dyn_modeling {
     dataAssociation chooseMaxScoreAssociation( const std::vector< std::vector< dataAssociation>> &t_matrix);
 
     bool associationsAllTaken( const std::vector< std::vector< dataAssociation>> &t_matrix);
+
+    inline double getLengthDiffThreshold() { return m_lengthDifferenceThreshold;};
+
+    inline void setLengthDiffThreshold( const double t_lengthDifferenceThreshold) { m_lengthDifferenceThreshold = t_lengthDifferenceThreshold; };
+
+
   };
 }

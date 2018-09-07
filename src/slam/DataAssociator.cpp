@@ -136,7 +136,7 @@ namespace dyn_modeling {
       }
     }
 
-    if ( (t_newLine_index +1) < m_newLines.size() && (t_oldLine_index -1) < m_oldLines.size()){
+    if ( (t_newLine_index +1) < m_newLines.size() && (t_oldLine_index +1) < m_oldLines.size()){
       line old_upper_neighboor = m_oldLines.at(t_oldLine_index +1);
       line new_upper_neighboor = m_newLines.at(t_newLine_index +1);
       if ( old_upper_neighboor.second_index == old_line.first_index  && new_upper_neighboor.second_index == new_line.first_index){
@@ -162,7 +162,7 @@ namespace dyn_modeling {
   double DataAssociator::getLineOrientation( const line &t_line, const std::vector<scanPoint> &t_sPoints ){
     scanPoint sP1 = t_sPoints.at( t_line.first_index);
     scanPoint sP2 = t_sPoints.at( t_line.second_index);
-    return atan2( sP1.coords(1) - sP2.coords(1), sP1.coords(0) - sP2.coords(0) );
+    return atan2( sP2.coords(1) - sP1.coords(1), sP2.coords(0) - sP1.coords(0) );
   }
 
 

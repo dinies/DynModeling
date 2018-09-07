@@ -19,15 +19,27 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_CASE( Box_minus2) {
     double res =  MyMath::boxMinusAngleRad(3.14159, 0);
     double threshold = 0.0001;
-    BOOST_CHECK_CLOSE( res, 0, threshold);
+    BOOST_CHECK_CLOSE( fabs(res), M_PI, threshold);
   }
 
   BOOST_AUTO_TEST_CASE( Box_minus3) {
+    double res =  MyMath::boxMinusAngleRad( - (M_PI/4 + M_PI/2), M_PI/4 );
+    double threshold = 0.0001;
+    BOOST_CHECK_CLOSE( fabs(res), M_PI, threshold);
+  }
 
-    double res =  MyMath::boxMinusAngleRad(-2.35619, 0.785);
+  BOOST_AUTO_TEST_CASE( Box_minus4) {
+    double res =  MyMath::boxMinusAngleRad(M_PI/6, M_PI/3);
+    double threshold = 0.0001;
+    BOOST_CHECK_CLOSE( res, -M_PI/6, threshold);
+  }
+
+  BOOST_AUTO_TEST_CASE( Box_minus5) {
+    double res =  MyMath::boxMinusAngleRad(M_PI/3, M_PI/3);
     double threshold = 0.0001;
     BOOST_CHECK_CLOSE( res, 0, threshold);
   }
+
 
 
   BOOST_AUTO_TEST_CASE( Box_plus) {

@@ -33,10 +33,10 @@ namespace dyn_modeling{
       Eigen::Vector2d c3(5,3);
       Eigen::Vector2d c4(5.5,3);
       Eigen::Vector2d c5(1,1.5);
-      Eigen::Vector2d c6(2.73,2);
-      Eigen::Vector2d c7(4,3.7);
-      Eigen::Vector2d c8(4.73,4);
-      Eigen::Vector2d c9(5.23,4);
+      Eigen::Vector2d c6(2.73,2.5);
+      Eigen::Vector2d c7(4,4.2);
+      Eigen::Vector2d c8(4.73,4.5);
+      Eigen::Vector2d c9(5.23,4.5);
 
       sp1.coords = c1;
       sp2.coords = c2;
@@ -147,87 +147,107 @@ namespace dyn_modeling{
 
 
 
-  // BOOST_AUTO_TEST_CASE( testAssociateLines ) {
+  BOOST_AUTO_TEST_CASE( testAssociateLines ) {
 
-  //   PlainDataAssociatorFixture fixture;
-  //   std::vector< dataAssociation> result = fixture.dA.associateLines();
-  //   BOOST_CHECK_EQUAL( 2 , result.size());
+    PlainDataAssociatorFixture fixture;
+    std::vector< dataAssociation> result = fixture.dA.associateLines();
+    BOOST_CHECK_EQUAL( 2 , result.size());
+    if ( result.size() ==2){
+      dataAssociation d1 = result.at(0);
+      dataAssociation d2 = result.at(1);
+      BOOST_CHECK_EQUAL( d1.old_line_index, 2);
+      BOOST_CHECK_EQUAL( d1.new_line_index, 3);
+      BOOST_CHECK( d1.confidence_score > 0);
+      BOOST_CHECK_EQUAL( d2.old_line_index, 0);
+      BOOST_CHECK_EQUAL( d2.new_line_index, 0);
+      BOOST_CHECK( d2.confidence_score > 0);
+   }
+  }
 
-  //   // RGBImage img;
-  //   // img.create( 900,900);
-  //   // img = cv::Vec3b(227, 246, 253);
-  //   // cv::namedWindow("Lines");
-  //   // cv::moveWindow("Lines", 40, 40);
-  //   // cv::Scalar dark_red = {20,0,255};
-  //   // Drawer drawer(15);
-  //   // cv::imshow("Lines",img);
-  //   // for ( auto line : lines){
-  //   //   scanPoint sP1 = scanPoints_robotFrame.at( line.first_index);
-  //   //   scanPoint sP2 = scanPoints_robotFrame.at( line.second_index);
-  //   //   cv::Point2d p1( sP1.coords(0), sP1.coords(1));
-  //   //   cv::Point2d p2( sP2.coords(0), sP2.coords(1));
-  //   //   drawer.drawLine( img, p1, p2 , dark_red);
-  //   // }
+  BOOST_AUTO_TEST_CASE( testFindCandidatesHighToleranceDistanceDiff) {
+    PlainDataAssociatorFixture fixture;
+    const int newLineIndex = 1;
+    fixture.dA.setLengthDiffThreshold( 3);
+    std::vector< dataAssociation> result = fixture.dA.findCandidates( newLineIndex);
+    BOOST_CHECK_EQUAL(3 , result.size());
+    if ( result.size() ==3){
+      dataAssociation d1 = result.at(0);
+      dataAssociation d2 = result.at(1);
+      dataAssociation d3 = result.at(2);
+      BOOST_CHECK_EQUAL( d1.old_line_index, 0);
+      BOOST_CHECK_EQUAL( d1.new_line_index, 1);
+      BOOST_CHECK( d1.confidence_score > 0);
+      BOOST_CHECK_EQUAL( d2.old_line_index, 1);
+      BOOST_CHECK_EQUAL( d2.new_line_index, 1);
+      BOOST_CHECK( d2.confidence_score > 0);
+      BOOST_CHECK_EQUAL( d3.old_line_index, 2);
+      BOOST_CHECK_EQUAL( d3.new_line_index, 1);
+      BOOST_CHECK( d3.confidence_score > 0);
+    }
+  }
 
-  //   // cv::imshow("Lines",img);
-  //   // cv::waitKey(500);
-  // }
-
-  // BOOST_AUTO_TEST_CASE( testFindCandidates) {
-  //   PlainDataAssociatorFixture fixture;
-  //   std::vector< dataAssociation> result = fixture.dA.associateLines();
-  //   BOOST_CHECK_EQUAL(2 , result.size());
-  //   if ( result.size() >=2){
-  //     dataAssociation d1 = result.at(0);
-  //     dataAssociation d2 = result.at(1);
-  //     BOOST_CHECK_EQUAL( d1.old_line_index, 0);
-  //     BOOST_CHECK_EQUAL( d1.new_line_index, 0);
-  //     BOOST_CHECK( d1.confidence_score > 0);
-  //     BOOST_CHECK_EQUAL( d2.old_line_index, 2);
-  //     BOOST_CHECK_EQUAL( d2.new_line_index, 3);
-  //     BOOST_CHECK( d2.confidence_score > 0);
-  //   }
-  // }
-
-  // BOOST_AUTO_TEST_CASE( testInsertOrderedDataAssociationHighScore) {
-  //   PlainDataAssociatorFixture fixtureClass;
-  //   DataAssociationsFixture fixtureStructs;
-  //   fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association, fixtureStructs.associationsVec );
-  //   BOOST_CHECK_EQUAL( 4 , fixtureStructs.associationsVec.size());
-  //   dataAssociation d = fixtureStructs.associationsVec.at(1);
-  //   BOOST_CHECK_EQUAL( 100 , d.confidence_score);
-  // }
-
-  // BOOST_AUTO_TEST_CASE( testInsertOrderedDataAssociationLowScore) {
-  //   PlainDataAssociatorFixture fixtureClass;
-  //   DataAssociationsFixture fixtureStructs;
-  //   fixtureStructs.association.confidence_score = 10;
-  //   fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association, fixtureStructs.associationsVec );
-  //   BOOST_CHECK_EQUAL( 4 , fixtureStructs.associationsVec.size());
-  //   dataAssociation d = fixtureStructs.associationsVec.at(3);
-  //   BOOST_CHECK_EQUAL( 10 , d.confidence_score);
-  // }
-
-  // BOOST_AUTO_TEST_CASE( testInsertOrderedDataAssociationInvalid) {
-  //   PlainDataAssociatorFixture fixtureClass;
-  //   DataAssociationsFixture fixtureStructs;
-  //   fixtureStructs.association.confidence_score = -1;
-  //   fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association, fixtureStructs.associationsVec );
-  //   BOOST_CHECK_EQUAL( 3 , fixtureStructs.associationsVec.size());
-  // }
+  BOOST_AUTO_TEST_CASE( testFindCandidatesLowToleranceDistanceDiff) {
+    PlainDataAssociatorFixture fixture;
+    const int newLineIndex = 1;
+    std::vector< dataAssociation> result = fixture.dA.findCandidates( newLineIndex);
+    BOOST_CHECK_EQUAL(1 , result.size());
+    if ( result.size() ==1){
+      dataAssociation d1 = result.at(0);
+      BOOST_CHECK_EQUAL( d1.old_line_index, 0);
+      BOOST_CHECK_EQUAL( d1.new_line_index, 1);
+      BOOST_CHECK( d1.confidence_score > 0);
+      }
+  }
 
 
-  // BOOST_AUTO_TEST_CASE( testCompareLinesValid) {
-  //   PlainDataAssociatorFixture fixtureClass;
-  //   dataAssociation result = fixtureClass.dA.compareLines(0,0);
-  //   BOOST_CHECK( result.confidence_score > 0);
-  // }
 
-  // BOOST_AUTO_TEST_CASE( testCompareLinesInvalid) {
-  //   PlainDataAssociatorFixture fixtureClass;
-  //   dataAssociation result = fixtureClass.dA.compareLines(0,2);
-  //   BOOST_CHECK( result.confidence_score < 0);
-  // }
+  BOOST_AUTO_TEST_CASE( testInsertOrderedDataAssociationHighScore) {
+    PlainDataAssociatorFixture fixtureClass;
+    DataAssociationsFixture fixtureStructs;
+    fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association, fixtureStructs.associationsVec );
+    BOOST_CHECK_EQUAL( 4 , fixtureStructs.associationsVec.size());
+    dataAssociation d = fixtureStructs.associationsVec.at(1);
+    BOOST_CHECK_EQUAL( 100 , d.confidence_score);
+  }
+
+  BOOST_AUTO_TEST_CASE( testInsertOrderedDataAssociationLowScore) {
+    PlainDataAssociatorFixture fixtureClass;
+    DataAssociationsFixture fixtureStructs;
+    fixtureStructs.association.confidence_score = 10;
+    fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association, fixtureStructs.associationsVec );
+    BOOST_CHECK_EQUAL( 4 , fixtureStructs.associationsVec.size());
+    dataAssociation d = fixtureStructs.associationsVec.at(3);
+    BOOST_CHECK_EQUAL( 10 , d.confidence_score);
+  }
+
+  BOOST_AUTO_TEST_CASE( testInsertOrderedDataAssociationInvalid) {
+    PlainDataAssociatorFixture fixtureClass;
+    DataAssociationsFixture fixtureStructs;
+    fixtureStructs.association.confidence_score = -1;
+    fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association, fixtureStructs.associationsVec );
+    BOOST_CHECK_EQUAL( 3 , fixtureStructs.associationsVec.size());
+  }
+
+
+  BOOST_AUTO_TEST_CASE( testCompareLinesValid1) {
+    PlainDataAssociatorFixture fixtureClass;
+    dataAssociation result = fixtureClass.dA.compareLines(0,0);
+    BOOST_CHECK( result.confidence_score > 0);
+  }
+
+  BOOST_AUTO_TEST_CASE( testCompareLinesValid2) {
+    PlainDataAssociatorFixture fixtureClass;
+    dataAssociation result = fixtureClass.dA.compareLines(0,1);
+    BOOST_CHECK( result.confidence_score > 0);
+  }
+
+
+
+  BOOST_AUTO_TEST_CASE( testCompareLinesInvalid) {
+    PlainDataAssociatorFixture fixtureClass;
+    dataAssociation result = fixtureClass.dA.compareLines(0,2);
+    BOOST_CHECK( result.confidence_score < 0);
+  }
 
 
   BOOST_AUTO_TEST_CASE( testGetLineLength) {
@@ -248,15 +268,13 @@ namespace dyn_modeling{
     double result = fixture.dA.getLineOrientation( line1, fixture.oldscanPoints);
     double truth = 0;
     double diff = MyMath::boxMinusAngleRad(result , truth);
-    std::cout << result << " res  " << diff << "  1\n";
     BOOST_CHECK_SMALL( diff, 0.01);
     line line2;
     line2.first_index = 1;
     line2.second_index = 2;
     result = fixture.dA.getLineOrientation( line2, fixture.oldscanPoints);
-    truth = 0.785;
+    truth = M_PI/4;
     diff = MyMath::boxMinusAngleRad(result , truth);
-    std::cout << result << " res  " << diff << "  2\n";
     BOOST_CHECK_SMALL( diff , 0.01);
   }
 
@@ -289,8 +307,24 @@ namespace dyn_modeling{
   }
 
   BOOST_AUTO_TEST_CASE( testChooseBestAssociations) {
-    //TODO
-    BOOST_CHECK( true);
+    PlainDataAssociatorFixture fixtureClass;
+    DataAssociationsFixture fixtureStructs;
+    std::vector<dataAssociation> result = fixtureClass.dA.chooseBestAssociations( fixtureStructs.associationsMatrix );
+    BOOST_CHECK_EQUAL( result.size() , 3);
+    if ( result.size() == 3){
+      dataAssociation d1 = result.at(0);
+      dataAssociation d2 = result.at(1);
+      dataAssociation d3 = result.at(2);
+      BOOST_CHECK_EQUAL( d1.old_line_index, 2);
+      BOOST_CHECK_EQUAL( d1.new_line_index, 3);
+      BOOST_CHECK_EQUAL( d1.confidence_score, 120);
+      BOOST_CHECK_EQUAL( d2.old_line_index, 0);
+      BOOST_CHECK_EQUAL( d2.new_line_index, 0);
+      BOOST_CHECK_EQUAL( d2.confidence_score, 110);
+      BOOST_CHECK_EQUAL( d3.old_line_index, 1);
+      BOOST_CHECK_EQUAL( d3.new_line_index, 1);
+      BOOST_CHECK_EQUAL( d3.confidence_score, 20);
+   }
   }
 
   BOOST_AUTO_TEST_CASE( testRemoveTakenAssociations) {
