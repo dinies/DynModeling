@@ -5,8 +5,12 @@ add_executable( TestSlam
   ../../src/slam/Robot.cpp
   ../../src/slam/ScanMatcher.cpp
   ../../src/slam/Map.cpp
+  ../../src/slam/Graph.cpp
+  ../../src/slam/LineMatcher.cpp
+  ../../src/slam/DataAssociator.cpp
   ../../src/utils/MyMath.cpp
   ../../src/drawing/Drawer.cpp
+
   )
 
 target_link_libraries(

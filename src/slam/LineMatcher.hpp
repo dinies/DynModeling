@@ -17,18 +17,14 @@
 
 namespace dyn_modeling {
 
-  typedef struct line_tag{
-    int first_index;
-    int second_index;
-  } line;
-
 
   class LineMatcher{
+
   private:
     double m_distanceBetweenSPointsThreshold;
     double m_angularCoeffThreshold;
   public:
-    LineMatcher( double m_distanceBetweenSPointsThreshold , double m_angularCoeffThreshold );
+    LineMatcher( double t_distanceBetweenSPointsThreshold , double t_angularCoeffThreshold );
 
 
     inline double getDistanceBetweenSPointsThreshold() { return m_distanceBetweenSPointsThreshold;};

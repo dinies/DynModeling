@@ -14,8 +14,11 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE(behaviouralTest) {
     std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/realLaserScans.txt";
-    std::vector<double> initial_state = { 0, 0, 0 };
-    Slam slam = Slam(absolutePath, initial_state);
+    Eigen::Vector3d initial_state;
+    initial_state <<  0, 0, 0;
+    const double maxDistBetweenSPoints = 0.2;
+    const double maxAngularCoeff = 0.3;
+    Slam slam = Slam(absolutePath, initial_state, maxDistBetweenSPoints, maxAngularCoeff );
     slam.cycle();
     cv::waitKey();
   }

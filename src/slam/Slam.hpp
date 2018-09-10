@@ -11,27 +11,28 @@
 #include "Map.hpp"
 #include "Robot.hpp"
 #include "ScanMatcher.hpp"
+#include "LineMatcher.hpp"
+#include "DataAssociator.hpp"
+#include "Graph.hpp"
+
+
 
 
 namespace dyn_modeling {
   class Slam {
-    typedef struct node_tag{
-      state state;
-      std::vector<double> transf2currState;
-      std::vector<scanPoint> scanPoints_robotFrame;
-      std::vector<line> lines;
-    } node;
 
   private:
     Robot m_robot;
     ScanMatcher m_scanMatcher;
     Map m_map;
-    std::vector<node> m_nodes;
+    Graph m_graph;
+    LineMatcher m_lineMatcher;
 
 
   public:
-    Slam( const std::string &t_dataSet_AbsolPath, const std::vector<double> &t_initialRobotState);
+    Slam( const std::string &t_dataSet_AbsolPath, const Eigen::Vector3d &t_initialRobotState, const double maxDistBetweenSPoints, const double maxAngularCoeff);
     void cycle();
+    roundResult matchAssociatedData(const node &t_prevNode,const edge &t_currEdge,const node &t_currNode, const int t_icpIterations_cap );
     void preDrawingManagement( const int t_index);
     void postDrawingManagement( const int t_index);
     void plotStateEvolution(const double t_delta_t);

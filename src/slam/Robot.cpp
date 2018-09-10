@@ -61,8 +61,8 @@ namespace dyn_modeling {
 
   void Robot::updateState(const Eigen::Vector3d &t_deltaState){
     m_state.mu = Robot::boxPlus(m_state.mu, t_deltaState);
-    Eigen::Isometry2d transf = MyMath::v2t(t_deltaState);
-    Eigen::Matrix2d R = transf.linear();
+    // Eigen::Isometry2d transf = MyMath::v2t(t_deltaState);
+    // Eigen::Matrix2d R = transf.linear();
     //TODO
     // m_state.sigma = 8;
   }

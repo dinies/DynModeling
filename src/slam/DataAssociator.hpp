@@ -12,14 +12,9 @@
 
 namespace dyn_modeling {
 
-  typedef struct dataAssociation_tag{
-    int old_line_index;
-    int new_line_index;
-    double confidence_score;
-  } dataAssociation;
-
 
   class DataAssociator{
+
   private:
     int m_maxCandidates;
     double m_lengthDifferenceThreshold;

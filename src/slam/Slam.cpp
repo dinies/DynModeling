@@ -4,23 +4,25 @@
 namespace dyn_modeling {
 
 
-  Slam::Slam( const std::string &t_dataSet_AbsolPath, const std::vector<double> &t_initialRobotState):
+  Slam::Slam( const std::string &t_dataSet_AbsolPath, const Eigen::Vector3d &t_initialRobotState, const double maxDistBetweenSPoints, const double maxAngularCoeff ):
     m_robot(  Robot( t_dataSet_AbsolPath, t_initialRobotState) ),
     m_scanMatcher( ScanMatcher()),
-    m_map( Map())
-  {}
+    m_map( Map()),
+    m_lineMatcher( LineMatcher( maxDistBetweenSPoints, maxAngularCoeff))
+  {
+    m_graph = Graph( m_robot.getNumDataEntries());
+  }
 
 
   void Slam::cycle(){
     const int num_ranges = m_robot.getNumRanges();
     const int num_dataEntries = m_robot.getNumDataEntries();
-    m_nodes.reserve(num_dataEntries);
 
 
-
-    // const std::vector<double> initialGuessState = { 0, 0, 0};
     const int icpIterations_cap = 2;
-
+    const int maxCandidatesAssociation = 2;
+    const double maxLengthDiffAssociation = 0.3;
+    const double maxOrientationDiffAssociation = 0.3;
 
     // std::vector<double> old_robotState;
     // old_robotState.reserve(3);
@@ -30,42 +32,53 @@ namespace dyn_modeling {
     // newSPoints_robotFrame.reserve(num_ranges);
     // std::vector<double> new_robotState;
     // new_robotState.reserve(3);
+
     std::vector<scanPoint> drawingPoints_worldFrame;
     drawingPoints_worldFrame.reserve(num_ranges);
-    roundResult icpRes;
+    roundResult icpResult;
     m_scanMatcher.setKernelThreshold(0.5);
 
 
 
 
     node currNode;
-    currNode.state.reserve(3);
-    currNode.transf2currState.reserve(3);
     currNode.scanPoints_robotFrame.reserve(num_ranges);
     currNode.lines.reserve(num_ranges);
-    Map::showImg();
+    node prevNode;
+    edge currEdge;
 
+    m_map.showImg();
 
     for (int i = 0; i < num_dataEntries; ++i) {
 
       currNode.scanPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
-      currNode.lines = m_lineGenerator.generateLines( currNode.scanPoints_robotFrame );
+      currNode.lines = m_lineMatcher.generateLines( currNode.scanPoints_robotFrame );
+
 
       if ( i == 0 ){
-        currNode.state = m_robot.getState();
-        currNode.transf2currState = {0,0,0};
+        currNode.q.mu = m_robot.getState();
+
       }
       else{
-        // oldSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i - 1);
-        // oldSPoints_robotFrame = m_nodes.at(i - 1).scanPoints_robotFrame;
-        // newSPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
+        prevNode = m_graph.getNode(i -1);
 
-        icpRes = m_scanMatcher.icpRound(icpIterations_cap,initialGuessState,oldSPoints_robotFrame,newSPoints_robotFrame);
-        m_robot.updateState( icpRes.delta_x);
-        currNode.state = m_robot.getState();
-        currNode.transf2currState = icpRes.delta_x;
+        DataAssociator associator( maxCandidatesAssociation, maxLengthDiffAssociation, maxOrientationDiffAssociation, prevNode.lines, prevNode.scanPoints_robotFrame, currNode.lines, currNode. scanPoints_robotFrame );
+
+        currEdge.associations = associator.associateLines();
+        if ( currEdge.associations.size() >= 0){
+          icpResult = matchAssociatedData( prevNode, currEdge, currNode, icpIterations_cap );
+          m_robot.updateState( icpResult.delta_x);
+          currNode.mu= m_robot.getState();
+          currEdge.delta_x = icpResult.delta_x;
+        }
+        else{
+
+          std::cout << "No associations";
+        }
       }
-      m_nodes.push_back(currNode);
+
+      m_graph.insertNode( currNode);
+      m_graph.insertEdge( currEdge);
 
       //loop checker
       //TODO
@@ -75,9 +88,34 @@ namespace dyn_modeling {
       m_map.drawImages( newDrawingPoints_worldFrame , new_robotState , i);
       //TODO add lines to the drawing;  create line struct inside line generator class and implement a new line matching
       postDrawingManagement(i);
-   }
+    }
     m_robot.plotStateEvolution(0.01);
   }
+
+  roundResult Slam::matchAssociatedData(const node &t_prevNode, const edge &t_currEdge, const node &t_currNode, const int t_icpIterations_cap){
+    std::vector<scanPoint> prevSPointsAssociated;
+    prevSPointsAssociated.reserve( t_currEdge.associations.size()*2);
+    std::vector<scanPoint> currSPointsAssociated;
+    currSPointsAssociated.reserve( t_currEdge.associations.size()*2);
+    line linePrev;
+    line lineCurr;
+    const Eigen::Vector3d icpInitialGuess;
+    icpInitialGuess << 0 , 0, 0;
+
+    for ( auto association : t_currEdge.associations){
+
+      linePrev = t_prevNode.lines.at( association.old_line_index);
+      prevSPointsAssociated.push_back( t_prevNode.scanPoints_robotFrame.at( linePrev.first_index));
+      prevSPointsAssociated.push_back( t_prevNode.scanPoints_robotFrame.at( linePrev.second_index));
+
+      lineCurr= t_currNode.lines.at( association.new_line_index);
+      currSPointsAssociated.push_back( t_currNode.scanPoints_robotFrame.at( lineCurr.first_index));
+      currSPointsAssociated.push_back( t_currNode.scanPoints_robotFrame.at( lineCurr.second_index));
+    }
+    return m_scanMatcher.icpRound(t_icpIterations_cap ,icpInitialGuess, prevSPointsAssociated, currSPointsAssociated);
+  }
+
+
 
   void  Slam::preDrawingManagement( const int t_index){
     const int i = t_index;
@@ -115,12 +153,14 @@ namespace dyn_modeling {
     std::vector< boost::tuple<double,double>> y;
     std::vector< boost::tuple<double,double>> theta;
     std::vector< boost::tuple<double,double>> path;
-    for ( auto n : m_nodes){
-      x.push_back( boost::make_tuple( curr_t, n.state.at(0)));
-      y.push_back( boost::make_tuple( curr_t,n.state.at(1)));
-      theta.push_back( boost::make_tuple( curr_t,n.state.at(2)));
+    std::vector< node> nodes =  m_graph.getNodes();
+
+    for ( auto n : nodes){
+      x.push_back( boost::make_tuple( curr_t, n.mu(0)));
+      y.push_back( boost::make_tuple( curr_t,n.mu(1)));
+      theta.push_back( boost::make_tuple( curr_t,n.mu(2)));
       curr_t += t_delta_t;
-      path.push_back( boost::make_tuple( n.state.at(0),n.state.at(1)));
+      path.push_back( boost::make_tuple( n.mu(0),n.mu(1)));
     }
     Gnuplot gp;
     gp << "set terminal qt 1\n";
