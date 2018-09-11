@@ -28,7 +28,7 @@ namespace dyn_modeling {
     finalResult.chi = chis;
 
     //why we have to negate the delta_x ? Maybe wrong order of p_r and z ?
-    finalResult.delta_x =  finalResult.delta_x * -1;
+    // finalResult.delta_x =  finalResult.delta_x * -1;
     return finalResult;
   };
 

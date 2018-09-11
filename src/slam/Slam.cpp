@@ -19,19 +19,10 @@ namespace dyn_modeling {
     const int num_dataEntries = m_robot.getNumDataEntries();
 
 
-    const int icpIterations_cap = 2;
-    const int maxCandidatesAssociation = 2;
-    const double maxLengthDiffAssociation = 0.3;
-    const double maxOrientationDiffAssociation = 0.3;
-
-    // std::vector<double> old_robotState;
-    // old_robotState.reserve(3);
-    // std::vector<scanPoint> oldSPoints_robotFrame;
-    // oldSPoints_robotFrame.reserve(num_ranges);
-    // std::vector<scanPoint> newSPoints_robotFrame;
-    // newSPoints_robotFrame.reserve(num_ranges);
-    // std::vector<double> new_robotState;
-    // new_robotState.reserve(3);
+    const int icpIterations_cap = 4;
+    const int maxCandidatesAssociation = 5;
+    const double maxLengthDiffAssociation = 0.1;
+    const double maxOrientationDiffAssociation = 0.2;
 
     std::vector<scanPoint> drawingPoints_worldFrame;
     drawingPoints_worldFrame.reserve(num_ranges);
@@ -54,6 +45,7 @@ namespace dyn_modeling {
       currNode.scanPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
       currNode.lines = m_lineMatcher.generateLines( currNode.scanPoints_robotFrame );
 
+      std::cout << currNode.lines.size() << " lines \n" ;
 
       if ( i == 0 ){
         currNode.q = m_robot.getState();
@@ -63,8 +55,8 @@ namespace dyn_modeling {
         prevNode = m_graph.getNode(i -1);
 
         DataAssociator associator( maxCandidatesAssociation, maxLengthDiffAssociation, maxOrientationDiffAssociation, prevNode.lines, prevNode.scanPoints_robotFrame, currNode.lines, currNode. scanPoints_robotFrame );
-
         currEdge.associations = associator.associateLines();
+        std::cout << currEdge.associations.size() << " associations \n" ;
         if ( currEdge.associations.size() > 0){
           icpResult = matchAssociatedData( prevNode, currEdge, currNode, icpIterations_cap );
           m_robot.updateState( icpResult.delta_x);
@@ -72,8 +64,7 @@ namespace dyn_modeling {
           currEdge.delta_x = icpResult.delta_x;
         }
         else{
-
-          std::cout << "No associations";
+          std::cout << "No associations\n";
         }
       }
 
@@ -137,7 +128,7 @@ namespace dyn_modeling {
 
   void  Slam::postDrawingManagement( const int t_index){
     const int i = t_index;
-    if (i%10==0) {
+    if (i%30==0) {
       m_map.drawTrail(0,i);
     }
     else{

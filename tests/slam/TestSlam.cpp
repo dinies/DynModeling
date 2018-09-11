@@ -13,10 +13,11 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_SUITE( SlamClass)
 
   BOOST_AUTO_TEST_CASE(behaviouralTest) {
+    // std::string relativePath= "../files/datasets/first100data.txt";
     std::string relativePath= "../files/datasets/realLaserScans.txt";
     Eigen::Vector3d initial_state( 0,0,0);
-    const double maxDistBetweenSPoints = 0.2;
-    const double maxAngularCoeff = 0.3;
+    const double maxDistBetweenSPoints = 5;
+    const double maxAngularCoeff = 1.4;
     Slam slam = Slam(relativePath, initial_state, maxDistBetweenSPoints, maxAngularCoeff );
     slam.cycle();
     cv::waitKey();
