@@ -25,16 +25,16 @@ namespace dyn_modeling {
     m_spatialUnit = 0.4;
   };
 
-  std::vector< cv::Point2d> Map::computePointsRobot( const std::vector<double> &t_robotState ){
+  std::vector< cv::Point2d> Map::computePointsRobot( const state &t_robotState ){
     double robot_radius = m_spatialUnit*15;
     std::vector< cv::Point2d> pointVec;
     pointVec.reserve(6);
-    double curr_angle(M_PI/6 + t_robotState.at(2));
+    double curr_angle(M_PI/6 + t_robotState.mu(2));
     double angle_offset( M_PI/3);
     for (int i = 0; i < 6; ++i) {
-      std::vector<double> currPoint = { robot_radius, 0 };
+      Eigen::Vector2d currPoint(robot_radius, 0.0);
       MyMath::rotate2D( currPoint, curr_angle );
-      cv::Point2d p( currPoint.at(0) , currPoint.at(1));
+      cv::Point2d p( currPoint(0) , currPoint(1));
       pointVec.push_back(p);
       curr_angle += angle_offset;
     }
@@ -63,12 +63,11 @@ namespace dyn_modeling {
     for (auto p : t_points){
       m_drawer.drawPatch(m_drawingMap, p, t_color);
     }
- };
-  
-  void Map::drawImages(const std::vector<scanPoint> &t_scanPoints_worldFrame,const std::vector<double> &t_robotState ,const int t_index){
+  };
+
+  void Map::drawImages(const std::vector<scanPoint> &t_scanPoints_worldFrame,const state &t_robotState ,const int t_index){
     drawingData dD;
     dD.index = t_index;
-    dD.robot_state.reserve(3);
     dD.robot_drawing.reserve(6);
     dD.scans_drawing.reserve(t_scanPoints_worldFrame.size());
     dD.robot_state = t_robotState;
@@ -85,7 +84,7 @@ namespace dyn_modeling {
     if ( t_indexFrom <= t_indexTo && t_indexTo <= m_drawingList.size()-1){
       for (int i = t_indexFrom; i <= t_indexTo ; ++i) {
         drawingData dD = m_drawingList.at(i);
-        cv::Point2d p( dD.robot_state.at(0), dD.robot_state.at(1));
+        cv::Point2d p( dD.robot_state.mu(0), dD.robot_state.mu(1));
         m_drawer.drawPatch(m_drawingMap, p, m_colors.darkBrown);
       }
     }
@@ -123,6 +122,4 @@ namespace dyn_modeling {
     cv::imshow("Map",m_drawingMap);
     cv::imshow("Robot",m_drawingRobot);
   };
-
-
 }

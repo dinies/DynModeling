@@ -97,9 +97,9 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE(drawLinesRealDataPoints) {
 
-    std::string absolutePath = "/home/dinies/gitrepos/DynModeling/files/datasets/exampleDataSetOneline.txt";
-    std::vector<double> initial_state = { 0, 0, 0};
-    Robot r = Robot(absolutePath, initial_state);
+    std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
+    Eigen::Vector3d initial_state(0.0, 0.0, 0.0);
+    Robot r = Robot(relativePath, initial_state);
 
     int num_data_entries = r.getNumDataEntries();
     BOOST_CHECK_EQUAL( num_data_entries , 1);
@@ -136,9 +136,9 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE(drawLinesTwoSubsequentDataPoints) {
 
-    std::string absolutePath = "/home/dinies/gitrepos/DynModeling/files/datasets/realLaserScans.txt";
-    std::vector<double> initial_state = { 0, 0, 0};
-    Robot r = Robot(absolutePath, initial_state);
+    std::string relativePath= "../files/datasets/realLaserScans.txt";
+    Eigen::Vector3d initial_state(0.0, 0.0, 0.0);
+    Robot r = Robot(relativePath, initial_state);
 
     int num_data_entries = r.getNumDataEntries();
     std::vector< scanPoint > scanPoints_1 = r.retrieveScanPointsRobotFrame(1100);

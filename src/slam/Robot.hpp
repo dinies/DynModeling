@@ -10,10 +10,6 @@
 #include "../utils/MyMath.hpp"
 #include "DatasetManager.hpp"
 namespace dyn_modeling {
-  typedef struct state_tag{
-    Eigen::Vector3d mu;
-    Eigen::Matrix3d sigma;
-  } state;
 
   class Robot{
   private:
@@ -24,6 +20,7 @@ namespace dyn_modeling {
     Robot( const std::string &t_dataSet_AbsolPath , const Eigen::Vector3d &t_initial_state);
 
     inline state getState() { return m_state; };
+
     inline void setState(state &t_newState ) { m_state = t_newState; };
 
     std::vector<scanPoint> retrieveScanPointsRobotFrame( int t_index_datanode );

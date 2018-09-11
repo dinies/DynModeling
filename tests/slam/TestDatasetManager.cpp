@@ -14,8 +14,8 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE(parseOnelineFile) {
 
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/exampleDataSetOneline.txt";
-    datasetParams params =  DatasetManager::parseStaticParameters(absolutePath);
+    std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
+    datasetParams params =  DatasetManager::parseStaticParameters(relativePath);
     BOOST_CHECK_EQUAL( params.tag  , "LASER_MESSAGE");
     if (params.tag == "LASER_MESSAGE"){
       BOOST_CHECK_EQUAL( params.topic  , "/scan");
@@ -33,7 +33,7 @@ namespace dyn_modeling{
   }
 
   BOOST_AUTO_TEST_CASE( parseDatasetTwoLines) {
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/exampleDataSetTwoLines.txt";
+    std::string relativePath= "../files/datasets/exampleDataSetTwoLines.txt";
     datasetParams params;
     params.tag =  "LASER_MESSAGE";
     params.topic = "/scan";
@@ -48,7 +48,7 @@ namespace dyn_modeling{
     params.ranges_size  = 721;
     params.intensities  = 0;
 
-    dataSet result_dS = DatasetManager::parseDataSet(absolutePath, params);
+    dataSet result_dS = DatasetManager::parseDataSet(relativePath, params);
 
     BOOST_CHECK_EQUAL( result_dS.size() , 2);
 
@@ -67,8 +67,8 @@ namespace dyn_modeling{
   }
   BOOST_AUTO_TEST_CASE( DMconstructorWithDummyFile) {
 
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/dummyDataSet.txt";
-    DatasetManager dm = DatasetManager(absolutePath);
+    std::string relativePath= "../files/datasets/dummyDataSet.txt";
+    DatasetManager dm = DatasetManager(relativePath);
     BOOST_CHECK_EQUAL( dm.m_staticParams.tag  , "LASER_MESSAGE");
 
     if (dm.m_staticParams.tag == "LASER_MESSAGE"){
@@ -88,8 +88,8 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE( DMconstructorWithSimilRealfile ) {
 
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/exampleDataSetOneline.txt";
-    DatasetManager dm = DatasetManager(absolutePath);
+    std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
+    DatasetManager dm = DatasetManager(relativePath);
     BOOST_CHECK_EQUAL( dm.m_staticParams.tag  , "LASER_MESSAGE");
 
     if (dm.m_staticParams.tag == "LASER_MESSAGE"){
@@ -108,8 +108,8 @@ namespace dyn_modeling{
   }
   BOOST_AUTO_TEST_CASE(SpanningAngles ) {
 
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/dummyDataSet.txt";
-    DatasetManager dm = DatasetManager(absolutePath);
+    std::string relativePath= "../files/datasets/dummyDataSet.txt";
+    DatasetManager dm = DatasetManager(relativePath);
     std::vector<double> spanning_angles = dm.getSpanningAngles();
 
 
@@ -126,8 +126,8 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE(nodeRanges) {
 
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/dummyDataSet.txt";
-    DatasetManager dm = DatasetManager(absolutePath);
+    std::string relativePath= "../files/datasets/dummyDataSet.txt";
+    DatasetManager dm = DatasetManager(relativePath);
 
     int num_data_entries = dm.getNumDataEntries();
     BOOST_CHECK_EQUAL( num_data_entries , 1);

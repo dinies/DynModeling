@@ -56,7 +56,7 @@ namespace dyn_modeling {
 
 
       if ( i == 0 ){
-        currNode.q.mu = m_robot.getState();
+        currNode.q = m_robot.getState();
 
       }
       else{
@@ -65,10 +65,10 @@ namespace dyn_modeling {
         DataAssociator associator( maxCandidatesAssociation, maxLengthDiffAssociation, maxOrientationDiffAssociation, prevNode.lines, prevNode.scanPoints_robotFrame, currNode.lines, currNode. scanPoints_robotFrame );
 
         currEdge.associations = associator.associateLines();
-        if ( currEdge.associations.size() >= 0){
+        if ( currEdge.associations.size() > 0){
           icpResult = matchAssociatedData( prevNode, currEdge, currNode, icpIterations_cap );
           m_robot.updateState( icpResult.delta_x);
-          currNode.mu= m_robot.getState();
+          currNode.q= m_robot.getState();
           currEdge.delta_x = icpResult.delta_x;
         }
         else{
@@ -85,11 +85,12 @@ namespace dyn_modeling {
 
       drawingPoints_worldFrame = m_robot.changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame );
       preDrawingManagement(i-1);
-      m_map.drawImages( newDrawingPoints_worldFrame , new_robotState , i);
+      m_map.drawImages( drawingPoints_worldFrame , currNode.q , i);
       //TODO add lines to the drawing;  create line struct inside line generator class and implement a new line matching
       postDrawingManagement(i);
+      std::cout << i << " iteration \n";
     }
-    m_robot.plotStateEvolution(0.01);
+    plotStateEvolution(0.01);
   }
 
   roundResult Slam::matchAssociatedData(const node &t_prevNode, const edge &t_currEdge, const node &t_currNode, const int t_icpIterations_cap){
@@ -99,7 +100,7 @@ namespace dyn_modeling {
     currSPointsAssociated.reserve( t_currEdge.associations.size()*2);
     line linePrev;
     line lineCurr;
-    const Eigen::Vector3d icpInitialGuess;
+    Eigen::Vector3d icpInitialGuess;
     icpInitialGuess << 0 , 0, 0;
 
     for ( auto association : t_currEdge.associations){
@@ -156,11 +157,11 @@ namespace dyn_modeling {
     std::vector< node> nodes =  m_graph.getNodes();
 
     for ( auto n : nodes){
-      x.push_back( boost::make_tuple( curr_t, n.mu(0)));
-      y.push_back( boost::make_tuple( curr_t,n.mu(1)));
-      theta.push_back( boost::make_tuple( curr_t,n.mu(2)));
+      x.push_back( boost::make_tuple( curr_t, n.q.mu(0)));
+      y.push_back( boost::make_tuple( curr_t,n.q.mu(1)));
+      theta.push_back( boost::make_tuple( curr_t,n.q.mu(2)));
       curr_t += t_delta_t;
-      path.push_back( boost::make_tuple( n.mu(0),n.mu(1)));
+      path.push_back( boost::make_tuple( n.q.mu(0),n.q.mu(1)));
     }
     Gnuplot gp;
     gp << "set terminal qt 1\n";

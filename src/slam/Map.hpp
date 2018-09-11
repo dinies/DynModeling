@@ -10,15 +10,17 @@
 
 #include "../drawing/Drawer.hpp"
 #include "../utils/MyMath.hpp"
+#include "../../include/structs.hpp"
 
 namespace dyn_modeling {
 
   typedef struct drawingData_tag{
     int index;
-    std::vector<double> robot_state;
+    state robot_state;
     std::vector<cv::Point2d> robot_drawing;
     std::vector<cv::Point2d> scans_drawing;
   }drawingData;
+
 
   typedef struct colors_tag{
     cv::Scalar green;
@@ -47,7 +49,7 @@ namespace dyn_modeling {
   public:
     Map();
 
-    std::vector< cv::Point2d> computePointsRobot( const std::vector<double> &t_robotState );
+    std::vector< cv::Point2d> computePointsRobot( const state &t_robotState );
 
     std::vector< cv::Point2d> computePointsScans( const std::vector<scanPoint> &t_scanPoints_worldFrame);
 
@@ -55,7 +57,7 @@ namespace dyn_modeling {
 
     void drawScans( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color);
 
-    void drawImages(const std::vector<scanPoint> &t_scanPoints_worldFrame,const std::vector<double> &t_robotState,const int t_index );
+    void drawImages(const std::vector<scanPoint> &t_scanPoints_worldFrame,const state &t_robotState,const int t_index );
 
     void drawTrail(const int t_indexFrom, const int t_indexTo);
 

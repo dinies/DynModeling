@@ -6,17 +6,17 @@
 #include <boost/test/unit_test.hpp>
 #include <Eigen/Core>
 
-
-#include "../../src/slam/Robot.hpp"
+#include "include/structs.hpp"
+#include "src/slam/Robot.hpp"
 
 
 namespace dyn_modeling{
 
   BOOST_AUTO_TEST_SUITE( Rob)
   BOOST_AUTO_TEST_CASE( retrieveScanPointsDummyDataset) {
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/dummyDataSet.txt";
-    std::vector<double> initial_state = { 0, 0, 0};
-    Robot r = Robot(absolutePath, initial_state);
+    std::string relativePath= "../files/datasets/dummyDataSet.txt";
+    Eigen::Vector3d initial_state (0.0, 0.0, 0.0);
+    Robot r = Robot(relativePath, initial_state);
 
     BOOST_CHECK_EQUAL( r.getNumDataEntries(),1);
     if(r.getNumDataEntries()==1){
@@ -44,10 +44,9 @@ namespace dyn_modeling{
  }
 
   BOOST_AUTO_TEST_CASE( retrieveScanPoints) {
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/exampleDataSetOneline.txt";
-    std::vector<double> initial_state = { 0, 0, 0};
-    Robot r = Robot(absolutePath, initial_state);
-
+    std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
+    Eigen::Vector3d initial_state (0.0, 0.0, 0.0);
+    Robot r = Robot(relativePath, initial_state);
     int num_data_entries = r.getNumDataEntries();
     BOOST_CHECK_EQUAL( num_data_entries , 1);
     if (num_data_entries == 1){
@@ -70,15 +69,15 @@ namespace dyn_modeling{
   }
 
   BOOST_AUTO_TEST_CASE(updateState){
-    std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/exampleDataSetOneline.txt";
-    std::vector<double> initial_state = { 0, 0, 0};
-    Robot r = Robot(absolutePath, initial_state);
-    std::vector<double> delta_state = { 4 , -2 , -M_PI/4};
-    std::vector<double> truth_state = { 4 , -2 , -M_PI/4};
+    std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
+    Eigen::Vector3d initial_state (0.0, 0.0, 0.0);
+    Robot r = Robot(relativePath, initial_state);
+    Eigen::Vector3d delta_state( 4.0 , -2.0 , -M_PI/4);
+    Eigen::Vector3d truth_state( 4.0 , -2.0 , -M_PI/4);
     r.updateState( delta_state);
     double threshold = 0.01;
-    for ( int i = 0; i < truth_state.size(); ++i){
-      BOOST_CHECK_SMALL( r.getState().at(i) - truth_state.at(i),threshold);
+    for ( int i = 0; i < 3; ++i){
+      BOOST_CHECK_SMALL( r.getState().mu(i) - truth_state(i),threshold);
     }
   }
 

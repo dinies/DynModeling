@@ -21,7 +21,14 @@ namespace dyn_modeling{
     double confidence_score;
   } dataAssociation;
 
-
+  typedef struct state_tag{
+    Eigen::Vector3d mu;
+    Eigen::Matrix3d sigma;
+  } state;
 
 }
+
+
+
+
 

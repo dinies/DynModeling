@@ -370,7 +370,7 @@ namespace dyn_modeling{
     DataAssociationsFixture fixtureStructs;
     bool result = fixtureClass.dA.associationsAllTaken(fixtureStructs.associationsMatrix);
     BOOST_CHECK( !result );
-  }
+ }
 
 
 

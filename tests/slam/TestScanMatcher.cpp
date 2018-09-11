@@ -17,7 +17,7 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_CASE(translationalICPscanMatchingFromOrigin) {
 
     ScanMatcher sM = ScanMatcher();
-    std::vector<double> state = { 0 ,0 ,0};
+    Eigen::Vector3d initialGuess(0.0 ,0.0 ,0.0);
 
     Eigen::Vector2d t(-3,0);
     scanPoint sp1;
@@ -53,19 +53,19 @@ namespace dyn_modeling{
 
     const std::vector<scanPoint> oldSPoints_robot ={ sp1,sp2,sp3,sp4,sp5};
     const std::vector<scanPoint> newSPoints_robot ={ sp6,sp7,sp8,sp9,sp10};
-    roundResult icpRes = sM.icpRound(5,state,oldSPoints_robot, newSPoints_robot);
+    roundResult icpRes = sM.icpRound(5,initialGuess,oldSPoints_robot, newSPoints_robot);
     std::cout << " translational num of iters " << icpRes.chi.size() <<"\n";
     std::vector<double> truthTransf = { - t(0), - t(1),0};
     double threshold = 0.02;
     for ( int i = 0; i < 3; ++i){
-      BOOST_CHECK_SMALL(icpRes.delta_x.at(i) - truthTransf.at(i),threshold);
+      BOOST_CHECK_SMALL(icpRes.delta_x(i) - truthTransf.at(i),threshold);
     }
   }
 
   BOOST_AUTO_TEST_CASE(rotationalICPscanMatchingFromOrigin) {
 
     ScanMatcher sM = ScanMatcher();
-    std::vector<double> state = { 0 ,0 ,0};
+    Eigen::Vector3d initialGuess(0.0 ,0.0 ,0.0);
     double angle = M_PI/3;
     Eigen::Matrix2d R;
     R << cos(angle ), -sin(angle),
@@ -106,12 +106,12 @@ namespace dyn_modeling{
     const std::vector<scanPoint> newSPoints_robot ={ sp6,sp7,sp8,sp9,sp10};
 
 
-    roundResult icpRes = sM.icpRound(5,state,oldSPoints_robot, newSPoints_robot);
+    roundResult icpRes = sM.icpRound(5,initialGuess,oldSPoints_robot, newSPoints_robot);
     std::cout << " rotational num of iters " << icpRes.chi.size() <<"\n";
     std::vector<double> truthTransf = {0,0, - angle};
     double threshold = 0.02;
     for ( int i = 0; i < 3; ++i){
-      BOOST_CHECK_SMALL( icpRes.delta_x.at(i) - truthTransf.at(i),threshold);
+      BOOST_CHECK_SMALL( icpRes.delta_x(i) - truthTransf.at(i),threshold);
     }
   }
 
@@ -121,7 +121,7 @@ namespace dyn_modeling{
   //   double bias_x = 3;
   //   double bias_y = -2;
   //   double bias_theta = 0.3;
-  //   std::vector<double> state = { bias_x ,bias_y ,bias_theta};
+  //   Eigen::Vector3d initialGuess(bias_x ,bias_y ,bias_theta);
   //   double angle = M_PI/3;
   //   Eigen::Matrix2d R;
   //   R << cos(angle ), -sin(angle),
@@ -161,7 +161,7 @@ namespace dyn_modeling{
   //   const std::vector<scanPoint> oldSPoints_robot ={ sp1,sp2,sp3,sp4,sp5};
   //   const std::vector<scanPoint> newSPoints_robot ={ sp6,sp7,sp8,sp9,sp10};
 
-  //   roundResult icpRes = sM.icpRound(5,state,oldSPoints_robot, newSPoints_robot);
+  //   roundResult icpRes = sM.icpRound(5,initialGuess,oldSPoints_robot, newSPoints_robot);
   //   std::cout << " rotational num of iters " << icpRes.chi.size() <<"\n";
   //   std::vector<double> truthTransf = {0,0,angle};
   //   double threshold = 0.02;

@@ -51,15 +51,23 @@ namespace dyn_modeling {
   };
 
 
-  void MyMath::rotate2D( std::vector<double> &t_point, const double t_angle_rad ){
+  // void MyMath::rotate2D( std::vector<double> &t_point, const double t_angle_rad ){
+  //   Eigen::Matrix2d R;
+  //   R << cos(t_angle_rad ), -sin(t_angle_rad),
+  //     sin(t_angle_rad), cos(t_angle_rad);
+  //   Eigen::Vector2d p_old( t_point.at(0) , t_point.at(1));
+  //   Eigen::Vector2d p_new = R* p_old;
+  //   t_point.at(0) = p_new(0);
+  //   t_point.at(1) = p_new(1);
+  // };
+
+
+  void MyMath::rotate2D( Eigen::Vector2d &t_point, const double t_angle_rad ){
     Eigen::Matrix2d R;
     R << cos(t_angle_rad ), -sin(t_angle_rad),
       sin(t_angle_rad), cos(t_angle_rad);
-    Eigen::Vector2d p_old( t_point.at(0) , t_point.at(1));
-    Eigen::Vector2d p_new = R* p_old;
-    t_point.at(0) = p_new(0);
-    t_point.at(1) = p_new(1);
-  };
+    t_point = R * t_point;
+ };
 
   std::vector<double> MyMath::vecSum(const std::vector<double> &t_first,const std::vector<double> &t_second){
     std::vector<double> result;

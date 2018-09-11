@@ -9,6 +9,7 @@
 #include <Eigen/Core>
 
 #include "../../src/slam/Map.hpp"
+#include "../../include/structs.hpp"
 
 
 namespace dyn_modeling{
@@ -16,7 +17,8 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE(drawRobotTest) {
     Map m =  Map();
-    std::vector<double> robotState = { 200,  200 , 1};
+    state robotState;
+    robotState.mu << 200.0,  200.0 , 1.0;
     std::vector< cv::Point2d> points = m.computePointsRobot(robotState);
     cv::Scalar blue = { 233, 0 , 0};
     m.drawRobot(points, blue);

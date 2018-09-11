@@ -14,7 +14,7 @@ namespace dyn_modeling {
     int i = 0;
     iterResult curr_result;
     roundResult finalResult;
-    finalResult.delta_x = {0 ,0 ,0};
+    finalResult.delta_x << 0.0 ,0.0 ,0.0 ;
     Eigen::Vector3d curr_guess = t_initialGuessState;
     while (i < t_numIterations && chi>epsilon){
       curr_result = icpIterationRframe(curr_guess, t_oldScanPoints_robot, t_newScanPoints_robot);
@@ -22,7 +22,7 @@ namespace dyn_modeling {
       // std::cout << curr_result.outliers << "\n";
       chis.push_back(chi);
       curr_guess = Robot::boxPlus(curr_guess,curr_result.delta_x);
-      finalResult.delta_x = MyMath::vecSum(finalResult.delta_x,curr_result.delta_x);
+      finalResult.delta_x = finalResult.delta_x + curr_result.delta_x;
       ++i;
     }
     finalResult.chi = chis;

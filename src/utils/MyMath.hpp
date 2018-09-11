@@ -20,7 +20,7 @@ namespace dyn_modeling {
     static Eigen::Isometry2d v2t(const Eigen::Vector3d &t_vec);
     static Eigen::Vector3d t2v(const Eigen::Isometry2d& t_transf);
 
-    static void rotate2D( std::vector<double> &t_point, const double t_angle_rad );
+    static void rotate2D( Eigen::Vector2d &t_point, const double t_angle_rad );
 
     static std::vector<double> vecSum(const std::vector<double> &t_first,const std::vector<double> &t_second);
 
