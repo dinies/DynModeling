@@ -27,9 +27,18 @@ namespace dyn_modeling {
     }
     finalResult.chi = chis;
 
+    if ( std::isnan( finalResult.delta_x(0)) || std::isnan( finalResult.delta_x(1)) || std::isnan( finalResult.delta_x(2)) ){
+      roundResult zero_result;
+      zero_result.delta_x << 0.0 ,0.0 ,0.0;
+      zero_result.chi = chis;
+      return zero_result;
+    }
+    else{
+      return finalResult;
+    }
+
     //why we have to negate the delta_x ? Maybe wrong order of p_r and z ?
     // finalResult.delta_x =  finalResult.delta_x * -1;
-    return finalResult;
   };
 
 

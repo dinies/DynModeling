@@ -75,7 +75,6 @@ namespace dyn_modeling {
     dD.scans_drawing = computePointsScans( t_scanPoints_worldFrame);
     drawRobot( dD.robot_drawing, m_colors.darkBrown);
     drawScans( dD.scans_drawing, m_colors.lightBlue);
-
     m_drawingList.push_back(dD);
   };
 

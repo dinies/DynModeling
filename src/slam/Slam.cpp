@@ -45,7 +45,7 @@ namespace dyn_modeling {
       currNode.scanPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i);
       currNode.lines = m_lineMatcher.generateLines( currNode.scanPoints_robotFrame );
 
-      std::cout << currNode.lines.size() << " lines \n" ;
+      // std::cout << currNode.lines.size() << " lines \n" ;
 
       if ( i == 0 ){
         currNode.q = m_robot.getState();
@@ -56,11 +56,18 @@ namespace dyn_modeling {
 
         DataAssociator associator( maxCandidatesAssociation, maxLengthDiffAssociation, maxOrientationDiffAssociation, prevNode.lines, prevNode.scanPoints_robotFrame, currNode.lines, currNode. scanPoints_robotFrame );
         currEdge.associations = associator.associateLines();
-        std::cout << currEdge.associations.size() << " associations \n" ;
+        // std::cout << currEdge.associations.size() << " associations \n" ;
         if ( currEdge.associations.size() > 0){
           icpResult = matchAssociatedData( prevNode, currEdge, currNode, icpIterations_cap );
           m_robot.updateState( icpResult.delta_x);
           currNode.q= m_robot.getState();
+
+          // std::cout  << icpResult.delta_x(0) << "; "<< icpResult.delta_x(1) << "; " << icpResult.delta_x(2) << " dX \n";
+          // Eigen::Vector3d curr_state= currNode.q.mu;
+          // if ( std::isnan( curr_state(0)) || std::isnan( curr_state(1)) || std::isnan( curr_state(2)) ){
+          //   std::cout << "NAN \n";
+          // }
+
           currEdge.delta_x = icpResult.delta_x;
         }
         else{
@@ -75,11 +82,12 @@ namespace dyn_modeling {
       //TODO
 
       drawingPoints_worldFrame = m_robot.changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame );
+
       preDrawingManagement(i-1);
       m_map.drawImages( drawingPoints_worldFrame , currNode.q , i);
       //TODO add lines to the drawing;  create line struct inside line generator class and implement a new line matching
       postDrawingManagement(i);
-      std::cout << i << " iteration \n";
+      // std::cout << i << " iteration \n";
     }
     plotStateEvolution(0.01);
   }
@@ -104,9 +112,11 @@ namespace dyn_modeling {
       currSPointsAssociated.push_back( t_currNode.scanPoints_robotFrame.at( lineCurr.first_index));
       currSPointsAssociated.push_back( t_currNode.scanPoints_robotFrame.at( lineCurr.second_index));
     }
-    return m_scanMatcher.icpRound(t_icpIterations_cap ,icpInitialGuess, prevSPointsAssociated, currSPointsAssociated);
-  }
+    roundResult result = m_scanMatcher.icpRound(t_icpIterations_cap ,icpInitialGuess, prevSPointsAssociated, currSPointsAssociated);
+    Eigen::Vector3d delta_x = result.delta_x;
 
+    return result;
+  }
 
 
   void  Slam::preDrawingManagement( const int t_index){
@@ -121,8 +131,8 @@ namespace dyn_modeling {
     if (i-20 > 0){
       m_map.fadeScanPoints(i-20);
     }
-    if (i-200 > 0){
-      m_map.deleteScanPoints(i-200);
+    if (i-50 > 0){
+      m_map.deleteScanPoints(i-50);
     }
   }
 
