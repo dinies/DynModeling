@@ -34,7 +34,7 @@ namespace dyn_modeling {
     inline int getNumRanges() { return m_datasetManager.getNumRanges(); }
 
 
-    static Eigen::Vector3d boxPlus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second);
+    static Eigen::Vector3d boxPlus(const Eigen::Vector3d &t_x,const Eigen::Vector3d &t_delta_x);
 
     static Eigen::Vector3d boxMinus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second);
 
