@@ -34,10 +34,11 @@ namespace dyn_modeling {
     inline int getNumRanges() { return m_datasetManager.getNumRanges(); }
 
 
-
     static Eigen::Vector3d boxPlus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second);
 
     static Eigen::Vector3d boxMinus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second);
+
+    static std::vector<scanPoint> computeMiddleScanPoints( const scanPoint &t_s1, const scanPoint &t_s2, const int t_numMidPoints);
 
   };
 }

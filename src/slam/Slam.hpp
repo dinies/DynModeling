@@ -19,6 +19,12 @@
 
 
 namespace dyn_modeling {
+  typedef struct resultMatchAssociations_tag{
+    roundResult icpResult;
+    std::vector<scanPoint> prevAssociationPoints;
+    std::vector<scanPoint> currAssociationPoints;
+  } resultMatchAssociations;
+
   class Slam {
 
   private:
@@ -30,9 +36,9 @@ namespace dyn_modeling {
 
 
   public:
-    Slam( const std::string &t_dataSet_AbsolPath, const Eigen::Vector3d &t_initialRobotState, const double maxDistBetweenSPoints, const double maxAngularCoeff);
+    Slam( const std::string &t_dataSet_AbsolPath, const Eigen::Vector3d &t_initialRobotState, const double t_maxDistBetweenRanges, const double t_maxAngularCoeff, const double t_minLength);
     void cycle();
-    roundResult matchAssociatedData(const node &t_prevNode,const edge &t_currEdge,const node &t_currNode, const int t_icpIterations_cap );
+    resultMatchAssociations matchAssociatedData(const node &t_prevNode,const edge &t_currEdge,const node &t_currNode, const int t_icpIterations_cap, const int numMidPoints);
     void preDrawingManagement( const int t_index);
     void postDrawingManagement( const int t_index);
     void plotStateEvolution(const double t_delta_t);

@@ -38,9 +38,6 @@ namespace dyn_modeling{
         }
       }
     }
-
-
-
  }
 
   BOOST_AUTO_TEST_CASE( retrieveScanPoints) {
@@ -80,6 +77,56 @@ namespace dyn_modeling{
       BOOST_CHECK_SMALL( r.getState().mu(i) - truth_state(i),threshold);
     }
   }
+
+  BOOST_AUTO_TEST_CASE(computeMiddleScanPointsFirstQuadrant){
+    scanPoint s1;
+    scanPoint s2;
+    s1.coords << 2, 2;
+    s2.coords << 4, 4;
+
+    std::vector<scanPoint> sVec = Robot::computeMiddleScanPoints( s1, s2, 1);
+
+    BOOST_CHECK_EQUAL( sVec.size(), 1);
+    if ( sVec.size() == 1){
+      double threshold = 0.01;
+      BOOST_CHECK_SMALL( sVec.at(0).coords(0) - 3,threshold);
+      BOOST_CHECK_SMALL( sVec.at(0).coords(1) - 3,threshold);
+    }
+  }
+
+  BOOST_AUTO_TEST_CASE(computeMiddleScanPointsFourthQuadrant){
+    scanPoint s1;
+    scanPoint s2;
+    s1.coords << 1, -1;
+    s2.coords << 9, -5;
+
+    std::vector<scanPoint> sVec = Robot::computeMiddleScanPoints( s1, s2, 1);
+    BOOST_CHECK_EQUAL( sVec.size(), 1);
+    if ( sVec.size() == 1){
+      double threshold = 0.01;
+      BOOST_CHECK_SMALL( sVec.at(0).coords(0) - 5,threshold);
+      BOOST_CHECK_SMALL( sVec.at(0).coords(1) + 3,threshold);
+    }
+  }
+
+  BOOST_AUTO_TEST_CASE(computeMiddleScanPointsSecondQuadrant2points){
+    scanPoint s1;
+    scanPoint s2;
+    s1.coords << -1, 1;
+    s2.coords << -10, 7;
+    std::vector<scanPoint> sVec = Robot::computeMiddleScanPoints( s1, s2, 2);
+
+    BOOST_CHECK_EQUAL( sVec.size(), 2);
+    if ( sVec.size() == 2){
+      double threshold = 0.01;
+      BOOST_CHECK_SMALL( sVec.at(0).coords(0) + 4,threshold);
+      BOOST_CHECK_SMALL( sVec.at(0).coords(1) - 3,threshold);
+      BOOST_CHECK_SMALL( sVec.at(1).coords(0) + 7,threshold);
+      BOOST_CHECK_SMALL( sVec.at(1).coords(1) - 5,threshold);
+    }
+  }
+
+
 
   BOOST_AUTO_TEST_SUITE_END()
 }

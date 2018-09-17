@@ -70,6 +70,7 @@ add_executable( TestDrawLines
   ../../src/slam/DatasetManager.cpp
   ../../src/slam/Robot.cpp
   ../../src/slam/LineMatcher.cpp
+  ../../src/slam/Map.cpp
   ../../src/utils/MyMath.cpp
   ../../src/drawing/Drawer.cpp
   )

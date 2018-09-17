@@ -48,7 +48,28 @@ namespace dyn_modeling {
     return scanPvec_worldFrame;
   };
 
+  std::vector<scanPoint> Robot::computeMiddleScanPoints( const scanPoint &t_s1, const scanPoint &t_s2, const int t_numMidPoints){
+
+    std::vector<scanPoint> middleScanPoints;
+    middleScanPoints.reserve( t_numMidPoints);
+    double dx = ( t_s2.coords(0) - t_s1.coords(0))/ (t_numMidPoints + 1);
+    double dy = ( t_s2.coords(1) - t_s1.coords(1))/ (t_numMidPoints + 1);
+    double x0{t_s1.coords(0) };
+    double y0{t_s1.coords(1) };
+
+    for ( int i = 1; i <= t_numMidPoints ; ++i){
+      scanPoint s;
+      x0 += dx;
+      y0 += dy;
+      s.coords << x0,y0;
+      middleScanPoints.push_back(s);
+    }
+    return middleScanPoints;
+  }
+
   Eigen::Vector3d Robot::boxPlus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second){
+
+    //TODO  rewrite see foundamental comment below
     Eigen::Vector3d result(  t_first(0) + t_second(0),  t_first(1) + t_second(1), MyMath::boxPlusAngleRad(t_first(2), t_second(2)));
     return result;
   }
@@ -61,6 +82,11 @@ namespace dyn_modeling {
 
   void Robot::updateState(const Eigen::Vector3d &t_deltaState){
     m_state.mu = Robot::boxPlus(m_state.mu, t_deltaState);
+    // TODO foundamental the update is now in robot frame , now we need to transform the reference frame of the update so we need to work with homogeneous matrices so using v2t on the current state and on the delta x we obtain two matrices that have to be concatenated.
+
+    
+
+
     // Eigen::Isometry2d transf = MyMath::v2t(t_deltaState);
     // Eigen::Matrix2d R = transf.linear();
     //TODO

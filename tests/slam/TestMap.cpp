@@ -19,7 +19,8 @@ namespace dyn_modeling{
     Map m =  Map();
     state robotState;
     robotState.mu << 200.0,  200.0 , 1.0;
-    std::vector< cv::Point2d> points = m.computePointsRobot(robotState);
+    const double radius = 3;
+    std::vector< cv::Point2d> points = Map::computePointsRobot(robotState, radius);
     cv::Scalar blue = { 233, 0 , 0};
     m.drawRobot(points, blue);
     m.showImg();

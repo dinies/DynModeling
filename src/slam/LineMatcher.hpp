@@ -21,19 +21,24 @@ namespace dyn_modeling {
   class LineMatcher{
 
   private:
-    double m_distanceBetweenSPointsThreshold;
+    double m_distanceBetweenRangesThreshold;
     double m_angularCoeffThreshold;
+    double m_minLengthThreshold;
   public:
-    LineMatcher( double t_distanceBetweenSPointsThreshold , double t_angularCoeffThreshold );
+    LineMatcher( const double t_distanceBetweenRangesThreshold , const double t_angularCoeffThreshold, const double t_minLength);
 
 
-    inline double getDistanceBetweenSPointsThreshold() { return m_distanceBetweenSPointsThreshold;};
-    inline void setDistanceBetweenSPointsThreshold( const double t_threshold) { m_distanceBetweenSPointsThreshold= t_threshold; };
+    inline double getDistanceBetweenRangesThreshold() { return m_distanceBetweenRangesThreshold;};
+    inline void setDistanceBetweenRangesThreshold( const double t_threshold) { m_distanceBetweenRangesThreshold= t_threshold; };
 
     inline double getAngularCoeffThreshold() { return m_angularCoeffThreshold;};
     inline void setAngularCoeffThreshold( const double t_threshold) { m_angularCoeffThreshold= t_threshold; };
 
+    double computeLength(const std::vector<scanPoint> &t_scanPoints,  const int t_firstIndex, const int t_secondIndex );
+
     std::vector<line> generateLines(const std::vector<scanPoint> &t_scanPoints_worldFrame);
+
+
 
   };
 }

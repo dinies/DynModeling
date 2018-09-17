@@ -10,15 +10,17 @@
 #include "opencv2/opencv.hpp"
 
 namespace dyn_modeling{
-  BOOST_AUTO_TEST_SUITE( SlamClass)
+  BOOST_AUTO_TEST_SUITE( SlamClass
+)
 
   BOOST_AUTO_TEST_CASE(behaviouralTest) {
     // std::string relativePath= "../files/datasets/first100data.txt";
     std::string relativePath= "../files/datasets/realLaserScans.txt";
-    Eigen::Vector3d initial_state( 0,0,0);
-    const double maxDistBetweenSPoints = 5;
-    const double maxAngularCoeff = 1.4;
-    Slam slam = Slam(relativePath, initial_state, maxDistBetweenSPoints, maxAngularCoeff );
+    Eigen::Vector3d initial_state(0,0,0);
+    const double maxDistBetweenRanges= 3;
+    const double maxAngularCoeff = 1;
+    const double minLengthLines = 0.1;
+    Slam slam = Slam(relativePath, initial_state, maxDistBetweenRanges, maxAngularCoeff, minLengthLines );
     slam.cycle();
     cv::waitKey();
   }

@@ -34,11 +34,13 @@ namespace dyn_modeling {
       return zero_result;
     }
     else{
+
+      // finalResult.delta_x =  finalResult.delta_x * -1;
       return finalResult;
     }
 
     //why we have to negate the delta_x ? Maybe wrong order of p_r and z ?
-    // finalResult.delta_x =  finalResult.delta_x * -1;
+    // it has to be wrong    !!!!!!!!!!!!!!!!!!! finalResult.delta_x =  finalResult.delta_x * -1;
   };
 
 

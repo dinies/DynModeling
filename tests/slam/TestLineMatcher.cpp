@@ -14,9 +14,28 @@
 namespace dyn_modeling{
   BOOST_AUTO_TEST_SUITE( LineMatcherClass)
 
+  BOOST_AUTO_TEST_CASE(lengthLine) {
+    LineMatcher lM = LineMatcher(1, 2, 5);
+    const int first_index = 0;
+    const int second_index = 1;
+    double truth = 0.1;
+    scanPoint sp1;
+    scanPoint sp2;
+    Eigen::Vector2d c1(0.1,0.1);
+    Eigen::Vector2d c2(0.1,0.2);
+    sp1.coords = c1;
+    sp2.coords = c2;
+    const std::vector<scanPoint> SPoints_robot ={ sp1, sp2};
+
+    double result = lM.computeLength( SPoints_robot, first_index, second_index);
+    double threshold = 0.001;
+    BOOST_CHECK_SMALL( truth - result , threshold);
+  }
+
+
   BOOST_AUTO_TEST_CASE(dummyOneLine) {
 
-    LineMatcher lM = LineMatcher(1, 2);
+    LineMatcher lM = LineMatcher(1, 2, 0.05);
 
     line l1;
     l1.first_index = 0;
@@ -47,7 +66,7 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE(dummyTwoLines) {
 
-    LineMatcher lM = LineMatcher(10, 0.1);
+    LineMatcher lM = LineMatcher(10, 0.1, 0.05);
 
     line l1;
     l1.first_index = 0;
