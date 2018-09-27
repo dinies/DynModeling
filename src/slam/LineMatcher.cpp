@@ -56,6 +56,7 @@ namespace dyn_modeling {
         }
         else{
           currState = 1;
+          prev_laserRange = curr_laserRange;
         }
         break;
       case 2:
@@ -76,6 +77,12 @@ namespace dyn_modeling {
         }
         else {
           if ( ! (fabs( prev_laserRange - curr_laserRange ) < m_distanceBetweenRangesThreshold )){
+            if ( second_index - 1 > first_index && computeLength( t_scanPoints_robotFrame, first_index, second_index -1) > m_minLengthThreshold){
+              line new_line;
+              new_line.first_index = first_index;
+              new_line.second_index = second_index - 1;
+              lines.push_back( new_line);
+            }
             currState = 0;
           }
           else {

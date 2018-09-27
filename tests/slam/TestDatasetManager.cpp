@@ -65,6 +65,7 @@ namespace dyn_modeling{
       BOOST_CHECK_EQUAL( result_dS.at(1).ranges.at(720),7.94);
     }
   }
+
   BOOST_AUTO_TEST_CASE( DMconstructorWithDummyFile) {
 
     std::string relativePath= "../files/datasets/dummyDataSet.txt";

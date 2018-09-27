@@ -66,7 +66,7 @@ namespace dyn_modeling {
       else{
         prevNode = m_graph.getNode(i -1);
 
-        DataAssociator associator( maxCandidatesAssociation, maxLengthDiffAssociation, maxOrientationDiffAssociation, prevNode.lines, prevNode.scanPoints_robotFrame, currNode.lines, currNode. scanPoints_robotFrame );
+        DataAssociator associator( maxCandidatesAssociation, maxLengthDiffAssociation, maxOrientationDiffAssociation, prevNode.lines, prevNode.scanPoints_robotFrame, currNode.lines, currNode.scanPoints_robotFrame );
         currEdge.associations = associator.associateLines();
         // std::cout << currEdge.associations.size() << " associations \n" ;
         if ( currEdge.associations.size() > 0){

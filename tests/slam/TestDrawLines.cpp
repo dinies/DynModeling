@@ -156,7 +156,7 @@ namespace dyn_modeling{
     std::vector< scanPoint > scanPoints_1 = r.retrieveScanPointsRobotFrame(50);
     std::vector< scanPoint > scanPoints_2 = r.retrieveScanPointsRobotFrame(55);
 
-    LineMatcher lM = LineMatcher(100, 1, 0.1);
+    LineMatcher lM = LineMatcher(3, 1, 0.1);
     std::vector<line> lines_1 = lM.generateLines( scanPoints_1);
     std::vector<line> lines_2 = lM.generateLines( scanPoints_2);
 

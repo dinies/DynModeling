@@ -199,8 +199,6 @@ namespace dyn_modeling{
       }
   }
 
-
-
   BOOST_AUTO_TEST_CASE( testInsertOrderedDataAssociationHighScore) {
     PlainDataAssociatorFixture fixtureClass;
     DataAssociationsFixture fixtureStructs;

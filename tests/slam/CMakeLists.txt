@@ -10,7 +10,6 @@ add_executable( TestSlam
   ../../src/slam/DataAssociator.cpp
   ../../src/utils/MyMath.cpp
   ../../src/drawing/Drawer.cpp
-
   )
 
 target_link_libraries(
@@ -22,6 +21,31 @@ target_link_libraries(
   PUBLIC Boost::iostreams
   )
 add_test( NAME TestSlam COMMAND TestSlam)
+
+add_executable( TestCriticalIterations
+  TestCriticalIterations.cpp
+  ../../src/slam/Slam.cpp
+  ../../src/slam/DatasetManager.cpp
+  ../../src/slam/Robot.cpp
+  ../../src/slam/ScanMatcher.cpp
+  ../../src/slam/Map.cpp
+  ../../src/slam/Graph.cpp
+  ../../src/slam/LineMatcher.cpp
+  ../../src/slam/DataAssociator.cpp
+  ../../src/utils/MyMath.cpp
+  ../../src/drawing/Drawer.cpp
+  )
+
+target_link_libraries(
+  TestCriticalIterations
+  PUBLIC Boost::unit_test_framework
+  PUBLIC ${OpenCV_LIBS}
+  PUBLIC Boost::filesystem
+  PUBLIC Boost::system
+  PUBLIC Boost::iostreams
+  )
+add_test( NAME TestCriticalIterations COMMAND TestCriticalIterations )
+
 
 add_executable( TestLineMatcher
   TestLineMatcher.cpp
@@ -63,6 +87,26 @@ target_link_libraries(
 add_test( NAME TestDataAssociator COMMAND TestDataAssociator)
 
 
+add_executable( TestCriticalAssociator
+  TestCriticalAssociator.cpp
+  ../../src/slam/DatasetManager.cpp
+  ../../src/slam/Robot.cpp
+  ../../src/slam/Map.cpp
+  ../../src/slam/LineMatcher.cpp
+  ../../src/slam/DataAssociator.cpp
+  ../../src/utils/MyMath.cpp
+  ../../src/drawing/Drawer.cpp
+  )
+
+target_link_libraries(
+  TestCriticalAssociator
+  PUBLIC Boost::unit_test_framework
+  PUBLIC ${OpenCV_LIBS}
+  PUBLIC Boost::filesystem
+  PUBLIC Boost::system
+  PUBLIC Boost::iostreams
+  )
+add_test( NAME TestCriticalAssociator COMMAND TestCriticalAssociator)
 
 
 add_executable( TestDrawLines
@@ -86,7 +130,6 @@ target_link_libraries(
 add_test( NAME TestDrawLines COMMAND TestDrawLines)
 
 
-
 add_executable( TestMap
   TestMap.cpp
   ../../src/slam/Map.cpp
@@ -99,7 +142,6 @@ target_link_libraries(
   PUBLIC ${OpenCV_LIBS}
   )
 add_test( NAME TestMap COMMAND TestMap)
-
 
 
 add_executable( TestScanMatcher
