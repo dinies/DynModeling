@@ -15,10 +15,11 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_CASE(criticalIterations) {
     std::string relativePath= "../files/datasets/criticalIterations.txt";
     Eigen::Vector3d initial_state(0,0,0);
-    const double maxDistBetweenRanges= 3;
-    const double maxAngularCoeff = 1;
-    const double minLengthLines = 0.1;
-    Slam slam = Slam(relativePath, initial_state, maxDistBetweenRanges, maxAngularCoeff, minLengthLines );
+    // paramsSlam params = paramsSlam( 6, 0.4, 3, 1, 0.1, 6, 0.1, 0.3, 3, 0.05);
+
+    paramsSlam params = paramsSlam( 6, 0.4, 0.6, 1, 0.1, 6, 0.1, 0.3, 3, 0.05);
+    Slam slam = Slam(relativePath, initial_state,params );
+
     slam.cycle();
     cv::waitKey();
   }

@@ -23,7 +23,10 @@ namespace dyn_modeling {
 
     inline void setState(state &t_newState ) { m_state = t_newState; };
 
-    std::vector<scanPoint> retrieveScanPointsRobotFrame( int t_index_datanode );
+
+    std::vector<scanPoint> retrieveScanPointsRobotFrame( const int t_index_datanode, const double borderRatio);
+
+    bool checkScanPointInBorders( const double range, const double borderRatio);
 
     std::vector<scanPoint> changeCoordsRobotToWorld( const std::vector<scanPoint> &t_scanPoints_robotFrame);
 

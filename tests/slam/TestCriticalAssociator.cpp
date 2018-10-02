@@ -24,10 +24,11 @@ BOOST_AUTO_TEST_CASE(associateAcriticalIteration) {
     Robot r = Robot(relativePath, initial_state);
 
     int num_data_entries = r.getNumDataEntries();
-    std::vector< scanPoint > scanPoints_1 = r.retrieveScanPointsRobotFrame(0);
-    std::vector< scanPoint > scanPoints_2 = r.retrieveScanPointsRobotFrame(1);
+    double borderRatio = 0.05;
+    std::vector< scanPoint > scanPoints_1 = r.retrieveScanPointsRobotFrame(0,borderRatio);
+    std::vector< scanPoint > scanPoints_2 = r.retrieveScanPointsRobotFrame(1,borderRatio);
 
-    LineMatcher lM = LineMatcher(30, 0.1, 0.1);
+    LineMatcher lM = LineMatcher(0.6, 1, 0.1);
     // LineMatcher lM = LineMatcher(3, 1, 0.1);
     // LineMatcher lM = LineMatcher(100, 1, 0.1);
 
@@ -109,8 +110,8 @@ BOOST_AUTO_TEST_CASE(associateAcriticalIteration) {
     }
 
     const int max_candidates = 2;
-    const double lengthDiffThreshold = 0.5;
-    const double orientationDiffThreshold = 0.2;
+    const double lengthDiffThreshold = 0.1;
+    const double orientationDiffThreshold = 0.3;
 
     DataAssociator dA = DataAssociator( max_candidates, lengthDiffThreshold, orientationDiffThreshold, lines_1, scanPoints_1, lines_2, scanPoints_2);
 

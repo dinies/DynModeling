@@ -13,26 +13,36 @@ namespace dyn_modeling {
 
 
 
-  std::vector<scanPoint> Robot::retrieveScanPointsRobotFrame( int t_index_datanode){
+  std::vector<scanPoint> Robot::retrieveScanPointsRobotFrame( const int t_index_datanode, const double borderRatio ){
     std::vector<double> spanning_angles = m_datasetManager.getSpanningAngles();
     std::vector<double> data_ranges = m_datasetManager.getDataNodeRanges( t_index_datanode);
     std::vector<scanPoint> scan_points;
     scan_points.reserve(data_ranges.size());
     int index = 0;
+    double curr_range;
     for ( auto angle : spanning_angles){
-      scanPoint sP;
-      Eigen::Matrix2d R;
-      R << cos(angle ), -sin(angle),
-        sin(angle), cos(angle);
-      Eigen::Vector2d origin_range( data_ranges.at(index) ,0);
-      Eigen::Vector2d coords = R* origin_range;
-      sP.coords = coords;
-      scan_points.push_back(sP);
+      curr_range =  data_ranges.at(index);
+      if ( checkScanPointInBorders( curr_range, borderRatio)){
+        scanPoint sP;
+        Eigen::Matrix2d R;
+        R << cos(angle ), -sin(angle),
+          sin(angle), cos(angle);
+        Eigen::Vector2d origin_range(curr_range ,0);
+        Eigen::Vector2d coords = R* origin_range;
+        sP.coords = coords;
+        scan_points.push_back(sP);
+      }
       ++index;
     }
     return scan_points;
   };
 
+  bool Robot::checkScanPointInBorders( const double range, const double borderRatio){
+    double min_range = m_datasetManager.m_staticParams.min_range;
+    double max_range = m_datasetManager.m_staticParams.max_range;
+    double borderLength = fabs( max_range - min_range ) * borderRatio;
+    return range > min_range + borderLength && range < max_range - borderLength;
+  }
 
   std::vector<scanPoint> Robot::changeCoordsRobotToWorld( const std::vector<scanPoint> &t_scanPoints_robotFrame){
     Eigen::Isometry2d transf = MyMath::v2t(m_state.mu);

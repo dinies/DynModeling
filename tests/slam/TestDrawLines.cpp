@@ -21,9 +21,9 @@ namespace dyn_modeling{
     scanPoint sp1;
     scanPoint sp2;
     scanPoint sp3;
-    Eigen::Vector2d c1(10,10);
-    Eigen::Vector2d c2(10,20);
-    Eigen::Vector2d c3(20,20);
+    Eigen::Vector2d c1(3,3);
+    Eigen::Vector2d c2(3,6);
+    Eigen::Vector2d c3(6,6);
     sp1.coords = c1;
     sp2.coords = c2;
     sp3.coords = c3;
@@ -34,13 +34,12 @@ namespace dyn_modeling{
     std::vector<line> lines = lM.generateLines( scanPoints_robotFrame);
 
     RGBImage img;
-    img.create( 900,900);
+    img.create( 600,600);
     img = cv::Vec3b(227, 246, 253);
-    cv::namedWindow("Lines");
-    cv::moveWindow("Lines", 40, 40);
+    cv::namedWindow("Lines1");
+    cv::moveWindow("Lines1", 40, 40);
     cv::Scalar dark_red = {20,0,255};
-    Drawer drawer(15);
-    // cv::imshow("Lines",img);
+    Drawer drawer(25);
     for ( auto line : lines){
       scanPoint sP1 = scanPoints_robotFrame.at( line.first_index);
       scanPoint sP2 = scanPoints_robotFrame.at( line.second_index);
@@ -49,8 +48,8 @@ namespace dyn_modeling{
       drawer.drawLine( img, p1, p2 , dark_red);
     }
 
-    cv::imshow("Lines",img);
-    cv::waitKey(500);
+    cv::imshow("Lines1",img);
+    cv::waitKey(1);
   }
 
   BOOST_AUTO_TEST_CASE(drawLinesThreeSquareAnglesPoints) {
@@ -76,15 +75,14 @@ namespace dyn_modeling{
     std::vector<line> lines = lM.generateLines( scanPoints_robotFrame);
 
     RGBImage img;
-    img.create( 900,900);
+    img.create( 600,600);
     img = cv::Vec3b(227, 246, 253);
-    cv::namedWindow("Lines");
-    cv::moveWindow("Lines", 40, 40);
+    cv::namedWindow("Lines2");
+    cv::moveWindow("Lines2", 640, 40);
     cv::Scalar dark_red = {20,0,255};
 
     cv::Scalar lightBlue= {210,139,38};
     Drawer drawer(25);
-    // cv::imshow("Lines",img);
     for ( auto line : lines){
       scanPoint sP1 = scanPoints_robotFrame.at( line.first_index);
       scanPoint sP2 = scanPoints_robotFrame.at( line.second_index);
@@ -93,8 +91,8 @@ namespace dyn_modeling{
       drawer.drawLine( img, p1, p2 , dark_red);
     }
 
-    cv::imshow("Lines",img);
-    cv::waitKey(500);
+    cv::imshow("Lines2",img);
+    cv::waitKey(1);
   }
 
 
@@ -107,16 +105,17 @@ namespace dyn_modeling{
     int num_data_entries = r.getNumDataEntries();
     BOOST_CHECK_EQUAL( num_data_entries , 1);
     if (num_data_entries == 1){
-      std::vector< scanPoint > scanPoints_robotFrame = r.retrieveScanPointsRobotFrame(0);
-      LineMatcher lM = LineMatcher(100, 1 , 0.1);
+      double borderRatio = 0.05;
+      std::vector< scanPoint > scanPoints_robotFrame = r.retrieveScanPointsRobotFrame(0,borderRatio);
+      LineMatcher lM = LineMatcher(0.2, 1, 0.1);
       std::vector<line> lines = lM.generateLines( scanPoints_robotFrame);
 
       std::cout << "num of lines : " << lines.size() << "\n" ;
       RGBImage img;
-      img.create( 900,900);
+      img.create( 600,600);
       img = cv::Vec3b(227, 246, 253);
-      cv::namedWindow("Lines");
-      cv::moveWindow("Lines", 40, 40);
+      cv::namedWindow("Lines3");
+      cv::moveWindow("Lines3", 1240, 40);
       cv::Scalar dark_red = {20,0,255};
       cv::Scalar lightBlue= {210,139,38};
 
@@ -140,8 +139,8 @@ namespace dyn_modeling{
         }
       }
 
-      cv::imshow("Lines",img);
-      cv::waitKey(2000);
+      cv::imshow("Lines3",img);
+      cv::waitKey(1);
     }
   }
 
@@ -153,10 +152,11 @@ namespace dyn_modeling{
     Robot r = Robot(relativePath, initial_state);
 
     int num_data_entries = r.getNumDataEntries();
-    std::vector< scanPoint > scanPoints_1 = r.retrieveScanPointsRobotFrame(50);
-    std::vector< scanPoint > scanPoints_2 = r.retrieveScanPointsRobotFrame(55);
+    double borderRatio = 0.05;
+    std::vector< scanPoint > scanPoints_1 = r.retrieveScanPointsRobotFrame(50,borderRatio);
+    std::vector< scanPoint > scanPoints_2 = r.retrieveScanPointsRobotFrame(55,borderRatio);
 
-    LineMatcher lM = LineMatcher(3, 1, 0.1);
+    LineMatcher lM = LineMatcher(0.2, 1, 0.1);
     std::vector<line> lines_1 = lM.generateLines( scanPoints_1);
     std::vector<line> lines_2 = lM.generateLines( scanPoints_2);
 
@@ -165,29 +165,33 @@ namespace dyn_modeling{
     RGBImage img_3;
     RGBImage img_4;
 
-    img_1.create( 600,600);
+    img_1.create( 400,400);
     img_1 = cv::Vec3b(227, 246, 253);
-    cv::namedWindow("Lines1");
-    cv::moveWindow("Lines1", 40, 40);
+    cv::namedWindow("LinesA");
+    cv::moveWindow("LinesA", 40, 670);
 
-    img_2.create( 600,600);
+    // img_2.create( 400,400);
+    img_2.create( 1600,1600);
     img_2 = cv::Vec3b(227, 246, 253);
-    cv::namedWindow("Lines2");
-    cv::moveWindow("Lines2", 860, 40);
+    cv::namedWindow("LinesB");
+    // cv::moveWindow("LinesB", 440, 670);
+    cv::moveWindow("LinesB", 40, 40);
 
-    img_3.create( 600,600);
+    img_3.create( 400,400);
     img_3 = cv::Vec3b(227, 246, 253);
-    cv::namedWindow("Points1");
-    cv::moveWindow("Points1", 40, 540);
+    cv::namedWindow("PointsA");
+    cv::moveWindow("PointsA", 840, 670);
 
-    img_4.create( 600,600);
+    // img_4.create( 400,400);
+    img_4.create( 1600,1600);
     img_4 = cv::Vec3b(227, 246, 253);
-    cv::namedWindow("Points2");
-    cv::moveWindow("Points2", 860, 540);
+    cv::namedWindow("PointsB");
+    // cv::moveWindow("PointsB", 1240, 670);
+    cv::moveWindow("PointsB", 40, 40);
 
     cv::Scalar lightBlue= {210,139,38};
     cv::Scalar dark_red = {20,0,255};
-    Drawer drawer(30);
+    Drawer drawer(25);
 
     bool flagColor = false;
 
@@ -232,10 +236,10 @@ namespace dyn_modeling{
       drawer.drawPatch(img_4, p, lightBlue );
     }
 
-    cv::imshow("Lines1",img_1);
-    cv::imshow("Lines2",img_2);
-    cv::imshow("Points1",img_3);
-    cv::imshow("Points2",img_4);
+    cv::imshow("LinesA",img_1);
+    cv::imshow("LinesB",img_2);
+    cv::imshow("PointsA",img_3);
+    cv::imshow("PointsB",img_4);
 
     cv::waitKey();
   }

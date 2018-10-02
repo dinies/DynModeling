@@ -20,7 +20,8 @@ namespace dyn_modeling{
 
     BOOST_CHECK_EQUAL( r.getNumDataEntries(),1);
     if(r.getNumDataEntries()==1){
-      std::vector< scanPoint > scanPoints_robotFrame = r.retrieveScanPointsRobotFrame(0);
+      double borderRatio = 0.05;
+      std::vector< scanPoint > scanPoints_robotFrame = r.retrieveScanPointsRobotFrame(0, borderRatio);
 
       BOOST_CHECK_EQUAL( scanPoints_robotFrame.size(),5);
       if( scanPoints_robotFrame.size() == 5){
@@ -47,7 +48,8 @@ namespace dyn_modeling{
     int num_data_entries = r.getNumDataEntries();
     BOOST_CHECK_EQUAL( num_data_entries , 1);
     if (num_data_entries == 1){
-      std::vector< scanPoint > scanPoints_robotFrame = r.retrieveScanPointsRobotFrame(0);
+      double borderRatio = 0.05;
+      std::vector< scanPoint > scanPoints_robotFrame = r.retrieveScanPointsRobotFrame(0, borderRatio);
 
       BOOST_CHECK_EQUAL( scanPoints_robotFrame.size() , 721);
       if (scanPoints_robotFrame.size() == 721){

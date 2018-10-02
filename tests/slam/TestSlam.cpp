@@ -14,13 +14,23 @@ namespace dyn_modeling{
 )
 
   BOOST_AUTO_TEST_CASE(behaviouralTest) {
-    // std::string relativePath= "../files/datasets/first100data.txt";
-    std::string relativePath= "../files/datasets/realLaserScans.txt";
+    std::string relativePath= "../files/datasets/first100data.txt";
+    // std::string relativePath= "../files/datasets/realLaserScans.txt";
     Eigen::Vector3d initial_state(0,0,0);
-    const double maxDistBetweenRanges= 3;
-    const double maxAngularCoeff = 1;
-    const double minLengthLines = 0.1;
-    Slam slam = Slam(relativePath, initial_state, maxDistBetweenRanges, maxAngularCoeff, minLengthLines );
+
+    paramsSlam params = paramsSlam( 6, 0.4, 0.6, 1, 0.1, 6, 0.1, 0.3, 3, 0.05);
+    //1 int icpIterationsCap;
+    //2 double kernelThresholdScanMatching;
+    //3 double maxDistBetweenRangesLineMatcher;
+    //4 double maxAngularCoeffLineMatcher;
+    //5 double minLengthLinesLineMatcher;
+    //6 int maxCandidatesAssociation;
+    //7 double maxLengthDiffAssociation;
+    //8 double maxOrientationDiffAssociation;
+    //9 int numMiddleScanPoints;
+    //10 double borderRatio;
+
+    Slam slam = Slam(relativePath, initial_state, params);
     slam.cycle();
     cv::waitKey();
   }

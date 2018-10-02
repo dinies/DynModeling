@@ -1,4 +1,3 @@
--DBOOST_TEST_DYN_LINK
 -DUNIX
 -Wl,-headerpad_max_install_names
 -Wl,-search_paths_first
@@ -7,5 +6,7 @@
 -isystem/usr/local/include/eigen3
 -I/usr/include/opencv
 -I/usr/local/include/eigen3
+-std=c++11
+-W
 -Wno-ignored-attributes
 -Wno-unused-parameter
