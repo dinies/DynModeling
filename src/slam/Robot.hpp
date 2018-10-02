@@ -6,41 +6,42 @@
 #include <boost/serialization/array_wrapper.hpp>
 #include <boost/tuple/tuple.hpp>
 
-#include "../../include/gnuplot-iostream.h"
 #include "../../include/structs.hpp"
 #include "../utils/MyMath.hpp"
 #include "DatasetManager.hpp"
 namespace dyn_modeling {
-  typedef struct state_tag{
-    std::vector<double> q;
-  } state;
 
   class Robot{
   private:
     DatasetManager m_datasetManager;
     state m_state;
-    std::vector<state> m_old_states;
 
   public:
-    Robot( const std::string &t_dataSet_AbsolPath , const std::vector<double> &t_initial_state);
+    Robot( const std::string &t_dataSet_AbsolPath , const Eigen::Vector3d &t_initial_state);
 
-    inline std::vector<double> getState() { return m_state.q; };
+    inline state getState() { return m_state; };
 
-    std::vector<scanPoint> retrieveScanPointsRobotFrame( int t_index_datanode );
+    inline void setState(state &t_newState ) { m_state = t_newState; };
+
+
+    std::vector<scanPoint> retrieveScanPointsRobotFrame( const int t_index_datanode, const double borderRatio);
+
+    bool checkScanPointInBorders( const double range, const double borderRatio);
 
     std::vector<scanPoint> changeCoordsRobotToWorld( const std::vector<scanPoint> &t_scanPoints_robotFrame);
 
-    void updateState(const std::vector<double> &t_deltaState);
+    void updateState(const Eigen::Vector3d &t_deltaState);
 
     inline int getNumDataEntries() { return m_datasetManager.getNumDataEntries(); }
 
     inline int getNumRanges() { return m_datasetManager.getNumRanges(); }
 
 
-    void plotStateEvolution(const double t_delta_t);
+    static Eigen::Vector3d boxPlus(const Eigen::Vector3d &t_x,const Eigen::Vector3d &t_delta_x);
 
-    static std::vector<double> boxPlus(const std::vector<double> t_first,const std::vector<double> t_second);
-    static std::vector<double> boxMinus(const std::vector<double> t_first,const std::vector<double> t_second);
+    static Eigen::Vector3d boxMinus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second);
+
+    static std::vector<scanPoint> computeMiddleScanPoints( const scanPoint &t_s1, const scanPoint &t_s2, const int t_numMidPoints);
 
   };
 }

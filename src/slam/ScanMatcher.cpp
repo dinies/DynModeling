@@ -7,34 +7,43 @@ namespace dyn_modeling {
     m_kernelThreshold = std::numeric_limits<double>::max();
   };
 
-  roundResult ScanMatcher::icpRound(const int t_numIterations, const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot){
+  roundResult ScanMatcher::icpRound(const int t_numIterations, const Eigen::Vector3d &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot){
     std::vector<double> chis;
     const double epsilon = 0.1;
     double chi = epsilon*2;
     int i = 0;
     iterResult curr_result;
     roundResult finalResult;
-    finalResult.delta_x = {0 ,0 ,0};
-    std::vector<double> curr_guess = t_initialGuessState;
+    finalResult.delta_x << 0.0 ,0.0 ,0.0 ;
+    Eigen::Vector3d curr_guess = t_initialGuessState;
     while (i < t_numIterations && chi>epsilon){
       curr_result = icpIterationRframe(curr_guess, t_oldScanPoints_robot, t_newScanPoints_robot);
       chi = curr_result.chi;
       // std::cout << curr_result.outliers << "\n";
       chis.push_back(chi);
       curr_guess = Robot::boxPlus(curr_guess,curr_result.delta_x);
-      finalResult.delta_x = MyMath::vecSum(finalResult.delta_x,curr_result.delta_x);
+      finalResult.delta_x = finalResult.delta_x + curr_result.delta_x;
       ++i;
     }
     finalResult.chi = chis;
 
-    std::vector<double> neg = { -1, -1 , -1};
-    finalResult.delta_x = MyMath::vecMultEleWise( finalResult.delta_x, neg);
-    return finalResult;
+    if ( std::isnan( finalResult.delta_x(0)) || std::isnan( finalResult.delta_x(1)) || std::isnan( finalResult.delta_x(2)) ){
+      roundResult zero_result;
+      zero_result.delta_x << 0.0 ,0.0 ,0.0;
+      zero_result.chi = chis;
+      return zero_result;
+    }
+    else{
+
+      finalResult.delta_x =  finalResult.delta_x * -1;
+      return finalResult;
+    }
+
   };
 
 
 
-  iterResult ScanMatcher::icpIterationRframe( const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot){
+  iterResult ScanMatcher::icpIterationRframe( const Eigen::Vector3d &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot){
     int outliers = 0;
     Eigen::Matrix<double, 3, 3> H;
     H.Zero();
@@ -42,8 +51,8 @@ namespace dyn_modeling {
     b.Zero();
     double chi = 0 ;
     Eigen::Matrix2d dR;
-    dR << -sin(t_initialGuessState.at(2)), -cos(t_initialGuessState.at(2)),
-      cos(t_initialGuessState.at(2)), -sin(t_initialGuessState.at(2));
+    dR << -sin(t_initialGuessState(2)), -cos(t_initialGuessState(2)),
+      cos(t_initialGuessState(2)), -sin(t_initialGuessState(2));
     Eigen::Vector2d p_r;
     Eigen::Vector2d z;
     Eigen::Isometry2d T;
@@ -74,9 +83,8 @@ namespace dyn_modeling {
     }
     Eigen::Vector3d dx = - H.inverse() * b;
 
-    std::vector<double> delta_x= { dx(0),dx(1),dx(2)};
     iterResult res;
-    res.delta_x = delta_x;
+    res.delta_x = dx;
     res.chi = chi;
     res.outliers = outliers;
     return res;

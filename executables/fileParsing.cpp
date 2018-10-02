@@ -7,8 +7,8 @@
 using namespace dyn_modeling;
 int main(int argc, char **argv) {
 
-  std::string absolutePath = "/home/dinies/GitRepos/DynModeling/files/datasets/exampleDataSetOneline.txt";
-  datasetParams params =  DatasetManager::parseStaticParameters( absolutePath);
+  std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
+  datasetParams params =  DatasetManager::parseStaticParameters( relativePath);
   std::cout << params.tag;
   return 0;
 }

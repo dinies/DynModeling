@@ -11,7 +11,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # -g used for enabling gdb  and -D for use gdb on boost tests ( it gives an error at compilation time,give up !!)
-SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}  -g -W -Wno-ignored-attributes -std=c++11")
+SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}  -g  -Wno-ignored-attributes ")
 
 
 message("build type: '${CMAKE_BUILD_TYPE}'")
@@ -33,7 +33,7 @@ INCLUDE_DIRECTORIES(${EIGEN3_INCLUDE_DIR})
 # INCLUDE_DIRECTORIES(/usr/include/eigen3)
 
 # Find Opencv
-FIND_PACKAGE(OpenCV  REQUIRED)
+FIND_PACKAGE(OpenCV REQUIRED)
 INCLUDE_DIRECTORIES(${OpenCV_INCLUDE_DIRS})
 
 FIND_PACKAGE(Boost COMPONENTS system filesystem iostreams unit_test_framework REQUIRED)

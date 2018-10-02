@@ -18,14 +18,14 @@
 namespace dyn_modeling {
   typedef struct iterResult_tag{
     double chi;
-    std::vector<double> delta_x;
+    Eigen::Vector3d delta_x;
     int outliers;
   } iterResult;
 
 
   typedef struct roundResult_tag{
     std::vector<double> chi;
-    std::vector<double> delta_x;
+    Eigen::Vector3d delta_x;
   } roundResult;
 
 
@@ -36,9 +36,9 @@ namespace dyn_modeling {
   public:
     ScanMatcher();
 
-    iterResult icpIterationRframe( const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot);
+    iterResult icpIterationRframe( const Eigen::Vector3d &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot);
 
-    roundResult icpRound(const int t_numIterations, const std::vector<double> &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot);
+    roundResult icpRound(const int t_numIterations, const Eigen::Vector3d &t_initialGuessState,const std::vector<scanPoint> &t_oldScanPoints_robot,const std::vector<scanPoint> &t_newScanPoints_robot);
 
     inline double getKernelThreshold() { return m_kernelThreshold;};
     inline void setKernelThreshold( const double t_threshold) { m_kernelThreshold = t_threshold; };

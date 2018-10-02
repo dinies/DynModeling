@@ -10,12 +10,38 @@
 namespace dyn_modeling{
   BOOST_AUTO_TEST_SUITE( MMath)
 
-  BOOST_AUTO_TEST_CASE( Box_minus) {
-
+  BOOST_AUTO_TEST_CASE( Box_minus1) {
     double res =  MyMath::boxMinusAngleRad(0.1, 0.2);
     double threshold = 0.0001;
     BOOST_CHECK_CLOSE( res, -0.1, threshold);
   }
+
+  BOOST_AUTO_TEST_CASE( Box_minus2) {
+    double res =  MyMath::boxMinusAngleRad(3.14159, 0);
+    double threshold = 0.0001;
+    BOOST_CHECK_CLOSE( fabs(res), M_PI, threshold);
+  }
+
+  BOOST_AUTO_TEST_CASE( Box_minus3) {
+    double res =  MyMath::boxMinusAngleRad( - (M_PI/4 + M_PI/2), M_PI/4 );
+    double threshold = 0.0001;
+    BOOST_CHECK_CLOSE( fabs(res), M_PI, threshold);
+  }
+
+  BOOST_AUTO_TEST_CASE( Box_minus4) {
+    double res =  MyMath::boxMinusAngleRad(M_PI/6, M_PI/3);
+    double threshold = 0.0001;
+    BOOST_CHECK_CLOSE( res, -M_PI/6, threshold);
+  }
+
+  BOOST_AUTO_TEST_CASE( Box_minus5) {
+    double res =  MyMath::boxMinusAngleRad(M_PI/3, M_PI/3);
+    double threshold = 0.0001;
+    BOOST_CHECK_CLOSE( res, 0, threshold);
+  }
+
+
+
   BOOST_AUTO_TEST_CASE( Box_plus) {
     double res =  MyMath::boxPlusAngleRad(3.14, 0.02);
     double threshold = 0.01;
@@ -47,7 +73,7 @@ namespace dyn_modeling{
 
 
   BOOST_AUTO_TEST_CASE( v2tAllZeros) {
-    std::vector<double> initial_guess= { 0 , 0 , 0};
+    Eigen::Vector3d initial_guess (0 ,0, 0 );
     Eigen::Isometry2d result =  MyMath::v2t(initial_guess);
     Eigen::Isometry2d truth;
     truth.setIdentity();

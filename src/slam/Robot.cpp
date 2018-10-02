@@ -4,38 +4,48 @@
 
 namespace dyn_modeling {
 
-  Robot::Robot( const std::string &t_dataSet_AbsolPath , const std::vector<double> &t_initial_state):
+  Robot::Robot( const std::string &t_dataSet_AbsolPath , const Eigen::Vector3d &t_initial_state):
     m_datasetManager( DatasetManager( t_dataSet_AbsolPath))
   {
-    m_state.q = t_initial_state;
-    m_old_states.push_back(m_state);
+    m_state.mu = t_initial_state;
+    m_state.sigma = Eigen::Matrix3d::Zero();
   };
 
 
 
-  std::vector<scanPoint> Robot::retrieveScanPointsRobotFrame( int t_index_datanode){
+  std::vector<scanPoint> Robot::retrieveScanPointsRobotFrame( const int t_index_datanode, const double borderRatio ){
     std::vector<double> spanning_angles = m_datasetManager.getSpanningAngles();
     std::vector<double> data_ranges = m_datasetManager.getDataNodeRanges( t_index_datanode);
     std::vector<scanPoint> scan_points;
     scan_points.reserve(data_ranges.size());
     int index = 0;
+    double curr_range;
     for ( auto angle : spanning_angles){
-      scanPoint sP;
-      Eigen::Matrix2d R;
-      R << cos(angle ), -sin(angle),
-        sin(angle), cos(angle);
-      Eigen::Vector2d origin_range( data_ranges.at(index) ,0);
-      Eigen::Vector2d coords = R* origin_range;
-      sP.coords = coords;
-      scan_points.push_back(sP);
+      curr_range =  data_ranges.at(index);
+      if ( checkScanPointInBorders( curr_range, borderRatio)){
+        scanPoint sP;
+        Eigen::Matrix2d R;
+        R << cos(angle ), -sin(angle),
+          sin(angle), cos(angle);
+        Eigen::Vector2d origin_range(curr_range ,0);
+        Eigen::Vector2d coords = R* origin_range;
+        sP.coords = coords;
+        scan_points.push_back(sP);
+      }
       ++index;
     }
     return scan_points;
   };
 
+  bool Robot::checkScanPointInBorders( const double range, const double borderRatio){
+    double min_range = m_datasetManager.m_staticParams.min_range;
+    double max_range = m_datasetManager.m_staticParams.max_range;
+    double borderLength = fabs( max_range - min_range ) * borderRatio;
+    return range > min_range + borderLength && range < max_range - borderLength;
+  }
 
   std::vector<scanPoint> Robot::changeCoordsRobotToWorld( const std::vector<scanPoint> &t_scanPoints_robotFrame){
-    Eigen::Isometry2d transf = MyMath::v2t(m_state.q);
+    Eigen::Isometry2d transf = MyMath::v2t(m_state.mu);
     std::vector<scanPoint> scanPvec_worldFrame;
     scanPvec_worldFrame.reserve( t_scanPoints_robotFrame.size());
 
@@ -48,55 +58,52 @@ namespace dyn_modeling {
     return scanPvec_worldFrame;
   };
 
-  std::vector<double> Robot::boxPlus(const std::vector<double> t_first,const std::vector<double> t_second){
-    std::vector<double> result;
-    result.reserve(3);
-    result.push_back( t_first.at(0) + t_second.at(0));
-    result.push_back( t_first.at(1) + t_second.at(1));
-    result.push_back( MyMath::boxPlusAngleRad(t_first.at(2), t_second.at(2)));
-    return result;
-  }
+  std::vector<scanPoint> Robot::computeMiddleScanPoints( const scanPoint &t_s1, const scanPoint &t_s2, const int t_numMidPoints){
 
-  std::vector<double> Robot::boxMinus(const std::vector<double> t_first,const std::vector<double> t_second){
-    std::vector<double> result;
-    result.reserve(3);
-    result.push_back( t_first.at(0) - t_second.at(0));
-    result.push_back( t_first.at(1) - t_second.at(1));
-    result.push_back( MyMath::boxMinusAngleRad(t_first.at(2), t_second.at(2)));
-    return result;
-  }
+    std::vector<scanPoint> middleScanPoints;
+    middleScanPoints.reserve( t_numMidPoints);
+    double dx = ( t_s2.coords(0) - t_s1.coords(0))/ (t_numMidPoints + 1);
+    double dy = ( t_s2.coords(1) - t_s1.coords(1))/ (t_numMidPoints + 1);
+    double x0{t_s1.coords(0) };
+    double y0{t_s1.coords(1) };
 
-
-  void Robot::updateState(const std::vector<double> &t_deltaState){
-    m_old_states.push_back(m_state);
-    m_state.q = Robot::boxPlus(m_state.q, t_deltaState);
-  }
-
-  void Robot::plotStateEvolution(const double t_delta_t){
-    double curr_t = 0;
-    std::vector< boost::tuple<double,double>> x;
-    std::vector< boost::tuple<double,double>> y;
-    std::vector< boost::tuple<double,double>> theta;
-    std::vector< boost::tuple<double,double>> path;
-    for ( auto s : m_old_states){
-      x.push_back( boost::make_tuple( curr_t,s.q.at(0)));
-      y.push_back( boost::make_tuple( curr_t,s.q.at(1)));
-      theta.push_back( boost::make_tuple( curr_t,s.q.at(2)));
-      curr_t += t_delta_t;
-      path.push_back( boost::make_tuple( s.q.at(0),s.q.at(1)));
+    for ( int i = 1; i <= t_numMidPoints ; ++i){
+      scanPoint s;
+      x0 += dx;
+      y0 += dy;
+      s.coords << x0,y0;
+      middleScanPoints.push_back(s);
     }
-    Gnuplot gp;
-    gp << "set terminal qt 1\n";
-    gp << "plot";
-    gp << gp.binFile1d(x, "record") << "with lines title 'x'" << ",";
-    gp << gp.binFile1d(y, "record") << "with lines title 'y'" << "\n";
-    gp << "set terminal qt 2\n";
-    gp << "plot";
-    gp << gp.binFile1d(theta, "record") << "with lines title 'theta'" << "\n";
-    gp << "set terminal qt 3\n";
-    gp << "plot";
-    gp << gp.binFile1d(path, "record") << "with lines title 'path'" << "\n";
-  };
+    return middleScanPoints;
+  }
+
+  Eigen::Vector3d Robot::boxPlus(const Eigen::Vector3d &t_x,const Eigen::Vector3d &t_delta_x){
+    //TODO  rewrite see foundamental comment below
+    Eigen::Isometry2d T_x = MyMath::v2t( t_x );
+    Eigen::Isometry2d T_delta_x =MyMath::v2t( t_delta_x );
+    return  MyMath::t2v( T_x * T_delta_x);
+  }
+
+  Eigen::Vector3d Robot::boxMinus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second){
+    Eigen::Isometry2d T_first = MyMath::v2t( t_first );
+    Eigen::Isometry2d T_second = MyMath::v2t( t_second );
+    return  MyMath::t2v( T_first * T_second.inverse());
+  }
+
+
+  void Robot::updateState(const Eigen::Vector3d &t_deltaState){
+
+    m_state.mu = Robot::boxPlus(m_state.mu, t_deltaState);
+    // TODO foundamental the update is now in robot frame , now we need to transform the reference frame of the update so we need to work with homogeneous matrices so using v2t on the current state and on the delta x we obtain two matrices that have to be concatenated.
+
+    // Eigen::Isometry2d transf = MyMath::v2t(t_deltaState);
+    // Eigen::Matrix2d R = transf.linear();
+    //TODO
+    // m_state.sigma = 8;
+  }
 }
+
+
+
 
 

@@ -1,0 +1,1720 @@
+[
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestMap.dir/__/__/src/drawing/Drawer.cpp.o", 
+            "../../../src/drawing/Drawer.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/drawing/Drawer.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/TestSlam.cpp.o", 
+            "../../../tests/slam/TestSlam.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../tests/slam/TestSlam.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/robotScanRetrieving.dir/robotScanRetrieving.cpp.o", 
+            "../../executables/robotScanRetrieving.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../executables/robotScanRetrieving.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/__/__/src/slam/Map.cpp.o", 
+            "../../../src/slam/Map.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Map.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestRobot.dir/TestRobot.cpp.o", 
+            "../../../tests/slam/TestRobot.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../tests/slam/TestRobot.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/__/__/src/slam/Robot.cpp.o", 
+            "../../../src/slam/Robot.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Robot.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestMap.dir/__/__/src/slam/Map.cpp.o", 
+            "../../../src/slam/Map.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Map.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDataAssociator.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/__/__/src/slam/DatasetManager.cpp.o", 
+            "../../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/__/__/src/slam/DatasetManager.cpp.o", 
+            "../../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDataAssociator.dir/__/__/src/slam/LineMatcher.cpp.o", 
+            "../../../src/slam/LineMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/LineMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/__/__/src/slam/Map.cpp.o", 
+            "../../../src/slam/Map.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Map.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDataAssociator.dir/TestDataAssociator.cpp.o", 
+            "../../../tests/slam/TestDataAssociator.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../tests/slam/TestDataAssociator.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-I/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/Test.dir/test.cpp.o", 
+            "../../tests/test.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests", 
+        "file": "../../tests/test.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawLines.dir/__/__/src/slam/Robot.cpp.o", 
+            "../../../src/slam/Robot.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Robot.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalAssociator.dir/__/__/src/slam/DatasetManager.cpp.o", 
+            "../../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/pendulumMain.dir/__/src/controllers/Controller.cpp.o", 
+            "../../src/controllers/Controller.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../src/controllers/Controller.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/__/__/src/slam/Graph.cpp.o", 
+            "../../../src/slam/Graph.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Graph.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-I/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestController.dir/__/__/src/controllers/Controller.cpp.o", 
+            "../../../src/controllers/Controller.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/pendulum", 
+        "file": "../../../src/controllers/Controller.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalAssociator.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/robotScanRetrieving.dir/__/src/slam/Robot.cpp.o", 
+            "../../src/slam/Robot.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../src/slam/Robot.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawEllipse.dir/TestEllipse.cpp.o", 
+            "../../../tests/utils/TestEllipse.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/utils", 
+        "file": "../../../tests/utils/TestEllipse.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/drawMovingPoints.dir/drawMovingPoints.cpp.o", 
+            "../../executables/drawMovingPoints.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../executables/drawMovingPoints.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestScanMatcher.dir/TestScanMatcher.cpp.o", 
+            "../../../tests/slam/TestScanMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../tests/slam/TestScanMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-I/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestMyMath.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/utils", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/__/__/src/drawing/Drawer.cpp.o", 
+            "../../../src/drawing/Drawer.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/drawing/Drawer.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestMap.dir/TestMap.cpp.o", 
+            "../../../tests/slam/TestMap.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../tests/slam/TestMap.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestLineMatcher.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-I/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestController.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/pendulum", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/__/__/src/drawing/Drawer.cpp.o", 
+            "../../../src/drawing/Drawer.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/drawing/Drawer.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-I/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDatasetManager.dir/__/__/src/slam/DatasetManager.cpp.o", 
+            "../../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestRobot.dir/__/__/src/slam/Robot.cpp.o", 
+            "../../../src/slam/Robot.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Robot.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/__/__/src/slam/Slam.cpp.o", 
+            "../../../src/slam/Slam.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Slam.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawer.dir/TestDrawer.cpp.o", 
+            "../../../tests/drawing/TestDrawer.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/drawing", 
+        "file": "../../../tests/drawing/TestDrawer.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/__/__/src/slam/Graph.cpp.o", 
+            "../../../src/slam/Graph.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Graph.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawLines.dir/__/__/src/slam/DatasetManager.cpp.o", 
+            "../../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/__/__/src/slam/Robot.cpp.o", 
+            "../../../src/slam/Robot.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Robot.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/__/__/src/slam/DataAssociator.cpp.o", 
+            "../../../src/slam/DataAssociator.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DataAssociator.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawer.dir/__/__/src/drawing/Drawer.cpp.o", 
+            "../../../src/drawing/Drawer.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/drawing", 
+        "file": "../../../src/drawing/Drawer.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalAssociator.dir/__/__/src/slam/LineMatcher.cpp.o", 
+            "../../../src/slam/LineMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/LineMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/pendulumMain.dir/__/src/utils/MyMath.cpp.o", 
+            "../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/TestCriticalIterations.cpp.o", 
+            "../../../tests/slam/TestCriticalIterations.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../tests/slam/TestCriticalIterations.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestLineMatcher.dir/__/__/src/slam/LineMatcher.cpp.o", 
+            "../../../src/slam/LineMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/LineMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestScanMatcher.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-I/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestMyMath.dir/TestMyMath.cpp.o", 
+            "../../../tests/utils/TestMyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/utils", 
+        "file": "../../../tests/utils/TestMyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-I/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/fileParsing.dir/__/src/slam/DatasetManager.cpp.o", 
+            "../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../src/slam/DatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/robotScanRetrieving.dir/__/src/slam/DatasetManager.cpp.o", 
+            "../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../src/slam/DatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-I/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestController.dir/TestController.cpp.o", 
+            "../../../tests/pendulum/TestController.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/pendulum", 
+        "file": "../../../tests/pendulum/TestController.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalAssociator.dir/__/__/src/slam/Robot.cpp.o", 
+            "../../../src/slam/Robot.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Robot.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-I/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDatasetManager.dir/TestDatasetManager.cpp.o", 
+            "../../../tests/slam/TestDatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../tests/slam/TestDatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/pendulumMain.dir/__/src/pendulum/Pendulum.cpp.o", 
+            "../../src/pendulum/Pendulum.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../src/pendulum/Pendulum.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalAssociator.dir/__/__/src/slam/DataAssociator.cpp.o", 
+            "../../../src/slam/DataAssociator.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DataAssociator.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalAssociator.dir/__/__/src/drawing/Drawer.cpp.o", 
+            "../../../src/drawing/Drawer.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/drawing/Drawer.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestRobot.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/__/__/src/slam/Slam.cpp.o", 
+            "../../../src/slam/Slam.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Slam.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestScanMatcher.dir/__/__/src/slam/Robot.cpp.o", 
+            "../../../src/slam/Robot.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Robot.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestLineMatcher.dir/__/__/src/slam/Robot.cpp.o", 
+            "../../../src/slam/Robot.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Robot.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawLines.dir/__/__/src/slam/LineMatcher.cpp.o", 
+            "../../../src/slam/LineMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/LineMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/__/__/src/slam/LineMatcher.cpp.o", 
+            "../../../src/slam/LineMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/LineMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawLines.dir/TestDrawLines.cpp.o", 
+            "../../../tests/slam/TestDrawLines.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../tests/slam/TestDrawLines.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestLineMatcher.dir/TestLineMatcher.cpp.o", 
+            "../../../tests/slam/TestLineMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../tests/slam/TestLineMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestMap.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/__/__/src/slam/ScanMatcher.cpp.o", 
+            "../../../src/slam/ScanMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/ScanMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalAssociator.dir/TestCriticalAssociator.cpp.o", 
+            "../../../tests/slam/TestCriticalAssociator.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../tests/slam/TestCriticalAssociator.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestScanMatcher.dir/__/__/src/slam/ScanMatcher.cpp.o", 
+            "../../../src/slam/ScanMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/ScanMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/robotScanRetrieving.dir/__/src/utils/MyMath.cpp.o", 
+            "../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDataAssociator.dir/__/__/src/slam/Robot.cpp.o", 
+            "../../../src/slam/Robot.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Robot.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDataAssociator.dir/__/__/src/slam/DataAssociator.cpp.o", 
+            "../../../src/slam/DataAssociator.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DataAssociator.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawLines.dir/__/__/src/drawing/Drawer.cpp.o", 
+            "../../../src/drawing/Drawer.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/drawing/Drawer.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestScanMatcher.dir/__/__/src/slam/DatasetManager.cpp.o", 
+            "../../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-I/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/fileParsing.dir/fileParsing.cpp.o", 
+            "../../executables/fileParsing.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../executables/fileParsing.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/__/__/src/slam/ScanMatcher.cpp.o", 
+            "../../../src/slam/ScanMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/ScanMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDataAssociator.dir/__/__/src/slam/DatasetManager.cpp.o", 
+            "../../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestSlam.dir/__/__/src/slam/LineMatcher.cpp.o", 
+            "../../../src/slam/LineMatcher.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/LineMatcher.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalIterations.dir/__/__/src/slam/DataAssociator.cpp.o", 
+            "../../../src/slam/DataAssociator.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DataAssociator.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawLines.dir/__/__/src/utils/MyMath.cpp.o", 
+            "../../../src/utils/MyMath.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/utils/MyMath.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestLineMatcher.dir/__/__/src/drawing/Drawer.cpp.o", 
+            "../../../src/drawing/Drawer.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/drawing/Drawer.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestCriticalAssociator.dir/__/__/src/slam/Map.cpp.o", 
+            "../../../src/slam/Map.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Map.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDataAssociator.dir/__/__/src/drawing/Drawer.cpp.o", 
+            "../../../src/drawing/Drawer.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/drawing/Drawer.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/pendulumMain.dir/__/src/utils/Clock.cpp.o", 
+            "../../src/utils/Clock.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../src/utils/Clock.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/pendulumMain.dir/pendulumMain.cpp.o", 
+            "../../executables/pendulumMain.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables", 
+        "file": "../../executables/pendulumMain.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawEllipse.dir/__/__/src/utils/Ellipse.cpp.o", 
+            "../../../src/utils/Ellipse.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/utils", 
+        "file": "../../../src/utils/Ellipse.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestDrawLines.dir/__/__/src/slam/Map.cpp.o", 
+            "../../../src/slam/Map.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/Map.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestLineMatcher.dir/__/__/src/slam/DatasetManager.cpp.o", 
+            "../../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DatasetManager.cpp"
+    }, 
+    {
+        "arguments": [
+            "/usr/bin/c++", 
+            "-c", 
+            "-DBOOST_TEST_DYN_LINK", 
+            "-DUNIX", 
+            "-I/home/dinies/gitrepos/DynModeling", 
+            "-I/usr/local/include/eigen3", 
+            "-isystem", 
+            "/usr/include/opencv", 
+            "-g", 
+            "-g", 
+            "-Wno-ignored-attributes", 
+            "-o", 
+            "CMakeFiles/TestRobot.dir/__/__/src/slam/DatasetManager.cpp.o", 
+            "../../../src/slam/DatasetManager.cpp"
+        ], 
+        "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam", 
+        "file": "../../../src/slam/DatasetManager.cpp"
+    }
+]
