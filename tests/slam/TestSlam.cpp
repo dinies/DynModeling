@@ -14,6 +14,7 @@ namespace dyn_modeling{
 )
 
   BOOST_AUTO_TEST_CASE(behaviouralTest) {
+
     std::string relativePath= "../files/datasets/first100data.txt";
     // std::string relativePath= "../files/datasets/realLaserScans.txt";
     Eigen::Vector3d initial_state(0,0,0);
@@ -31,6 +32,7 @@ namespace dyn_modeling{
     //10 double borderRatio;
 
     Slam slam = Slam(relativePath, initial_state, params);
+
     slam.cycle();
     cv::waitKey();
   }
