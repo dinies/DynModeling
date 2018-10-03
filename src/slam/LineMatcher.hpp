@@ -25,13 +25,15 @@ namespace dyn_modeling {
     double m_angularCoeffThreshold;
     double m_minLengthThreshold;
   public:
-    LineMatcher( const double t_distanceBetweenRangesThreshold , const double t_angularCoeffThreshold, const double t_minLength);
+    LineMatcher( const double t_distanceBetweenRangesThreshold, const double t_angularCoeffThreshold, const double t_minLength);
 
 
     inline double getDistanceBetweenRangesThreshold() { return m_distanceBetweenRangesThreshold;};
+
     inline void setDistanceBetweenRangesThreshold( const double t_threshold) { m_distanceBetweenRangesThreshold= t_threshold; };
 
     inline double getAngularCoeffThreshold() { return m_angularCoeffThreshold;};
+
     inline void setAngularCoeffThreshold( const double t_threshold) { m_angularCoeffThreshold= t_threshold; };
 
     double computeLength(const std::vector<scanPoint> &t_scanPoints,  const int t_firstIndex, const int t_secondIndex );

@@ -3,14 +3,18 @@
 #include "LineMatcher.hpp"
 
 namespace dyn_modeling {
-  LineMatcher::LineMatcher( double t_distanceBetweenRangesThreshold, double t_angularCoeffThreshold,  const double t_minLength):
+  LineMatcher::LineMatcher( double t_distanceBetweenRangesThreshold,
+                            double t_angularCoeffThreshold,
+                            const double t_minLength):
     m_distanceBetweenRangesThreshold(t_distanceBetweenRangesThreshold),
     m_angularCoeffThreshold( t_angularCoeffThreshold),
     m_minLengthThreshold( t_minLength)
   {};
 
 
-  double LineMatcher::computeLength(const std::vector<scanPoint> &t_scanPoints,  const int t_firstIndex, const int t_secondIndex ){
+  double LineMatcher::computeLength(const std::vector<scanPoint> &t_scanPoints,
+                                    const int t_firstIndex,
+                                    const int t_secondIndex ){
     scanPoint s1 = t_scanPoints.at( t_firstIndex);
     scanPoint s2 = t_scanPoints.at( t_secondIndex);
     return  sqrt( pow(s2.coords(0) - s1.coords(0), 2) + pow(s2.coords(1) - s1.coords(1), 2));
@@ -27,9 +31,9 @@ namespace dyn_modeling {
     scanPoint sP;
     int first_index;
     int second_index;
-    for (int i = 0; i < t_scanPoints_robotFrame.size(); ++i){
+    for (int i = 0; i < t_scanPoints_robotFrame.size() -1; ++i){
 
-      sP = t_scanPoints_robotFrame.at(i);
+     sP = t_scanPoints_robotFrame.at(i);
       switch( currState){
       case 0:
         first_index = i;
@@ -47,17 +51,9 @@ namespace dyn_modeling {
           prevSPoint = sP;
           prev_laserRange = curr_laserRange;
           currState = 2;
-          if ( i == t_scanPoints_robotFrame.size() -1 &&
-               computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold){
-            line new_line;
-            new_line.first_index = first_index;
-            new_line.second_index = second_index;
-            lines.push_back( new_line);
-          }
         }
         else{
-          currState = 1;
-          prev_laserRange = curr_laserRange;
+          currState = 0;
         }
         break;
       case 2:
@@ -70,13 +66,6 @@ namespace dyn_modeling {
           curr_avg_lineInclination = MyMath::computeAvg( curr_avg_lineInclination, i - first_index, curr_segmentInclination);
           prevSPoint = sP;
           prev_laserRange = curr_laserRange;
-          if ( i == t_scanPoints_robotFrame.size()-1 &&
-               computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold) {
-            line new_line;
-            new_line.first_index = first_index;
-            new_line.second_index = second_index;
-            lines.push_back( new_line);
-          }
         }
         else {
           if ( ! (fabs( prev_laserRange - curr_laserRange ) < m_distanceBetweenRangesThreshold )){
@@ -91,10 +80,10 @@ namespace dyn_modeling {
           }
           else {
             if ( computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold){
-            line new_line;
-            new_line.first_index = first_index;
-            new_line.second_index = second_index;
-            lines.push_back( new_line);
+              line new_line;
+              new_line.first_index = first_index;
+              new_line.second_index = second_index;
+              lines.push_back( new_line);
             }
 
             first_index = i-1;
@@ -104,19 +93,19 @@ namespace dyn_modeling {
             curr_avg_lineInclination = MyMath::computeAvg( curr_avg_lineInclination, i - first_index, curr_segmentInclination);
             prevSPoint = sP;
             prev_laserRange = sqrt( pow(sP.coords(0),2) + pow(sP.coords(1),2) );
-
-            if ( i == t_scanPoints_robotFrame.size() -1 &&
-                 computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold){
-              line new_line;
-              new_line.first_index = first_index;
-              new_line.second_index = second_index;
-              lines.push_back( new_line);
-            }
           }
         }
         break;
       }
     }
+    if ( currState > 0 &&
+         computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold){
+      line new_line;
+      new_line.first_index = first_index;
+      new_line.second_index = second_index;
+      lines.push_back( new_line);
+    }
+
     return lines;
   }
 }
