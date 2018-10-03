@@ -55,7 +55,7 @@ namespace dyn_modeling{
     const std::vector<scanPoint> newSPoints_robot ={ sp6,sp7,sp8,sp9,sp10};
     roundResult icpRes = sM.icpRound(5,initialGuess,oldSPoints_robot, newSPoints_robot);
     std::cout << " translational num of iters " << icpRes.chi.size() <<"\n";
-    std::vector<double> truthTransf = { t(0), t(1),0};
+    std::vector<double> truthTransf = { - t(0), - t(1), - 0};
     double threshold = 0.02;
     for ( int i = 0; i < 3; ++i){
       BOOST_CHECK_SMALL(icpRes.delta_x(i) - truthTransf.at(i),threshold);
@@ -108,7 +108,7 @@ namespace dyn_modeling{
 
     roundResult icpRes = sM.icpRound(5,initialGuess,oldSPoints_robot, newSPoints_robot);
     std::cout << " rotational num of iters " << icpRes.chi.size() <<"\n";
-    std::vector<double> truthTransf = {0,0, angle};
+    std::vector<double> truthTransf = { -0, - 0, -angle};
     double threshold = 0.02;
     for ( int i = 0; i < 3; ++i){
       BOOST_CHECK_SMALL( icpRes.delta_x(i) - truthTransf.at(i),threshold);
@@ -162,7 +162,7 @@ namespace dyn_modeling{
 
     roundResult icpRes = sM.icpRound(5,initialGuess,oldSPoints_robot, newSPoints_robot);
     std::cout << " rototraslational num of iters " << icpRes.chi.size() <<"\n";
-    std::vector<double> truthTransf = { t(0),t(1),angle };
+    std::vector<double> truthTransf = { - t(0), - t(1), -angle };
     double threshold = 0.02;
     for ( int i = 0; i < 3; ++i){
       BOOST_CHECK_SMALL( icpRes.delta_x(i) - truthTransf.at(i),threshold);

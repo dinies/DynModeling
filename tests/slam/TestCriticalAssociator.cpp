@@ -111,9 +111,20 @@ BOOST_AUTO_TEST_CASE(associateAcriticalIteration) {
 
     const int max_candidates = 2;
     const double lengthDiffThreshold = 0.1;
-    const double orientationDiffThreshold = 0.3;
+    const double absoluteOrientationDiffThreshold = 0.1;
+    const double nearLinesOrientationDiffThreshold = 0.3;
+    const double nearLinesBonusScoreMultiplier= 1.3;
 
-    DataAssociator dA = DataAssociator( max_candidates, lengthDiffThreshold, orientationDiffThreshold, lines_1, scanPoints_1, lines_2, scanPoints_2);
+
+    DataAssociator dA = DataAssociator( max_candidates,
+                                        lengthDiffThreshold,
+                                        absoluteOrientationDiffThreshold,
+                                        nearLinesOrientationDiffThreshold,
+                                        nearLinesBonusScoreMultiplier,
+                                        lines_1,
+                                        scanPoints_1,
+                                        lines_2,
+                                        scanPoints_2);
 
     std::vector< dataAssociation> result = dA.associateLines();
     std::cout << "n of associations : " << result.size() << "\n";

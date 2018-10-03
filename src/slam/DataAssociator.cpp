@@ -3,10 +3,21 @@
 #include "DataAssociator.hpp"
 
 namespace dyn_modeling {
-  DataAssociator::DataAssociator( int t_maxCandidates, double t_lengthDifferenceThreshold, double t_orientationDiffThreshold, const std::vector<line> &t_old_lines,const std::vector<scanPoint> &t_old_sPoints,const std::vector<line> &t_new_lines,const std::vector<scanPoint> &t_new_sPoints):
+
+  DataAssociator::DataAssociator( const int t_maxCandidates,
+                  const double t_lengthDifferenceThreshold,
+                  const double t_absoluteOrientationDiffThreshold,
+                  const double t_nearLinesOrientationDiffThreshold,
+                  const double t_nearLinesBonusScoreMultiplier,
+                  const std::vector<line> &t_old_lines,
+                  const std::vector<scanPoint> &t_old_sPoints,
+                  const std::vector<line> &t_new_lines,
+                  const std::vector<scanPoint> &t_new_sPoints):
     m_maxCandidates(t_maxCandidates),
     m_lengthDifferenceThreshold( t_lengthDifferenceThreshold),
-    m_orientationDiffThreshold( t_orientationDiffThreshold),
+    m_absoluteOrientationDiffThreshold( t_absoluteOrientationDiffThreshold),
+    m_nearLinesOrientationDiffThreshold( t_nearLinesOrientationDiffThreshold),
+    m_nearLinesBonusScoreMultiplier( t_nearLinesBonusScoreMultiplier),
     m_oldLines( t_old_lines),
     m_oldSPoints( t_old_sPoints),
     m_newLines( t_new_lines),
@@ -111,17 +122,18 @@ namespace dyn_modeling {
     double oldLength = getLineLength( m_oldLines.at(t_oldLine_index), m_oldSPoints);
     double newLength = getLineLength( m_newLines.at(t_newLine_index), m_newSPoints);
     double lengthDiff = fabs(oldLength - newLength);
-    if ( lengthDiff > m_lengthDifferenceThreshold ){
-      result.confidence_score = -1;
-    }
-    else{
-      result.confidence_score = 100 - ( 100* lengthDiff / m_lengthDifferenceThreshold );
-    }
-
     line old_line = m_oldLines.at(t_oldLine_index );
     line new_line = m_newLines.at(t_newLine_index );
     double old_line_orientation = getLineOrientation( old_line, m_oldSPoints);
     double new_line_orientation = getLineOrientation( new_line, m_newSPoints);
+    double absoluteOriDiff = fabs( old_line_orientation - new_line_orientation);
+
+    if (lengthDiff > m_lengthDifferenceThreshold || absoluteOriDiff > m_absoluteOrientationDiffThreshold){
+      result.confidence_score = -1;
+    }
+    else{
+      result.confidence_score = 100 - (60 * lengthDiff/ m_lengthDifferenceThreshold) -(40 * absoluteOriDiff/ m_absoluteOrientationDiffThreshold);
+    }
 
     if ( (t_newLine_index -1) >= 0 && (t_oldLine_index -1) >= 0){
       line old_lower_neighboor = m_oldLines.at(t_oldLine_index -1);
@@ -130,8 +142,9 @@ namespace dyn_modeling {
         double old_low_neigh_ori = getLineOrientation( old_lower_neighboor, m_oldSPoints);
         double new_low_neigh_ori = getLineOrientation( new_lower_neighboor, m_newSPoints);
 
-        if ( fabs(MyMath::boxMinusAngleRad( MyMath::boxMinusAngleRad( old_low_neigh_ori, old_line_orientation) , MyMath::boxMinusAngleRad( new_low_neigh_ori, new_line_orientation))) < m_orientationDiffThreshold ){
-          result.confidence_score = result.confidence_score * 1.3;
+        if ( fabs(MyMath::boxMinusAngleRad( MyMath::boxMinusAngleRad( old_low_neigh_ori, old_line_orientation),
+                                            MyMath::boxMinusAngleRad( new_low_neigh_ori, new_line_orientation))) < m_nearLinesOrientationDiffThreshold){
+          result.confidence_score = result.confidence_score * m_nearLinesBonusScoreMultiplier;
         }
       }
     }
@@ -143,8 +156,9 @@ namespace dyn_modeling {
         double old_up_neigh_ori = getLineOrientation( old_upper_neighboor, m_oldSPoints);
         double new_up_neigh_ori = getLineOrientation( new_upper_neighboor, m_newSPoints);
 
-        if ( fabs(MyMath::boxMinusAngleRad( MyMath::boxMinusAngleRad( old_line_orientation, old_up_neigh_ori) , MyMath::boxMinusAngleRad( new_line_orientation, new_up_neigh_ori ))) < m_orientationDiffThreshold ){
-          result.confidence_score = result.confidence_score * 1.3;
+        if ( fabs(MyMath::boxMinusAngleRad( MyMath::boxMinusAngleRad( old_line_orientation, old_up_neigh_ori),
+                                            MyMath::boxMinusAngleRad( new_line_orientation, new_up_neigh_ori ))) < m_nearLinesOrientationDiffThreshold){
+          result.confidence_score = result.confidence_score * m_nearLinesBonusScoreMultiplier;
         }
       }
     }

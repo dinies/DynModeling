@@ -18,15 +18,24 @@ namespace dyn_modeling {
   private:
     int m_maxCandidates;
     double m_lengthDifferenceThreshold;
-    double m_orientationDiffThreshold;
+    double m_absoluteOrientationDiffThreshold;
+    double m_nearLinesOrientationDiffThreshold;
+    double m_nearLinesBonusScoreMultiplier;
     std::vector<line> m_oldLines;
     std::vector<line> m_newLines;
     std::vector<scanPoint> m_oldSPoints;
     std::vector<scanPoint> m_newSPoints;
 
   public:
-    DataAssociator( int t_maxCandidates, double t_lengthDifferenceThreshold, double t_orientationDiffThreshold, const std::vector<line> &t_old_lines,const std::vector<scanPoint> &t_old_sPoints,const std::vector<line> &t_new_lines,const std::vector<scanPoint> &t_new_sPoints);
-
+    DataAssociator( const int t_maxCandidates,
+                    const double t_lengthDifferenceThreshold,
+                    const double t_absoluteOrientationDiffThreshold,
+                    const double t_nearLinesOrientationDiffThreshold,
+                    const double t_nearLinesBonusScoreMultiplier,
+                    const std::vector<line> &t_old_lines,
+                    const std::vector<scanPoint> &t_old_sPoints,
+                    const std::vector<line> &t_new_lines,
+                    const std::vector<scanPoint> &t_new_sPoints);
 
     DataAssociator();
 

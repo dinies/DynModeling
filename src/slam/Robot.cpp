@@ -77,8 +77,21 @@ namespace dyn_modeling {
     return middleScanPoints;
   }
 
+  Eigen::Vector3d Robot::elemWisePlus(const Eigen::Vector3d &t_x,const Eigen::Vector3d &t_delta_x){
+    const Eigen::Vector3d result( t_x(0) + t_delta_x(0),
+                                  t_x(1) + t_delta_x(1),
+                                  MyMath::boxPlusAngleRad( t_x(2), t_delta_x(2)));
+    return result;
+  }
+
+  Eigen::Vector3d Robot::elemWiseMinus(const Eigen::Vector3d &t_x,const Eigen::Vector3d &t_delta_x){
+    const Eigen::Vector3d result( t_x(0) - t_delta_x(0),
+                                  t_x(1) - t_delta_x(1),
+                                  MyMath::boxMinusAngleRad( t_x(2), t_delta_x(2)));
+    return result;
+  }
+
   Eigen::Vector3d Robot::boxPlus(const Eigen::Vector3d &t_x,const Eigen::Vector3d &t_delta_x){
-    //TODO  rewrite see foundamental comment below
     Eigen::Isometry2d T_x = MyMath::v2t( t_x );
     Eigen::Isometry2d T_delta_x =MyMath::v2t( t_delta_x );
     return  MyMath::t2v( T_x * T_delta_x);
@@ -94,7 +107,7 @@ namespace dyn_modeling {
   void Robot::updateState(const Eigen::Vector3d &t_deltaState){
 
     m_state.mu = Robot::boxPlus(m_state.mu, t_deltaState);
-    // TODO foundamental the update is now in robot frame , now we need to transform the reference frame of the update so we need to work with homogeneous matrices so using v2t on the current state and on the delta x we obtain two matrices that have to be concatenated.
+    // DONE foundamental the update is now in robot frame , now we need to transform the reference frame of the update so we need to work with homogeneous matrices so using v2t on the current state and on the delta x we obtain two matrices that have to be concatenated.
 
     // Eigen::Isometry2d transf = MyMath::v2t(t_deltaState);
     // Eigen::Matrix2d R = transf.linear();

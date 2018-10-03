@@ -20,8 +20,9 @@ namespace dyn_modeling{
 
     BOOST_CHECK_EQUAL( r.getNumDataEntries(),1);
     if(r.getNumDataEntries()==1){
-      double borderRatio = 0.05;
-      std::vector< scanPoint > scanPoints_robotFrame = r.retrieveScanPointsRobotFrame(0, borderRatio);
+      double borderRatio = 0.02;
+      std::vector< scanPoint > scanPoints_robotFrame=
+        r.retrieveScanPointsRobotFrame(0, borderRatio);
 
       BOOST_CHECK_EQUAL( scanPoints_robotFrame.size(),5);
       if( scanPoints_robotFrame.size() == 5){
@@ -34,8 +35,10 @@ namespace dyn_modeling{
         double threshold = 0.01;
 
         for( int i = 0; i < 5 ; ++i){
-          BOOST_CHECK_SMALL( scanPoints_robotFrame.at(i).coords(0) - truth_points.at(i).at(0), threshold);
-          BOOST_CHECK_SMALL( scanPoints_robotFrame.at(i).coords(1) - truth_points.at(i).at(1), threshold);
+          BOOST_CHECK_SMALL( scanPoints_robotFrame.at(i).coords(0)-
+                             truth_points.at(i).at(0), threshold);
+          BOOST_CHECK_SMALL( scanPoints_robotFrame.at(i).coords(1)-
+                             truth_points.at(i).at(1), threshold);
         }
       }
     }
@@ -50,11 +53,11 @@ namespace dyn_modeling{
     int num_data_entries = r.getNumDataEntries();
     BOOST_CHECK_EQUAL( num_data_entries , 1);
     if (num_data_entries == 1){
-      double borderRatio = 0.05;
+      double borderRatio = 0.01;
       std::vector< scanPoint > scanPoints_robotFrame = r.retrieveScanPointsRobotFrame(0, borderRatio);
 
-      BOOST_CHECK_EQUAL( scanPoints_robotFrame.size() , 721);
-      if (scanPoints_robotFrame.size() == 721){
+      BOOST_CHECK_EQUAL( scanPoints_robotFrame.size() , 714);
+      if (scanPoints_robotFrame.size() == 714){
         double angle = -((M_PI/2) - 0.5235984);
         Eigen::Matrix2d R;
         R << cos(angle ), -sin(angle),
@@ -62,7 +65,7 @@ namespace dyn_modeling{
         Eigen::Vector2d origin_range( 1.417 ,0);
         Eigen::Vector2d coords = R* origin_range;
         scanPoint sP = scanPoints_robotFrame.at(120);
-        double threshold = 0.01;
+        double threshold = 0.02;
         BOOST_CHECK_SMALL( sP.coords(0) - coords(0),threshold);
         BOOST_CHECK_SMALL( sP.coords(1) - coords(1),threshold);
       }

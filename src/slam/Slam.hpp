@@ -28,10 +28,14 @@ namespace dyn_modeling {
     double minLengthLinesLineMatcher;
     int maxCandidatesAssociation;
     double maxLengthDiffAssociation;
-    double maxOrientationDiffAssociation;
+    double maxAbsoluteOrientationDiffThreshold;
+    double maxNearLinesOrientationDiffThreshold;
+    double nearLinesBonusScoreMultiplier;
     int numMiddleScanPoints;
     double borderRatio;
-    paramsSlam_tag(int t_1,double t_2,double t_3,double t_4,double t_5,int t_6,double t_7,double t_8,int t_9,double t_10):
+    paramsSlam_tag(int t_1,double t_2,double t_3,double t_4,
+                   double t_5,int t_6,double t_7,double t_8,
+                   double t_9,double t_10,int t_11,double t_12):
       icpIterationsCap( t_1),
       kernelThresholdScanMatching(t_2),
       maxDistBetweenRangesLineMatcher(t_3),
@@ -39,9 +43,11 @@ namespace dyn_modeling {
       minLengthLinesLineMatcher(t_5),
       maxCandidatesAssociation(t_6),
       maxLengthDiffAssociation(t_7),
-      maxOrientationDiffAssociation(t_8),
-      numMiddleScanPoints(t_9),
-      borderRatio( t_10)
+      maxAbsoluteOrientationDiffThreshold(t_8),
+      maxNearLinesOrientationDiffThreshold(t_9),
+      nearLinesBonusScoreMultiplier(t_10),
+      numMiddleScanPoints(t_11),
+      borderRatio( t_12)
     {}
   } paramsSlam;
 

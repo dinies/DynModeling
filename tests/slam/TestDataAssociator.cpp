@@ -80,9 +80,19 @@ namespace dyn_modeling{
 
       const int max_candidates = 2;
       const double lengthDiffThreshold = 0.5;
-      const double orientationDiffThreshold = 0.2;
+      const double absoluteOrientationDiffThreshold = 1.4;
+      const double nearLinesOrientationDiffThreshold = 0.3;
+      const double nearLinesBonusScoreMultiplier= 1.3;
 
-      dA = DataAssociator( max_candidates, lengthDiffThreshold, orientationDiffThreshold, oldLines,oldscanPoints, newLines, newscanPoints);
+      dA = DataAssociator( max_candidates,
+                           lengthDiffThreshold,
+                           absoluteOrientationDiffThreshold,
+                           nearLinesOrientationDiffThreshold,
+                           nearLinesBonusScoreMultiplier,
+                           oldLines,
+                           oldscanPoints,
+                           newLines,
+                           newscanPoints);
 
     }
     ~PlainDataAssociatorFixture(){}
@@ -174,10 +184,10 @@ namespace dyn_modeling{
       dataAssociation d1 = result.at(0);
       dataAssociation d2 = result.at(1);
       dataAssociation d3 = result.at(2);
-      BOOST_CHECK_EQUAL( d1.old_line_index, 0);
+      BOOST_CHECK_EQUAL( d1.old_line_index, 1);
       BOOST_CHECK_EQUAL( d1.new_line_index, 1);
       BOOST_CHECK( d1.confidence_score > 0);
-      BOOST_CHECK_EQUAL( d2.old_line_index, 1);
+      BOOST_CHECK_EQUAL( d2.old_line_index, 0);
       BOOST_CHECK_EQUAL( d2.new_line_index, 1);
       BOOST_CHECK( d2.confidence_score > 0);
       BOOST_CHECK_EQUAL( d3.old_line_index, 2);
@@ -202,7 +212,8 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_CASE( testInsertOrderedDataAssociationHighScore) {
     PlainDataAssociatorFixture fixtureClass;
     DataAssociationsFixture fixtureStructs;
-    fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association, fixtureStructs.associationsVec );
+    fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association,
+                                                  fixtureStructs.associationsVec );
     BOOST_CHECK_EQUAL( 4 , fixtureStructs.associationsVec.size());
     dataAssociation d = fixtureStructs.associationsVec.at(1);
     BOOST_CHECK_EQUAL( 100 , d.confidence_score);
@@ -212,7 +223,8 @@ namespace dyn_modeling{
     PlainDataAssociatorFixture fixtureClass;
     DataAssociationsFixture fixtureStructs;
     fixtureStructs.association.confidence_score = 10;
-    fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association, fixtureStructs.associationsVec );
+    fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association,
+                                                  fixtureStructs.associationsVec );
     BOOST_CHECK_EQUAL( 4 , fixtureStructs.associationsVec.size());
     dataAssociation d = fixtureStructs.associationsVec.at(3);
     BOOST_CHECK_EQUAL( 10 , d.confidence_score);
@@ -222,7 +234,8 @@ namespace dyn_modeling{
     PlainDataAssociatorFixture fixtureClass;
     DataAssociationsFixture fixtureStructs;
     fixtureStructs.association.confidence_score = -1;
-    fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association, fixtureStructs.associationsVec );
+    fixtureClass.dA.insertOrderedDataAssociation( fixtureStructs.association,
+                                                  fixtureStructs.associationsVec );
     BOOST_CHECK_EQUAL( 3 , fixtureStructs.associationsVec.size());
   }
 

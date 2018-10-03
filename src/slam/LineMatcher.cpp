@@ -47,7 +47,8 @@ namespace dyn_modeling {
           prevSPoint = sP;
           prev_laserRange = curr_laserRange;
           currState = 2;
-          if ( i == t_scanPoints_robotFrame.size() -1 && computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold){
+          if ( i == t_scanPoints_robotFrame.size() -1 &&
+               computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold){
             line new_line;
             new_line.first_index = first_index;
             new_line.second_index = second_index;
@@ -62,13 +63,15 @@ namespace dyn_modeling {
       case 2:
         curr_laserRange = sqrt( pow(sP.coords(0),2) + pow(sP.coords(1),2) );
         curr_segmentInclination = atan2( sP.coords(1) - prevSPoint.coords(1), sP.coords(0) - prevSPoint.coords(0) );
-        if ( fabs(curr_segmentInclination - curr_avg_lineInclination) < m_angularCoeffThreshold && fabs( prev_laserRange - curr_laserRange ) < m_distanceBetweenRangesThreshold ){
+        if ( fabs(curr_segmentInclination - curr_avg_lineInclination) < m_angularCoeffThreshold
+             && fabs( prev_laserRange - curr_laserRange ) < m_distanceBetweenRangesThreshold ){
 
           second_index = i;
           curr_avg_lineInclination = MyMath::computeAvg( curr_avg_lineInclination, i - first_index, curr_segmentInclination);
           prevSPoint = sP;
           prev_laserRange = curr_laserRange;
-          if ( i == t_scanPoints_robotFrame.size()-1 && computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold) {
+          if ( i == t_scanPoints_robotFrame.size()-1 &&
+               computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold) {
             line new_line;
             new_line.first_index = first_index;
             new_line.second_index = second_index;
@@ -77,7 +80,8 @@ namespace dyn_modeling {
         }
         else {
           if ( ! (fabs( prev_laserRange - curr_laserRange ) < m_distanceBetweenRangesThreshold )){
-            if ( second_index - 1 > first_index && computeLength( t_scanPoints_robotFrame, first_index, second_index -1) > m_minLengthThreshold){
+            if ( second_index - 1 > first_index &&
+                 computeLength( t_scanPoints_robotFrame, first_index, second_index -1) > m_minLengthThreshold){
               line new_line;
               new_line.first_index = first_index;
               new_line.second_index = second_index - 1;
@@ -101,7 +105,8 @@ namespace dyn_modeling {
             prevSPoint = sP;
             prev_laserRange = sqrt( pow(sP.coords(0),2) + pow(sP.coords(1),2) );
 
-            if ( i == t_scanPoints_robotFrame.size() -1 && computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold){
+            if ( i == t_scanPoints_robotFrame.size() -1 &&
+                 computeLength( t_scanPoints_robotFrame, first_index, second_index) > m_minLengthThreshold){
               line new_line;
               new_line.first_index = first_index;
               new_line.second_index = second_index;

@@ -61,7 +61,13 @@ namespace dyn_modeling {
       else{
         prevNode = m_graph.getNode(i -1);
 
-        DataAssociator associator(m_params.maxCandidatesAssociation,m_params.maxLengthDiffAssociation, m_params.maxOrientationDiffAssociation,prevNode.lines,prevNode.scanPoints_robotFrame, currNode.lines, currNode.scanPoints_robotFrame );
+        DataAssociator associator(m_params.maxCandidatesAssociation,
+                                  m_params.maxLengthDiffAssociation,
+                                  m_params.maxAbsoluteOrientationDiffThreshold,
+                                  m_params.maxNearLinesOrientationDiffThreshold,
+                                  m_params.nearLinesBonusScoreMultiplier,
+                                  prevNode.lines,prevNode.scanPoints_robotFrame,
+                                  currNode.lines, currNode.scanPoints_robotFrame );
         currEdge.associations = associator.associateLines();
         // std::cout << currEdge.associations.size() << " associations \n" ;
         if ( currEdge.associations.size() > 0){
@@ -164,7 +170,6 @@ namespace dyn_modeling {
     if (i-10 >= 0){
       m_map.fadeWorldMap(i-10);
     }
- 
   }
 
   void  Slam::postDrawingManagement( const int t_index){
