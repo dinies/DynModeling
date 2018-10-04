@@ -17,34 +17,46 @@ namespace dyn_modeling {
     state m_state;
 
   public:
-    Robot( const std::string &t_dataSet_AbsolPath , const Eigen::Vector3d &t_initial_state);
+    Robot( const std::string &t_dataSet_AbsolPath,
+           const Eigen::Vector3d &t_initial_state);
 
     inline state getState() { return m_state; };
 
     inline void setState(state &t_newState ) { m_state = t_newState; };
 
 
-    std::vector<scanPoint> retrieveScanPointsRobotFrame( const int t_index_datanode, const double borderRatio);
+    std::vector<scanPoint> retrieveScanPointsRobotFrame
+    ( const int t_index_datanode, const double borderRatio);
 
-    bool checkScanPointInBorders( const double range, const double borderRatio);
+    bool checkScanPointInBorders( const double range,
+                                  const double borderRatio);
 
-    std::vector<scanPoint> changeCoordsRobotToWorld( const std::vector<scanPoint> &t_scanPoints_robotFrame);
+    std::vector<scanPoint> changeCoordsRobotToWorld
+    ( const std::vector<scanPoint> &t_scanPoints_robotFrame);
 
     void updateState(const Eigen::Vector3d &t_deltaState);
 
-    inline int getNumDataEntries() { return m_datasetManager.getNumDataEntries(); }
+    inline int getNumDataEntries()
+    { return m_datasetManager.getNumDataEntries(); }
 
     inline int getNumRanges() { return m_datasetManager.getNumRanges(); }
 
-    static Eigen::Vector3d elemWisePlus(const Eigen::Vector3d &t_x,const Eigen::Vector3d &t_delta_x);
+    static Eigen::Vector3d elemWisePlus(const Eigen::Vector3d &t_x,
+                                        const Eigen::Vector3d &t_delta_x);
 
-    static Eigen::Vector3d elemWiseMinus(const Eigen::Vector3d &t_x,const Eigen::Vector3d &t_delta_x);
+    static Eigen::Vector3d elemWiseMinus(const Eigen::Vector3d &t_x,
+                                         const Eigen::Vector3d &t_delta_x);
 
-    static Eigen::Vector3d boxPlus(const Eigen::Vector3d &t_x,const Eigen::Vector3d &t_delta_x);
+    static Eigen::Vector3d boxPlus(const Eigen::Vector3d &t_x,
+                                   const Eigen::Vector3d &t_delta_x);
 
-    static Eigen::Vector3d boxMinus(const Eigen::Vector3d &t_first,const Eigen::Vector3d &t_second);
+    static Eigen::Vector3d boxMinus(const Eigen::Vector3d &t_first,
+                                    const Eigen::Vector3d &t_second);
 
-    static std::vector<scanPoint> computeMiddleScanPoints( const scanPoint &t_s1, const scanPoint &t_s2, const int t_numMidPoints);
+    static std::vector<scanPoint> computeMiddleScanPoints
+    ( const scanPoint &t_s1,
+      const scanPoint &t_s2,
+      const int t_numMidPoints);
 
   };
 }

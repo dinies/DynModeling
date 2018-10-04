@@ -5,12 +5,16 @@ namespace dyn_modeling {
 
 
 
-  Slam::Slam( const std::string &t_dataSet_AbsolPath, const Eigen::Vector3d &t_initialRobotState, const paramsSlam &t_params):
+  Slam::Slam( const std::string &t_dataSet_AbsolPath,
+              const Eigen::Vector3d &t_initialRobotState,
+              const paramsSlam &t_params):
     m_params( t_params),
     m_robot(  Robot( t_dataSet_AbsolPath, t_initialRobotState) ),
-    m_scanMatcher( ScanMatcher()),
+    m_scanMatcher( ScanMatcher(t_params.icpEpsilon)),
     m_map( Map()),
-    m_lineMatcher( LineMatcher(t_params.maxDistBetweenRangesLineMatcher,  t_params.maxAngularCoeffLineMatcher, t_params.minLengthLinesLineMatcher))
+    m_lineMatcher( LineMatcher(t_params.maxDistBetweenRangesLineMatcher,
+                               t_params.maxAngularCoeffLineMatcher,
+                               t_params.minLengthLinesLineMatcher))
   {
     m_graph = Graph( m_robot.getNumDataEntries());
   }
@@ -49,8 +53,10 @@ namespace dyn_modeling {
 
     for (int i = 0; i < num_dataEntries; ++i) {
 
-      currNode.scanPoints_robotFrame = m_robot.retrieveScanPointsRobotFrame(i, m_params.borderRatio);
-      currNode.lines = m_lineMatcher.generateLines( currNode.scanPoints_robotFrame );
+      currNode.scanPoints_robotFrame =
+        m_robot.retrieveScanPointsRobotFrame(i, m_params.borderRatio);
+      currNode.lines =
+        m_lineMatcher.generateLines( currNode.scanPoints_robotFrame );
 
       // std::cout << currNode.lines.size() << " lines \n" ;
 
@@ -61,18 +67,24 @@ namespace dyn_modeling {
       else{
         prevNode = m_graph.getNode(i -1);
 
-        DataAssociator associator(m_params.maxCandidatesAssociation,
-                                  m_params.maxLengthDiffAssociation,
-                                  m_params.maxAbsoluteOrientationDiffThreshold,
-                                  m_params.maxNearLinesOrientationDiffThreshold,
-                                  m_params.nearLinesBonusScoreMultiplier,
-                                  prevNode.lines,prevNode.scanPoints_robotFrame,
-                                  currNode.lines, currNode.scanPoints_robotFrame );
+        DataAssociator associator
+          (m_params.maxCandidatesAssociation,
+           m_params.maxLengthDiffAssociation,
+           m_params.maxAbsoluteOrientationDiffThreshold,
+           m_params.maxNearLinesOrientationDiffThreshold,
+           m_params.nearLinesBonusScoreMultiplier,
+           prevNode.lines,prevNode.scanPoints_robotFrame,
+           currNode.lines, currNode.scanPoints_robotFrame );
+
         currEdge.associations = associator.associateLines();
         // std::cout << currEdge.associations.size() << " associations \n" ;
         if ( currEdge.associations.size() > 0){
           m_robot.setState( prevNode.q);
-          resMatch = matchAssociatedData( prevNode, currEdge, currNode, m_params.icpIterationsCap, m_params.numMiddleScanPoints);
+          resMatch = matchAssociatedData( prevNode,
+                                          currEdge,
+                                          currNode,
+                                          m_params.icpIterationsCap,
+                                          m_params.numMiddleScanPoints);
           currEdge.delta_x = resMatch.icpResult.delta_x;
 
           m_robot.updateState( currEdge.delta_x );
@@ -95,12 +107,20 @@ namespace dyn_modeling {
       //loop checker
       //TODO
 
-      drawingPoints_worldFrame = m_robot.changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame );
-      prevAssociationSP_worldFrame = m_robot.changeCoordsRobotToWorld( resMatch.prevAssociationPoints);
-      currAssociationSP_worldFrame = m_robot.changeCoordsRobotToWorld( resMatch.currAssociationPoints);
+      drawingPoints_worldFrame =
+        m_robot.changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame );
+      prevAssociationSP_worldFrame =
+        m_robot.changeCoordsRobotToWorld( resMatch.prevAssociationPoints);
+      currAssociationSP_worldFrame =
+        m_robot.changeCoordsRobotToWorld( resMatch.currAssociationPoints);
 
       preDrawingManagement(i-1);
-      m_map.drawImages( drawingPoints_worldFrame, prevAssociationSP_worldFrame, currAssociationSP_worldFrame, m_params.numMiddleScanPoints, currNode.q , i);
+      m_map.drawImages( drawingPoints_worldFrame,
+                        prevAssociationSP_worldFrame,
+                        currAssociationSP_worldFrame,
+                        m_params.numMiddleScanPoints,
+                        currNode.q,
+                        i);
 
       postDrawingManagement(i);
       // std::cout << i << " iteration \n";
@@ -108,10 +128,18 @@ namespace dyn_modeling {
     plotStateEvolution(0.01);
   }
 
-  resultMatchAssociations Slam::matchAssociatedData(const node &t_prevNode, const edge &t_currEdge, const node &t_currNode, const int t_icpIterations_cap, const int t_numMidPoints){
+  resultMatchAssociations Slam::matchAssociatedData
+  (const node &t_prevNode,
+   const edge &t_currEdge,
+   const node &t_currNode,
+   const int t_icpIterations_cap,
+   const int t_numMidPoints){
+
     resultMatchAssociations result;
-    result.prevAssociationPoints.reserve( t_currEdge.associations.size()*t_numMidPoints);
-    result.currAssociationPoints.reserve( t_currEdge.associations.size()*t_numMidPoints);
+    result.prevAssociationPoints.reserve
+      (t_currEdge.associations.size()*t_numMidPoints);
+    result.currAssociationPoints.reserve
+      (t_currEdge.associations.size()*t_numMidPoints);
 
     line linePrev;
     line lineCurr;
@@ -141,7 +169,10 @@ namespace dyn_modeling {
 
 
     }
-    result.icpResult = m_scanMatcher.icpRound(t_icpIterations_cap ,icpInitialGuess, result.prevAssociationPoints, result.currAssociationPoints);
+    result.icpResult = m_scanMatcher.icpRound(t_icpIterations_cap,
+                                              icpInitialGuess,
+                                              result.prevAssociationPoints,
+                                              result.currAssociationPoints);
     return result;
   }
 

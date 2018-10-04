@@ -48,9 +48,11 @@ namespace dyn_modeling {
 
     inline node getNode( const int t_index ){return m_nodes.at(t_index); };
 
-    inline void changeNode( const int t_index, const node &t_node ){ m_nodes.at(t_index) = t_node; };
+    inline void changeNode( const int t_index, const node &t_node )
+    { m_nodes.at(t_index) = t_node; };
 
-    inline void changeEdge( const int t_index, const edge &t_edge ){ m_edges.at(t_index) = t_edge; };
+    inline void changeEdge( const int t_index, const edge &t_edge )
+    { m_edges.at(t_index) = t_edge; };
 
     inline std::vector<node> getNodes(){return m_nodes; };
 

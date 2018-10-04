@@ -108,7 +108,6 @@ target_link_libraries(
   )
 add_test( NAME TestCriticalAssociator COMMAND TestCriticalAssociator)
 
-
 add_executable( TestDrawLines
   TestDrawLines.cpp
   ../../src/slam/DatasetManager.cpp
@@ -128,6 +127,27 @@ target_link_libraries(
   PUBLIC Boost::iostreams
   )
 add_test( NAME TestDrawLines COMMAND TestDrawLines)
+
+
+add_executable( TestTuningLineMatcherParams
+  TestTuningLineMatcherParams.cpp
+  ../../src/slam/DatasetManager.cpp
+  ../../src/slam/Robot.cpp
+  ../../src/slam/LineMatcher.cpp
+  ../../src/slam/Map.cpp
+  ../../src/utils/MyMath.cpp
+  ../../src/drawing/Drawer.cpp
+  )
+
+target_link_libraries(
+  TestTuningLineMatcherParams
+  PUBLIC Boost::unit_test_framework
+  PUBLIC ${OpenCV_LIBS}
+  PUBLIC Boost::filesystem
+  PUBLIC Boost::system
+  PUBLIC Boost::iostreams
+  )
+add_test( NAME TestTuningLineMatcherParams COMMAND TestTuningLineMatcherParams)
 
 
 add_executable( TestMap

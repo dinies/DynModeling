@@ -3,23 +3,26 @@
 #include "ScanMatcher.hpp"
 
 namespace dyn_modeling {
-  ScanMatcher::ScanMatcher(){
+  ScanMatcher::ScanMatcher( const double t_epsilon):
+    m_epsilon( t_epsilon)
+  {
     m_kernelThreshold = std::numeric_limits<double>::max();
   };
 
-  roundResult ScanMatcher::icpRound(const int t_numIterations,
-                                    const Eigen::Vector3d &t_initialGuessState,
-                                    const std::vector<scanPoint> &t_oldScanPoints_robot,
-                                    const std::vector<scanPoint> &t_newScanPoints_robot){
+  roundResult ScanMatcher::icpRound
+  (const int t_numIterations,
+   const Eigen::Vector3d &t_initialGuessState,
+   const std::vector<scanPoint> &t_oldScanPoints_robot,
+   const std::vector<scanPoint> &t_newScanPoints_robot){
+
     std::vector<double> chis;
-    const double epsilon = 0.1;
-    double chi = epsilon*2;
+    double chi = m_epsilon*2;
     int i = 0;
     iterResult curr_result;
     roundResult finalResult;
     finalResult.delta_x << 0.0 ,0.0 ,0.0 ;
     Eigen::Vector3d curr_guess = t_initialGuessState;
-    while (i < t_numIterations && chi > epsilon){
+    while (i < t_numIterations && chi > m_epsilon){
       curr_result = icpIterationRframe(curr_guess,
                                        t_oldScanPoints_robot,
                                        t_newScanPoints_robot);
@@ -49,9 +52,11 @@ namespace dyn_modeling {
 
 
 
-  iterResult ScanMatcher::icpIterationRframe( const Eigen::Vector3d &t_initialGuessState,
-                                              const std::vector<scanPoint> &t_oldScanPoints_robot,
-                                              const std::vector<scanPoint> &t_newScanPoints_robot){
+  iterResult ScanMatcher::icpIterationRframe
+  ( const Eigen::Vector3d &t_initialGuessState,
+    const std::vector<scanPoint> &t_oldScanPoints_robot,
+    const std::vector<scanPoint> &t_newScanPoints_robot){
+
     int outliers = 0;
     Eigen::Matrix<double, 3, 3> H;
     H.Zero();

@@ -38,7 +38,8 @@ namespace dyn_modeling {
     m_spatialUnit = 0.4;
   };
 
-  std::vector< cv::Point2d> Map::computePointsRobot( const state &t_robotState, const double t_robotRadius ){
+  std::vector< cv::Point2d> Map::computePointsRobot
+  ( const state &t_robotState, const double t_robotRadius ){
     std::vector< cv::Point2d> pointVec;
     pointVec.reserve(6);
     double curr_angle(M_PI/6 + t_robotState.mu(2));
@@ -53,7 +54,8 @@ namespace dyn_modeling {
     return pointVec;
   };
 
-  std::vector< cv::Point2d> Map::computePointsScans( const std::vector<scanPoint> &t_scanPoints_worldFrame){
+  std::vector< cv::Point2d> Map::computePointsScans
+  ( const std::vector<scanPoint> &t_scanPoints_worldFrame){
     std::vector< cv::Point2d> points;
     points.reserve( t_scanPoints_worldFrame.size());
     for( auto sP : t_scanPoints_worldFrame){
@@ -64,14 +66,18 @@ namespace dyn_modeling {
 
   };
 
-  std::vector< cv::Point2d> Map::computePointsLineAssociations( const std::vector<scanPoint> &t_prevAssociatedSP_worldFrame,const std::vector<scanPoint> &t_currAssociatedSP_worldFrame, const int t_numMiddlePoints){
-    std::vector< cv::Point2d> points;
+  std::vector< cv::Point2d> Map::computePointsLineAssociations
+  ( const std::vector<scanPoint> &t_prevAssociatedSP_worldFrame,
+    const std::vector<scanPoint> &t_currAssociatedSP_worldFrame,
+    const int t_numMiddlePoints){
 
-    for (int i = 0; i< t_prevAssociatedSP_worldFrame.size(); i+= t_numMiddlePoints ){
+    std::vector< cv::Point2d> points;
+    for (int i = 0; i< t_prevAssociatedSP_worldFrame.size();
+         i+= t_numMiddlePoints ){
       scanPoint sP1 = t_prevAssociatedSP_worldFrame.at( i);
-      scanPoint sP2 = t_prevAssociatedSP_worldFrame.at( i + t_numMiddlePoints -1);
+      scanPoint sP2 = t_prevAssociatedSP_worldFrame.at(i+ t_numMiddlePoints-1);
       scanPoint sP3 = t_currAssociatedSP_worldFrame.at( i);
-      scanPoint sP4 = t_currAssociatedSP_worldFrame.at( i + t_numMiddlePoints -1);
+      scanPoint sP4 = t_currAssociatedSP_worldFrame.at(i+ t_numMiddlePoints-1);
 
       cv::Point2d p1( sP1.coords(0) , sP1.coords(1));
       cv::Point2d p2( sP2.coords(0) , sP2.coords(1));
@@ -86,34 +92,55 @@ namespace dyn_modeling {
     return points;
   }
 
-  void Map::drawRobot( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color){
+  void Map::drawRobot( const std::vector< cv::Point2d> &t_points,
+                       const cv::Scalar &t_color){
     m_drawer.drawHollowPoligon(m_drawingRobot, t_points, t_color);
     cv::Point2d origin ( 0 , 0 );
     m_drawer.drawLine(m_drawingRobot, origin, t_points.at(0), t_color);
     m_drawer.drawLine(m_drawingRobot, origin, t_points.at(5), t_color);
   };
 
-  void Map::drawScans( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color){
+  void Map::drawScans( const std::vector< cv::Point2d> &t_points,
+                       const cv::Scalar &t_color){
     for (auto p : t_points){
       m_drawer.drawPatch(m_drawingMap, p, t_color);
     }
   };
 
-  void Map::drawLineAssociations( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_prevColor, const cv::Scalar &t_currColor){
+  void Map::drawLineAssociations( const std::vector< cv::Point2d> &t_points,
+                                  const cv::Scalar &t_prevColor,
+                                  const cv::Scalar &t_currColor){
     for (int i = 0; i< t_points.size(); i+= 4 ){
-      m_drawer.drawLine(m_drawingLineAssociations, t_points.at(i), t_points.at(i+1), t_prevColor);
-      m_drawer.drawLine(m_drawingLineAssociations, t_points.at(i+2), t_points.at(i+3), t_currColor);
+      m_drawer.drawLine(m_drawingLineAssociations,
+                        t_points.at(i),
+                        t_points.at(i+1),
+                        t_prevColor);
+      m_drawer.drawLine(m_drawingLineAssociations,
+                        t_points.at(i+2),
+                        t_points.at(i+3),
+                        t_currColor);
     }
   }
 
-  void Map::drawWorldMap( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color){
+  void Map::drawWorldMap( const std::vector< cv::Point2d> &t_points,
+                          const cv::Scalar &t_color){
     for (int i = 0; i< t_points.size(); i+= 4 ){
-      m_drawer.drawLine(m_drawingWorldMap, t_points.at(i), t_points.at(i+1), t_color);
+      m_drawer.drawLine(m_drawingWorldMap,
+                        t_points.at(i),
+                        t_points.at(i+1),
+                        t_color);
     }
   }
 
 
-  void Map::drawImages(const std::vector<scanPoint> &t_scanPoints_worldFrame, const std::vector<scanPoint> &t_prevAssociatedSP_worldFrame,const std::vector<scanPoint> &t_currAssociatedSP_worldFrame, const int t_numMiddlePoints ,const state &t_robotState,const int t_index ){
+  void Map::drawImages
+  (const std::vector<scanPoint> &t_scanPoints_worldFrame,
+   const std::vector<scanPoint> &t_prevAssociatedSP_worldFrame,
+   const std::vector<scanPoint> &t_currAssociatedSP_worldFrame,
+   const int t_numMiddlePoints,
+   const state &t_robotState,
+   const int t_index ){
+
     drawingData dD;
     dD.index = t_index;
     dD.robot_drawing.reserve(6);
@@ -124,11 +151,17 @@ namespace dyn_modeling {
     drawRobot( dD.robot_drawing, m_colors.darkBrown);
     drawScans( dD.scans_drawing, m_colors.lightBlue);
 
-    dD.someAssociations = t_prevAssociatedSP_worldFrame.size() != 0 && t_currAssociatedSP_worldFrame.size() != 0;
+    dD.someAssociations = t_prevAssociatedSP_worldFrame.size() != 0 &&
+      t_currAssociatedSP_worldFrame.size() != 0;
     if ( dD.someAssociations){
-      dD.lineAssociations_drawing.reserve( t_prevAssociatedSP_worldFrame.size());
-      dD.lineAssociations_drawing = computePointsLineAssociations( t_prevAssociatedSP_worldFrame, t_currAssociatedSP_worldFrame, t_numMiddlePoints);
-      drawLineAssociations( dD.lineAssociations_drawing, m_colors.dark_red, m_colors.lightBlue);
+      dD.lineAssociations_drawing.reserve(t_prevAssociatedSP_worldFrame.size());
+      dD.lineAssociations_drawing =
+        computePointsLineAssociations( t_prevAssociatedSP_worldFrame,
+                                       t_currAssociatedSP_worldFrame,
+                                       t_numMiddlePoints);
+      drawLineAssociations( dD.lineAssociations_drawing,
+                            m_colors.dark_red,
+                            m_colors.lightBlue);
       drawWorldMap( dD.lineAssociations_drawing, m_colors.lightBlue);
     }
     m_drawingList.push_back(dD);
@@ -185,7 +218,9 @@ namespace dyn_modeling {
   void Map::deleteLineAssociations( const int t_index){
     if ( t_index <= m_drawingList.size()-1 ) {
       drawingData dD = m_drawingList.at(t_index);
-      drawLineAssociations( dD.lineAssociations_drawing, m_colors.milk, m_colors.milk);
+      drawLineAssociations( dD.lineAssociations_drawing,
+                            m_colors.milk,
+                            m_colors.milk);
     }
   };
 

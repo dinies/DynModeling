@@ -53,21 +53,38 @@ namespace dyn_modeling {
   public:
     Map();
 
-    static std::vector< cv::Point2d> computePointsRobot( const state &t_robotState , const double t_robotRadius);
+    static std::vector< cv::Point2d> computePointsRobot
+    ( const state &t_robotState,
+      const double t_robotRadius);
 
-    static std::vector< cv::Point2d> computePointsScans( const std::vector<scanPoint> &t_scanPoints_worldFrame);
+    static std::vector< cv::Point2d> computePointsScans
+    ( const std::vector<scanPoint> &t_scanPoints_worldFrame);
 
-    static std::vector< cv::Point2d> computePointsLineAssociations( const std::vector<scanPoint> &t_prevAssociatedSP_worldFrame,const std::vector<scanPoint> &t_currAssociatedSP_worldFrame, const int t_numMiddlePoints);
+    static std::vector< cv::Point2d> computePointsLineAssociations
+    ( const std::vector<scanPoint> &t_prevAssociatedSP_worldFrame,
+      const std::vector<scanPoint> &t_currAssociatedSP_worldFrame,
+      const int t_numMiddlePoints);
 
-    void drawRobot( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color);
+    void drawRobot( const std::vector< cv::Point2d> &t_points,
+                    const cv::Scalar &t_color);
 
-    void drawScans( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color);
+    void drawScans( const std::vector< cv::Point2d> &t_points,
+                    const cv::Scalar &t_color);
 
-    void drawLineAssociations(  const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_prevColor, const cv::Scalar &t_currColor);
+    void drawLineAssociations(  const std::vector< cv::Point2d> &t_points,
+                                const cv::Scalar &t_prevColor,
+                                const cv::Scalar &t_currColor);
 
-    void drawWorldMap( const std::vector< cv::Point2d> &t_points, const cv::Scalar &t_color);
+    void drawWorldMap( const std::vector< cv::Point2d> &t_points,
+                       const cv::Scalar &t_color);
 
-    void drawImages(const std::vector<scanPoint> &t_scanPoints_worldFrame, const std::vector<scanPoint> &t_prevAssociatedSP_worldFrame,const std::vector<scanPoint> &t_currAssociatedSP_worldFrame, const int t_numMiddlePoints ,const state &t_robotState,const int t_index );
+    void drawImages
+    (const std::vector<scanPoint> &t_scanPoints_worldFrame,
+     const std::vector<scanPoint> &t_prevAssociatedSP_worldFrame,
+     const std::vector<scanPoint> &t_currAssociatedSP_worldFrame,
+     const int t_numMiddlePoints ,
+     const state &t_robotState,
+     const int t_index );
 
     void drawTrail(const int t_indexFrom, const int t_indexTo);
 
