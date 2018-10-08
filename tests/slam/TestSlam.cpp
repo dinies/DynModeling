@@ -9,8 +9,7 @@
 #include "opencv2/opencv.hpp"
 
 namespace dyn_modeling{
-  BOOST_AUTO_TEST_SUITE( SlamClass
-)
+  BOOST_AUTO_TEST_SUITE( SlamClass)
 
   BOOST_AUTO_TEST_CASE(behaviouralTest) {
 
@@ -23,9 +22,9 @@ namespace dyn_modeling{
        0.1, // double icpEpsilon
        6, // int icpIterationsCap
        0.4, // double kernelThresholdScanMatching
-       0.6, // double maxDistBetweenRangesLineMatcher
+       3, // double maxDistBetweenRangesLineMatcher
        1, // double maxAngularCoeffLineMatcher
-       0.1, // double minLengthLinesLineMatcher
+       0.2, // double minLengthLinesLineMatcher
        6, // int maxCandidatesAssociation
        0.1, // double maxLengthDiffAssociation
        0.1, // double maxAbsoluteOrientationDiffThreshold

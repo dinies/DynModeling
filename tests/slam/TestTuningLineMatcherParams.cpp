@@ -25,7 +25,8 @@ namespace dyn_modeling{
 
     int num_data_entries = r.getNumDataEntries();
     double borderRatio = 0.05;
-    std::vector< scanPoint > scanPoints = r.retrieveScanPointsRobotFrame(2343,borderRatio);
+    std::vector< scanPoint > scanPoints =
+      r.retrieveScanPointsRobotFrame(2343,borderRatio);
 
     LineMatcher lM_1 = LineMatcher(0.2, 1, 0.1);
     LineMatcher lM_2 = LineMatcher(1.2, 1, 0.1);
@@ -36,15 +37,16 @@ namespace dyn_modeling{
     LineMatcher lM_7 = LineMatcher(3, 1, 0.4);
     LineMatcher lM_8 = LineMatcher(3, 1, 0.5);
 
-    std::vector<std::vector< line>> linesMat {
-                                              lM_1.generateLines( scanPoints),
-                                              lM_2.generateLines( scanPoints),
-                                              lM_3.generateLines( scanPoints),
-                                              lM_4.generateLines( scanPoints),
-                                              lM_5.generateLines( scanPoints),
-                                              lM_6.generateLines( scanPoints),
-                                              lM_7.generateLines( scanPoints),
-                                              lM_8.generateLines( scanPoints)};
+    std::vector<std::vector< line>> linesMat
+      {
+       lM_1.generateLines( scanPoints),
+       lM_2.generateLines( scanPoints),
+       lM_3.generateLines( scanPoints),
+       lM_4.generateLines( scanPoints),
+       lM_5.generateLines( scanPoints),
+       lM_6.generateLines( scanPoints),
+       lM_7.generateLines( scanPoints),
+       lM_8.generateLines( scanPoints)};
 
     RGBImage img_1;
     RGBImage img_2;

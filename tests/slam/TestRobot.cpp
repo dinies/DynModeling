@@ -102,6 +102,7 @@ namespace dyn_modeling{
     }
   }
 
+
   BOOST_AUTO_TEST_CASE(computeMiddleScanPointsFourthQuadrant){
     scanPoint s1;
     scanPoint s2;

@@ -16,7 +16,7 @@ namespace dyn_modeling {
                                t_params.maxAngularCoeffLineMatcher,
                                t_params.minLengthLinesLineMatcher))
   {
-    m_graph = Graph( m_robot.getNumDataEntries());
+    m_graph = Graph( m_robot.getNumDataEntries(), m_robot.getNumRanges());
   }
 
 

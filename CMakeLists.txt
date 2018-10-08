@@ -39,6 +39,7 @@ INCLUDE_DIRECTORIES(${OpenCV_INCLUDE_DIRS})
 FIND_PACKAGE(Boost COMPONENTS system filesystem iostreams unit_test_framework REQUIRED)
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 
+add_subdirectory( src)
 add_subdirectory( executables)
 
 enable_testing()

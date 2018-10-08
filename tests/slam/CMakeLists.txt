@@ -1,19 +1,10 @@
 add_executable( TestSlam
   TestSlam.cpp
-  ../../src/slam/Slam.cpp
-  ../../src/slam/DatasetManager.cpp
-  ../../src/slam/Robot.cpp
-  ../../src/slam/ScanMatcher.cpp
-  ../../src/slam/Map.cpp
-  ../../src/slam/Graph.cpp
-  ../../src/slam/LineMatcher.cpp
-  ../../src/slam/DataAssociator.cpp
-  ../../src/utils/MyMath.cpp
-  ../../src/drawing/Drawer.cpp
   )
 
 target_link_libraries(
   TestSlam
+  PUBLIC slamSources
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
   PUBLIC Boost::filesystem
@@ -24,20 +15,11 @@ add_test( NAME TestSlam COMMAND TestSlam)
 
 add_executable( TestCriticalIterations
   TestCriticalIterations.cpp
-  ../../src/slam/Slam.cpp
-  ../../src/slam/DatasetManager.cpp
-  ../../src/slam/Robot.cpp
-  ../../src/slam/ScanMatcher.cpp
-  ../../src/slam/Map.cpp
-  ../../src/slam/Graph.cpp
-  ../../src/slam/LineMatcher.cpp
-  ../../src/slam/DataAssociator.cpp
-  ../../src/utils/MyMath.cpp
-  ../../src/drawing/Drawer.cpp
-  )
+)
 
 target_link_libraries(
   TestCriticalIterations
+  PUBLIC slamSources
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
   PUBLIC Boost::filesystem
@@ -47,17 +29,29 @@ target_link_libraries(
 add_test( NAME TestCriticalIterations COMMAND TestCriticalIterations )
 
 
-add_executable( TestLineMatcher
-  TestLineMatcher.cpp
-  ../../src/slam/DatasetManager.cpp
-  ../../src/slam/Robot.cpp
-  ../../src/slam/LineMatcher.cpp
-  ../../src/utils/MyMath.cpp
-  ../../src/drawing/Drawer.cpp
+add_executable( TestGraph
+  TestGraph.cpp
   )
 
 target_link_libraries(
+  TestGraph
+  PUBLIC slamSources
+  PUBLIC Boost::unit_test_framework
+  PUBLIC ${OpenCV_LIBS}
+  PUBLIC Boost::filesystem
+  PUBLIC Boost::system
+  PUBLIC Boost::iostreams
+  )
+add_test( NAME TestGraph COMMAND TestGraph)
+
+
+add_executable( TestLineMatcher
+  TestLineMatcher.cpp
+ )
+
+target_link_libraries(
   TestLineMatcher
+  PUBLIC slamSources
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
   PUBLIC Boost::filesystem
@@ -68,16 +62,11 @@ add_test( NAME TestLineMatcher COMMAND TestLineMatcher)
 
 add_executable( TestDataAssociator
   TestDataAssociator.cpp
-  ../../src/slam/DatasetManager.cpp
-  ../../src/slam/Robot.cpp
-  ../../src/slam/LineMatcher.cpp
-  ../../src/slam/DataAssociator.cpp
-  ../../src/utils/MyMath.cpp
-  ../../src/drawing/Drawer.cpp
-  )
+ )
 
 target_link_libraries(
   TestDataAssociator
+  PUBLIC slamSources
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
   PUBLIC Boost::filesystem
@@ -89,17 +78,11 @@ add_test( NAME TestDataAssociator COMMAND TestDataAssociator)
 
 add_executable( TestCriticalAssociator
   TestCriticalAssociator.cpp
-  ../../src/slam/DatasetManager.cpp
-  ../../src/slam/Robot.cpp
-  ../../src/slam/Map.cpp
-  ../../src/slam/LineMatcher.cpp
-  ../../src/slam/DataAssociator.cpp
-  ../../src/utils/MyMath.cpp
-  ../../src/drawing/Drawer.cpp
-  )
+ )
 
 target_link_libraries(
   TestCriticalAssociator
+  PUBLIC slamSources
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
   PUBLIC Boost::filesystem
@@ -110,16 +93,11 @@ add_test( NAME TestCriticalAssociator COMMAND TestCriticalAssociator)
 
 add_executable( TestDrawLines
   TestDrawLines.cpp
-  ../../src/slam/DatasetManager.cpp
-  ../../src/slam/Robot.cpp
-  ../../src/slam/LineMatcher.cpp
-  ../../src/slam/Map.cpp
-  ../../src/utils/MyMath.cpp
-  ../../src/drawing/Drawer.cpp
-  )
+ )
 
 target_link_libraries(
   TestDrawLines
+  PUBLIC slamSources
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
   PUBLIC Boost::filesystem
@@ -131,16 +109,11 @@ add_test( NAME TestDrawLines COMMAND TestDrawLines)
 
 add_executable( TestTuningLineMatcherParams
   TestTuningLineMatcherParams.cpp
-  ../../src/slam/DatasetManager.cpp
-  ../../src/slam/Robot.cpp
-  ../../src/slam/LineMatcher.cpp
-  ../../src/slam/Map.cpp
-  ../../src/utils/MyMath.cpp
-  ../../src/drawing/Drawer.cpp
-  )
+ )
 
 target_link_libraries(
   TestTuningLineMatcherParams
+  PUBLIC slamSources
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
   PUBLIC Boost::filesystem
@@ -152,12 +125,10 @@ add_test( NAME TestTuningLineMatcherParams COMMAND TestTuningLineMatcherParams)
 
 add_executable( TestMap
   TestMap.cpp
-  ../../src/slam/Map.cpp
-  ../../src/utils/MyMath.cpp
-  ../../src/drawing/Drawer.cpp
-  )
+ )
 target_link_libraries(
   TestMap
+  PUBLIC slamSources
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
   )
@@ -166,14 +137,11 @@ add_test( NAME TestMap COMMAND TestMap)
 
 add_executable( TestScanMatcher
   TestScanMatcher.cpp
-  ../../src/slam/ScanMatcher.cpp
-  ../../src/slam/DatasetManager.cpp
-  ../../src/slam/Robot.cpp
-  ../../src/utils/MyMath.cpp
-  )
+ )
 
 target_link_libraries(
   TestScanMatcher
+  PUBLIC slamSources
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
   PUBLIC Boost::filesystem
@@ -185,13 +153,11 @@ add_test( NAME TestScanMatcher COMMAND TestScanMatcher)
 
 add_executable( TestRobot
   TestRobot.cpp
-  ../../src/slam/Robot.cpp
-  ../../src/slam/DatasetManager.cpp
-  ../../src/utils/MyMath.cpp
-  )
+ )
 
 target_link_libraries(
   TestRobot
+  PUBLIC slamSources
   PUBLIC Boost::unit_test_framework
   PUBLIC ${OpenCV_LIBS}
   PUBLIC Boost::filesystem
