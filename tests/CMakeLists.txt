@@ -9,6 +9,33 @@ target_link_libraries(
 )
 add_test( NAME NameTest COMMAND Test)
 
+
+add_executable(
+  TestGoogleTest
+  TestGoogleTest.cpp
+  )
+target_link_libraries(
+  TestGoogleTest
+  gtest_main
+  )
+
+add_test(
+  NAME TestGoogleTest
+  COMMAND TestGoogleTest
+  )
+
+
+add_executable(
+  TestGmock
+  TestGmock.cpp
+  )
+target_include_directories(
+  TestGmock
+  PUBLIC "${gtest_SOURCE_DIR}/include" "${gmock_SOURCE_DIR}/include"
+  )
+
+
+
 add_subdirectory(drawing)
 add_subdirectory(pendulum)
 add_subdirectory(slam)

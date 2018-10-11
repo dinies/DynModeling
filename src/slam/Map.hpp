@@ -3,10 +3,7 @@
 #pragma once
 #include <unistd.h>
 #include <vector>
-
 #include "opencv2/opencv.hpp"
-
-
 
 #include "../drawing/Drawer.hpp"
 #include "../utils/MyMath.hpp"

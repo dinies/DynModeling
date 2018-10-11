@@ -14,6 +14,7 @@
 #include "LineMatcher.hpp"
 #include "DataAssociator.hpp"
 #include "Graph.hpp"
+#include "LoopCloser.hpp"
 
 
 
@@ -34,9 +35,12 @@ namespace dyn_modeling {
     double nearLinesBonusScoreMultiplier;
     int numMiddleScanPoints;
     double borderRatio;
+    double maxLinesLengthDiffLoopCloser;
+    double maxLinesOrientDiffLoopCloser;
     paramsSlam_tag(double t_1, int t_2, double t_3,double t_4,double t_5,
                    double t_6,int t_7,double t_8,double t_9,
-                   double t_10,double t_11,int t_12,double t_13):
+                   double t_10,double t_11,int t_12,double t_13,
+                   double t_14, double t_15):
       icpEpsilon( t_1),
       icpIterationsCap( t_2),
       kernelThresholdScanMatching(t_3),
@@ -49,7 +53,9 @@ namespace dyn_modeling {
       maxNearLinesOrientationDiffThreshold(t_10),
       nearLinesBonusScoreMultiplier(t_11),
       numMiddleScanPoints(t_12),
-      borderRatio( t_13)
+      borderRatio( t_13),
+      maxLinesLengthDiffLoopCloser( t_14),
+      maxLinesOrientDiffLoopCloser( t_15)
     {}
   } paramsSlam;
 
@@ -68,7 +74,7 @@ namespace dyn_modeling {
     Map m_map;
     Graph m_graph;
     LineMatcher m_lineMatcher;
-
+    Eigen::Vector3d m_initialRobotState;
 
   public:
 

@@ -9,12 +9,13 @@ namespace dyn_modeling {
               const Eigen::Vector3d &t_initialRobotState,
               const paramsSlam &t_params):
     m_params( t_params),
-    m_robot(  Robot( t_dataSet_AbsolPath, t_initialRobotState) ),
+    m_robot(  Robot( t_dataSet_AbsolPath )),
     m_scanMatcher( ScanMatcher(t_params.icpEpsilon)),
     m_map( Map()),
     m_lineMatcher( LineMatcher(t_params.maxDistBetweenRangesLineMatcher,
                                t_params.maxAngularCoeffLineMatcher,
-                               t_params.minLengthLinesLineMatcher))
+                               t_params.minLengthLinesLineMatcher)),
+    m_initialRobotState( t_initialRobotState)
   {
     m_graph = Graph( m_robot.getNumDataEntries(), m_robot.getNumRanges());
   }
@@ -42,6 +43,10 @@ namespace dyn_modeling {
 
 
 
+    LoopCloser loopC( m_graph,
+                      m_params.maxLinesLengthDiffLoopCloser,
+                      m_params.maxLinesOrientDiffLoopCloser
+                      );
 
     node currNode;
     currNode.scanPoints_robotFrame.reserve(num_ranges);
@@ -61,7 +66,7 @@ namespace dyn_modeling {
       // std::cout << currNode.lines.size() << " lines \n" ;
 
       if ( i == 0 ){
-        currNode.q = m_robot.getState();
+        currNode.q = m_initialRobotState;
 
       }
       else{
@@ -79,7 +84,6 @@ namespace dyn_modeling {
         currEdge.associations = associator.associateLines();
         // std::cout << currEdge.associations.size() << " associations \n" ;
         if ( currEdge.associations.size() > 0){
-          m_robot.setState( prevNode.q);
           resMatch = matchAssociatedData( prevNode,
                                           currEdge,
                                           currNode,
@@ -87,8 +91,7 @@ namespace dyn_modeling {
                                           m_params.numMiddleScanPoints);
           currEdge.delta_x = resMatch.icpResult.delta_x;
 
-          m_robot.updateState( currEdge.delta_x );
-          currNode.q= m_robot.getState();
+          currNode.q= Robot::updateState( prevNode.q, currEdge.delta_x );
           // std::cout  << currEdge.delta_x(0) << "; "<< currEdge.delta_x(1) << "; " << currEdge.delta_x(2) << " dX \n";
           // Eigen::Vector3d curr_state= currNode.q.mu;
           // if ( std::isnan( curr_state(0)) || std::isnan( curr_state(1)) || std::isnan( curr_state(2)) ){
@@ -105,14 +108,20 @@ namespace dyn_modeling {
 
 
       //loop checker
-      //TODO
+      if (i%500==0) {
+
+        loopC.closeLoop( i, i - 100, 20);
+      }
 
       drawingPoints_worldFrame =
-        m_robot.changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame );
+        Robot::changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame,
+                                           currNode.q);
       prevAssociationSP_worldFrame =
-        m_robot.changeCoordsRobotToWorld( resMatch.prevAssociationPoints);
+        Robot::changeCoordsRobotToWorld( resMatch.prevAssociationPoints,
+                                          currNode.q);
       currAssociationSP_worldFrame =
-        m_robot.changeCoordsRobotToWorld( resMatch.currAssociationPoints);
+        Robot::changeCoordsRobotToWorld( resMatch.currAssociationPoints,
+                                          currNode.q);
 
       preDrawingManagement(i-1);
       m_map.drawImages( drawingPoints_worldFrame,

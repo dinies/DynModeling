@@ -34,9 +34,10 @@ namespace dyn_modeling{
        0.1, // double maxNearLinesOrientationDiffThreshold
        1.3, // double nearLinesBonusScoreMultiplier
        3, // int numMiddleScanPoints
-       0.05); // double borderRatio;
-
-
+       0.05,// double borderRatio;
+       0.1, //maxLinesLengthDiffLoopCloser;
+       0.5 //maxLinesOrientDiffLoopCloser;
+       );
     Slam slam = Slam(relativePath, initial_state,params );
 
     slam.cycle();

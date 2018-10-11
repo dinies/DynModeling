@@ -142,15 +142,19 @@ namespace dyn_modeling {
     dataAssociation result;
     result.old_line_index = t_oldLine_index;
     result.new_line_index = t_newLine_index;
-    double oldLength = getLineLength( m_oldLines.at
-                                      (t_oldLine_index), m_oldSPoints);
-    double newLength = getLineLength( m_newLines.at
-                                      (t_newLine_index), m_newSPoints);
+    double oldLength =
+      DataAssociator::getLineLength( m_oldLines.at(t_oldLine_index),
+                                     m_oldSPoints);
+    double newLength =
+      DataAssociator::getLineLength( m_newLines.at(t_newLine_index),
+                                     m_newSPoints);
     double lengthDiff = fabs(oldLength - newLength);
     line old_line = m_oldLines.at(t_oldLine_index );
     line new_line = m_newLines.at(t_newLine_index );
-    double old_line_orientation = getLineOrientation(old_line, m_oldSPoints);
-    double new_line_orientation = getLineOrientation(new_line, m_newSPoints);
+    double old_line_orientation =
+      DataAssociator::getLineOrientation(old_line, m_oldSPoints);
+    double new_line_orientation =
+      DataAssociator::getLineOrientation(new_line, m_newSPoints);
     double absoluteOriDiff = fabs(old_line_orientation -new_line_orientation);
 
     if (lengthDiff > m_lengthDifferenceThreshold ||
@@ -168,10 +172,12 @@ namespace dyn_modeling {
 
       if ( old_lower_neighboor.second_index == old_line.first_index &&
            new_lower_neighboor.second_index == new_line.first_index){
-        double old_low_neigh_ori = getLineOrientation( old_lower_neighboor,
-                                                       m_oldSPoints);
-        double new_low_neigh_ori = getLineOrientation( new_lower_neighboor,
-                                                       m_newSPoints);
+        double old_low_neigh_ori =
+          DataAssociator::getLineOrientation( old_lower_neighboor,
+                                              m_oldSPoints);
+        double new_low_neigh_ori =
+          DataAssociator::getLineOrientation( new_lower_neighboor,
+                                              m_newSPoints);
 
         if (fabs(MyMath::boxMinusAngleRad
                  ( MyMath::boxMinusAngleRad( old_low_neigh_ori,
@@ -194,10 +200,12 @@ namespace dyn_modeling {
       if ( old_upper_neighboor.second_index == old_line.first_index &&
            new_upper_neighboor.second_index == new_line.first_index){
 
-        double old_up_neigh_ori = getLineOrientation( old_upper_neighboor,
-                                                      m_oldSPoints);
-        double new_up_neigh_ori = getLineOrientation( new_upper_neighboor,
-                                                      m_newSPoints);
+        double old_up_neigh_ori =
+          DataAssociator::getLineOrientation( old_upper_neighboor,
+                                              m_oldSPoints);
+        double new_up_neigh_ori =
+          DataAssociator::getLineOrientation( new_upper_neighboor,
+                                              m_newSPoints);
 
         if ( fabs(MyMath::boxMinusAngleRad
                   ( MyMath::boxMinusAngleRad( old_line_orientation,

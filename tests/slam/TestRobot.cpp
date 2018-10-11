@@ -6,17 +6,15 @@
 #include <boost/test/unit_test.hpp>
 #include <Eigen/Core>
 
-#include "include/structs.hpp"
-#include "src/slam/Robot.hpp"
-
+#include "../../src/slam/Robot.hpp"
+#include "../../include/structs.hpp"
 
 namespace dyn_modeling{
-
   BOOST_AUTO_TEST_SUITE( Rob)
+
   BOOST_AUTO_TEST_CASE( retrieveScanPointsDummyDataset) {
     std::string relativePath= "../files/datasets/dummyDataSet.txt";
-    Eigen::Vector3d initial_state (0.0, 0.0, 0.0);
-    Robot r = Robot(relativePath, initial_state);
+    Robot r = Robot(relativePath);
 
     BOOST_CHECK_EQUAL( r.getNumDataEntries(),1);
     if(r.getNumDataEntries()==1){
@@ -47,8 +45,7 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_CASE( retrieveScanPoints) {
 
     std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
-    Eigen::Vector3d initial_state (0.0, 0.0, 0.0);
-    Robot r = Robot(relativePath, initial_state);
+    Robot r = Robot(relativePath );
 
     int num_data_entries = r.getNumDataEntries();
     BOOST_CHECK_EQUAL( num_data_entries , 1);
@@ -74,15 +71,17 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE(updateState){
     std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
-    Eigen::Vector3d initial_state (0.0, 0.0, 0.0);
-    Robot r = Robot(relativePath, initial_state);
+    Eigen::Vector3d initial_state_mu (0.0, 0.0, 0.0);
+    state initial_state( initial_state_mu);
+
+    Robot r = Robot(relativePath);
     Eigen::Vector3d delta_state( 4.0 , -2.0 , -M_PI/4);
     Eigen::Vector3d truth_state( 4.0 , -2.0 , -M_PI/4);
 
-    r.updateState( delta_state);
+    state  resultState = Robot::updateState(initial_state, delta_state);
     double threshold = 0.01;
     for ( int i = 0; i < 3; ++i){
-      BOOST_CHECK_SMALL( r.getState().mu(i) - truth_state(i),threshold);
+      BOOST_CHECK_SMALL( resultState.mu(i) - truth_state(i),threshold);
     }
   }
 

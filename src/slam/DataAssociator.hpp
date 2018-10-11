@@ -51,11 +51,11 @@ namespace dyn_modeling {
     dataAssociation compareLines( const int t_oldLine_index,
                                   const int t_newLine_index  );
 
-    double getLineLength( const line &t_line,
-                          const std::vector<scanPoint> &t_sPoints );
+    static double getLineLength( const line &t_line,
+                                 const std::vector<scanPoint> &t_sPoints );
 
-    double getLineOrientation( const line &t_line,
-                               const std::vector<scanPoint> &t_sPoints );
+    static double getLineOrientation( const line &t_line,
+                                      const std::vector<scanPoint> &t_sPoints );
 
     std::vector< int> getPossibleCandidateIndexes(const int t_newLine_index );
 

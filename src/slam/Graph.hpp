@@ -60,30 +60,6 @@ namespace dyn_modeling {
     }
   } edge;
 
-  typedef struct trail_tag{
-    Eigen::VectorXd lineCenterCoords;
-    int nodeIndex;
-    int lineIndex;
-    int length;
-
-    trail_tag( Eigen::VectorXd t_1,
-               int t_2,
-               int t_3,
-               int t_4):
-      lineCenterCoords( t_1),
-      nodeIndex( t_2),
-      lineIndex( t_3),
-      length( t_4)
-    {}
-    trail_tag():
-      nodeIndex(-1),
-      lineIndex(-1),
-      length(-1)
-   {
-      lineCenterCoords = Eigen::Vector2d::Zero();
-    }
-  } trail;
-
   class Graph{
 
   private:

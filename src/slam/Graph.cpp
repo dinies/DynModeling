@@ -1,7 +1,6 @@
 // Created by Dinies on 10/09/2018.
 
 #include "Graph.hpp"
-#include "Robot.hpp"
 
 namespace dyn_modeling {
   Graph::Graph( const int t_dataEntriesNum, const int t_maxPointsNum):

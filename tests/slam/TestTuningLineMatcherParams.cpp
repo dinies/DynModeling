@@ -21,7 +21,7 @@ namespace dyn_modeling{
 
     std::string relativePath= "../files/datasets/realLaserScans.txt";
     Eigen::Vector3d initial_state(0.0, 0.0, 0.0);
-    Robot r = Robot(relativePath, initial_state);
+    Robot r = Robot(relativePath);
 
     int num_data_entries = r.getNumDataEntries();
     double borderRatio = 0.05;

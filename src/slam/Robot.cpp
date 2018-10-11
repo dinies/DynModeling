@@ -4,13 +4,9 @@
 
 namespace dyn_modeling {
 
-  Robot::Robot( const std::string &t_dataSet_AbsolPath,
-                const Eigen::Vector3d &t_initial_state):
+  Robot::Robot( const std::string &t_dataSet_AbsolPath):
     m_datasetManager( DatasetManager( t_dataSet_AbsolPath))
-  {
-    m_state.mu = t_initial_state;
-    m_state.sigma = Eigen::Matrix3d::Zero();
-  };
+  {};
 
 
 
@@ -50,9 +46,10 @@ namespace dyn_modeling {
   }
 
   std::vector<scanPoint> Robot::changeCoordsRobotToWorld
-  (const std::vector<scanPoint> &t_scanPoints_robotFrame){
+  (const std::vector<scanPoint> &t_scanPoints_robotFrame,
+   const state &t_currState){
 
-    Eigen::Isometry2d transf = MyMath::v2t(m_state.mu);
+    Eigen::Isometry2d transf = MyMath::v2t(t_currState.mu);
     std::vector<scanPoint> scanPvec_worldFrame;
     scanPvec_worldFrame.reserve( t_scanPoints_robotFrame.size());
 
@@ -117,15 +114,17 @@ namespace dyn_modeling {
     return  MyMath::t2v( T_first * T_second.inverse());
   }
 
+  state Robot::updateState( const state &t_currState,
+                     const Eigen::Vector3d &t_deltaState){
 
-  void Robot::updateState(const Eigen::Vector3d &t_deltaState){
+    return state( Robot::boxPlus(t_currState.mu, t_deltaState));
 
-    m_state.mu = Robot::boxPlus(m_state.mu, t_deltaState);
+    // m_state.mu = Robot::boxPlus(m_state.mu, t_deltaState); DONE now robot is a stateless class
     // DONE foundamental the update is now in robot frame , now we need to transform the reference frame of the update so we need to work with homogeneous matrices so using v2t on the current state and on the delta x we obtain two matrices that have to be concatenated.
 
     // Eigen::Isometry2d transf = MyMath::v2t(t_deltaState);
     // Eigen::Matrix2d R = transf.linear();
-    //TODO
+    //TODO     learn how to propagate sigma
     // m_state.sigma = 8;
   }
 }
