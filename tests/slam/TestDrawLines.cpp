@@ -99,8 +99,7 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_CASE(drawLinesRealDataPoints) {
 
     std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
-    Eigen::Vector3d initial_state(0.0, 0.0, 0.0);
-    Robot r = Robot(relativePath, initial_state);
+    Robot r = Robot(relativePath);
 
     int num_data_entries = r.getNumDataEntries();
     BOOST_CHECK_EQUAL( num_data_entries , 1);
@@ -148,8 +147,7 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_CASE(drawLinesTwoSubsequentDataPoints) {
 
     std::string relativePath= "../files/datasets/realLaserScans.txt";
-    Eigen::Vector3d initial_state(0.0, 0.0, 0.0);
-    Robot r = Robot(relativePath, initial_state);
+    Robot r = Robot(relativePath );
 
     int num_data_entries = r.getNumDataEntries();
     double borderRatio = 0.05;

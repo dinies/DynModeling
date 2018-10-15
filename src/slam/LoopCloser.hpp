@@ -11,11 +11,10 @@
 // #include <Eigen/Dense>
 
 #include "../../include/structs.hpp"
-#include "../../include/kd_tree_altered.cpp"
 #include "Graph.hpp"
 #include "DataAssociator.hpp"
 #include "Robot.hpp"
-
+#include "../kdtree/kdTreeAltered.hpp"
 
 
 namespace dyn_modeling {

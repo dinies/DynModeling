@@ -2,9 +2,12 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.8)
 
 PROJECT(dyn_modeling)
 
+
 # Set the output directory for the build executables and libraries
 ADD_DEFINITIONS(-DUNIX)
 MESSAGE(STATUS "Compiling on Unix")
+
+set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Debug)

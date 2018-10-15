@@ -4,7 +4,7 @@
 
 namespace dyn_modeling {
   Graph::Graph( const int t_dataEntriesNum, const int t_maxPointsNum):
-    m_maxPointsNum( t_maxPointsNum)
+    GraphInterface( t_maxPointsNum)
   {
     m_nodes.reserve( t_dataEntriesNum );
     m_edges.reserve( t_dataEntriesNum );
@@ -99,7 +99,8 @@ namespace dyn_modeling {
                      std::map< int, trail> &t_unmatchedTrails){
 
     trail curr_trail;
-    for( std::map<int,trail>::iterator it=t_unmatchedTrails.begin(); it!=t_unmatchedTrails.end();++it ){
+    for( std::map<int,trail>::iterator it=t_unmatchedTrails.begin();
+        it!=t_unmatchedTrails.end();++it ){
       t_oldTrails.push_back(it->second);
       curr_trail = it->second;
       // std::cout << "trail : center " << curr_trail.lineCenterCoords(0) << "," << curr_trail.lineCenterCoords(1) << "node "<< curr_trail.nodeIndex <<" ";

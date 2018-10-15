@@ -10,7 +10,7 @@ slam/Slam.cpp
 slam/LoopCloser.cpp
 drawing/Drawer.cpp
 utils/MyMath.cpp
-../include/kd_tree_altered.cpp
+kdtree/kdTreeAltered.cpp
 )
 
 target_include_directories(

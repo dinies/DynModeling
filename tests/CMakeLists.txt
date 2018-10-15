@@ -25,17 +25,6 @@ add_test(
   )
 
 
-add_executable(
-  TestGmock
-  TestGmock.cpp
-  )
-target_include_directories(
-  TestGmock
-  PUBLIC "${gtest_SOURCE_DIR}/include" "${gmock_SOURCE_DIR}/include"
-  )
-
-
-
 add_subdirectory(drawing)
 add_subdirectory(pendulum)
 add_subdirectory(slam)

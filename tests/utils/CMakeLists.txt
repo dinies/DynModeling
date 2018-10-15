@@ -19,3 +19,25 @@ target_link_libraries(
   )
 
 add_test( NAME TestDrawEllipse COMMAND TestDrawEllipse)
+
+
+add_executable(
+  TestClock
+  TestClock.cpp
+  MockClock.hpp
+  )
+
+
+target_link_libraries(
+  TestClock
+  gmock_main
+  )
+
+ # legacy mode  
+ # target_include_directories(
+ # TestClock
+ # PUBLIC "${gtest_SOURCE_DIR}/include" "${gmock_SOURCE_DIR}/include"
+ # )
+
+
+
