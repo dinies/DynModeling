@@ -4,7 +4,7 @@
 namespace dyn_modeling {
 
 
-
+//TODO  change constructor
   Slam::Slam( const std::string &t_dataSet_AbsolPath,
               const Eigen::Vector3d &t_initialRobotState,
               const paramsSlam &t_params):
@@ -18,7 +18,11 @@ namespace dyn_modeling {
     m_initialRobotState( t_initialRobotState)
   {
     m_graph = Graph( m_robot.getNumDataEntries(), m_robot.getNumRanges());
+    m_loopCloser = LoopCloser(  m_graph,
+        m_params.maxLinesLengthDiffLoopCloser,
+        m_params.maxLinesOrientDiffLoopCloser);
   }
+  //TODO
 
 
   void Slam::cycle(){
@@ -41,12 +45,6 @@ namespace dyn_modeling {
     std::vector<scanPoint> currAssociationSP_worldFrame;
     currAssociationSP_worldFrame.reserve(num_ranges);
 
-
-
-    LoopCloser loopC( m_graph,
-                      m_params.maxLinesLengthDiffLoopCloser,
-                      m_params.maxLinesOrientDiffLoopCloser
-                      );
 
     node currNode;
     currNode.scanPoints_robotFrame.reserve(num_ranges);
@@ -110,7 +108,7 @@ namespace dyn_modeling {
       //loop checker
       if (i%500==0) {
 
-        loopC.closeLoop( i, i - 100, 20);
+        m_loopCloser.closeLoop( i, i - 100, 20);
       }
 
       drawingPoints_worldFrame =

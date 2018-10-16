@@ -14,7 +14,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # -g used for enabling gdb  and -D for use gdb on boost tests ( it gives an error at compilation time,give up !!)
-SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}  -g  -Wno-ignored-attributes ")
+SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}  -ggdb  -Wno-ignored-attributes ")
 
 
 message("build type: '${CMAKE_BUILD_TYPE}'")

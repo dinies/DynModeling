@@ -16,18 +16,20 @@ namespace dyn_modeling {
 
 
   void LoopCloser::closeLoop( const int t_currIteration,
-                              const int t_backRange,
-                              const int t_querySetRange ){
+      const int t_backRange,
+      const int t_querySetRange ){
 
     std::list<closure> closures=
       findClosures( t_currIteration,
-                    t_backRange,
-                    t_querySetRange);
+          t_backRange,
+          t_querySetRange);
 
-    sanitizeClosures( closures);
+    if ( closures.size() > 0){
+      sanitizeClosures( closures);
 
-    std::pair<int,int> optimIndexes =
-      LoopCloser::findIndexesOptimization( closures, t_currIteration);
+      std::pair<int,int> optimIndexes =
+        LoopCloser::findIndexesOptimization(closures,t_currIteration);
+    }
 
   }
 
@@ -102,36 +104,39 @@ namespace dyn_modeling {
 
 
   std::list< closure > LoopCloser::findClosures
-  (const int t_currIteration,
-   const int t_backRange,
-   const int t_querySetRange){
+    (const int t_currIteration,
+     const int t_backRange,
+     const int t_querySetRange){
 
-    std::list< closure > closures;
+      std::list< closure > closures;
 
-    const double leafRange{1};
-    const double maxDistance{0.2};
+      const double leafRange{1};
+      const double maxDistance{0.2};
 
-    const int treeIndexFrom = t_currIteration - t_backRange;
-    const int queryIndexFrom = t_currIteration - t_querySetRange;
-    std::vector<trail> treeTrails = m_graph.findTrails( treeIndexFrom,
-                                                        t_currIteration);
-    std::vector<trail> queryTrails = m_graph.findTrails( queryIndexFrom,
-                                                         t_currIteration);
+      const int treeIndexFrom = t_currIteration - t_backRange;
+      const int queryIndexFrom = t_currIteration - t_querySetRange;
 
+      if ( treeIndexFrom >= 0 && queryIndexFrom >=0){
+        std::vector<trail> treeTrails =
+          m_graph.findTrails( treeIndexFrom,t_currIteration);
 
-    BaseTreeNode* root= buildTree(treeTrails, leafRange);
+        std::vector<trail> queryTrails =
+          m_graph.findTrails( queryIndexFrom,t_currIteration);
 
-    closure c;
-    trail answer;
-    for ( auto t: queryTrails){
-      	double kd_dist = root->findNeighbor(answer, t, maxDistance);
-        if ( kd_dist >= 0){
-          c = closure( t, answer);
-          closures.push_back( c );
+        BaseTreeNode* root= buildTree(treeTrails, leafRange);
+
+        closure c;
+        trail answer;
+        for ( auto t: queryTrails){
+          double kd_dist = root->findNeighbor(answer, t, maxDistance);
+          if ( kd_dist >= 0){
+            c = closure( t, answer);
+            closures.push_back( c );
+          }
         }
+      }
+      return closures;
     }
-    return closures;
-  }
 
 }
 

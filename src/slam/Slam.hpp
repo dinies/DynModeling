@@ -73,6 +73,7 @@ namespace dyn_modeling {
     ScanMatcher m_scanMatcher;
     Map m_map;
     Graph m_graph;
+    LoopCloser m_loopCloser;
     LineMatcher m_lineMatcher;
     Eigen::Vector3d m_initialRobotState;
 
