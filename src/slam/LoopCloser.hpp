@@ -48,7 +48,7 @@ namespace dyn_modeling {
   class LoopCloser{
 
   private:
-    Graph &m_graph;
+    Graph& m_graph;
     double m_maxDistCenters;
     double m_maxLinesLengthDiff;
     double m_maxLinesOrientDiff;

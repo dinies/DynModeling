@@ -4,8 +4,8 @@
 
 namespace dyn_modeling {
 
-  Robot::Robot( const std::string &t_dataSet_AbsolPath):
-    m_datasetManager( DatasetManager( t_dataSet_AbsolPath))
+  Robot::Robot( DatasetManager &t_datasetManager):
+    m_datasetManager( t_datasetManager) 
   {};
 
 

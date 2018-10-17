@@ -15,7 +15,7 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_SUITE( LineMatcherClass)
 
   BOOST_AUTO_TEST_CASE(lengthLine) {
-    LineMatcher lM = LineMatcher(1, 2, 5);
+    LineMatcher lM(1, 2, 5);
     const int first_index = 0;
     const int second_index = 1;
     double truth = 0.1;
@@ -35,7 +35,7 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE(dummyOneLine) {
 
-    LineMatcher lM = LineMatcher(1, 2, 0.05);
+    LineMatcher lM(1, 2, 0.05);
 
     line l1;
     l1.first_index = 0;
@@ -66,7 +66,7 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE(dummyTwoLines) {
 
-    LineMatcher lM = LineMatcher(10, 0.1, 0.05);
+    LineMatcher lM(10, 0.1, 0.05);
 
     line l1;
     l1.first_index = 0;

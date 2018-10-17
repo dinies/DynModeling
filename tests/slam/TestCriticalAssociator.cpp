@@ -20,7 +20,9 @@ namespace dyn_modeling{
 BOOST_AUTO_TEST_CASE(associateAcriticalIteration) {
 
     std::string relativePath= "../files/datasets/CriticalNoAssociations.txt";
-    Robot r = Robot(relativePath);
+    DatasetManager dM( relativePath);
+    Robot r(dM);
+ 
 
     int num_data_entries = r.getNumDataEntries();
     double borderRatio = 0.05;

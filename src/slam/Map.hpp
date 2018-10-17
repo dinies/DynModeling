@@ -44,11 +44,12 @@ namespace dyn_modeling {
     std::vector< drawingData> m_drawingList;
     colors m_colors;
     double m_spatialUnit;
-    Drawer m_drawer;
+
+    Drawer& m_drawer;
 
 
   public:
-    Map();
+    Map( Drawer &t_drawer);
 
     static std::vector< cv::Point2d> computePointsRobot
     ( const state &t_robotState,

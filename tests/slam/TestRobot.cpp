@@ -14,7 +14,9 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE( retrieveScanPointsDummyDataset) {
     std::string relativePath= "../files/datasets/dummyDataSet.txt";
-    Robot r = Robot(relativePath);
+    DatasetManager dM( relativePath);
+    Robot r(dM);
+ 
 
     BOOST_CHECK_EQUAL( r.getNumDataEntries(),1);
     if(r.getNumDataEntries()==1){
@@ -45,8 +47,9 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_CASE( retrieveScanPoints) {
 
     std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
-    Robot r = Robot(relativePath );
-
+    DatasetManager dM( relativePath);
+    Robot r(dM);
+ 
     int num_data_entries = r.getNumDataEntries();
     BOOST_CHECK_EQUAL( num_data_entries , 1);
     if (num_data_entries == 1){
@@ -73,8 +76,9 @@ namespace dyn_modeling{
     std::string relativePath= "../files/datasets/exampleDataSetOneline.txt";
     Eigen::Vector3d initial_state_mu (0.0, 0.0, 0.0);
     state initial_state( initial_state_mu);
-
-    Robot r = Robot(relativePath);
+    DatasetManager dM( relativePath);
+    Robot r(dM);
+ 
     Eigen::Vector3d delta_state( 4.0 , -2.0 , -M_PI/4);
     Eigen::Vector3d truth_state( 4.0 , -2.0 , -M_PI/4);
 

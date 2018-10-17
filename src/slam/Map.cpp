@@ -3,8 +3,8 @@
 #include "Map.hpp"
 namespace dyn_modeling {
 
-  Map::Map():
-    m_drawer( Drawer(15))
+  Map::Map( Drawer &t_drawer):
+    m_drawer( t_drawer)
   {
     m_drawingMap.create( 700,1200 );
     m_drawingMap= cv::Vec3b(227, 246, 253);

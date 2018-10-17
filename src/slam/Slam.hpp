@@ -1,4 +1,4 @@
-// Created by Dinies on 26/06/2018.
+// Created by Dinies on 25/03/2018.
 #pragma once
 #include <unistd.h>
 #include <Eigen/Core>
@@ -68,20 +68,24 @@ namespace dyn_modeling {
   class Slam {
 
   private:
-    paramsSlam m_params;
-    Robot m_robot;
-    ScanMatcher m_scanMatcher;
-    Map m_map;
-    Graph m_graph;
-    LoopCloser m_loopCloser;
-    LineMatcher m_lineMatcher;
-    Eigen::Vector3d m_initialRobotState;
+    Eigen::Vector3d &m_initialRobotState;
+    paramsSlam &m_params;
+    Robot &m_robot;
+    ScanMatcher &m_scanMatcher;
+    Map &m_map;
+    LineMatcher &m_lineMatcher;
+    Graph &m_graph;
+    LoopCloser &m_loopCloser;
 
   public:
-
-    Slam( const std::string &t_dataSet_AbsolPath,
-          const Eigen::Vector3d &t_initialRobotState,
-          const paramsSlam &t_params);
+    Slam( Eigen::Vector3d &t_initRState,
+        paramsSlam &t_params,
+        Robot &t_robot,
+        ScanMatcher &t_scanM,
+        Map &t_map,
+        LineMatcher &t_lineM,
+        Graph &t_graph,
+        LoopCloser &t_loopC);
 
     void cycle();
 

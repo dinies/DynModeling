@@ -12,6 +12,7 @@ namespace dyn_modeling {
     m_maxLinesLengthDiff( t_maxLinesLengthDiff),
     m_maxLinesOrientDiff( t_maxLinesOrientDiff)
   { m_maxDistCenters = 0.4; }
+  //TODO add distCenters to the initial params
 
 
 

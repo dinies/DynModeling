@@ -13,10 +13,10 @@ namespace dyn_modeling {
 
   class Robot{
   private:
-    DatasetManager m_datasetManager;
+    DatasetManager &m_datasetManager;
 
   public:
-    Robot( const std::string &t_dataSet_AbsolPath);
+    Robot( DatasetManager & t_datasetManager);
 
 
     std::vector<scanPoint> retrieveScanPointsRobotFrame

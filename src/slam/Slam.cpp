@@ -4,25 +4,24 @@
 namespace dyn_modeling {
 
 
-//TODO  change constructor
-  Slam::Slam( const std::string &t_dataSet_AbsolPath,
-              const Eigen::Vector3d &t_initialRobotState,
-              const paramsSlam &t_params):
+  Slam::Slam( Eigen::Vector3d &t_initRState,
+      paramsSlam &t_params,
+      Robot &t_robot,
+      ScanMatcher &t_scanM,
+      Map &t_map,
+      LineMatcher &t_lineM,
+      Graph &t_graph,
+      LoopCloser &t_loopC):
+    m_initialRobotState( t_initRState),
     m_params( t_params),
-    m_robot(  Robot( t_dataSet_AbsolPath )),
-    m_scanMatcher( ScanMatcher(t_params.icpEpsilon)),
-    m_map( Map()),
-    m_lineMatcher( LineMatcher(t_params.maxDistBetweenRangesLineMatcher,
-                               t_params.maxAngularCoeffLineMatcher,
-                               t_params.minLengthLinesLineMatcher)),
-    m_initialRobotState( t_initialRobotState)
-  {
-    m_graph = Graph( m_robot.getNumDataEntries(), m_robot.getNumRanges());
-    m_loopCloser = LoopCloser(  m_graph,
-        m_params.maxLinesLengthDiffLoopCloser,
-        m_params.maxLinesOrientDiffLoopCloser);
-  }
-  //TODO
+    m_robot( t_robot),
+    m_scanMatcher( t_scanM),
+    m_map( t_map),
+    m_lineMatcher( t_lineM),
+    m_graph( t_graph),
+    m_loopCloser( t_loopC)
+  {};
+
 
 
   void Slam::cycle(){
