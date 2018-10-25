@@ -1,252 +1,262 @@
 [
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-build/googlemock",
-  "command": "/usr/bin/c++  -DUNIX -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -g  -Wno-ignored-attributes    -std=c++11 -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -pthread -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/src/gmock_main.cc",
+  "command": "/usr/bin/c++  -DUNIX -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -ggdb  -Wno-ignored-attributes    -std=c++11 -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -pthread -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/src/gmock_main.cc",
   "file": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/src/gmock_main.cc"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-build/googlemock",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/include -I/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -g  -Wno-ignored-attributes    -std=c++11 -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -pthread -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/src/gmock-all.cc",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/include -I/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -ggdb  -Wno-ignored-attributes    -std=c++11 -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -pthread -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/src/gmock-all.cc",
   "file": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/src/gmock-all.cc"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-build/googlemock/gtest",
-  "command": "/usr/bin/c++  -DUNIX -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -g  -Wno-ignored-attributes    -std=c++11 -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -pthread -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/src/gtest_main.cc",
+  "command": "/usr/bin/c++  -DUNIX -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -ggdb  -Wno-ignored-attributes    -std=c++11 -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -pthread -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/src/gtest_main.cc",
   "file": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/src/gtest_main.cc"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-build/googlemock/gtest",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -I/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -g  -Wno-ignored-attributes    -std=c++11 -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -pthread -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/src/gtest-all.cc",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -I/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -ggdb  -Wno-ignored-attributes    -std=c++11 -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -pthread -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/src/gtest-all.cc",
   "file": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/src/gtest-all.cc"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/DataAssociator.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/DataAssociator.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/DataAssociator.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/DataAssociator.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/DataAssociator.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/DatasetManager.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/DatasetManager.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/DatasetManager.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/DatasetManager.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/DatasetManager.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/Graph.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/Graph.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/Graph.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/Graph.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/Graph.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/LineMatcher.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/LineMatcher.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/LineMatcher.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/LineMatcher.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/LineMatcher.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/Map.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/Map.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/Map.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/Map.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/Map.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/Robot.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/Robot.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/Robot.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/Robot.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/Robot.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/ScanMatcher.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/ScanMatcher.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/ScanMatcher.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/ScanMatcher.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/ScanMatcher.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/Slam.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/Slam.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/Slam.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/Slam.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/Slam.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/LoopCloser.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/LoopCloser.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/slam/LoopCloser.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/LoopCloser.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/LoopCloser.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/drawing/Drawer.cpp.o -c /home/dinies/gitrepos/DynModeling/src/drawing/Drawer.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/drawing/Drawer.cpp.o -c /home/dinies/gitrepos/DynModeling/src/drawing/Drawer.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/drawing/Drawer.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/utils/MyMath.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/utils/MyMath.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/src",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/kdtree/kdTreeAltered.cpp.o -c /home/dinies/gitrepos/DynModeling/src/kdtree/kdTreeAltered.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -I/home/dinies/gitrepos/DynModeling/src  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/slamSources.dir/kdtree/kdTreeAltered.cpp.o -c /home/dinies/gitrepos/DynModeling/src/kdtree/kdTreeAltered.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/kdtree/kdTreeAltered.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/pendulumMain.dir/pendulumMain.cpp.o -c /home/dinies/gitrepos/DynModeling/executables/pendulumMain.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/pendulumMain.dir/pendulumMain.cpp.o -c /home/dinies/gitrepos/DynModeling/executables/pendulumMain.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/executables/pendulumMain.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/pendulumMain.dir/__/src/pendulum/Pendulum.cpp.o -c /home/dinies/gitrepos/DynModeling/src/pendulum/Pendulum.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/pendulumMain.dir/__/src/pendulum/Pendulum.cpp.o -c /home/dinies/gitrepos/DynModeling/src/pendulum/Pendulum.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/pendulum/Pendulum.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/pendulumMain.dir/__/src/utils/Clock.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/Clock.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/pendulumMain.dir/__/src/utils/Clock.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/Clock.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/utils/Clock.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/pendulumMain.dir/__/src/controllers/Controller.cpp.o -c /home/dinies/gitrepos/DynModeling/src/controllers/Controller.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/pendulumMain.dir/__/src/controllers/Controller.cpp.o -c /home/dinies/gitrepos/DynModeling/src/controllers/Controller.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/controllers/Controller.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/pendulumMain.dir/__/src/utils/MyMath.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/pendulumMain.dir/__/src/utils/MyMath.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/robotScanRetrieving.dir/robotScanRetrieving.cpp.o -c /home/dinies/gitrepos/DynModeling/executables/robotScanRetrieving.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/robotScanRetrieving.dir/robotScanRetrieving.cpp.o -c /home/dinies/gitrepos/DynModeling/executables/robotScanRetrieving.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/executables/robotScanRetrieving.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/drawMovingPoints.dir/drawMovingPoints.cpp.o -c /home/dinies/gitrepos/DynModeling/executables/drawMovingPoints.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/drawMovingPoints.dir/drawMovingPoints.cpp.o -c /home/dinies/gitrepos/DynModeling/executables/drawMovingPoints.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/executables/drawMovingPoints.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/fileParsing.dir/fileParsing.cpp.o -c /home/dinies/gitrepos/DynModeling/executables/fileParsing.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/fileParsing.dir/fileParsing.cpp.o -c /home/dinies/gitrepos/DynModeling/executables/fileParsing.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/executables/fileParsing.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/executables",
-  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/fileParsing.dir/__/src/slam/DatasetManager.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/DatasetManager.cpp",
+  "command": "/usr/bin/c++  -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/fileParsing.dir/__/src/slam/DatasetManager.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/DatasetManager.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/DatasetManager.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/Test.dir/test.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/test.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock  -g  -ggdb  -Wno-ignored-attributes    -pthread -o CMakeFiles/TestRunner.dir/TestRunner.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/TestRunner.cpp",
+  "file": "/home/dinies/gitrepos/DynModeling/tests/TestRunner.cpp"
+},
+{
+  "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock  -g  -ggdb  -Wno-ignored-attributes    -pthread -o CMakeFiles/TestRunner.dir/slam/TestLoopCloser.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestLoopCloser.cpp",
+  "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestLoopCloser.cpp"
+},
+{
+  "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock  -g  -ggdb  -Wno-ignored-attributes    -pthread -o CMakeFiles/TestRunner.dir/utils/TestClock.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/utils/TestClock.cpp",
+  "file": "/home/dinies/gitrepos/DynModeling/tests/utils/TestClock.cpp"
+},
+{
+  "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/Test.dir/test.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/test.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/test.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -g  -Wno-ignored-attributes    -pthread -o CMakeFiles/TestGoogleTest.dir/TestGoogleTest.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/TestGoogleTest.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -ggdb  -Wno-ignored-attributes    -pthread -o CMakeFiles/TestGoogleTest.dir/TestGoogleTest.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/TestGoogleTest.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/TestGoogleTest.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/drawing",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestDrawer.dir/TestDrawer.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/drawing/TestDrawer.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestDrawer.dir/TestDrawer.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/drawing/TestDrawer.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/drawing/TestDrawer.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/drawing",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestDrawer.dir/__/__/src/drawing/Drawer.cpp.o -c /home/dinies/gitrepos/DynModeling/src/drawing/Drawer.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestDrawer.dir/__/__/src/drawing/Drawer.cpp.o -c /home/dinies/gitrepos/DynModeling/src/drawing/Drawer.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/drawing/Drawer.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/pendulum",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestController.dir/TestController.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/pendulum/TestController.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestController.dir/TestController.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/pendulum/TestController.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/pendulum/TestController.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/pendulum",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestController.dir/__/__/src/controllers/Controller.cpp.o -c /home/dinies/gitrepos/DynModeling/src/controllers/Controller.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestController.dir/__/__/src/controllers/Controller.cpp.o -c /home/dinies/gitrepos/DynModeling/src/controllers/Controller.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/controllers/Controller.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/pendulum",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestController.dir/__/__/src/utils/MyMath.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestController.dir/__/__/src/utils/MyMath.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestCriticalAssociator.dir/TestCriticalAssociator.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestCriticalAssociator.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestCriticalAssociator.dir/TestCriticalAssociator.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestCriticalAssociator.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestCriticalAssociator.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestCriticalIterations.dir/TestCriticalIterations.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestCriticalIterations.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestCriticalIterations.dir/TestCriticalIterations.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestCriticalIterations.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestCriticalIterations.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestDatasetManager.dir/TestDatasetManager.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestDatasetManager.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestDatasetManager.dir/TestDatasetManager.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestDatasetManager.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestDatasetManager.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestDatasetManager.dir/__/__/src/slam/DatasetManager.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/DatasetManager.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestDatasetManager.dir/__/__/src/slam/DatasetManager.cpp.o -c /home/dinies/gitrepos/DynModeling/src/slam/DatasetManager.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/slam/DatasetManager.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestDataAssociator.dir/TestDataAssociator.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestDataAssociator.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestDataAssociator.dir/TestDataAssociator.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestDataAssociator.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestDataAssociator.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestDrawLines.dir/TestDrawLines.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestDrawLines.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestDrawLines.dir/TestDrawLines.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestDrawLines.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestDrawLines.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestGraph.dir/TestGraph.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestGraph.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestGraph.dir/TestGraph.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestGraph.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestGraph.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestLineMatcher.dir/TestLineMatcher.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestLineMatcher.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestLineMatcher.dir/TestLineMatcher.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestLineMatcher.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestLineMatcher.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestSlam.dir/TestSlam.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestSlam.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestSlam.dir/TestSlam.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestSlam.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestSlam.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestTuningLineMatcherParams.dir/TestTuningLineMatcherParams.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestTuningLineMatcherParams.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestTuningLineMatcherParams.dir/TestTuningLineMatcherParams.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestTuningLineMatcherParams.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestTuningLineMatcherParams.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestMap.dir/TestMap.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestMap.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestMap.dir/TestMap.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestMap.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestMap.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestRobot.dir/TestRobot.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestRobot.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestRobot.dir/TestRobot.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestRobot.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestRobot.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/slam",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestScanMatcher.dir/TestScanMatcher.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestScanMatcher.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/home/dinies/gitrepos/DynModeling/src -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestScanMatcher.dir/TestScanMatcher.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/slam/TestScanMatcher.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/slam/TestScanMatcher.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/utils",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestDrawEllipse.dir/TestEllipse.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/utils/TestEllipse.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestDrawEllipse.dir/TestEllipse.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/utils/TestEllipse.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/utils/TestEllipse.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/utils",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestDrawEllipse.dir/__/__/src/utils/Ellipse.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/Ellipse.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -isystem /usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestDrawEllipse.dir/__/__/src/utils/Ellipse.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/Ellipse.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/utils/Ellipse.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/utils",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestMyMath.dir/TestMyMath.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/utils/TestMyMath.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestMyMath.dir/TestMyMath.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/utils/TestMyMath.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/tests/utils/TestMyMath.cpp"
 },
 {
   "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/utils",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -g  -Wno-ignored-attributes    -o CMakeFiles/TestMyMath.dir/__/__/src/utils/MyMath.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp",
+  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv  -g  -ggdb  -Wno-ignored-attributes    -o CMakeFiles/TestMyMath.dir/__/__/src/utils/MyMath.cpp.o -c /home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp",
   "file": "/home/dinies/gitrepos/DynModeling/src/utils/MyMath.cpp"
-},
-{
-  "directory": "/home/dinies/gitrepos/DynModeling/cmake-build-debug/tests/utils",
-  "command": "/usr/bin/c++  -DBOOST_TEST_DYN_LINK -DUNIX -I/home/dinies/gitrepos/DynModeling -I/usr/local/include/eigen3 -I/usr/include/opencv -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googlemock -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest/include -isystem /home/dinies/gitrepos/DynModeling/cmake-build-debug/googletest-src/googletest  -g  -g  -Wno-ignored-attributes    -pthread -o CMakeFiles/TestClock.dir/TestClock.cpp.o -c /home/dinies/gitrepos/DynModeling/tests/utils/TestClock.cpp",
-  "file": "/home/dinies/gitrepos/DynModeling/tests/utils/TestClock.cpp"
 }
 ]

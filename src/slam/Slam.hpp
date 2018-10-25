@@ -75,7 +75,7 @@ namespace dyn_modeling {
     Map &m_map;
     LineMatcher &m_lineMatcher;
     Graph &m_graph;
-    LoopCloser &m_loopCloser;
+    LoopCloser<Graph> &m_loopCloser;
 
   public:
     Slam( Eigen::Vector3d &t_initRState,
@@ -85,7 +85,7 @@ namespace dyn_modeling {
         Map &t_map,
         LineMatcher &t_lineM,
         Graph &t_graph,
-        LoopCloser &t_loopC);
+        LoopCloser<Graph> &t_loopC);
 
     void cycle();
 

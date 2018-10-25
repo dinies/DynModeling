@@ -38,7 +38,7 @@ namespace dyn_modeling {
          std::isnan( finalResult.delta_x(1)) ||
          std::isnan( finalResult.delta_x(2)) ){
       roundResult zero_result;
-      std::cout<< "icp iterations has returned null values";
+      std::cout<< "icp iterations has returned null values\n";
       zero_result.delta_x << 0.0 ,0.0 ,0.0;
       zero_result.chi = chis;
       return zero_result;

@@ -10,6 +10,9 @@ namespace dyn_modeling{
     scanPoint_tag( double t_x, double t_y):
       coords(t_x, t_y)
     {}
+    scanPoint_tag(Eigen::Vector2d t_coords):
+      coords(t_coords )
+    {}
     scanPoint_tag():
       coords(0,0)
     {}

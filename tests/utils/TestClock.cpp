@@ -1,3 +1,5 @@
+// Created by dinies on 10/10/2018.
+
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
 #include "MockClock.hpp"
@@ -34,8 +36,8 @@ namespace dyn_modeling {
 
 
 
-int main( int argc, char** argv) {
-  ::testing::InitGoogleMock( &argc,argv);
-  return RUN_ALL_TESTS();
-}
+//int main( int argc, char** argv) {
+//  ::testing::InitGoogleMock( &argc,argv);
+//  return RUN_ALL_TESTS();
+//}
 

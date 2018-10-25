@@ -11,7 +11,7 @@ namespace dyn_modeling {
       Map &t_map,
       LineMatcher &t_lineM,
       Graph &t_graph,
-      LoopCloser &t_loopC):
+      LoopCloser<Graph> &t_loopC):
     m_initialRobotState( t_initRState),
     m_params( t_params),
     m_robot( t_robot),
@@ -105,10 +105,10 @@ namespace dyn_modeling {
 
 
       //loop checker
-      if (i%500==0) {
+      //if (i%500==0) {
 
-        m_loopCloser.closeLoop( i, i - 100, 20);
-      }
+       // m_loopCloser.closeLoop( i, i - 100, 20);
+       //}
 
       drawingPoints_worldFrame =
         Robot::changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame,

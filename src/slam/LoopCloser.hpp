@@ -11,7 +11,7 @@
 // #include <Eigen/Dense>
 
 #include "../../include/structs.hpp"
-#include "Graph.hpp"
+#include "GraphInterface.hpp"
 #include "DataAssociator.hpp"
 #include "Robot.hpp"
 #include "../kdtree/kdTreeAltered.hpp"
@@ -45,10 +45,11 @@ namespace dyn_modeling {
 
   } closure;
 
+  template <class T>
   class LoopCloser{
 
   private:
-    Graph& m_graph;
+    T& m_graph;
     double m_maxDistCenters;
     double m_maxLinesLengthDiff;
     double m_maxLinesOrientDiff;
@@ -56,7 +57,7 @@ namespace dyn_modeling {
   public:
     LoopCloser(); 
 
-    LoopCloser( Graph &t_graph,
+    LoopCloser( T &t_graph,
                 const double t_maxLinesLengthDiff,
                 const double t_maxLinesOrientDiff);
 
@@ -77,3 +78,4 @@ namespace dyn_modeling {
   };
 }
 
+#include "LoopCloser.tpp"

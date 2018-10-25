@@ -39,6 +39,6 @@ namespace dyn_modeling {
             std::map<int,trail> &t_activeTrails,
             const int t_nodeIndex ));
 
-      virtual ~MockClock() {};
+      virtual ~MockGraph() {};
   };
 }

@@ -46,7 +46,7 @@ namespace dyn_modeling{
           params.maxAngularCoeffLineMatcher,
           params.minLengthLinesLineMatcher);
       Graph graph( robot.getNumDataEntries(), robot.getNumRanges());
-      LoopCloser loopC(  graph,
+      LoopCloser<Graph> loopC(  graph,
           params.maxLinesLengthDiffLoopCloser,
           params.maxLinesOrientDiffLoopCloser);
 

@@ -21,17 +21,17 @@ target_link_libraries(
 add_test( NAME TestDrawEllipse COMMAND TestDrawEllipse)
 
 
-add_executable(
-  TestClock
-  TestClock.cpp
-  MockClock.hpp
-  )
+# TODO  remove this, since we want to have a test runner that runs all tests !
+ #  add_executable(
+ # TestClock
+ # TestClock.cpp
+ # )
 
 
-target_link_libraries(
-  TestClock
-  gmock_main
-  )
+ # target_link_libraries(
+ # TestClock
+ # gmock_main
+ # )
 
  # legacy mode  
  # target_include_directories(

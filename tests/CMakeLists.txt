@@ -25,7 +25,31 @@ add_test(
   )
 
 
+add_executable(
+  TestRunner
+  TestRunner.cpp
+  ./slam/TestLoopCloser.cpp
+  ./utils/TestClock.cpp
+  )
+target_link_libraries(
+  TestRunner
+  PUBLIC gtest_main
+  PUBLIC gmock_main
+  PUBLIC slamSources
+  PUBLIC ${OpenCV_LIBS}
+  PUBLIC Boost::filesystem
+  PUBLIC Boost::system
+  PUBLIC Boost::iostreams
+ )
+
+add_test(
+  NAME TestRunner
+  COMMAND TestRunner
+  )
+
+
 add_subdirectory(drawing)
 add_subdirectory(pendulum)
 add_subdirectory(slam)
 add_subdirectory(utils)
+

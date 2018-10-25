@@ -7,7 +7,6 @@ slam/Map.cpp
 slam/Robot.cpp
 slam/ScanMatcher.cpp
 slam/Slam.cpp
-slam/LoopCloser.cpp
 drawing/Drawer.cpp
 utils/MyMath.cpp
 kdtree/kdTreeAltered.cpp

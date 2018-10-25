@@ -39,12 +39,14 @@ namespace dyn_modeling {
     Eigen::Vector3d delta_x;
     std::vector<dataAssociation> associations;
 
-    edge_tag( Eigen::Vector3d t_1,
+    edge_tag(
+        Eigen::Vector3d t_1,
         std::vector<dataAssociation> t_2):
       delta_x( t_1),
       associations( t_2)
     {}
-    edge_tag( double t_x,
+    edge_tag( 
+        double t_x,
         double t_y,
         double t_theta,
         std::vector<dataAssociation> t_associations):
