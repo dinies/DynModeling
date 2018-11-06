@@ -105,10 +105,10 @@ namespace dyn_modeling {
 
 
       //loop checker
-      //if (i%500==0) {
+      if (i%500==0) {
 
-       // m_loopCloser.closeLoop( i, i - 100, 20);
-       //}
+        m_loopCloser.closeLoop( i, i - 100, 20);
+      }
 
       drawingPoints_worldFrame =
         Robot::changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame,

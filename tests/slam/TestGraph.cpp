@@ -55,16 +55,16 @@ namespace dyn_modeling{
       std::vector< dataAssociation> associations_bc { d1_bc};
 
       state s_a( 0, 0 ,0);
-      state s_b( 0.1, 0 ,0.1);
-      state s_c( 0.1, 0.1 ,0.2);
+      state s_b( 0, 0 ,0);
+      state s_c( 0, 0 ,0);
 
       node node_a( s_a, points_a, lines_a);
       node node_b( s_b, points_b, lines_b);
       node node_c( s_c, points_c, lines_c);
 
       edge edge_zero = edge();
-      edge edge_ab( 0.1, 0 , 0.1, associations_ab);
-      edge edge_bc( 0, 0.1 , 0.1, associations_bc);
+      edge edge_ab( 0, 0, 0, associations_ab);
+      edge edge_bc( 0, 0, 0, associations_bc);
 
       const int dataEntriesNum {3};
       const int maxPointsNum {4};

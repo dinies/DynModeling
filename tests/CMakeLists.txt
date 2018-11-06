@@ -29,6 +29,7 @@ add_executable(
   TestRunner
   TestRunner.cpp
   ./slam/TestLoopCloser.cpp
+  ./kdtree/TestKdTree.cpp
   ./utils/TestClock.cpp
   )
 target_link_libraries(

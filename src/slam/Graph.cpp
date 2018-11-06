@@ -52,11 +52,15 @@ namespace dyn_modeling {
       else{
 
         line l = n.lines.at( dA.new_line_index);
-        std::vector<scanPoint> middlePointVec =
+        std::vector<scanPoint> middlePointVec_rFrame =
           Robot::computeMiddleScanPoints(  n.scanPoints_robotFrame.at(l.first_index),
                                            n.scanPoints_robotFrame.at(l.second_index),
                                            1);
-        scanPoint middlePoint= middlePointVec.at(0);
+
+        std::vector<scanPoint> middlePointVec_wFrame =
+          Robot::changeCoordsRobotToWorld( middlePointVec_rFrame, n.q);
+
+        scanPoint middlePoint= middlePointVec_wFrame.at(0);
         // std::cout << "p1 "<< n.scanPoints_robotFrame.at(l.first_index).coords(0)<<","<< n.scanPoints_robotFrame.at(l.first_index).coords(1)<< " ";
         // std::cout << ", p2 "<< n.scanPoints_robotFrame.at(l.second_index).coords(0)<<","<< n.scanPoints_robotFrame.at(l.second_index).coords(1)<< " ";
         // std::cout << " middle : " << middlePoint.coords(0) << ", "<< middlePoint.coords(1) << "\n";
@@ -74,12 +78,17 @@ namespace dyn_modeling {
     for (int j= 0; j<linesUsed.size(); ++j){
       if( linesUsed.at(j) == 0){
         l = n.lines.at(j);
-        std::vector<scanPoint> middlePointVec =
+        std::vector<scanPoint> middlePointVec_rFrame =
           Robot::computeMiddleScanPoints(  n.scanPoints_robotFrame.at(l.first_index),
                                            n.scanPoints_robotFrame.at(l.second_index),
                                            1);
-        scanPoint middlePoint= middlePointVec.at(0);
-        // std::cout << "p1 "<< n.scanPoints_robotFrame.at(l.first_index).coords(0)<<","<< n.scanPoints_robotFrame.at(l.first_index).coords(1)<< " ";
+
+        std::vector<scanPoint> middlePointVec_wFrame =
+          Robot::changeCoordsRobotToWorld( middlePointVec_rFrame, n.q);
+
+        scanPoint middlePoint= middlePointVec_wFrame.at(0);
+
+       // std::cout << "p1 "<< n.scanPoints_robotFrame.at(l.first_index).coords(0)<<","<< n.scanPoints_robotFrame.at(l.first_index).coords(1)<< " ";
         // std::cout << ", p2 "<< n.scanPoints_robotFrame.at(l.second_index).coords(0)<<","<< n.scanPoints_robotFrame.at(l.second_index).coords(1)<< " ";
         // std::cout << " middle : " << middlePoint.coords(0) << ", "<< middlePoint.coords(1) << "\n";
 

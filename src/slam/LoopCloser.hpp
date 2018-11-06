@@ -4,12 +4,6 @@
 #include <unistd.h>
 #include <vector>
 
-// #include <limits>
-// #include <string>
-// #include <fstream>
-// #include <iostream>
-// #include <Eigen/Dense>
-
 #include "../../include/structs.hpp"
 #include "GraphInterface.hpp"
 #include "DataAssociator.hpp"
@@ -50,7 +44,6 @@ namespace dyn_modeling {
 
   private:
     T& m_graph;
-    double m_maxDistCenters;
     double m_maxLinesLengthDiff;
     double m_maxLinesOrientDiff;
 

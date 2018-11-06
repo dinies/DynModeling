@@ -9,8 +9,7 @@ namespace dyn_modeling {
       m_graph( t_graph),
       m_maxLinesLengthDiff( t_maxLinesLengthDiff),
       m_maxLinesOrientDiff( t_maxLinesOrientDiff)
-  { m_maxDistCenters = 0.4; }
-  //TODO add distCenters to the initial params
+  {}
 
 
   template< class T>
@@ -25,11 +24,11 @@ namespace dyn_modeling {
 
       if ( closures.size() > 0){
         sanitizeClosures( closures);
-
+      }
+      if ( closures.size() > 0){
         std::pair<int,int> optimIndexes =
           LoopCloser::findIndexesOptimization(closures,t_currIteration);
       }
-
     }
 
   template< class T>
@@ -68,15 +67,16 @@ namespace dyn_modeling {
       double length2;
       double orient1;
       double orient2;
-      for (std::list< closure >::iterator it=t_closures.begin();
-          it != t_closures.end(); ++it){
+      std::list< closure >::iterator it=t_closures.begin();
+
+      while( it != t_closures.end()){
 
         t1 = it->newerTrail;
         t2 = it->olderTrail;
         n1 = m_graph.getNode( t1.nodeIndex);
         n2 = m_graph.getNode( t2.nodeIndex);
         l1 = n1.lines.at( t1.lineIndex);
-        l2 = n1.lines.at( t1.lineIndex);
+        l2 = n2.lines.at( t1.lineIndex);
         pointsWorld1 =
           Robot::changeCoordsRobotToWorld( n1.scanPoints_robotFrame,
               n1.q);
@@ -90,7 +90,10 @@ namespace dyn_modeling {
 
         if ( fabs( length1 - length2) > m_maxLinesLengthDiff ||
             fabs( orient1 - orient2) > m_maxLinesOrientDiff ){
-          t_closures.erase(it);
+
+          it = t_closures.erase(it); 
+          //automatically increments, since all the following
+          //elements are shifted to the left !!
         }
         else{
           it->score =
@@ -98,6 +101,7 @@ namespace dyn_modeling {
                 m_maxLinesLengthDiff)*0.5/m_maxLinesLengthDiff+
             fabs(fabs(orient1- orient2)-
                 m_maxLinesOrientDiff)*0.5/m_maxLinesOrientDiff;
+          ++it;
         }
       }
     }
@@ -112,7 +116,7 @@ namespace dyn_modeling {
 
       std::list< closure > closures;
 
-      const double leafRange{1};
+      const double leafRange{0.1};
       const double maxDistance{0.2};
 
       const int treeIndexFrom = t_currIteration - t_backRange;

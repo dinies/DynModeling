@@ -104,12 +104,12 @@ namespace dyn_modeling {
             maxLinesOrientDiff
             );
 
-        scanPoint sp1(-5,3);
-        scanPoint sp2(-5,5);
-        scanPoint sp3(-4,5);
-        scanPoint sp4(0,5);
-        scanPoint sp5(2,5);
-        scanPoint sp6(2,4);
+        scanPoint sp1(3,5);
+        scanPoint sp2(5,5);
+        scanPoint sp3(5,4);
+        scanPoint sp4(5,0);
+        scanPoint sp5(5,-2);
+        scanPoint sp6(4,-2);
 
         std::vector<scanPoint> points_n1 { sp1, sp2, sp3};
         std::vector<scanPoint> points_n2 {};
@@ -160,7 +160,7 @@ namespace dyn_modeling {
         g.insertEdge( edge_4);
 
         trail t1 = trail( Eigen::Vector2d(4,5),  0,0,1);
-        trail t2 = trail( Eigen::Vector2d(5,4.5),1,1,1);
+        trail t2 = trail( Eigen::Vector2d(5,4.5),0,1,1);
         trail t3 = trail( Eigen::Vector2d(4,5),  3,0,1);
         trail t4 = trail( Eigen::Vector2d(5,4.5),3,1,1);
         trailsTree = { t1, t2};
@@ -179,7 +179,7 @@ namespace dyn_modeling {
     EXPECT_EQ( 3, g.getNodes().size());
   }
 
-  TEST_F( FourStepClosure, closeFourStepLoop){
+  TEST_F( FourStepClosure, ClosuresFourStepLoop){
     
 
    EXPECT_CALL( graphMock, findTrails(0, 1))
@@ -190,7 +190,22 @@ namespace dyn_modeling {
       .Times(1)
       .WillOnce( Return( trailsQuery));
 
-     std::list<closure> result = lC->findClosures(2,3,1);
-     EXPECT_EQ( 2, result.size());
+     std::list<closure> resultingClosures = lC->findClosures(3,3,1);
+     EXPECT_EQ( 2, resultingClosures.size());
+
+     EXPECT_CALL( graphMock, getNode(3))
+      .Times(2)
+      .WillRepeatedly( Return( g.getNode(3)));
+
+     EXPECT_CALL( graphMock, getNode(0))
+      .Times(2)
+      .WillRepeatedly( Return( g.getNode(0)));
+
+     lC->sanitizeClosures( resultingClosures);
+     EXPECT_EQ( 2, resultingClosures.size());
+
+     std::pair<int,int> truthIndexes(0,3);
+     EXPECT_EQ( truthIndexes, lC->findIndexesOptimization( resultingClosures, 3));
+
   }
 }
