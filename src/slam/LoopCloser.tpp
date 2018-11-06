@@ -73,10 +73,11 @@ namespace dyn_modeling {
 
         t1 = it->newerTrail;
         t2 = it->olderTrail;
+        std::cout << "Closure between node "<< t1.nodeIndex << " and " << t2.nodeIndex << "\n";
         n1 = m_graph.getNode( t1.nodeIndex);
         n2 = m_graph.getNode( t2.nodeIndex);
         l1 = n1.lines.at( t1.lineIndex);
-        l2 = n2.lines.at( t1.lineIndex);
+        l2 = n2.lines.at( t2.lineIndex);
         pointsWorld1 =
           Robot::changeCoordsRobotToWorld( n1.scanPoints_robotFrame,
               n1.q);
