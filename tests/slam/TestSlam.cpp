@@ -33,7 +33,10 @@ namespace dyn_modeling{
          1, // int numMiddleScanPoints
          0.02, // double borderRatio;
          0.1, //maxLinesLengthDiffLoopCloser;
-         0.5 //maxLinesOrientDiffLoopCloser;
+         0.5, //maxLinesOrientDiffLoopCloser;
+         0.1, //leafRangeKdtree;
+         0.2 //maxDistancekdtree;
+ 
         );
 
       DatasetManager dM( relativePath);
@@ -48,7 +51,9 @@ namespace dyn_modeling{
       Graph graph( robot.getNumDataEntries(), robot.getNumRanges());
       LoopCloser<Graph> loopC(  graph,
           params.maxLinesLengthDiffLoopCloser,
-          params.maxLinesOrientDiffLoopCloser);
+          params.maxLinesOrientDiffLoopCloser,
+          params.leafRangeKdtree,
+          params.maxDistanceKdtree);
 
       Slam slam( 
           initial_state,

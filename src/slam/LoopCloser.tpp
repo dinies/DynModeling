@@ -5,10 +5,15 @@ namespace dyn_modeling {
   template< class T>
     LoopCloser<T>::LoopCloser( T &t_graph,
         const double t_maxLinesLengthDiff,
-        const double t_maxLinesOrientDiff):
+        const double t_maxLinesOrientDiff,
+        const double t_leafRangeKdtree,
+        const double t_maxDistanceKdtree
+        ):
       m_graph( t_graph),
       m_maxLinesLengthDiff( t_maxLinesLengthDiff),
-      m_maxLinesOrientDiff( t_maxLinesOrientDiff)
+      m_maxLinesOrientDiff( t_maxLinesOrientDiff),
+      m_leafRangeKdtree( t_leafRangeKdtree),
+      m_maxDistanceKdtree( t_maxDistanceKdtree)
   {}
 
 
@@ -48,7 +53,6 @@ namespace dyn_modeling {
         }
       }
       return std::pair<int,int>( minIndex, maxIndex);
-
     }
 
   template< class T>
@@ -73,7 +77,7 @@ namespace dyn_modeling {
 
         t1 = it->newerTrail;
         t2 = it->olderTrail;
-        std::cout << "Closure between node "<< t1.nodeIndex << " and " << t2.nodeIndex << "\n";
+       // std::cout << "Closure between node "<< t1.nodeIndex << " and " << t2.nodeIndex << "\n";
         n1 = m_graph.getNode( t1.nodeIndex);
         n2 = m_graph.getNode( t2.nodeIndex);
         l1 = n1.lines.at( t1.lineIndex);
@@ -107,8 +111,6 @@ namespace dyn_modeling {
       }
     }
 
-
-
   template< class T>
     std::list< closure > LoopCloser<T>::findClosures
     (const int t_currIteration,
@@ -116,9 +118,6 @@ namespace dyn_modeling {
      const int t_querySetRange){
 
       std::list< closure > closures;
-
-      const double leafRange{0.1};
-      const double maxDistance{0.2};
 
       const int treeIndexFrom = t_currIteration - t_backRange;
       const int treeIndexTo = t_currIteration - 2*t_querySetRange;
@@ -131,12 +130,12 @@ namespace dyn_modeling {
         std::vector<trail> queryTrails =
           m_graph.findTrails( queryIndexFrom,t_currIteration);
 
-        BaseTreeNode* root= buildTree(treeTrails, leafRange);
+        BaseTreeNode* root= buildTree(treeTrails, m_leafRangeKdtree);
 
         closure c;
         trail answer;
         for ( auto t: queryTrails){
-          double kd_dist = root->findNeighbor(answer, t, maxDistance);
+          double kd_dist = root->findNeighbor(answer, t, m_maxDistanceKdtree);
           if ( kd_dist >= 0){
             c = closure( t, answer);
             closures.push_back( c );

@@ -46,13 +46,17 @@ namespace dyn_modeling {
     T& m_graph;
     double m_maxLinesLengthDiff;
     double m_maxLinesOrientDiff;
-
+    double m_leafRangeKdtree;
+    double m_maxDistanceKdtree;
+ 
   public:
-    LoopCloser(); 
 
     LoopCloser( T &t_graph,
                 const double t_maxLinesLengthDiff,
-                const double t_maxLinesOrientDiff);
+                const double t_maxLinesOrientDiff,
+                const double t_leafRangeKdtree,
+                const double t_maxDistanceKdtree
+                );
 
     void closeLoop( const int t_currIteration,
                     const int backRange,
