@@ -108,7 +108,7 @@ namespace dyn_modeling {
       //loop checker
       if (i%500==0) {
 
-        m_loopCloser.closeLoop( i, i - 100, 20);
+        m_loopCloser.closeLoop( i, i - 1, 50);
       }
 
       drawingPoints_worldFrame =

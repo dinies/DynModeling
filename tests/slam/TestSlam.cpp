@@ -19,7 +19,7 @@ namespace dyn_modeling{
 
       paramsSlam params = paramsSlam
         (
-         0.1, // double icpEpsilon
+         0.01, // double icpEpsilon
          6, // int icpIterationsCap
          0.4, // double kernelThresholdScanMatching
          3, // double maxDistBetweenRangesLineMatcher
@@ -32,10 +32,11 @@ namespace dyn_modeling{
          1.3, // double nearLinesBonusScoreMultiplier
          1, // int numMiddleScanPoints
          0.02, // double borderRatio;
-         0.1, //maxLinesLengthDiffLoopCloser;
-         0.5, //maxLinesOrientDiffLoopCloser;
+         0.02, //maxLinesLengthDiffLoopCloser;
+         0.05, //maxLinesOrientDiffLoopCloser;
          0.1, //leafRangeKdtree;
-         0.2 //maxDistancekdtree;
+         0.1, //maxDistancekdtree;
+         100 //thresholdLoopRecognition;
  
         );
 
@@ -53,7 +54,8 @@ namespace dyn_modeling{
           params.maxLinesLengthDiffLoopCloser,
           params.maxLinesOrientDiffLoopCloser,
           params.leafRangeKdtree,
-          params.maxDistanceKdtree);
+          params.maxDistanceKdtree,
+          params.thresholdLoopRecognition);
 
       Slam slam( 
           initial_state,

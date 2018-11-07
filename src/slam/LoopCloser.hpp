@@ -48,6 +48,7 @@ namespace dyn_modeling {
     double m_maxLinesOrientDiff;
     double m_leafRangeKdtree;
     double m_maxDistanceKdtree;
+    double m_thresholdLoopRecognition;
  
   public:
 
@@ -55,7 +56,8 @@ namespace dyn_modeling {
                 const double t_maxLinesLengthDiff,
                 const double t_maxLinesOrientDiff,
                 const double t_leafRangeKdtree,
-                const double t_maxDistanceKdtree
+                const double t_maxDistanceKdtree,
+                const double t_thresholdLoopRecognition
                 );
 
     void closeLoop( const int t_currIteration,

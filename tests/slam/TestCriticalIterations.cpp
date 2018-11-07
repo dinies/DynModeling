@@ -38,7 +38,8 @@ namespace dyn_modeling{
          0.1, //maxLinesLengthDiffLoopCloser;
          0.5, //maxLinesOrientDiffLoopCloser;
          0.1, //leafRangeKdtree;
-         0.2 //maxDistancekdtree;
+         0.2, //maxDistancekdtree;
+         10 //thresholdLoopRecognition
  
         );
       DatasetManager dM( relativePath);
@@ -55,7 +56,8 @@ namespace dyn_modeling{
           params.maxLinesLengthDiffLoopCloser,
           params.maxLinesOrientDiffLoopCloser,
           params.leafRangeKdtree,
-          params.maxDistanceKdtree);
+          params.maxDistanceKdtree,
+          params.thresholdLoopRecognition);
 
 
 

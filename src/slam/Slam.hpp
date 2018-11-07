@@ -39,10 +39,12 @@ namespace dyn_modeling {
     double maxLinesOrientDiffLoopCloser;
     double leafRangeKdtree;
     double maxDistanceKdtree;
+    double thresholdLoopRecognition;
     paramsSlam_tag(double t_1, int t_2, double t_3,double t_4,double t_5,
                    double t_6,int t_7,double t_8,double t_9,
                    double t_10,double t_11,int t_12,double t_13,
-                   double t_14, double t_15,double t_16, double t_17):
+                   double t_14, double t_15,double t_16,
+                   double t_17, double t_18):
       icpEpsilon( t_1),
       icpIterationsCap( t_2),
       kernelThresholdScanMatching(t_3),
@@ -59,7 +61,8 @@ namespace dyn_modeling {
       maxLinesLengthDiffLoopCloser( t_14),
       maxLinesOrientDiffLoopCloser( t_15),
       leafRangeKdtree( t_16),
-      maxDistanceKdtree( t_17)
+      maxDistanceKdtree( t_17),
+      thresholdLoopRecognition( t_18)
     {}
   } paramsSlam;
 

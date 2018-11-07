@@ -7,13 +7,15 @@ namespace dyn_modeling {
         const double t_maxLinesLengthDiff,
         const double t_maxLinesOrientDiff,
         const double t_leafRangeKdtree,
-        const double t_maxDistanceKdtree
+        const double t_maxDistanceKdtree,
+        const double t_thresholdLoopRecognition
         ):
       m_graph( t_graph),
       m_maxLinesLengthDiff( t_maxLinesLengthDiff),
       m_maxLinesOrientDiff( t_maxLinesOrientDiff),
       m_leafRangeKdtree( t_leafRangeKdtree),
-      m_maxDistanceKdtree( t_maxDistanceKdtree)
+      m_maxDistanceKdtree( t_maxDistanceKdtree),
+      m_thresholdLoopRecognition( t_thresholdLoopRecognition)
   {}
 
 
@@ -22,6 +24,8 @@ namespace dyn_modeling {
         const int t_backRange,
         const int t_querySetRange ){
 
+
+      std::cout << "begin closure iter:"<< t_currIteration << "\n";
       std::list<closure> closures=
         findClosures( t_currIteration,
             t_backRange,
@@ -34,6 +38,8 @@ namespace dyn_modeling {
         std::pair<int,int> optimIndexes =
           LoopCloser::findIndexesOptimization(closures,t_currIteration);
       }
+
+      std::cout << "end  closure \n";
     }
 
   template< class T>
@@ -101,12 +107,22 @@ namespace dyn_modeling {
           //elements are shifted to the left !!
         }
         else{
-          it->score =
-            fabs(fabs(length1- length2)-
+          int temporalDistance = t1.nodeIndex - t2.nodeIndex;
+          double scoreClosure = temporalDistance * (
+              fabs(fabs(length1- length2)-
                 m_maxLinesLengthDiff)*0.5/m_maxLinesLengthDiff+
-            fabs(fabs(orient1- orient2)-
-                m_maxLinesOrientDiff)*0.5/m_maxLinesOrientDiff;
-          ++it;
+              fabs(fabs(orient1- orient2)-
+                m_maxLinesOrientDiff)*0.5/m_maxLinesOrientDiff);
+
+
+          if ( scoreClosure <= m_thresholdLoopRecognition) {
+            it = t_closures.erase(it); 
+          }
+          else{
+            it->score = scoreClosure;
+            std::cout << "closure detected \n ";
+            ++it;
+          }
         }
       }
     }

@@ -100,13 +100,15 @@ namespace dyn_modeling {
         const double maxLinesOrientDiff{0.1};
         const double leafRangeKdtree{0.1};
         const double maxDistanceKdtree{0.2};
+        const double thresholdLoopRecognition{1};
    
         lC= new LoopCloser<MockGraph>( 
             graphMock,
             maxLinesLengthDiff,
             maxLinesOrientDiff,
             leafRangeKdtree,
-            maxDistanceKdtree
+            maxDistanceKdtree,
+            thresholdLoopRecognition
             );
 
         scanPoint sp1(3,5);
