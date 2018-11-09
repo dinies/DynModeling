@@ -93,6 +93,7 @@ namespace dyn_modeling {
       LoopCloser<MockGraph>* lC;
       std::vector<trail> trailsTree;
       std::vector<trail> trailsQuery;
+      std::vector<loopDrawingData> loopDrawings;
   
       virtual void SetUp(){
         
@@ -110,6 +111,7 @@ namespace dyn_modeling {
             maxDistanceKdtree,
             thresholdLoopRecognition
             );
+        
 
         scanPoint sp1(3,5);
         scanPoint sp2(5,5);
@@ -208,7 +210,7 @@ namespace dyn_modeling {
       .Times(2)
       .WillRepeatedly( Return( g.getNode(0)));
 
-     lC->sanitizeClosures( resultingClosures);
+     lC->sanitizeClosures( resultingClosures,loopDrawings);
      EXPECT_EQ( 2, resultingClosures.size());
 
      std::pair<int,int> truthIndexes(0,3);

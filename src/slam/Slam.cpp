@@ -52,6 +52,8 @@ namespace dyn_modeling {
     node prevNode;
     edge currEdge;
 
+    std::vector<loopDrawingData>  currLoopDrawings;
+    std::vector<loopDrawingData>  prevLoopDrawings;
     m_map.showImg();
 
     for (int i = 0; i < num_dataEntries; ++i) {
@@ -107,8 +109,8 @@ namespace dyn_modeling {
 
       //loop checker
       if (i%500==0) {
-
-        m_loopCloser.closeLoop( i, i - 1, 50);
+        prevLoopDrawings = currLoopDrawings;
+        currLoopDrawings=  m_loopCloser.closeLoop( i, i - 1, 50);
       }
 
       drawingPoints_worldFrame =
@@ -128,6 +130,10 @@ namespace dyn_modeling {
                         m_params.numMiddleScanPoints,
                         currNode.q,
                         i);
+      if (i%500==0) {
+        m_map.drawLoopClosures( prevLoopDrawings, false);
+        m_map.drawLoopClosures( currLoopDrawings, true);
+      }
 
       postDrawingManagement(i);
       // std::cout << i << " iteration \n";

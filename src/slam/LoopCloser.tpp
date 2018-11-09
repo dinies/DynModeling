@@ -20,19 +20,21 @@ namespace dyn_modeling {
 
 
   template< class T>
-    void LoopCloser<T>::closeLoop( const int t_currIteration,
+    std::vector<loopDrawingData> LoopCloser<T>::closeLoop( const int t_currIteration,
         const int t_backRange,
         const int t_querySetRange ){
 
-
       std::cout << "begin closure iter:"<< t_currIteration << "\n";
+
+      std::vector<loopDrawingData> loopDrawings;
       std::list<closure> closures=
         findClosures( t_currIteration,
             t_backRange,
             t_querySetRange);
 
       if ( closures.size() > 0){
-        sanitizeClosures( closures);
+        loopDrawings.reserve( closures.size());
+        sanitizeClosures(closures, loopDrawings);
       }
       if ( closures.size() > 0){
         std::pair<int,int> optimIndexes =
@@ -40,6 +42,8 @@ namespace dyn_modeling {
       }
 
       std::cout << "end  closure \n";
+
+      return loopDrawings;
     }
 
   template< class T>
@@ -63,7 +67,9 @@ namespace dyn_modeling {
 
   template< class T>
     void LoopCloser<T>::sanitizeClosures
-    (std::list< closure > &t_closures){
+    (std::list< closure > &t_closures,
+     std::vector<loopDrawingData> &t_loopDrawings
+     ){
 
       trail t1;
       trail t2;
@@ -120,6 +126,35 @@ namespace dyn_modeling {
           }
           else{
             it->score = scoreClosure;
+
+            scanPoint curr_edge1 = pointsWorld1.at(l1.first_index);
+            scanPoint curr_edge2 = pointsWorld1.at(l1.second_index);
+            std::vector<scanPoint> curr_middle_vec = Robot::computeMiddleScanPoints(
+                curr_edge1,
+                curr_edge2,
+                1);
+
+            scanPoint curr_middle = curr_middle_vec.at(0);
+
+            scanPoint prev_edge1 = pointsWorld2.at(l2.first_index);
+            scanPoint prev_edge2 = pointsWorld2.at(l2.second_index);
+            std::vector<scanPoint> prev_middle_vec =  Robot::computeMiddleScanPoints(
+                prev_edge1,
+                prev_edge2,
+                1);
+
+            scanPoint prev_middle = prev_middle_vec.at(0);
+
+            loopDrawingData loopDrawing(
+                curr_edge1.coords,
+                curr_edge2.coords,
+                curr_middle.coords,
+                prev_edge1.coords,
+                prev_edge2.coords,
+                prev_middle.coords
+                );
+
+            t_loopDrawings.push_back(loopDrawing);
             std::cout << "closure detected \n ";
             ++it;
           }

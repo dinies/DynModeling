@@ -95,6 +95,40 @@ namespace dyn_modeling{
     }
   } trail;
 
+  typedef struct loopDrawingData_tag{
+    Eigen::Vector2d currLine_firstEdge;
+    Eigen::Vector2d currLine_secondEdge;
+    Eigen::Vector2d currLine_middlePoint;
+    Eigen::Vector2d prevLine_firstEdge;
+    Eigen::Vector2d prevLine_secondEdge;
+    Eigen::Vector2d prevLine_middlePoint;
+
+    loopDrawingData_tag( 
+        Eigen::Vector2d t_1,
+        Eigen::Vector2d t_2,
+        Eigen::Vector2d t_3,
+        Eigen::Vector2d t_4,
+        Eigen::Vector2d t_5,
+        Eigen::Vector2d t_6):
+      currLine_firstEdge(t_1),
+      currLine_secondEdge(t_2),
+      currLine_middlePoint(t_3),
+      prevLine_firstEdge(t_4),
+      prevLine_secondEdge(t_5),
+      prevLine_middlePoint(t_6)
+    {}
+    loopDrawingData_tag()
+    {
+      currLine_firstEdge= Eigen::Vector2d::Zero();
+      currLine_secondEdge= Eigen::Vector2d::Zero();
+      currLine_middlePoint= Eigen::Vector2d::Zero();
+      prevLine_firstEdge= Eigen::Vector2d::Zero();
+      prevLine_secondEdge= Eigen::Vector2d::Zero();
+      prevLine_middlePoint= Eigen::Vector2d::Zero();
+    }
+  } loopDrawingData;
+
+
 }
 
 

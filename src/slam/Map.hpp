@@ -41,6 +41,8 @@ namespace dyn_modeling {
     RGBImage m_drawingRobot;
     RGBImage m_drawingLineAssociations;
     RGBImage m_drawingWorldMap;
+    RGBImage m_drawingLoops;
+
     std::vector< drawingData> m_drawingList;
     colors m_colors;
     double m_spatialUnit;
@@ -75,6 +77,8 @@ namespace dyn_modeling {
 
     void drawWorldMap( const std::vector< cv::Point2d> &t_points,
                        const cv::Scalar &t_color);
+
+    void drawLoopClosures( const std::vector<loopDrawingData > &t_points, const bool t_flagCurrentLoop);
 
     void drawImages
     (const std::vector<scanPoint> &t_scanPoints_worldFrame,

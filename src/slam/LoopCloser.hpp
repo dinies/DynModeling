@@ -60,7 +60,7 @@ namespace dyn_modeling {
                 const double t_thresholdLoopRecognition
                 );
 
-    void closeLoop( const int t_currIteration,
+    std::vector<loopDrawingData> closeLoop( const int t_currIteration,
                     const int backRange,
                     const int querySetRange);
 
@@ -68,7 +68,8 @@ namespace dyn_modeling {
     (const std::list< closure > &t_closures,
      const int t_currIteration);
 
-    void sanitizeClosures( std::list< closure > &t_closures);
+    void sanitizeClosures( std::list< closure > &t_closures,
+        std::vector<loopDrawingData> &t_loopDrawings);
 
     std::list<closure> findClosures (const int t_currIteration,
                                      const int t_backRange,
