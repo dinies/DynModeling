@@ -109,8 +109,9 @@ namespace dyn_modeling {
             fabs( orient1 - orient2) > m_maxLinesOrientDiff ){
 
           it = t_closures.erase(it); 
-          //automatically increments, since all the following
-          //elements are shifted to the left !!
+          // This takes advantage that the iterator automatically will
+          // point to the next element , since all the following
+          // elements have been shifted to the left
         }
         else{
           int temporalDistance = t1.nodeIndex - t2.nodeIndex;
@@ -119,6 +120,9 @@ namespace dyn_modeling {
                 m_maxLinesLengthDiff)*0.5/m_maxLinesLengthDiff+
               fabs(fabs(orient1- orient2)-
                 m_maxLinesOrientDiff)*0.5/m_maxLinesOrientDiff);
+
+          std::cout << scoreClosure << "\n";
+
 
 
           if ( scoreClosure <= m_thresholdLoopRecognition) {

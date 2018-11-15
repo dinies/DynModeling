@@ -63,8 +63,6 @@ namespace dyn_modeling {
       currNode.lines =
         m_lineMatcher.generateLines( currNode.scanPoints_robotFrame );
 
-      // std::cout << currNode.lines.size() << " lines \n" ;
-
       if ( i == 0 ){
         currNode.q = m_initialRobotState;
 
@@ -82,7 +80,6 @@ namespace dyn_modeling {
            currNode.lines, currNode.scanPoints_robotFrame );
 
         currEdge.associations = associator.associateLines();
-        // std::cout << currEdge.associations.size() << " associations \n" ;
         if ( currEdge.associations.size() > 0){
           resMatch = matchAssociatedData( prevNode,
                                           currEdge,
@@ -92,11 +89,6 @@ namespace dyn_modeling {
           currEdge.delta_x = resMatch.icpResult.delta_x;
 
           currNode.q= Robot::updateState( prevNode.q, currEdge.delta_x );
-          // std::cout  << currEdge.delta_x(0) << "; "<< currEdge.delta_x(1) << "; " << currEdge.delta_x(2) << " dX \n";
-          // Eigen::Vector3d curr_state= currNode.q.mu;
-          // if ( std::isnan( curr_state(0)) || std::isnan( curr_state(1)) || std::isnan( curr_state(2)) ){
-          //   std::cout << "NAN \n";
-          // }
         }
         else{
           std::cout << "No associations at iteration : "<< i <<"\n";
@@ -106,10 +98,7 @@ namespace dyn_modeling {
       m_graph.insertNode( currNode);
       m_graph.insertEdge( currEdge);
 
-
-
-      //loop checker
-      if (i%m_params.everyNumIterTryLoopClosure ==0) {
+      if (i% m_params.everyNumIterTryLoopClosure ==0) {
         prevLoopDrawings = currLoopDrawings;
         currLoopDrawings=
           m_loopCloser.closeLoop(i, i-1, m_params.dimQuerySetLoopClosure);
@@ -118,7 +107,7 @@ namespace dyn_modeling {
       drawingPoints_worldFrame =
         Robot::changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame,
                                            currNode.q);
-     prevAssociationSP_worldFrame =
+      prevAssociationSP_worldFrame =
         Robot::changeCoordsRobotToWorld( resMatch.prevAssociationPoints,
                                           prevNode.q);
       currAssociationSP_worldFrame =
@@ -132,13 +121,12 @@ namespace dyn_modeling {
                         m_params.numMiddleScanPoints,
                         currNode.q,
                         i);
-      if (i%m_params.everyNumIterTryLoopClosure ==0) {
+      if (i% m_params.everyNumIterTryLoopClosure ==0) {
         m_map.drawLoopClosures( prevLoopDrawings, false);
         m_map.drawLoopClosures( currLoopDrawings, true);
       }
 
       postDrawingManagement(i);
-      // std::cout << i << " iteration \n";
     }
     plotStateEvolution(0.01);
   }

@@ -118,14 +118,6 @@ namespace dyn_modeling {
                      const Eigen::Vector3d &t_deltaState){
 
     return state( Robot::boxPlus(t_currState.mu, t_deltaState));
-
-    // m_state.mu = Robot::boxPlus(m_state.mu, t_deltaState); DONE now robot is a stateless class
-    // DONE foundamental the update is now in robot frame , now we need to transform the reference frame of the update so we need to work with homogeneous matrices so using v2t on the current state and on the delta x we obtain two matrices that have to be concatenated.
-
-    // Eigen::Isometry2d transf = MyMath::v2t(t_deltaState);
-    // Eigen::Matrix2d R = transf.linear();
-    //TODO     learn how to propagate sigma
-    // m_state.sigma = 8;
   }
 }
 
