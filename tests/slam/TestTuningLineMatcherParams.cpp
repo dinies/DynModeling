@@ -29,16 +29,16 @@ namespace dyn_modeling{
     int num_data_entries = r.getNumDataEntries();
     double borderRatio = 0.05;
     std::vector< scanPoint > scanPoints =
-      r.retrieveScanPointsRobotFrame(2343,borderRatio);
+      r.retrieveScanPointsRobotFrame(234,borderRatio);
 
     LineMatcher lM_1 = LineMatcher(0.2, 1, 0.1);
     LineMatcher lM_2 = LineMatcher(1.2, 1, 0.1);
-    LineMatcher lM_3 = LineMatcher(3, 0.02, 0.1);
-    LineMatcher lM_4 = LineMatcher(3, 0.4, 0.1);
-    LineMatcher lM_5 = LineMatcher(3, 0.8, 0.2);
-    LineMatcher lM_6 = LineMatcher(3, 1.2, 0.2);
-    LineMatcher lM_7 = LineMatcher(3, 1, 0.4);
-    LineMatcher lM_8 = LineMatcher(3, 1, 0.5);
+    LineMatcher lM_3 = LineMatcher(1.2, 1, 0.15);
+    LineMatcher lM_4 = LineMatcher(1.2, 1, 0.01);
+    LineMatcher lM_5 = LineMatcher(1.3, 0.8, 0.2);
+    LineMatcher lM_6 = LineMatcher(2, 1.2, 0.2);
+    LineMatcher lM_7 = LineMatcher(1.4, 1, 0.2);
+    LineMatcher lM_8 = LineMatcher(1.2, 1, 0.05);
 
     std::vector<std::vector< line>> linesMat
       {
@@ -109,7 +109,7 @@ namespace dyn_modeling{
 
     cv::Scalar lightBlue= {210,139,38};
     cv::Scalar dark_red = {20,0,255};
-    Drawer drawer(10);
+    Drawer drawer(30);
 
     std::vector<RGBImage> images {img_1,
                                   img_2,

@@ -6,29 +6,31 @@ namespace dyn_modeling {
   Map::Map( Drawer &t_drawer):
     m_drawer( t_drawer)
   {
-    m_drawingMap.create( 700,1200 );
+    m_drawingMap.create( 800,1250 );
     m_drawingMap= cv::Vec3b(227, 246, 253);
     cv::namedWindow("Map");
     cv::moveWindow("Map", 20, 20);
-    m_drawingLineAssociations.create( 700,1200);
+
+    m_drawingLineAssociations.create( 800,1250);
     m_drawingLineAssociations= cv::Vec3b(227, 246, 253);
     cv::namedWindow("LineAssociations");
-    cv::moveWindow("LineAssociations", 1340, 20);
+    cv::moveWindow("LineAssociations", 1290, 20);
 
-    m_drawingWorldMap.create( 700,900);
+    m_drawingWorldMap.create( 800,1250);
     m_drawingWorldMap = cv::Vec3b(227, 246, 253);
     cv::namedWindow("WorldMap");
     cv::moveWindow("WorldMap", 20, 840);
 
-    m_drawingRobot.create( 300,300 );
+    m_drawingLoops.create( 800,1250);
+    m_drawingLoops= cv::Vec3b(227, 246, 253);
+    cv::namedWindow("Loops");
+    cv::moveWindow("Loops", 1290, 840);
+
+    m_drawingRobot.create( 250,250 );
     m_drawingRobot= cv::Vec3b(227, 246, 253);
     cv::namedWindow("Robot");
-    cv::moveWindow("Robot", 940, 840);
+    cv::moveWindow("Robot", 1150, 700);
 
-    m_drawingLoops.create( 700,900);
-    m_drawingWorldMap = cv::Vec3b(227, 246, 253);
-    cv::namedWindow("Loops");
-    cv::moveWindow("Loops", 1260, 840);
 
     m_colors.white = {255,255,255};
     m_colors.green = {0,255,20};
@@ -290,10 +292,10 @@ namespace dyn_modeling {
 
   void Map::showImg(){
     cv::imshow("Map",m_drawingMap);
-    cv::imshow("Robot",m_drawingRobot);
     cv::imshow("LineAssociations",m_drawingLineAssociations);
     cv::imshow("WorldMap",m_drawingWorldMap);
     cv::imshow("Loops",m_drawingLoops);
+    cv::imshow("Robot",m_drawingRobot);
 
   };
 }

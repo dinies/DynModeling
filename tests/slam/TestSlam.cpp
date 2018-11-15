@@ -19,24 +19,26 @@ namespace dyn_modeling{
 
       paramsSlam params = paramsSlam
         (
-         0.01, // double icpEpsilon
+         0.001, // double icpEpsilon
          6, // int icpIterationsCap
-         0.4, // double kernelThresholdScanMatching
-         3, // double maxDistBetweenRangesLineMatcher
+         0.2, // double kernelThresholdScanMatching
+         1.4, // double maxDistBetweenRangesLineMatcher
          1, // double maxAngularCoeffLineMatcher
          0.2, // double minLengthLinesLineMatcher
-         6, // int maxCandidatesAssociation
+         15, // int maxCandidatesAssociation
          0.1, // double maxLengthDiffAssociation
          0.1, // double maxAbsoluteOrientationDiffThreshold
          0.1, // double maxNearLinesOrientationDiffThreshold
          1.3, // double nearLinesBonusScoreMultiplier
-         1, // int numMiddleScanPoints
-         0.02, // double borderRatio;
+         2, // int numMiddleScanPoints
+         0.05, // double borderRatio;
          0.02, //maxLinesLengthDiffLoopCloser;
          0.05, //maxLinesOrientDiffLoopCloser;
-         0.1, //leafRangeKdtree;
-         0.1, //maxDistancekdtree;
-         100 //thresholdLoopRecognition;
+         3.5, //leafRangeKdtree;
+         0.5, //maxDistancekdtree;
+         50, //thresholdLoopRecognition;
+         800, //everyNumIterTryLoopClosure
+         350 //dimQuerySetLoopClosure
  
         );
 
@@ -44,7 +46,7 @@ namespace dyn_modeling{
       Robot robot(dM);
       ScanMatcher scanM(params.icpEpsilon);
 
-      Drawer drawer(15);
+      Drawer drawer(40);
       Map map( drawer );
       LineMatcher lineM(params.maxDistBetweenRangesLineMatcher,
           params.maxAngularCoeffLineMatcher,

@@ -107,18 +107,20 @@ namespace dyn_modeling {
       m_graph.insertEdge( currEdge);
 
 
+
       //loop checker
-      if (i%500==0) {
+      if (i%m_params.everyNumIterTryLoopClosure ==0) {
         prevLoopDrawings = currLoopDrawings;
-        currLoopDrawings=  m_loopCloser.closeLoop( i, i - 1, 50);
+        currLoopDrawings=
+          m_loopCloser.closeLoop(i, i-1, m_params.dimQuerySetLoopClosure);
       }
 
       drawingPoints_worldFrame =
         Robot::changeCoordsRobotToWorld(  currNode.scanPoints_robotFrame,
                                            currNode.q);
-      prevAssociationSP_worldFrame =
+     prevAssociationSP_worldFrame =
         Robot::changeCoordsRobotToWorld( resMatch.prevAssociationPoints,
-                                          currNode.q);
+                                          prevNode.q);
       currAssociationSP_worldFrame =
         Robot::changeCoordsRobotToWorld( resMatch.currAssociationPoints,
                                           currNode.q);
@@ -130,7 +132,7 @@ namespace dyn_modeling {
                         m_params.numMiddleScanPoints,
                         currNode.q,
                         i);
-      if (i%500==0) {
+      if (i%m_params.everyNumIterTryLoopClosure ==0) {
         m_map.drawLoopClosures( prevLoopDrawings, false);
         m_map.drawLoopClosures( currLoopDrawings, true);
       }
