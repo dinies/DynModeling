@@ -1,60 +1,49 @@
 // Created by Dinies on 10/09/2018.
 
 #pragma once
-#include <unistd.h>
-#include <vector>
-
-// #include <limits>
-// #include <string>
-// #include <fstream>
-// #include <iostream>
-// #include <Eigen/Dense>
-
-#include "../../include/structs.hpp"
-// #include "../utils/MyMath.hpp"
-#include "Robot.hpp"
-
-
+#include "GraphInterface.hpp"
 
 namespace dyn_modeling {
 
-  typedef struct node_tag{
-    state q;
-    std::vector<scanPoint> scanPoints_robotFrame;
-    std::vector<line> lines;
-  } node;
+   class Graph: GraphInterface {
 
-  typedef struct edge_tag{
-    Eigen::Vector3d delta_x;
-    std::vector<dataAssociation> associations;
-  } edge;
+    public:
+      Graph( const int t_dataEntriesNum, const int t_maxPointsNum );
 
-  class Graph{
+      Graph();
 
-  private:
-    std::vector<node> m_nodes;
-    std::vector<edge> m_edges;
+      inline void insertNode( const node &t_node){ m_nodes.push_back(t_node); };
 
-  public:
-    Graph( const int t_dataEntries );
+      inline void insertEdge( const edge &t_edge){ m_edges.push_back(t_edge); };
 
-    Graph();
+      inline edge getEdge( const int t_index ){return m_edges.at(t_index); };
 
-    inline void insertNode( const node &t_node){ m_nodes.push_back(t_node); };
+      inline node getNode( const int t_index ){return m_nodes.at(t_index); };
 
-    inline void insertEdge( const edge &t_edge){ m_edges.push_back(t_edge); };
+      inline edge& getEdgeRef( const int t_index ){return m_edges.at(t_index); };
 
-    inline edge getEdge( const int t_index ){return m_edges.at(t_index); };
+      inline node& getNodeRef( const int t_index ){return m_nodes.at(t_index); };
 
-    inline node getNode( const int t_index ){return m_nodes.at(t_index); };
+      inline void changeNode( const int t_index, const node &t_node )
+      { m_nodes.at(t_index) = t_node; };
 
-    inline void changeNode( const int t_index, const node &t_node ){ m_nodes.at(t_index) = t_node; };
+      inline void changeEdge( const int t_index, const edge &t_edge )
+      { m_edges.at(t_index) = t_edge; };
 
-    inline void changeEdge( const int t_index, const edge &t_edge ){ m_edges.at(t_index) = t_edge; };
+      inline std::vector<node> getNodes(){return m_nodes; };
 
-    inline std::vector<node> getNodes(){return m_nodes; };
+      inline std::vector<edge> getEdges(){return m_edges; };
 
-    inline std::vector<edge> getEdges(){return m_edges; };
+      void updateNodeStates();
+
+      std::vector<trail> findTrails(const int t_nodeFromIndex,
+          const int t_nodeToIndex );
+
+      void addOldTrails( std::vector<trail> &oldTrails,
+          std::map< int, trail> &t_unmatchedTrails);
+
+      std::map<int,trail> matchActiveTrails (std::map<int,trail> &t_activeTrails,
+          const int t_nodeIndex);
 
   };
 }

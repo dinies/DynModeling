@@ -41,29 +41,43 @@ namespace dyn_modeling {
 
     std::vector<dataAssociation> associateLines();
 
-    std::vector<dataAssociation> findCandidates(const int t_choosen_newLine_index);
+    std::vector<dataAssociation> findCandidates
+    (const int t_choosen_newLine_index);
 
-    void insertOrderedDataAssociation(const dataAssociation &t_lineComparison, std::vector<dataAssociation> &t_candidates);
+    void insertOrderedDataAssociation
+    (const dataAssociation &t_lineComparison,
+     std::vector<dataAssociation> &t_candidates);
 
-    dataAssociation compareLines( const int t_oldLine_index,  const int t_newLine_index  );
+    dataAssociation compareLines( const int t_oldLine_index,
+                                  const int t_newLine_index  );
 
-    double getLineLength( const line &t_line, const std::vector<scanPoint> &t_sPoints );
+    static double getLineLength( const line &t_line,
+                                 const std::vector<scanPoint> &t_sPoints );
 
-    double getLineOrientation( const line &t_line, const std::vector<scanPoint> &t_sPoints );
+    static double getLineOrientation( const line &t_line,
+                                      const std::vector<scanPoint> &t_sPoints );
 
     std::vector< int> getPossibleCandidateIndexes(const int t_newLine_index );
 
-    std::vector<dataAssociation> chooseBestAssociations( std::vector< std::vector< dataAssociation>> &t_matrix);
+    std::vector<dataAssociation> chooseBestAssociations
+    ( std::vector< std::vector< dataAssociation>> &t_matrix);
 
-    void removeTakenAssociations( const dataAssociation &t_takenAssociation, std::vector< std::vector< dataAssociation>> &t_matrix);
+    void removeTakenAssociations
+    ( const dataAssociation &t_takenAssociation,
+      std::vector< std::vector< dataAssociation>> &t_matrix);
 
-    dataAssociation chooseMaxScoreAssociation( const std::vector< std::vector< dataAssociation>> &t_matrix);
+    dataAssociation chooseMaxScoreAssociation
+    ( const std::vector< std::vector< dataAssociation>> &t_matrix);
 
-    bool associationsAllTaken( const std::vector< std::vector< dataAssociation>> &t_matrix);
+    bool associationsAllTaken
+    ( const std::vector< std::vector< dataAssociation>> &t_matrix);
 
-    inline double getLengthDiffThreshold() { return m_lengthDifferenceThreshold;};
+    inline double getLengthDiffThreshold()
+    { return m_lengthDifferenceThreshold;};
 
-    inline void setLengthDiffThreshold( const double t_lengthDifferenceThreshold) { m_lengthDifferenceThreshold = t_lengthDifferenceThreshold; };
+    inline void setLengthDiffThreshold
+    ( const double t_lengthDifferenceThreshold)
+    { m_lengthDifferenceThreshold = t_lengthDifferenceThreshold; };
 
 
   };

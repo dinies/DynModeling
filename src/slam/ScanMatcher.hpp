@@ -33,12 +33,14 @@ namespace dyn_modeling {
   class ScanMatcher{
   private:
     double m_kernelThreshold;
+    double m_epsilon;
   public:
-    ScanMatcher();
+    ScanMatcher( const double t_epsilon);
 
-    iterResult icpIterationRframe(const Eigen::Vector3d &t_initialGuessState,
-                                  const std::vector<scanPoint> &t_oldScanPoints_robot,
-                                  const std::vector<scanPoint> &t_newScanPoints_robot);
+    iterResult icpIterationRframe
+    (const Eigen::Vector3d &t_initialGuessState,
+     const std::vector<scanPoint> &t_oldScanPoints_robot,
+     const std::vector<scanPoint> &t_newScanPoints_robot);
 
     roundResult icpRound(const int t_numIterations,
                          const Eigen::Vector3d &t_initialGuessState,
@@ -46,7 +48,8 @@ namespace dyn_modeling {
                          const std::vector<scanPoint> &t_newScanPoints_robot);
 
     inline double getKernelThreshold() { return m_kernelThreshold;};
-    inline void setKernelThreshold( const double t_threshold) { m_kernelThreshold = t_threshold; };
+    inline void setKernelThreshold(const double t_threshold)
+    { m_kernelThreshold = t_threshold; };
   };
 }
 

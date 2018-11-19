@@ -1,4 +1,5 @@
-add_executable(drawMovingPoints  drawMovingPoints.cpp)
+add_executable(drawMovingPoints
+  drawMovingPoints.cpp)
 
 target_link_libraries(
   drawMovingPoints
@@ -9,7 +10,8 @@ target_link_libraries(
   )
 
 
-add_executable( pendulumMain pendulumMain.cpp
+add_executable( pendulumMain
+  pendulumMain.cpp
   ../src/pendulum/Pendulum.cpp
   ../src/utils/Clock.cpp
   ../src/controllers/Controller.cpp
@@ -24,17 +26,17 @@ target_link_libraries(
   PUBLIC Boost::iostreams
   )
 
-add_executable( fileParsing fileParsing.cpp
+add_executable( fileParsing
+  fileParsing.cpp
   ../src/slam/DatasetManager.cpp
   )
 
-add_executable( robotScanRetrieving robotScanRetrieving.cpp
-  ../src/slam/Robot.cpp
-  ../src/utils/MyMath.cpp
-  ../src/slam/DatasetManager.cpp
-  )
+add_executable( robotScanRetrieving
+  robotScanRetrieving.cpp
+ )
 target_link_libraries(
   robotScanRetrieving
+  PUBLIC slamSources
   PUBLIC ${OpenCV_LIBS}
   PUBLIC Boost::filesystem
   PUBLIC Boost::system

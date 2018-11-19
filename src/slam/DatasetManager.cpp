@@ -12,7 +12,8 @@ namespace dyn_modeling {
 
 
 
-  datasetParams DatasetManager::parseStaticParameters( const std::string &t_dataSetPath){
+  datasetParams DatasetManager::parseStaticParameters
+  (const std::string &t_dataSetPath){
 
     std::ifstream fileStream( t_dataSetPath);
     std::string firstLine;
@@ -56,7 +57,9 @@ namespace dyn_modeling {
       return pS;
     }
   }
-  void DatasetManager::collectDataFromString( const std::string &t_dataString, dataNode &t_returning_struct, int t_rangesNum){
+  void DatasetManager::collectDataFromString( const std::string &t_dataString,
+                                              dataNode &t_returning_struct,
+                                              int t_rangesNum){
     char * cstr = new char [t_dataString.length()+1];
     std::strcpy (cstr, t_dataString.c_str());
 
@@ -86,7 +89,8 @@ namespace dyn_modeling {
   };
 
 
-  dataSet DatasetManager::parseDataSet( const std::string &t_dataSetPath, const datasetParams &t_dSetParams){
+  dataSet DatasetManager::parseDataSet( const std::string &t_dataSetPath,
+                                        const datasetParams &t_dSetParams){
     dataSet dS;
 
     std::ifstream fileStream( t_dataSetPath);
@@ -94,13 +98,14 @@ namespace dyn_modeling {
     if (!fileStream.is_open()) {
       return dS;
     }
-
     const int ranges_num = static_cast<int>(t_dSetParams.ranges_size);
     while ( getline (fileStream,current_line) ){
 
       dataNode dataOfNode;
       dataOfNode.ranges.reserve(ranges_num);
-      DatasetManager::collectDataFromString(current_line, dataOfNode, ranges_num);
+      DatasetManager::collectDataFromString(current_line,
+                                            dataOfNode,
+                                            ranges_num);
       dS.push_back(dataOfNode);
     }
     fileStream.close();
@@ -108,8 +113,6 @@ namespace dyn_modeling {
   };
 
   std::vector<double> DatasetManager::getSpanningAngles(){
-    // double total_span = std::abs( m_staticParams.max_angle - m_staticParams.min_angle);
-    // double raw_num_span = std::round(total_span / delta_span );
 
     int num_span = static_cast<int>(m_staticParams.ranges_size);
     std::vector<double> span_angles;
@@ -124,7 +127,9 @@ namespace dyn_modeling {
   };
 
 
-  std::vector<double> DatasetManager::getDataNodeRanges( int t_index_datanode){
+  std::vector<double> DatasetManager::getDataNodeRanges
+  (const int t_index_datanode){
+
     dataNode dN = m_dataSet.at(t_index_datanode);
     return dN.ranges;
   };

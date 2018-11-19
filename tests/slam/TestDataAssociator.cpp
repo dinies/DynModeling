@@ -17,61 +17,30 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_SUITE( DataAssociatorClass)
 
   struct PlainDataAssociatorFixture {
+    DataAssociator dA;
+    std::vector<scanPoint> oldscanPoints;
+    std::vector<scanPoint> newscanPoints;
     PlainDataAssociatorFixture(){
-      scanPoint sp1;
-      scanPoint sp2;
-      scanPoint sp3;
-      scanPoint sp4;
-      scanPoint sp5;
-      scanPoint sp6;
-      scanPoint sp7;
-      scanPoint sp8;
-      scanPoint sp9;
-
-      Eigen::Vector2d c1(1,1);
-      Eigen::Vector2d c2(3,1);
-      Eigen::Vector2d c3(5,3);
-      Eigen::Vector2d c4(5.5,3);
-      Eigen::Vector2d c5(1,1.5);
-      Eigen::Vector2d c6(2.73,2.5);
-      Eigen::Vector2d c7(4,4.2);
-      Eigen::Vector2d c8(4.73,4.5);
-      Eigen::Vector2d c9(5.23,4.5);
-
-      sp1.coords = c1;
-      sp2.coords = c2;
-      sp3.coords = c3;
-      sp4.coords = c4;
-      sp5.coords = c5;
-      sp6.coords = c6;
-      sp7.coords = c7;
-      sp8.coords = c8;
-      sp9.coords = c9;
+      scanPoint sp1(1,1);
+      scanPoint sp2(3,1);
+      scanPoint sp3(5,3);
+      scanPoint sp4(5.5,3);
+      scanPoint sp5(1,1.5);
+      scanPoint sp6(2.73,2.5);
+      scanPoint sp7(4,4.2);
+      scanPoint sp8(4.73,4.5);
+      scanPoint sp9(5.23,4.5);
 
       oldscanPoints ={ sp1, sp2, sp3, sp4};
       newscanPoints ={ sp5, sp6, sp7, sp8, sp9};
 
-      line l1;
-      l1.first_index = 0;
-      l1.second_index = 1;
-      line l2;
-      l2.first_index = 1;
-      l2.second_index = 2;
-      line l3;
-      l3.first_index = 2;
-      l3.second_index = 3;
-      line l4;
-      l4.first_index = 0;
-      l4.second_index = 1;
-      line l5;
-      l5.first_index = 1;
-      l5.second_index = 2;
-      line l6;
-      l6.first_index = 2;
-      l6.second_index = 3;
-      line l7;
-      l7.first_index = 3;
-      l7.second_index = 4;
+      line l1(0,1);
+      line l2(1,2);
+      line l3(2,3);
+      line l4(0,1);
+      line l5(1,2);
+      line l6(2,3);
+      line l7(3,4);
 
 
       std::vector<line> oldLines = { l1, l2, l3};
@@ -96,46 +65,29 @@ namespace dyn_modeling{
 
     }
     ~PlainDataAssociatorFixture(){}
-    DataAssociator dA;
-    std::vector<scanPoint> oldscanPoints;
-    std::vector<scanPoint> newscanPoints;
-  };
+ };
 
   struct DataAssociationsFixture {
+    dataAssociation association;
+    std::vector<dataAssociation> associationsVec;
+    std::vector< std::vector< dataAssociation>> associationsMatrix;
+    std::vector< std::vector< dataAssociation>> associationsMatrixEmpty;
     DataAssociationsFixture(){
       association.old_line_index = 0;
       association.new_line_index = 0;
       association.confidence_score = 100;
 
-      dataAssociation d1;
-      d1.old_line_index = 0;
-      d1.new_line_index = 0;
-      d1.confidence_score = 110;
+      dataAssociation d1(0,0,110);
 
-      dataAssociation d2;
-      d2.old_line_index = 0;
-      d2.new_line_index = 1;
-      d2.confidence_score = 70;
+      dataAssociation d2(0,1,70);
 
-      dataAssociation d3;
-      d3.old_line_index = 0;
-      d3.new_line_index = 2;
-      d3.confidence_score = 50;
+      dataAssociation d3(0,2,50);
 
-      dataAssociation d4;
-      d4.old_line_index = 1;
-      d4.new_line_index = 1;
-      d4.confidence_score = 20;
+      dataAssociation d4(1,1,20);
 
-      dataAssociation d5;
-      d5.old_line_index = 2;
-      d5.new_line_index = 1;
-      d5.confidence_score = 20;
+      dataAssociation d5(2,1,20);
 
-      dataAssociation d6;
-      d6.old_line_index = 2;
-      d6.new_line_index = 3;
-      d6.confidence_score = 120;
+      dataAssociation d6(2,3,120);
 
       associationsVec = { d1, d2, d3};
       std::vector< dataAssociation> vecNewline1 = { d1 };
@@ -146,14 +98,9 @@ namespace dyn_modeling{
 
       std::vector< dataAssociation> emptyVec = {};
       associationsMatrixEmpty = {emptyVec, emptyVec, emptyVec, emptyVec};
-
     }
     ~DataAssociationsFixture(){}
-    dataAssociation association;
-    std::vector<dataAssociation> associationsVec;
-    std::vector< std::vector< dataAssociation>> associationsMatrix;
-    std::vector< std::vector< dataAssociation>> associationsMatrixEmpty;
-  };
+ };
 
 
 
@@ -273,16 +220,12 @@ namespace dyn_modeling{
 
   BOOST_AUTO_TEST_CASE( testGetLineOrientation) {
     PlainDataAssociatorFixture fixture;
-    line line1;
-    line1.first_index = 0;
-    line1.second_index = 1;
+    line line1(0,1);
     double result = fixture.dA.getLineOrientation( line1, fixture.oldscanPoints);
     double truth = 0;
     double diff = MyMath::boxMinusAngleRad(result , truth);
     BOOST_CHECK_SMALL( diff, 0.01);
-    line line2;
-    line2.first_index = 1;
-    line2.second_index = 2;
+    line line2(1,2);
     result = fixture.dA.getLineOrientation( line2, fixture.oldscanPoints);
     truth = M_PI/4;
     diff = MyMath::boxMinusAngleRad(result , truth);

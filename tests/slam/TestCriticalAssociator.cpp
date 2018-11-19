@@ -20,8 +20,9 @@ namespace dyn_modeling{
 BOOST_AUTO_TEST_CASE(associateAcriticalIteration) {
 
     std::string relativePath= "../files/datasets/CriticalNoAssociations.txt";
-    Eigen::Vector3d initial_state(0.0, 0.0, 0.0);
-    Robot r = Robot(relativePath, initial_state);
+    DatasetManager dM( relativePath);
+    Robot r(dM);
+ 
 
     int num_data_entries = r.getNumDataEntries();
     double borderRatio = 0.05;
@@ -42,25 +43,25 @@ BOOST_AUTO_TEST_CASE(associateAcriticalIteration) {
     RGBImage img_4;
     RGBImage img_5;
 
-    img_1.create( 600,600);
+    img_1.create( 600,800);
     img_1 = cv::Vec3b(227, 246, 253);
     cv::namedWindow("Lines1");
-    cv::moveWindow("Lines1", 40, 40);
+    cv::moveWindow("Lines1", 20, 20);
 
-    img_2.create( 600,600);
+    img_2.create( 600,800);
     img_2 = cv::Vec3b(227, 246, 253);
     cv::namedWindow("Lines2");
-    cv::moveWindow("Lines2", 860, 40);
+    cv::moveWindow("Lines2", 840, 20);
 
-    img_3.create( 600,600);
+    img_3.create( 600,800);
     img_3 = cv::Vec3b(227, 246, 253);
     cv::namedWindow("Points1");
-    cv::moveWindow("Points1", 40, 540);
+    cv::moveWindow("Points1", 20, 740);
 
-    img_4.create( 600,600);
+    img_4.create( 600,800);
     img_4 = cv::Vec3b(227, 246, 253);
     cv::namedWindow("Points2");
-    cv::moveWindow("Points2", 860, 540);
+    cv::moveWindow("Points2", 840, 740);
 
     cv::Scalar lightBlue= {210,139,38};
     cv::Scalar dark_red = {20,0,255};
@@ -129,7 +130,7 @@ BOOST_AUTO_TEST_CASE(associateAcriticalIteration) {
     std::vector< dataAssociation> result = dA.associateLines();
     std::cout << "n of associations : " << result.size() << "\n";
 
-    // std::vector<cv::Point2d> lineAssociations_drawing = computePointsLineAssociations( t_prevAssociatedSP_worldFrame, t_currAssociatedSP_worldFrame, t_numMiddlePoints);
+     //std::vector<cv::Point2d> lineAssociations_drawing = computePointsLineAssociations( t_prevAssociatedSP_worldFrame, t_currAssociatedSP_worldFrame, t_numMiddlePoints);
     // drawLineAssociations( dD.lineAssociations_drawing, m_colors.dark_red, m_colors.lightBlue);
 
 

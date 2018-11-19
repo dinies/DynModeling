@@ -2,8 +2,6 @@
 
 #define BOOST_TEST_MODULE SlamTests
 
-
-
 #include <iostream>
 #include <boost/test/unit_test.hpp>
 #include <Eigen/Core>
@@ -16,7 +14,10 @@ namespace dyn_modeling{
   BOOST_AUTO_TEST_SUITE( MapClass)
 
   BOOST_AUTO_TEST_CASE(drawRobotTest) {
-    Map m =  Map();
+
+    Drawer drawer(15);
+    Map m( drawer );
+ 
     state robotState;
     robotState.mu << 200.0,  200.0 , 1.0;
     const double radius = 3;

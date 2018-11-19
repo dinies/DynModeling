@@ -1,4 +1,4 @@
-// Created by Dinies on 26/06/2018.
+// Created by Dinies on 25/03/2018.
 #pragma once
 #include <unistd.h>
 #include <Eigen/Core>
@@ -14,6 +14,7 @@
 #include "LineMatcher.hpp"
 #include "DataAssociator.hpp"
 #include "Graph.hpp"
+#include "LoopCloser.hpp"
 
 
 
@@ -21,6 +22,7 @@
 namespace dyn_modeling {
 
   typedef struct paramsSlam_tag{
+    double icpEpsilon;
     int icpIterationsCap;
     double kernelThresholdScanMatching;
     double maxDistBetweenRangesLineMatcher;
@@ -33,21 +35,38 @@ namespace dyn_modeling {
     double nearLinesBonusScoreMultiplier;
     int numMiddleScanPoints;
     double borderRatio;
-    paramsSlam_tag(int t_1,double t_2,double t_3,double t_4,
-                   double t_5,int t_6,double t_7,double t_8,
-                   double t_9,double t_10,int t_11,double t_12):
-      icpIterationsCap( t_1),
-      kernelThresholdScanMatching(t_2),
-      maxDistBetweenRangesLineMatcher(t_3),
-      maxAngularCoeffLineMatcher(t_4),
-      minLengthLinesLineMatcher(t_5),
-      maxCandidatesAssociation(t_6),
-      maxLengthDiffAssociation(t_7),
-      maxAbsoluteOrientationDiffThreshold(t_8),
-      maxNearLinesOrientationDiffThreshold(t_9),
-      nearLinesBonusScoreMultiplier(t_10),
-      numMiddleScanPoints(t_11),
-      borderRatio( t_12)
+    double maxLinesLengthDiffLoopCloser;
+    double maxLinesOrientDiffLoopCloser;
+    double leafRangeKdtree;
+    double maxDistanceKdtree;
+    double thresholdLoopRecognition;
+    int everyNumIterTryLoopClosure;
+    int dimQuerySetLoopClosure;
+    paramsSlam_tag(double t_1, int t_2, double t_3,double t_4,double t_5,
+                   double t_6,int t_7,double t_8,double t_9,
+                   double t_10,double t_11,int t_12,double t_13,
+                   double t_14, double t_15,double t_16,
+                   double t_17, double t_18, int t_19, int t_20):
+      icpEpsilon( t_1),
+      icpIterationsCap( t_2),
+      kernelThresholdScanMatching(t_3),
+      maxDistBetweenRangesLineMatcher(t_4),
+      maxAngularCoeffLineMatcher(t_5),
+      minLengthLinesLineMatcher(t_6),
+      maxCandidatesAssociation(t_7),
+      maxLengthDiffAssociation(t_8),
+      maxAbsoluteOrientationDiffThreshold(t_9),
+      maxNearLinesOrientationDiffThreshold(t_10),
+      nearLinesBonusScoreMultiplier(t_11),
+      numMiddleScanPoints(t_12),
+      borderRatio( t_13),
+      maxLinesLengthDiffLoopCloser( t_14),
+      maxLinesOrientDiffLoopCloser( t_15),
+      leafRangeKdtree( t_16),
+      maxDistanceKdtree( t_17),
+      thresholdLoopRecognition( t_18),
+      everyNumIterTryLoopClosure( t_19),
+      dimQuerySetLoopClosure( t_20)
     {}
   } paramsSlam;
 
@@ -60,19 +79,33 @@ namespace dyn_modeling {
   class Slam {
 
   private:
-    paramsSlam m_params;
-    Robot m_robot;
-    ScanMatcher m_scanMatcher;
-    Map m_map;
-    Graph m_graph;
-    LineMatcher m_lineMatcher;
-
+    Eigen::Vector3d &m_initialRobotState;
+    paramsSlam &m_params;
+    Robot &m_robot;
+    ScanMatcher &m_scanMatcher;
+    Map &m_map;
+    LineMatcher &m_lineMatcher;
+    Graph &m_graph;
+    LoopCloser<Graph> &m_loopCloser;
 
   public:
+    Slam( Eigen::Vector3d &t_initRState,
+        paramsSlam &t_params,
+        Robot &t_robot,
+        ScanMatcher &t_scanM,
+        Map &t_map,
+        LineMatcher &t_lineM,
+        Graph &t_graph,
+        LoopCloser<Graph> &t_loopC);
 
-    Slam( const std::string &t_dataSet_AbsolPath, const Eigen::Vector3d &t_initialRobotState, const paramsSlam &t_params);
     void cycle();
-    resultMatchAssociations matchAssociatedData(const node &t_prevNode,const edge &t_currEdge,const node &t_currNode, const int t_icpIterations_cap, const int numMidPoints);
+
+    resultMatchAssociations matchAssociatedData(const node &t_prevNode,
+                                                const edge &t_currEdge,
+                                                const node &t_currNode,
+                                                const int t_icpIterations_cap,
+                                                const int numMidPoints);
+
     void preDrawingManagement( const int t_index);
     void postDrawingManagement( const int t_index);
     void plotStateEvolution(const double t_delta_t);

@@ -36,25 +36,29 @@ namespace dyn_modeling {
 
   class DatasetManager {
   private:
-    std::string m_dataSetPath; //maybe unused
+    std::string m_dataSetPath;
     dataSet m_dataSet;
   public:
    datasetParams m_staticParams;
 
     DatasetManager( const std::string &t_dataSetPath);
 
-    static datasetParams parseStaticParameters( const std::string &t_dataSetPath); //try to make this private , maybe with RTTR ( reflection library)
+    static datasetParams parseStaticParameters
+    (const std::string &t_dataSetPath);
 
-    static dataSet parseDataSet( const std::string &t_dataSetPath, const datasetParams &t_dSetParams); //try to make this private
+    static dataSet parseDataSet( const std::string &t_dataSetPath,
+                                 const datasetParams &t_dSetParams);
 
-    static void collectDataFromString( const std::string &t_dataString , dataNode &t_returning_struct , int t_rangesNum);
+    static void collectDataFromString( const std::string &t_dataString,
+                                       dataNode &t_returning_struct,
+                                       int t_rangesNum);
 
     std::vector<double> getSpanningAngles();
 
     inline int getNumDataEntries() { return m_dataSet.size(); }
     inline int getNumRanges() { return m_staticParams.ranges_size; }
 
-    std::vector<double> getDataNodeRanges( int t_index_datanode);
+    std::vector<double> getDataNodeRanges(const int t_index_datanode);
 
   };
 }
@@ -82,4 +86,3 @@ namespace dyn_modeling {
 // double ranges_size;
 // std::vector<double> ranges;
 // double intensities;
- 
