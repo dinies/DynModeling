@@ -17,7 +17,7 @@ mkdir build && cd build && cmake .. && make -j8
 
 after that you can navigate to the bin folder and execute the binaries:
 
-cd ../bin\\
+cd ../bin \
 ./TestSlam
 
 ## Known issues
