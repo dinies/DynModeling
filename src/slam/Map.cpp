@@ -263,6 +263,13 @@ namespace dyn_modeling {
       drawWorldMap( dD.lineAssociations_drawing, m_colors.lightOrange);
     }
   };
+  void Map::ultraFadeWorldMap( const int t_index){
+    if ( t_index <= m_drawingList.size()-1 ) {
+      drawingData dD = m_drawingList.at(t_index);
+      drawWorldMap( dD.lineAssociations_drawing, m_colors.fadedLightBlue);
+    }
+  };
+
 
 
   void Map::deleteScanPoints( const int t_index){

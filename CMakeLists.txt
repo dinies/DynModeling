@@ -16,6 +16,7 @@ endif()
 # -g used for enabling gdb  and -D for use gdb on boost tests ( it gives an error at compilation time,give up !!)
 SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}  -std=c++1z  -ggdb  -Wno-ignored-attributes ")
 
+SET(CMAKE_CXX_FLAGS_RELEASE " -std=c++1z -O2 ")
 
 message("build type: '${CMAKE_BUILD_TYPE}'")
 
