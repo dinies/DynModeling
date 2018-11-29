@@ -70,36 +70,50 @@ Moreover in the edges there are the transformations coming from scan-matching
 and also the data associations found.\\
 With all this informations the Graph class carries out a preprocessing
 operation in order to reduce the complexity of the loop closure phase:
-it tries to assemble the features of subsequent iterations in \textsl{trails}.
+it tries to assemble the features of subsequent iterations in \textsl{trails}.\\
 It means that if a certain segment of scan $k_n$ is associated with another 
 that belongs to the scan $k_{n+1}$ and finally the second is associated with a third
 belonging to scan $k_{n+2}$ they will be assembled in a \textsl{trail}.\\
 A \textsl{trail} can be treated as a single feature that could be identified
 with the first segment of the trail, addictionally the more would be is length,
-the more textsl{weigth} it will have on the loop recognition procedure.
+the more \textsl{weigth} it will have on the loop recognition procedure.
 
 \subsection{ Loop Recognitor}
 The LoopCloser class uses a distance map approach to evaluate loop closure
 candidates.\\At first, whenever the loop recognition function is triggered,
 it divide all the available \textsl{trails} at the current iteration in two
 subsets: the \textbf{query set}, which contains the most recent ones, and the 
-\textbf{tree set} in which there are all that belong to iterations remote in
-time.\\Then it exploits the KD tree implementation available and feed it with
+\textbf{tree set} in which there are all the ones that belong to past 
+iterations ( in particular only to iterations that are remote in time ).\\
+Then it exploits the KD tree implementation available and feed it with
 the \textbf{tree set} \textsl{trails}. Then it queries the KD tree with the
 other set to obtain some candidates.\\
-After that those candidates will be validated and then a score will be 
-assigned to every one of them.\\Only the candidates that has a score greater
+After the aforementioned step, those candidates will be validated and then a score will be 
+assigned to every one of them.\\Only the candidates that have a score greater
 than a threshold will be treated as legitimate loop closures.
 
 
 
 
 \subsection{ GUI rendering and tests}
-Last but not least, all the graphical inteface animation has been created
+At last, all the graphical inteface animation has been created
 using the opencv library.\\Consequently all the computations to generate the
 the points to be colored are being carried out from the Map and Drawer classes.\\
 The overall procedings of the project has been verified with unit tests
-to certificate function behaviours, avoiding the introduction of regression bugs.
+to certificate function behaviours, avoiding the introduction of regression
+bugs.\\The eigen library has been used extensively to operate matrix arithmetics.
+
+\section{ Conclusions and afterthoughts}
+In conclusion, it can be said that the algorithm recognises some loops, and 
+there are several hundreds of iterations between the recognised loop ends.
+This is extremely encouraging since it is dealing with a real dataset.\\
+The complexity grows more than linearly with further iterations.\\ This means
+that an efficient solution would be to run the loop recognition portion in
+parallel, for example on another threads, with a shared data structure that
+would be the graph.
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.26)  29 NOV 2018 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.26)  29 NOV 2018 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -916,7 +916,7 @@ LaTeX Info: Redefining \nameref on input line 33.
 
 \c@lstlisting=\count143
  (./frontLayer.tex
-<Images/SapienzaLogo.pdf, id=40, 284.52731pt x 85.33737pt>
+<Images/SapienzaLogo.pdf, id=44, 284.52731pt x 85.33737pt>
 File: Images/SapienzaLogo.pdf Graphic file (type pdf)
 <use Images/SapienzaLogo.pdf>
 Package pdftex.def Info: Images/SapienzaLogo.pdf  used on input line 3.
@@ -966,15 +966,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 0D01032131329928FB4B834902487F1E;577.
+(rerunfilecheck)             Checksum: 0B9D0D884EB5D11E4DED9AB3A25BDC1F;642.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
  ) 
 Here is how much of TeX's memory you used:
- 14321 strings out of 494923
- 225518 string characters out of 6180741
+ 14325 strings out of 494923
+ 225556 string characters out of 6180741
  445912 words of memory out of 5000000
- 17391 multiletter control sequences out of 15000+600000
- 12777 words of font info for 66 fonts, out of 8000000 for 9000
+ 17392 multiletter control sequences out of 15000+600000
+ 12881 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,11n,51p,8844b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
@@ -988,10 +988,10 @@ s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
 amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb>
-Output written on report.pdf (4 pages, 138992 bytes).
+Output written on report.pdf (4 pages, 141278 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 14414 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 116 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 14422 words of extra memory for PDF output out of 17280 (max. 10000000)
 
