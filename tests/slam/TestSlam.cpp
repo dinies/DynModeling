@@ -36,7 +36,7 @@ namespace dyn_modeling{
          0.05, //maxLinesOrientDiffLoopCloser;
          4.5, //leafRangeKdtree;
          2.0, //maxDistancekdtree;
-         0.4, //thresholdLoopRecognition;
+         0.2, //thresholdLoopRecognition;
          400, //everyNumIterTryLoopClosure
          0.2//ratioQuerySetLoopClosure
  
