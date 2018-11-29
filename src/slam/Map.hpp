@@ -96,6 +96,8 @@ namespace dyn_modeling {
 
     void fadeWorldMap( const int t_index);
 
+    void ultraFadeWorldMap( const int t_index);
+
     void deleteScanPoints( const int t_index);
 
     void deleteRobot( const int t_index);

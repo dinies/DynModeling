@@ -204,6 +204,10 @@ namespace dyn_modeling {
     if (i-10 >= 0){
       m_map.fadeWorldMap(i-10);
     }
+
+    if (i-1000 >= 0){
+      m_map.ultraFadeWorldMap(i-1000);
+    }
   }
 
   void  Slam::postDrawingManagement( const int t_index){
