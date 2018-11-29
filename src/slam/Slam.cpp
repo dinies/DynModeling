@@ -101,7 +101,7 @@ namespace dyn_modeling {
       if (i% m_params.everyNumIterTryLoopClosure ==0) {
         prevLoopDrawings = currLoopDrawings;
         currLoopDrawings=
-          m_loopCloser.closeLoop(i, i-1, m_params.dimQuerySetLoopClosure);
+          m_loopCloser.closeLoop(i, m_params.ratioQuerySetLoopClosure);
       }
 
       drawingPoints_worldFrame =

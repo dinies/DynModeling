@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.26)  26 NOV 2018 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.26)  28 NOV 2018 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -916,12 +916,12 @@ LaTeX Info: Redefining \nameref on input line 33.
 
 \c@lstlisting=\count143
  (./frontLayer.tex
-<Images/SapienzaLogo.pdf, id=4, 284.52731pt x 85.33737pt>
+<Images/SapienzaLogo.pdf, id=40, 284.52731pt x 85.33737pt>
 File: Images/SapienzaLogo.pdf Graphic file (type pdf)
 <use Images/SapienzaLogo.pdf>
 Package pdftex.def Info: Images/SapienzaLogo.pdf  used on input line 3.
 (pdftex.def)             Requested size: 227.62215pt x 68.26997pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 18.
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -929,7 +929,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 18.
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -959,316 +959,43 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 38
 
 
 ] (./body.tex
-
-LaTeX Warning: Reference `simParams' on page 3 undefined on input line 39.
-
-
-LaTeX Warning: Reference `virtParams' on page 3 undefined on input line 40.
-
-
-LaTeX Warning: Reference `ParamSelect' on page 3 undefined on input line 41.
-
-[3
-
-]
-
-LaTeX Warning: Reference `fig:bodo' on page 4 undefined on input line 74.
-
-
-LaTeX Warning: Reference `H_22' on page 4 undefined on input line 74.
-
-
-LaTeX Warning: Reference `positionResponceFrequencies' on page 4 undefined on i
-nput line 92.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 100.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 100.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
+ [3
 
-
-LaTeX Warning: Reference `fig:10Htz' on page 4 undefined on input line 104.
-
-
-LaTeX Warning: Reference `fig:100Htz' on page 4 undefined on input line 106.
-
-
-LaTeX Warning: Reference `fig:1000Htz' on page 4 undefined on input line 108.
-
-<Images/vibr10Htz.png, id=50, 1675.25874pt x 845.1575pt>
-File: Images/vibr10Htz.png Graphic file (type png)
-<use Images/vibr10Htz.png>
-Package pdftex.def Info: Images/vibr10Htz.png  used on input line 114.
-(pdftex.def)             Requested size: 448.10812pt x 179.24217pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/vibr100Htz.png, id=52, 3360.555pt x 1296.845pt>
-File: Images/vibr100Htz.png Graphic file (type png)
-<use Images/vibr100Htz.png>
-Package pdftex.def Info: Images/vibr100Htz.png  used on input line 122.
-(pdftex.def)             Requested size: 448.11734pt x 201.64212pt.
-<Images/vibr1000Htz.png, id=53, 3342.4875pt x 1830.84pt>
-File: Images/vibr1000Htz.png Graphic file (type png)
-<use Images/vibr1000Htz.png>
-Package pdftex.def Info: Images/vibr1000Htz.png  used on input line 130.
-(pdftex.def)             Requested size: 448.10521pt x 201.64445pt.
-[4] [5 <./Images/vibr10Htz.png> <./Images/vibr100Htz.png>]
-
-LaTeX Warning: Reference `fig:freeRigTot50HR' on page 6 undefined on input line
- 154.
-
-
-LaTeX Warning: Reference `fig:freeSetTot50HR' on page 6 undefined on input line
- 154.
-
-<Images/set20freeTot50HtznoiseRect.png, id=73, 1673.25125pt x 627.34375pt>
-File: Images/set20freeTot50HtznoiseRect.png Graphic file (type png)
-<use Images/set20freeTot50HtznoiseRect.png>
-Package pdftex.def Info: Images/set20freeTot50HtznoiseRect.png  used on input l
-ine 162.
-(pdftex.def)             Requested size: 448.13284pt x 215.10324pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/set20freePart50Htznoise.png, id=74, 1677.26625pt x 628.3475pt>
-File: Images/set20freePart50Htznoise.png Graphic file (type png)
-<use Images/set20freePart50Htznoise.png>
-Package pdftex.def Info: Images/set20freePart50Htznoise.png  used on input line
- 170.
-(pdftex.def)             Requested size: 448.13324pt x 215.09267pt.
-
-LaTeX Warning: Reference `fig:freeSetTot50HR' on page 6 undefined on input line
- 171.
-
-
-LaTeX Warning: Reference `fig:freeSetTot50HR' on page 6 undefined on input line
- 171.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/rCoupFreeTot50htznoiseRect.png, id=75, 1674.255pt x 624.3325pt>
-File: Images/rCoupFreeTot50htznoiseRect.png Graphic file (type png)
-<use Images/rCoupFreeTot50htznoiseRect.png>
-Package pdftex.def Info: Images/rCoupFreeTot50htznoiseRect.png  used on input l
-ine 180.
-(pdftex.def)             Requested size: 448.12065pt x 215.09962pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/rCoupFree50htznoise.png, id=76, 1677.26625pt x 620.3175pt>
-File: Images/rCoupFree50htznoise.png Graphic file (type png)
-<use Images/rCoupFree50htznoise.png>
-Package pdftex.def Info: Images/rCoupFree50htznoise.png  used on input line 188
-.
-(pdftex.def)             Requested size: 448.13324pt x 215.09827pt.
-
-LaTeX Warning: Reference `fig:freeRigTot50HR' on page 6 undefined on input line
- 189.
-
-
-LaTeX Warning: Reference `fig:freeRigTot50HR' on page 6 undefined on input line
- 189.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:freeRigPar50HR' on page 6 undefined on input line
- 197.
-
-
-LaTeX Warning: Reference `fig:freeSetPar50HR' on page 6 undefined on input line
- 197.
-
-[6 <./Images/vibr1000Htz.png>]
-<Images/freeSet20Tot20HtznoiseRect.png, id=83, 1674.255pt x 738.76pt>
-File: Images/freeSet20Tot20HtznoiseRect.png Graphic file (type png)
-<use Images/freeSet20Tot20HtznoiseRect.png>
-Package pdftex.def Info: Images/freeSet20Tot20HtznoiseRect.png  used on input l
-ine 212.
-(pdftex.def)             Requested size: 448.12065pt x 215.10289pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/freeSet20Part20Htznoise.png, id=84, 1672.2475pt x 741.77126pt>
-File: Images/freeSet20Part20Htznoise.png Graphic file (type png)
-<use Images/freeSet20Part20Htznoise.png>
-Package pdftex.def Info: Images/freeSet20Part20Htznoise.png  used on input line
- 220.
-(pdftex.def)             Requested size: 448.11919pt x 215.09683pt.
-
-LaTeX Warning: Reference `fig:freeSetTot20HR' on page 7 undefined on input line
- 221.
-
-
-LaTeX Warning: Reference `fig:freeSetTot20HR' on page 7 undefined on input line
- 221.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/freerigidTot20HtznoiseRect.png, id=85, 1679.27374pt x 643.40375pt>
-File: Images/freerigidTot20HtznoiseRect.png Graphic file (type png)
-<use Images/freerigidTot20HtznoiseRect.png>
-Package pdftex.def Info: Images/freerigidTot20HtznoiseRect.png  used on input l
-ine 230.
-(pdftex.def)             Requested size: 448.1315pt x 215.10225pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/freerigidPart20Htznoise.png, id=86, 1675.25874pt x 643.40375pt>
-File: Images/freerigidPart20Htznoise.png Graphic file (type png)
-<use Images/freerigidPart20Htznoise.png>
-Package pdftex.def Info: Images/freerigidPart20Htznoise.png  used on input line
- 238.
-(pdftex.def)             Requested size: 448.10812pt x 215.10225pt.
-
-LaTeX Warning: Reference `fig:freeRigTot20HR' on page 7 undefined on input line
- 239.
-
-
-LaTeX Warning: Reference `fig:freeRigTot20HR' on page 7 undefined on input line
- 239.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:freeRigPar20HR' on page 7 undefined on input line
- 245.
-
-
-LaTeX Warning: Reference `fig:freeSetPar20HR' on page 7 undefined on input line
- 245.
-
-
-LaTeX Warning: Reference `fig:contact_virtual' on page 7 undefined on input lin
-e 260.
-
-
-LaTeX Warning: Reference `fig:contact_rigid' on page 7 undefined on input line 
-260.
-
-<Images/setPointContactReacPosArrow.png, id=87, 1677.26625pt x 859.21pt>
-File: Images/setPointContactReacPosArrow.png Graphic file (type png)
-<use Images/setPointContactReacPosArrow.png>
-Package pdftex.def Info: Images/setPointContactReacPosArrow.png  used on input 
-line 265.
-(pdftex.def)             Requested size: 448.13324pt x 183.73015pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/setPointContactReacTorArrow.png, id=88, 1679.27374pt x 846.16125pt>
-File: Images/setPointContactReacTorArrow.png Graphic file (type png)
-<use Images/setPointContactReacTorArrow.png>
-Package pdftex.def Info: Images/setPointContactReacTorArrow.png  used on input 
-line 273.
-(pdftex.def)             Requested size: 448.1315pt x 183.72871pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:ContactSetPos' on page 7 undefined on input line 
-286.
-
-
-LaTeX Warning: Reference `fig:ContactRigPos' on page 7 undefined on input line 
-286.
-
-
-LaTeX Warning: Reference `fig:ContactSetTor' on page 7 undefined on input line 
-289.
-
-
-LaTeX Warning: Reference `fig:ContactRigTor' on page 7 undefined on input line 
-289.
-
-[7 <./Images/set20freeTot50HtznoiseRect.png>]
-<Images/rigidContactReacPosArrow.png, id=97, 1678.27pt x 857.2025pt>
-File: Images/rigidContactReacPosArrow.png Graphic file (type png)
-<use Images/rigidContactReacPosArrow.png>
-Package pdftex.def Info: Images/rigidContactReacPosArrow.png  used on input lin
-e 295.
-(pdftex.def)             Requested size: 448.11974pt x 183.73251pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Images/rigidContactReacTorArrow.png, id=98, 1680.2775pt x 836.12375pt>
-File: Images/rigidContactReacTorArrow.png Graphic file (type png)
-<use Images/rigidContactReacTorArrow.png>
-Package pdftex.def Info: Images/rigidContactReacTorArrow.png  used on input lin
-e 303.
-(pdftex.def)             Requested size: 448.11734pt x 183.7309pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[8 <./Images/set20freePart50Htznoise.png>]) [9 <./Images/rCoupFreeTot50htznoise
-Rect.png>] [10 <./Images/rCoupFree50htznoise.png> <./Images/freeSet20Tot20Htzno
-iseRect.png>] [11 <./Images/freeSet20Part20Htznoise.png> <./Images/freerigidTot
-20HtznoiseRect.png>] [12 <./Images/freerigidPart20Htznoise.png> <./Images/setPo
-intContactReacPosArrow.png>] [13 <./Images/setPointContactReacTorArrow.png> <./
-Images/rigidContactReacPosArrow.png>] [14 <./Images/rigidContactReacTorArrow.pn
-g>]
+]) [4]
 No file report.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
 (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
-
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  5C2693E0167CE5530D9DEA8C92F64A5C;577.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: CBAF5506BB53B545E370C49C100A6C7F;537.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
  ) 
 Here is how much of TeX's memory you used:
- 14556 strings out of 494923
- 230632 string characters out of 6180741
- 449948 words of memory out of 5000000
- 17543 multiletter control sequences out of 15000+600000
- 16491 words of font info for 92 fonts, out of 8000000 for 9000
+ 14308 strings out of 494923
+ 225456 string characters out of 6180741
+ 444960 words of memory out of 5000000
+ 17396 multiletter control sequences out of 15000+600000
+ 11386 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,16n,51p,8844b,602s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (14 pages, 2711975 bytes).
+ 42i,11n,51p,8844b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report.pdf (4 pages, 81725 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
- 22097 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 11854 words of extra memory for PDF output out of 12000 (max. 10000000)
 
