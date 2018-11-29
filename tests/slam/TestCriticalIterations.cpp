@@ -41,7 +41,7 @@ namespace dyn_modeling{
          0.2, //maxDistancekdtree;
          10, //thresholdLoopRecognition
          500, //everyNumIterTryLoopClosure
-         150 //dimQuerySetLoopClosure
+         0.1 //ratioQuerySetLoopClosure
  
         );
       DatasetManager dM( relativePath);

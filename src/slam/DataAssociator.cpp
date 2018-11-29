@@ -29,6 +29,7 @@ namespace dyn_modeling {
 
 
   std::vector<dataAssociation> DataAssociator::associateLines(){
+
     std::vector< std::vector< dataAssociation> > matrix_associations;
     matrix_associations.reserve( m_newLines.size());
 

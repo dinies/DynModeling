@@ -34,11 +34,11 @@ namespace dyn_modeling{
          0.05, // double borderRatio;
          0.02, //maxLinesLengthDiffLoopCloser;
          0.05, //maxLinesOrientDiffLoopCloser;
-         3.5, //leafRangeKdtree;
-         0.5, //maxDistancekdtree;
-         50, //thresholdLoopRecognition;
-         800, //everyNumIterTryLoopClosure
-         350 //dimQuerySetLoopClosure
+         4.5, //leafRangeKdtree;
+         2.0, //maxDistancekdtree;
+         0.4, //thresholdLoopRecognition;
+         400, //everyNumIterTryLoopClosure
+         0.2//ratioQuerySetLoopClosure
  
         );
 

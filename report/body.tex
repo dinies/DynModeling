@@ -1,0 +1,25 @@
+\section{Big Picture}
+
+Loop closure detection is a tecnique that helps to reduce the escalating uncertainty that is generated from the filtering process used to extimate the evolution of the state of the system.\\ In particular it can be applied in autonomous vehicle navigation tasks where the enviromental informations gathered from the sensors can be used to build an artificial map.\\
+The main objective carried out from loop closure algorithms is to identify portions of the environment that have strong correspondence with others already seen and then decide if the robot is navigating in a location of the environment in which it has already  been.\\
+In order to develop a loop closure algorithm, that could work in a simulation, it is necessary to have a dataset and to be able of carrying out the foundamental operations of autonomous navigation simulations:
+\begin{itemize}
+  \item A feature extractor able to generate consistent features described by possibly unique descriptors.
+   \item A data association euristic that allows to find which one of the new features corresponds to the older.
+   \item An extimator of the evolution of the state, that given the data association, iteratively minimise the error of the guess. In this case is called scan-matcher.
+     \item An algorithm for loop closures recognition that processes the data memorised and tries to close a loop on the artificial map.
+\end{itemize}
+
+\section{ Implementation}
+In the following paragraphs the c++ implementation approach will be described.
+\subsection{ Dataset Parser}
+I was given a dataset of a real 2D laser scanner that follows the ... format.\\ The DatasetManager class gathers all the scanner ranges in data structures ...
+\subsection{ Feature Extractor}
+The feature of choice is the line, precisely a 2D segment.\\ The class LineMatcher, through its euristic, tries to align subsequent cartesian points that corresponds to the spots where the laser hits the walls.\\ When the distance or the orientation between subsequent points exceedes a threshold a segment is built with the former and previous points, then the latter will be part of the following segment.
+\subsection{ Data Associator}
+In order to recognise features among two consecutive sets of laser ranges that corresponds to the same environment entities, the class DataAssociator orders the possible correspondences assigning a score based on a similarity measure.\\
+This measure has been choosen  to be almost invariant to the rototraslation  of the robot that happens between two scan matches. In fact the lenght of the segments and  also the orientation, assuming a ...
+\subsection{ Scan Matcher }
+\subsection{ Graph Manager}
+\subsection{ Loop Recognitor}
+\subsection{ GUI rendering}

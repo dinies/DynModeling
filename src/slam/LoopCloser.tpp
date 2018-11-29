@@ -20,21 +20,19 @@ namespace dyn_modeling {
 
 
   template< class T>
-    std::vector<loopDrawingData> LoopCloser<T>::closeLoop( const int t_currIteration,
-        const int t_backRange,
-        const int t_querySetRange ){
+    std::vector<loopDrawingData> LoopCloser<T>::closeLoop(
+        const int t_currIteration,
+        const double t_ratioQuerySet){
 
       std::cout << "begin closure iter:"<< t_currIteration << "\n";
 
       std::vector<loopDrawingData> loopDrawings;
       std::list<closure> closures=
-        findClosures( t_currIteration,
-            t_backRange,
-            t_querySetRange);
+        findClosures( t_currIteration,t_ratioQuerySet);
 
       if ( closures.size() > 0){
         loopDrawings.reserve( closures.size());
-        sanitizeClosures(closures, loopDrawings);
+        sanitizeClosures(closures, loopDrawings, t_currIteration);
       }
       if ( closures.size() > 0){
         std::pair<int,int> optimIndexes =
@@ -68,7 +66,8 @@ namespace dyn_modeling {
   template< class T>
     void LoopCloser<T>::sanitizeClosures
     (std::list< closure > &t_closures,
-     std::vector<loopDrawingData> &t_loopDrawings
+     std::vector<loopDrawingData> &t_loopDrawings,
+     const int t_currentIteration
      ){
 
       trail t1;
@@ -119,7 +118,7 @@ namespace dyn_modeling {
               fabs(fabs(length1- length2)-
                 m_maxLinesLengthDiff)*0.5/m_maxLinesLengthDiff+
               fabs(fabs(orient1- orient2)-
-                m_maxLinesOrientDiff)*0.5/m_maxLinesOrientDiff);
+                m_maxLinesOrientDiff)*0.5/m_maxLinesOrientDiff) / t_currentIteration;
 
           std::cout << scoreClosure << "\n";
 
@@ -160,6 +159,7 @@ namespace dyn_modeling {
 
             t_loopDrawings.push_back(loopDrawing);
             std::cout << "closure detected \n ";
+            std::cout << "Closure between node "<< t1.nodeIndex << " and " << t2.nodeIndex << "\n";
             ++it;
           }
         }
@@ -169,16 +169,16 @@ namespace dyn_modeling {
   template< class T>
     std::list< closure > LoopCloser<T>::findClosures
     (const int t_currIteration,
-     const int t_backRange,
-     const int t_querySetRange){
+     const double t_ratioQuerySet){
 
       std::list< closure > closures;
+      const int querySetDim = (int) floor(t_currIteration* t_ratioQuerySet);
 
-      const int treeIndexFrom = t_currIteration - t_backRange;
-      const int treeIndexTo = t_currIteration - 2*t_querySetRange;
-      const int queryIndexFrom = t_currIteration - t_querySetRange;
+      const int treeIndexFrom = 3;
+      const int treeIndexTo = t_currIteration - 2*querySetDim;
+      const int queryIndexFrom = t_currIteration - querySetDim;
 
-      if ( treeIndexFrom >= 0 && treeIndexTo>=0 && queryIndexFrom >=0){
+      if ( treeIndexFrom >= 0 && treeIndexTo > treeIndexFrom && queryIndexFrom >= treeIndexTo){
         std::vector<trail> treeTrails =
           m_graph.findTrails( treeIndexFrom,treeIndexTo);
 
